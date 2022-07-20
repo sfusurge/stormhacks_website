@@ -1,0 +1,78 @@
+.container {
+  position: fixed;
+  background-color: var(--color-modal);
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.topBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 0 35px 0 25px;
+  width: calc(100% - 60px);
+  z-index: 1;
+}
+
+.title {
+  font: var(--font-sub-header);
+  color: var(--color-text-body);
+  cursor: default;
+}
+
+.topButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 110px;
+  align-items: center;
+}
+
+.close path {
+  stroke: var(--color-text-body);
+}
+
+.close {
+  cursor: pointer;
+}
+
+.maximize rect {
+  stroke: var(--color-text-body);
+}
+
+.minimize rect {
+  stroke: var(--color-text-body);
+  fill: var(--color-text-body);
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  padding: 0 0 26px 0;
+  background-color: var(--color-modal-accent);
+  max-width: 80vw;
+  max-height: 80vh;
+  overflow: scroll;
+}
+
+.scroll {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+  height: inherit;
+  width: 17px;
+  align-items: center;
+  background-color: var(--color-scroll);
+}
+
+.scroll path {
+  fill: var(--color-scroll-arrows);
+}
+
+@media only screen and (max-width: 900px) {
+  .classnme {
+    width: 90%;
+  }
+}

@@ -1,0 +1,52 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  overflow-x: hidden;
+  background-color: var(--color-background-main);
+}
+
+.banners {
+  position: absolute;
+  right: 5%;
+}
+
+.splash {
+  position: absolute;
+  background: url('../assets/light/desktop-splash.svg') no-repeat;
+  width: 738px;
+  height: 378px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 1300px) {
+  .splash {
+    transform: translate(-60%, -60%);
+  }
+}
+
+[data-theme='dark'] .splash {
+  background-image: url('../assets/dark/desktop-splash.svg');
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.files {
+  height: 100%;
+  left: 3%;
+  z-index: 1;
+}
+
+.socials {
+  position: absolute;
+  right: 2%;
+  bottom: max(11vh, 80px);
+}

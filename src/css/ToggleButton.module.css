@@ -1,0 +1,24 @@
+.themeButton {
+  border: none;
+  background: transparent;
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
+  cursor: pointer;
+}
+
+.themeButton:focus {
+  outline: none;
+}
+
+.themeToggle {
+  height: 34px;
+  width: 34px;
+  margin: 10px 15px;
+  background-repeat: no-repeat;
+  background-image: url('../assets/light/lightmodeIcon-mobile.svg');
+}
+
+[data-theme='dark'] .themeToggle {
+  background-image: url('../assets/dark/darkmodeIcon-mobile.svg');
+}

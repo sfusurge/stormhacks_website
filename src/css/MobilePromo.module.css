@@ -1,0 +1,111 @@
+.container{
+  background-color: var(--color-background-main);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.banners {
+  position: absolute;
+  right: 28px;
+}
+
+.box{
+  position: absolute;
+  top: 30vh;
+  left: 9%;
+  width: 82%;
+}
+
+.title{
+  width: 260px;
+  color: var(--color-text-header);
+  font: var(--font-header); 
+  line-height: 36px;
+}
+
+.subtitle{
+  position: relative;
+  color: var(--color-date-header);
+  font: var(--font-email-sub-header); 
+  line-height: 30px;
+  z-index: 1;
+}
+
+.otter{
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 125px;
+  height: 146px;
+  z-index: 0;
+  background-image: url("../assets/stormy-wave.svg");
+}
+
+[data-theme='dark'] .otter {
+  background-image: url("../assets/sparky-wave.svg");
+}
+
+.textBox{
+  position: relative;
+  background-color: transparent;
+  color: var(--color-text-body);
+  border-color: var(--color-footer);
+  width: calc(100% - 46px);
+  z-index: 5;
+  padding-left: 12px;
+  padding-right: 6px;
+  border: none;
+}
+
+.input{
+  display: flex;
+  align-items: center;
+  border: 3px solid var(--color-sign-up);
+  background-color: var(--color-sign-up-background);
+  width: 100%;
+  height: 40px;
+  margin-top: 16px;
+  position: relative;
+}
+
+.button{
+  z-index: 6;
+  margin-right: 6px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  height: fit-content;
+  display: flex;
+}
+
+.button:focus, .textBox:focus{
+  outline: none;
+}
+
+.signUpIcon{
+  height: 34px;
+}
+
+.textBox::placeholder{
+  color: var(--color-text-body);
+
+}
+
+.logo{
+  position: absolute;
+  left: 50vw;
+  transform: translateX(-50%);
+  top: 65%;
+  width: clamp(95px, 25vw, 150px);
+  height: clamp(98px, 25vw, 150px);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('../assets/light/stormhacksLogo-light.svg');
+}
+
+[data-theme='dark'] .logo {
+  background-image: url("../assets/dark/stormhacksLogo-dark.svg");
+}
+

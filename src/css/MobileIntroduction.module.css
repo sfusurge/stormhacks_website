@@ -1,0 +1,32 @@
+.container {
+  width: 82%;
+  margin: 80px 9% 0;
+}
+
+.heading {
+  margin: 0;
+  font: var(--font-header);
+  color: var(--color-text-body);
+  line-height: 40px;
+}
+
+.subheading {
+  margin: 0;
+  font: var(--font-sub-header);
+  color: var(--color-text-header);
+  line-height: 35px;
+}
+
+.text {
+  margin: 20px 0 0;
+  font: var(--font-body);
+  color: var(--color-text-body);
+  line-height: 25px;
+}
+
+.closingText {
+  margin: 20px 0 0;
+  font: var(--font-body-bold);
+  color: var(--color-text-body);
+  line-height: 35px;
+}

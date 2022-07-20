@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  color: var(--color-text-body);
+  font: var(--font-body);
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+}

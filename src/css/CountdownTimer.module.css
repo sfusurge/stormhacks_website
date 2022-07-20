@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  width: 85%;
+  margin-bottom: 20px;
+  background-color: var(--color-text-header);
+  background-image: url('../assets/clock.svg');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-left: 12px;
+}
+
+.title {
+  font: var(--font-body);
+  margin: 46px 0 0;
+}
+
+.days {
+  margin: 0;
+  font: var(--font-subtitle);
+}
+
+.timer {
+  margin: 0 0 8px;
+  font: var(--font-body-bold);
+}
+
+.clock {
+  margin-top: 8px;
+}

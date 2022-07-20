@@ -1,0 +1,108 @@
+.container {
+  display: flex;
+  height: 70px;
+  background-color: var(--color-footer);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.innerContainer {
+  width: 350px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 2%;
+}
+
+#logoPad {
+  margin-left: 3%;
+  height: 34px;
+  width: 34px;
+  background-image: url('../assets/light/surgeIcon-light.svg');
+  /* content: none; */
+  text-decoration: none;
+}
+
+[data-theme='dark'] #logoPad {
+  background-image: url('../assets/dark/surgeIcon-dark.svg');
+}
+
+#packageLinks {
+  display: flex;
+}
+
+.hyperLinks {
+  padding: 5px;
+  display: block;
+  text-align: right;
+  font: var(--font-body);
+  color: var(--color-text-white);
+}
+
+.hyperLinkBtn {
+  border: none;
+  outline: none;
+  display: block;
+  background: none;
+  text-align: right;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 5px;
+  font: var(--font-body);
+  color: var(--color-text-white);
+}
+
+.themeButton {
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.themeButton:focus {
+  outline: none;
+}
+
+.themeToggle {
+  height: 34px;
+  width: 34px;
+  margin: 10px 15px;
+  background-image: url('../assets/light/lightmodeIcon-desktop.svg');
+}
+
+[data-theme='dark'] .themeToggle {
+  background-image: url('../assets/dark/darkmodeIcon-desktop.svg');
+}
+
+.notificationButton {
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.notificationButton:focus {
+  outline: none;
+}
+
+.notificationIcon {
+  height: 34px;
+  width: 39px;
+  background-image: url('../assets/notifications-icon.svg');
+}
+
+.sideBar {
+  position: fixed;
+  bottom: 70px;
+  right: -40%;
+  transition: 850ms;
+}
+
+.sideBarActive {
+  position: fixed;
+  bottom: 70px;
+  right: 0;
+  transition: 350ms;
+}

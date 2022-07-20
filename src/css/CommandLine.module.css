@@ -1,0 +1,34 @@
+.container {
+  width: 500px;
+  height: 400px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background-popup);
+}
+
+.noMargin {
+  margin: 0;
+  font: var(--font-body);
+  color: var(--color-text-body);
+}
+
+.padBottom {
+  margin-top: 0;
+  font: var(--font-body);
+  color: var(--color-text-body);
+}
+
+.fontAnimated {
+  font: var(--font-body);
+  color: var(--color-text-body);
+}
+
+.linkAnimated {
+  font: var(--font-body);
+  color: var(--color-text-body);
+}
+
+.typist span {
+  color: var(--color-text-body);
+}

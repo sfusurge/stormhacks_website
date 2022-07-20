@@ -1,0 +1,45 @@
+.container {
+  width: 884px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-background-popup);
+}
+
+.heading {
+  color: var(--color-text-body);
+  font: var(--font-sub-header);
+  margin: 30px 0 38px;
+  width: 95%;
+}
+
+.line {
+  background-color: var(--color-lines);
+  height: 1px;
+  width: 95%;
+}
+
+.sponsors {
+  border-top: 1px solid var(--color-lines);
+  padding: 5px 2%;
+}
+
+#goldSponsors {
+  flex: 1 100%;
+}
+
+#silverSponsors {
+  flex: 1 33%;
+}
+
+#bronzeSponsors {
+  flex: 1 25%;
+}
+
+.innerContainer {
+  width: 95%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+}

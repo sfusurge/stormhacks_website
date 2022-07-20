@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: min(65vh, 210px);
+}
+
+.iconLink:hover {
+  opacity: 0.95;
+}
+
+.img {
+  width: 36px;
+  height: 36px;
+  opacity: 0.5;
+}
+
+.img:hover {
+  opacity: 1;
+}
+
+[data-theme='dark'] .img {
+  opacity: 1;
+}
+
+[data-theme='dark'] .img:hover {
+  opacity: 0.9;
+}
+
+#mail {
+  background-image: url('../assets/light/mail-light.svg');
+}
+
+[data-theme='dark'] #mail {
+  background-image: url('../assets/dark/mail-dark.svg');
+}
+
+#instagram {
+  background-image: url('../assets/light/instagram-light.svg');
+}
+
+[data-theme='dark'] #instagram {
+  background-image: url('../assets/dark/instagram-dark.svg');
+}
+
+#facebook {
+  background-image: url('../assets/light/facebook-light.svg');
+}
+
+[data-theme='dark'] #facebook {
+  background-image: url('../assets/dark/facebook-dark.svg');
+}
+
+#linkedin {
+  background-image: url('../assets/light/linkedin-light.svg');
+}
+
+[data-theme='dark'] #linkedin {
+  background-image: url('../assets/dark/linkedin-dark.svg');
+}
+
+#github {
+  background-image: url('../assets/light/github-light.svg');
+}
+
+[data-theme='dark'] #github {
+  background-image: url('../assets/dark/github-dark.svg');
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    flex-direction: row;
+    width: 210px;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .img {
+    opacity: 1;
+  }
+}

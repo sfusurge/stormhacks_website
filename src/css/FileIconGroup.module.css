@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: calc(100% - 70px);
+  justify-content: flex-start;
+  width: fit-content;
+  margin-left: 35px;
+}

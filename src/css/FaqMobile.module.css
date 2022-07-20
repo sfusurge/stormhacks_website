@@ -1,0 +1,12 @@
+.heading {
+  margin: 82px 9% 3px;
+  font: var(--font-header);
+  color: var(--color-text-body);
+}
+
+@media only screen and (min-width: 600px) {
+  .heading {
+    width: 550px;
+    margin: 95px auto 18px;
+  }
+}

@@ -1,0 +1,85 @@
+.container {
+  width: 62%;
+  margin-left: 17%;
+  margin-right: 17%;
+}
+
+.descriptionsContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.titleContainer {
+  width: 71%;
+}
+
+.headerFont {
+  font: var(--font-sub-header);
+  color: var(--color-text-body);
+  margin: 0;
+}
+
+.paragraph {
+  font: var(--font-body);
+  line-height: 25px;
+  margin: 0;
+  color: var(--color-text-body);
+}
+
+.connectionsTrackImg {
+  width: 98px;
+  height: 101px;
+  background-image: url('../assets/light/connections-track-light.svg');
+}
+
+[data-theme='dark'] .connectionsTrackImg {
+  width: 98px;
+  height: 101px;
+  background-image: url('../assets/dark/connectionsTrack-dark.svg');
+}
+
+.environmentImg {
+  width: 90px;
+  height: 90px;
+  background-image: url('../assets/light/environmentTrack-light.svg');
+}
+
+[data-theme='dark'] .environmentImg {
+  width: 90px;
+  height: 90px;
+  background-image: url('../assets/dark/environmentTrack-dark.svg');
+}
+
+.healthImg {
+  width: 98px;
+  height: 86px;
+  background-image: url('../assets/light/healthTrack-light.svg');
+}
+
+[data-theme='dark'] .healthImg {
+  width: 98px;
+  height: 86px;
+  background-image: url('../assets/dark/healthTrack-dark.svg');
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .container {
+    width: 550px;
+    margin: 80px auto 0;
+    background-color: transparent;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .container {
+    width: 564px;
+    padding-top: 29px;
+    padding-bottom: 72px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0;
+    height: 100%;
+    background-color: var(--color-background-popup);
+  }
+}

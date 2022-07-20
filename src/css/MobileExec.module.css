@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 82%;
+  margin: 80px 9% 0;
+}
+
+.execContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.heading {
+  font: var(--font-header);
+  color: var(--color-text-body);
+  margin: 0 0 45px 0;
+}
+
+.execs {
+  flex: 0 50%;
+  padding-top: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    width: 550px;
+    margin: 112px auto 0;
+  }
+  .execs {
+    flex: 0 33%;
+    padding-top: 10px;
+  }
+}

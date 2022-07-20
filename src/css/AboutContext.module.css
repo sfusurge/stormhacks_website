@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--color-background-popup);
+}
+
+.otter {
+  width: 100%;
+  background-image: url('../assets/about-otters.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[data-theme='dark'] .otter {
+  background-image: url('../assets/about-otters-dark.svg');
+}
+
+.header {
+  font: var(--font-header);
+  color: var(--color-text-body);
+  margin: 0;
+  margin-top: 42.6px;
+  /* line-height: 40px; */
+}
+
+.subheader {
+  font: var(--font-sub-header);
+  color: var(--color-text-header);
+  margin: 0;
+  margin-top: 7px;
+  /* line-height: 35px; */
+}
+
+.body1 {
+  color: var(--color-text-body);
+  font: var(--font-body);
+  width: 81%;
+  margin: 0;
+  margin-top: 33px;
+  line-height: 25px;
+}
+
+.body2 {
+  color: var(--color-text-body);
+  font: var(--font-body);
+  margin: 0;
+  width: 89.8%;
+  margin-top: 15px;
+  line-height: 25px;
+}
+.footer {
+  color: var(--color-text-body);
+  font: var(--font-body-bold);
+  margin: 0;
+  margin-top: 24px;
+  line-height: 35px;
+  margin-bottom: 18px;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  .container {
+    width: 550px;
+    background-color: transparent;
+    margin: auto;
+    padding: 110px 0 0;
+  }
+
+  .otter {
+    height: 146px;
+  }
+
+  .textContainer {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .container {
+    width: 594px;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 32px;
+    background-color: var(--color-background-popup);
+  }
+
+  .otter {
+    height: 146px;
+  }
+
+  .textContainer {
+    display: block;
+  }
+}

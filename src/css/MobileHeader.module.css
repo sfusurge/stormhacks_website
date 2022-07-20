@@ -1,0 +1,139 @@
+.backgroundContainer {
+  background-image: url('../assets/light/background-mobile-light.svg');
+  background-size: cover;
+  height: 624px;
+}
+
+[data-theme='dark'] .backgroundContainer {
+  background-image: url('../assets/dark/background-mobile-dark.svg');
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.banners {
+  margin-right: 30px;
+}
+
+.headingContainer {
+  width: 300px;
+  margin: 100px auto 0;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+}
+
+.stormhacksLogo {
+  min-width: 85px;
+  height: 88px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('../assets/light/stormhacksLogo-light.svg');
+}
+
+[data-theme='dark'] .stormhacksLogo {
+  background-image: url('../assets/dark/stormhacksLogo-dark.svg');
+}
+
+.title {
+  font: var(--font-title);
+  color: var(--color-text-header);
+  line-height: 45px;
+  margin: 0 0 0 10px;
+}
+
+.date {
+  font: var(--font-date-header);
+  color: var(--color-date-header);
+  margin: 4px 24px 0 0;
+  float: right;
+}
+
+.subheading {
+  font: var(--font-header);
+  color: var(--color-text-header);
+  padding-top: 23px;
+  margin-bottom: 0;
+}
+
+.subheader {
+  margin: 0;
+  font: var(--font-sub-header);
+  color: var(--color-text-body);
+}
+
+.apply {
+  width: 100%;
+  display: block;
+  margin: 33px auto 0;
+  height: 50px;
+  background-color: var(--color-text-header);
+  color: var(--color-text-white);
+  font: var(--font-sub-header);
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+}
+
+.text {
+  margin: 20px 0 0;
+  font: var(--font-body);
+  color: var(--color-text-body);
+  line-height: 25px;
+}
+
+@media only screen and (min-width: 600px) {
+  .backgroundContainer {
+    height: 705px;
+  }
+
+  .headingContainer {
+    width: 583px;
+  }
+
+  .title {
+    line-height: 92px;
+    width: 50%;
+  }
+
+  .titleContainer {
+    margin: auto;
+  }
+
+  .date {
+    font: var(--font-email-sub-header);
+    margin: 8px 22px 0 0;
+  }
+
+  .stormhacksLogo {
+    width: 175px;
+    height: 180px;
+  }
+
+  .subheading {
+    font: var(--font-subtitle);
+    color: var(--color-text-header);
+    padding-top: 44px;
+  }
+
+  .subheader {
+    font: var(--font-header);
+    color: var(--color-text-body);
+    margin: 0;
+  }
+
+  .breakLine {
+    display: none;
+  }
+
+  .apply {
+    height: 94px;
+    line-height: 94px;
+    margin-top: 66px;
+  }
+}
