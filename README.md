@@ -29,9 +29,17 @@ Hosted by <a href="https://sfusurge.com/"><img src=".github/assets/surge.svg" he
    https://github.com/sfusurge/stormhacks_website.git
    ```
    
-2. **Install development dependencies.**  
+2. **Install `nvm` (Node Version Manager)**
+
+   - [Bash/Zsh](https://github.com/nvm-sh/nvm)
+   - [Fish Shell](https://github.com/jorgebucaran/nvm.fish)
+   - [PowerShell](https://github.com/aaronpowell/ps-nvm) (Windows)
+
+   
+3. **Install development dependencies.**  
    
    ```bash
+   nvm use
    npm install
    ```
 
