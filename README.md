@@ -2,6 +2,11 @@
 
 The source code and development repository for [https://stormhacks.com/](https://stormhacks.com/).
 
+<img src=".github/assets/stormhacks.svg" alt="StormHacks Logo" />
+
+Hosted by <a href="https://sfusurge.com/"><img src=".github/assets/surge.svg" height="16" style="height: 1em; line-height: 100%" /> SFU Surge</a>.
+
+&nbsp;
 
 **Table of Contents:**
 

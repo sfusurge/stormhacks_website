@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(0.275043,0,0,0.275043,0,-7.10543e-15)">
+        <g id="Layer_2">
+            <g id="Layer_1-2">
+                <circle cx="58.17" cy="58.17" r="58.17" style="fill:rgb(28,48,122);"/>
+                <path d="M46,99.75L65.29,73.25L52.74,48.81L77.5,36.92L62,11.25L114.68,72C115.786,67.477 116.346,62.837 116.346,58.18C116.346,26.269 90.087,0.01 58.176,0.01C26.264,0.01 0.006,26.269 0.006,58.18C0.006,90.089 26.261,116.347 58.17,116.35L59.17,116.35L46,99.75Z" style="fill:rgb(86,140,219);fill-rule:nonzero;"/>
+                <circle cx="58.17" cy="58.17" r="58.17" style="fill:none;"/>
+                <path d="M77.5,36.92L61.75,10.08L41.41,62.25L77.5,36.92Z" style="fill:rgb(255,202,97);fill-rule:nonzero;"/>
+                <path d="M57.64,50.76L77.52,75.56L41.34,62.33L57.64,50.76Z" style="fill:url(#_Linear1);fill-rule:nonzero;"/>
+                <path d="M77.52,75.56L45.97,99.75L55.57,67.53L77.52,75.56Z" style="fill:rgb(255,202,97);fill-rule:nonzero;"/>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-15.7061,-27.2185,27.2185,-15.7061,66.8173,81.7378)"><stop offset="0" style="stop-color:rgb(250,175,64);stop-opacity:1"/><stop offset="0.28" style="stop-color:rgb(250,171,61);stop-opacity:1"/><stop offset="0.57" style="stop-color:rgb(252,158,52);stop-opacity:1"/><stop offset="0.87" style="stop-color:rgb(254,138,38);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(255,126,30);stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>
