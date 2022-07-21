@@ -10,7 +10,7 @@ const BreakLine = ({ exec, idx }) => {
       {(idx !== 0 && idx % 4 === 0) && <span className={styles.line} />}
       <div className={styles.execs}>
         <ExecMember
-          src={execResolver(exec.src).default}
+          src={execResolver(exec.src)}
           width={exec.width}
           height={exec.height}
           name={exec.name}

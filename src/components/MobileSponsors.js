@@ -25,7 +25,7 @@ const MobileSponsors = props => {
                 className={idx < 4 ? styles.goldSponsors : styles.sponsors}
               >
                 <Sponsor
-                  src={sponsorResolver(getSrc(sponsor)).default}
+                  src={sponsorResolver(getSrc(sponsor))}
                   name={sponsor.name}
                   width={
                     window.innerWidth < 600 && sponsor.mobileWidth

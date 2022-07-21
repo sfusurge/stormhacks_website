@@ -12,7 +12,7 @@ const MobileExecs = props => {
         {execs.map(exec => (
           <div className={styles.execs} key={exec.name}>
             <ExecMember
-              src={execResolver(exec.src).default}
+              src={execResolver(exec.src)}
               width={exec.width}
               height={exec.height}
               name={exec.name}

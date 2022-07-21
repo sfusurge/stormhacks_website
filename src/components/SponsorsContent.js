@@ -28,7 +28,7 @@ const SponsorsContent = props => {
                 id={styles[sponsor.title]}
               >
                 <Sponsor
-                  src={sponsorResolver(getSrc(sponsor)).default}
+                  src={sponsorResolver(getSrc(sponsor))}
                   name={sponsor.name}
                   width={sponsor.width + 'px'}
                   link={sponsor.link}

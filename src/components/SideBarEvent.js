@@ -24,7 +24,7 @@ const SideBarEvents = props => {
             className={styles.links}
           >
             <div className={styles.innerContainer}>
-              <img src={eventResolver(getSrc(image)).default} alt={eventName} />
+              <img src={eventResolver(getSrc(image))} alt={eventName} />
               <div className={styles.eventDescription}>
                 <p className={styles.eventText}>{eventName}</p>
                 <p className={styles.eventText}>{eventTime}</p>

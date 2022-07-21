@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import toggleTheme from './utils/theme'
 
 
@@ -16,11 +16,9 @@ const App = () => {
   return (
     <div id={styles.app}>
       <Router>
-        <Switch>
-          <Route path="/">
-            <HomeToggle />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/" element={<HomeToggle />} />
+        </Routes>
       </Router>
     </div>
   )

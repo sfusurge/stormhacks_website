@@ -46,7 +46,7 @@ const PastEvents = props => {
             <img
               key={pic}
               className={styles[`img${i + 1}`]}
-              src={imageResolver(pic).default}
+              src={imageResolver(pic)}
               alt={`Surge pictures ${i + 1}_2020`}
             />
           ))}
@@ -57,7 +57,7 @@ const PastEvents = props => {
             <img
               key={pic}
               className={styles[`img${i + 1}_19`]}
-              src={imageResolver(pic).default}
+              src={imageResolver(pic)}
               alt={`Surge pictures ${i + 1}_2019`}
             />
           ))}
