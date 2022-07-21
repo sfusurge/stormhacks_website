@@ -11,7 +11,8 @@ Hosted by <a href="https://sfusurge.com/"><img src=".github/assets/surge.svg" he
 **Table of Contents:**
 
 - [Contributing](#contributing)
-   - [Setup](#setup)
+   - [Setup (The Easy Way)](#setup-the-easy-way)
+   - [Setup (The Hard Way)](#setup-the-hard-way)
    - [Development](#development)
    - [Workflow](#workflow)
 
@@ -21,7 +22,31 @@ Hosted by <a href="https://sfusurge.com/"><img src=".github/assets/surge.svg" he
 
 ## Contributing
 
-### Setup
+### Setup (The Easy Way)
+
+<details><summary><b>MacOS / Linux</b></summary><div>
+
+1. **Install nvm for Bash:** https://github.com/nvm-sh/nvm#installing-and-updating
+2. **Run the start script.**
+   ```bash
+   ./start.sh
+   ```
+
+</div></details>
+
+<details><summary><b>Windows</b></summary><div>
+
+1. **Install PowerShell.**
+2. **Install nvm for PowerShell:** https://github.com/aaronpowell/ps-nvm
+3. **Run the start script.**
+   ```bash
+   .\start.ps1
+   ```
+
+</div></details>
+
+
+### Setup (The Hard Way)
 
 1. **Clone the repository.**  
    
