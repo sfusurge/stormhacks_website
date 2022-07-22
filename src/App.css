@@ -1,0 +1,19 @@
+html, body, #root, .archive {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.archive {
+	display: flex;
+	flex-direction: column;
+}
+
+.archive-main {
+	flex: 1 1 auto;
+}
+
+.archive-main > article {
+	width: 100%;
+	height: 100%;
+}
