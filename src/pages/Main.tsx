@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 import Archive from "../archives";
 
 export interface MainProps {
@@ -14,7 +16,7 @@ export default function Main(props: MainProps) {
 				{props.archives.map(archive => {
 					return (
 						<li>
-							<a href={`/${archive.year}`} key={archive.year}>StormHacks {archive.year} Website</a>
+							<Link to={`/${archive.year}`} key={archive.year}>StormHacks {archive.year} Website</Link>
 						</li>
 					)
 				})}
