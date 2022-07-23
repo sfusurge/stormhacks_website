@@ -123,5 +123,24 @@ Run `npm start` to open a local dev server for the StormHacks website.
 
 ## Archives
 
-TODO
+Archives are hosted at the `archive.stormhacks.com` domain. Each site is built and served by Netlify, and wrapped inside an `<iframe>` for presentation on the archive website.
 
+|Year|Status|
+|:--|:--|
+|**[2021](https://archive.stormhacks.com/2021/)**|[![Netlify Status](https://api.netlify.com/api/v1/badges/fc4b6043-e750-49f7-8508-227fce824f38/deploy-status)](https://app.netlify.com/sites/stormhacks-archive-2021-internal/deploys)|
+
+### Creating Archives
+
+1. Check out final copy of the current website as a new `archives/[year]` branch.
+
+2. Modify the `index.html` page to include the following:
+   
+   ```html
+   <script src="https://archive.stormhacks.com/history-client.js"></script>
+   ```
+   
+   This script allows `react-router-dom` and browser navigation to work properly from within the presentation iframe.
+
+3. Create a Netlify site for this repo targeting the `archives/[year]` branch.
+
+4. Check out the `archives/site` branch and add the archive to the `src/archives.js` file.
