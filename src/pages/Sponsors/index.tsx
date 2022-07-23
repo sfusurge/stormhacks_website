@@ -58,7 +58,7 @@ const Sponsors = () => {
             >
               <div style={isMobile ? sponsor.mobileStyle : sponsor.style}>
                 <ImageLink
-                  src={sponsorResolver(sponsor.src).default}
+                  src={sponsorResolver(sponsor.src)}
                   alt={sponsor.name}
                   className={styles.sponsorImg}
                   link={sponsor.link}

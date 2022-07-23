@@ -103,7 +103,7 @@ const About = () => {
       <div className={styles.execGroup}>
         {execs.map(({ src, name, link }) => (
           <ImageLink
-            src={execResolver(src).default}
+            src={execResolver(src)}
             className={styles.headshot}
             alt={name}
             link={link}

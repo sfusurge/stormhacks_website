@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import styles from './App.module.scss'
 
 import ThemeProvider from './context/Theme'
@@ -21,23 +21,13 @@ function App() {
           <div className={styles.App}>
             <Router>
               <Nav />
-              <Switch>
-                <Route path="/" exact>
-                  <About />
-                </Route>
-                <Route path="/faq">
-                  <FAQ />
-                </Route>
-                <Route path="/schedule">
-                  <Schedule />
-                </Route>
-                <Route path="/sponsors">
-                  <Sponsors />
-                </Route>
-                <Route path="/themes">
-                  <Themes />
-                </Route>
-              </Switch>
+              <Routes>
+                <Route path="/" element={<About />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/schedule" element={<Schedule />} />
+                <Route path="/sponsors" element={<Sponsors />} />
+                <Route path="/themes" element={<Themes />} />
+              </Routes>
               <Footer />
             </Router>
           </div>
