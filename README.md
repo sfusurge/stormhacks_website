@@ -128,6 +128,7 @@ Archives are hosted at the `archive.stormhacks.com` domain. Each site is built a
 |Year|Status|
 |:--|:--|
 |**[2021](https://archive.stormhacks.com/2021/)**|[![Netlify Status](https://api.netlify.com/api/v1/badges/fc4b6043-e750-49f7-8508-227fce824f38/deploy-status)](https://app.netlify.com/sites/stormhacks-archive-2021-internal/deploys)|
+|**[2022](https://archive.stormhacks.com/2022/)**|[![Netlify Status](https://api.netlify.com/api/v1/badges/1fbaa297-4792-494a-b6d0-aec23050bd07/deploy-status)](https://app.netlify.com/sites/stormhacks-archive-2022-internal/deploys)|
 
 ### Creating Archives
 
