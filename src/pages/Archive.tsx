@@ -12,6 +12,9 @@ export interface ArchiveProps extends ArchiveInfo {
 }
 
 export default function Archive(props: ArchiveProps) {
+	const { pathname } = useLocation();
+	const splat = pathname.substring(`/${props.year}/`.length);
+
 	useEffect(() => {
 		// Change document title and the root path for the shared iframe history.
 		document.title = `${props.year} - StormHacks Archive`;
@@ -26,8 +29,18 @@ export default function Archive(props: ArchiveProps) {
 		};
 	});
 
-	const { pathname } = useLocation();
-	const splat = pathname.substring(`/${props.year}/`.length);
+	useEffect(()  => {
+		if (props.backgrounds != null) {
+			const background = props.backgrounds[`/${splat}`]
+				?? props.backgrounds['/'];
+
+			// Change the body background.
+			document.body.style.background = background;
+			return () => {
+				document.body.style.background = null;
+			};
+		}
+	});
 
 	return (
 		<div className={classes.archive}>
