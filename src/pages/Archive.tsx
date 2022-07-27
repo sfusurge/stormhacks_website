@@ -1,3 +1,5 @@
+import classes from "../styles/Page_Archive.module.css";
+
 import ArchiveInfo from "../archives";
 
 import ArchiveEmbed from "../components/ArchiveEmbed.tsx";
@@ -11,16 +13,26 @@ export interface ArchiveProps extends ArchiveInfo {
 
 export default function Archive(props: ArchiveProps) {
 	useEffect(() => {
+		// Change document title and the root path for the shared iframe history.
 		document.title = `${props.year} - StormHacks Archive`;
 		(window as any).frameHistory.base = props.year;
 	});
 
+	useEffect(()  => {
+		// Change the body styles.
+		document.body.classList.add(classes.body);
+		return () => {
+			document.body.classList.remove(classes.body);
+		};
+	});
+
 	const { pathname } = useLocation();
 	const splat = pathname.substring(`/${props.year}/`.length);
+
 	return (
-		<div className="archive">
+		<div className={classes.archive}>
 			{/*<ArchiveHeader {...props} />*/}
-			<main className="archive-main">
+			<main className={classes.archiveMain}>
 				<article>
 					<ArchiveEmbed {...props} site={props.site + splat} />
 				</article>

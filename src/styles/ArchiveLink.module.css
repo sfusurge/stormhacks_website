@@ -1,0 +1,23 @@
+.archiveLink {
+	display: inline-block;
+
+	box-sizing: border-box;
+	width: 100%;
+
+	border: var(--primary-inverted) 1px solid;
+	color: inherit;
+	text-decoration: none;
+
+	font-size: 4rem;
+	padding: 1px;
+}
+
+.archiveLink:hover,
+.archiveLink:focus {
+	border-width: 2px;
+	padding: 0;
+}
+
+.innerPadding {
+	padding: 6rem 1rem 1rem 1rem;
+}

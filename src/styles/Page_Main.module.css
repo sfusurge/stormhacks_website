@@ -1,0 +1,78 @@
+.body {
+	overflow: unset;
+}
+
+.main {
+	padding: 1em;
+}
+
+/* Header */
+.header {
+	display: flex;
+	align-items: center;
+
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+
+	margin-top: 0.5rem;
+	margin-bottom: 0;
+
+	/* Honestly, don't even ask. This just makes it scale nicely. */
+	/*                  largest size                              */
+	/*                     |              scaling size            */
+	/*                  vvvvvv              |                     */
+	/*                  vvvvvv            vvvv                    */
+	font-size: calc(min(3.5rem, max(1rem, 11vw)));
+	line-height: calc(min(3.5rem, max(1rem, 11vw)));
+}
+
+.header svg {
+	margin-left: 0.5ch;
+}
+
+/* Subheader */
+.subheader {
+	font-family: 'Switzer', sans-serif;
+	text-transform: uppercase;
+}
+
+.subheader a {
+	display: inline-flex;
+	align-items: center;
+}
+
+/* Make SVGs Nice */
+.header svg,
+.subheader svg {
+	height: 1em;
+	width: auto;
+	fill: currentColor;
+}
+
+/* Links */
+.subheader a {
+	color: var(--primary-inverted);
+	text-decoration: none;
+	border-bottom: var(--primary-inverted) 1px solid;
+}
+
+.subheader a > svg {
+	margin-left: 0.5ch;
+	height: 0.8em;
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	list-style: none;
+	padding: 0;
+}
+
+.links li {
+	display: block;
+	width: calc(max(min(100vw - 2rem, 475px), 75%)); /* Again, scaling. */
+
+	margin-top: 1.5rem;
+}
+
