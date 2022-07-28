@@ -80,6 +80,7 @@
 /* Fancy Animated Link Hover */
 a.swipeLink {
 	border-bottom: var(--primary-inverted) 1px solid;
+	transition: color var(--transition-time) linear;
 }
 
 a.swipeLink > * {
@@ -87,13 +88,19 @@ a.swipeLink > * {
 }
 
 a.swipeLink::before {
-	position: absolute;
 	content: '';
-	
-	height: 0;
+
+	position: absolute;
+	bottom: -1px;
+	left: -0.1em;
+	right: -0.1em;
+	height: 1px;
+
 	z-index: 1;
 	will-change: height;
 	transition: height var(--transition-time) linear;
+	
+	background: var(--primary-inverted);
 }
 
 a.swipeLink:hover,
@@ -104,10 +111,5 @@ a.swipeLink:focus {
 
 a.swipeLink:hover::before,
 a.swipeLink:focus::before {
-	background: var(--primary-inverted);
-
-	bottom: -1px;
-	left: -0.1em;
-	right: -0.1em;
 	height: calc(100% + 1px);
 }
