@@ -9,13 +9,17 @@
 	text-decoration: none;
 
 	font-size: 4rem;
-	padding: 1px;
+
+	will-change: color, background;
+	transition: color, background var(--transition-time) linear;
 }
 
 .archiveLink:hover,
 .archiveLink:focus {
-	border-width: 2px;
-	padding: 0;
+	opacity: unset;
+
+	color: var(--primary);
+	background: var(--primary-inverted);
 }
 
 .innerPadding {
