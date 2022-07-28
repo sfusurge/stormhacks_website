@@ -28,8 +28,8 @@ export default function Main(props: MainProps) {
 				</h1>
 				<div className={classes.subheader}>
 					Hosted by {' '}
-					<a href="https://sfusurge.com">
-						SFU SURGE
+					<a href="https://sfusurge.com" className={classes.swipeLink}>
+						<span>SFU SURGE</span>
 						<SurgeIcon/>
 					</a>
 				</div>

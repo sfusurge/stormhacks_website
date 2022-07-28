@@ -39,7 +39,9 @@
 .subheader a {
 	display: inline-flex;
 	align-items: center;
+	position: relative;
 }
+
 
 /* Make SVGs Nice */
 .header svg,
@@ -53,7 +55,6 @@
 .subheader a {
 	color: var(--primary-inverted);
 	text-decoration: none;
-	border-bottom: var(--primary-inverted) 1px solid;
 }
 
 .subheader a > svg {
@@ -76,3 +77,37 @@
 	margin-top: 1.5rem;
 }
 
+/* Fancy Animated Link Hover */
+a.swipeLink {
+	border-bottom: var(--primary-inverted) 1px solid;
+}
+
+a.swipeLink > * {
+	z-index: 2;
+}
+
+a.swipeLink::before {
+	position: absolute;
+	content: '';
+	
+	height: 0;
+	z-index: 1;
+	will-change: height;
+	transition: height var(--transition-time) linear;
+}
+
+a.swipeLink:hover,
+a.swipeLink:focus {
+	color: var(--primary);
+	opacity: unset;
+}
+
+a.swipeLink:hover::before,
+a.swipeLink:focus::before {
+	background: var(--primary-inverted);
+
+	bottom: -1px;
+	left: -0.1em;
+	right: -0.1em;
+	height: calc(100% + 1px);
+}
