@@ -52,13 +52,51 @@ if [ -f ".nvmrc" ]; then
 	}
 fi
 
-# Install dependencies if node_module does not yet exist.
-if ! [ -d "node_modules" ]; then
+# Function to get a checksum of the dependencies.
+get_dependency_checksum() {
+	local dependencies
+	dependencies="$(cat package.json)"
+
+	# If jq is installed, we can extract the dependencies specifically.
+	if command -v jq &>/dev/null; then
+		dependencies="$(jq '
+			.dependencies + .devDependencies
+				| to_entries
+				| sort_by(.key)
+				| unique_by(.key)
+				| from_entries
+		' <<< "$dependencies")"
+	fi
+
+	# Generate a checksum of the dependencies.
+	if command -v sha256sum &>/dev/null; then
+		sha256sum <<< "$dependencies" | cut -d' ' -f1
+		return $?
+	fi
+
+	shasum -a 256 <<< "$dependencies" | cut -d' ' -f1
+	return $?
+}
+
+# Install dependencies if node_modules is outdated/not installed.
+dependencies_need_updating=false
+if ! [ -d "node_modules" ] || ! [ -f ".dependencies.sha256" ]; then
+	dependencies_need_updating=true
 	echo "Installing required dependencies..."
+fi
+
+if ! "$dependencies_need_updating" && [ "$(get_dependency_checksum)" != "$(cat .dependencies.sha256)" ]; then
+	dependencies_need_updating=true
+	echo "Installing updated dependencies..."
+fi
+
+if "$dependencies_need_updating"; then
 	npm install	|| {
 		echo "Unable to install dependencies"
 		exit 1
 	}
+
+	get_dependency_checksum > .dependencies.sha256
 fi
 
 # Run the start script.
