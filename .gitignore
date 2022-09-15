@@ -23,3 +23,6 @@ yarn-error.log*
 # tools 
 .idea
 .vscode
+
+# scripts
+.dependencies.sha256
