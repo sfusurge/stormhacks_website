@@ -5,6 +5,24 @@ set -euo pipefail
 
 # Remove the prefix from .npmrc temporarily.
 if [ -f "$HOME/.npmrc" ]; then
+
+	# Check if there was a leftover .npmrc backup from this script.
+	if [ -f "$HOME/.npmrc.if_i_exist_replace_original_with_me" ]; then
+		diff_from_original="$(
+			{ diff -d "$HOME/.npmrc" "$HOME/.npmrc.if_i_exist_replace_original_with_me" || true; } \
+			| grep '^> \|^< '
+		)"
+
+		if [ $(wc -l <<< "$diff_from_original") -eq 1 ] && grep '^> prefix=' <<< "$diff_from_original" &>/dev/null; then
+			mv "$HOME/.npmrc.if_i_exist_replace_original_with_me" "$HOME/.npmrc"
+		else
+			echo "error: It appears that this script did not exit cleanly last time." 1>&2
+			echo "       Please restore your ~/.npmrc from ~/.npmrc.if_i_exist_replace_original_with_me" 1>&2
+			exit 10
+		fi
+	fi
+
+	# Check if .npmrc contains a prefix change.
 	if grep "^prefix=" "$HOME/.npmrc" &>/dev/null; then
 		echo "Your .npmrc file has a prefix. It will be removed while this script is running."
 
