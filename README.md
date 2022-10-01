@@ -95,6 +95,7 @@ To open the workspace, open the `Stormhacks.code-workspace` folder through your 
    
    > **Commit Policy:**  
    > 
+   > - Run `npm run format` before adding files to the commit.
    > - Each commit should be buildable by itself.
    > - Each commit should (ideally) be one change.
    > - Commit messages should be descriptive. 

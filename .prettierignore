@@ -1,0 +1,12 @@
+.github
+.vscode
+
+# npm
+node_modules
+.package.json
+.package-lock.json
+
+# configuration
+tsconfig.json
+.eslintrc
+.prettierrc
