@@ -25,6 +25,7 @@
 		"@types/react": "^18.0.21",
 		"@types/react-dom": "^18.0.6",
 		"craco": "^0.0.3",
+		"eslint-plugin-prettier": "^4.2.1",
 		"prettier": "^2.7.1",
 		"react-app-alias": "^2.2.2",
 		"sass": "^1.55.0",
@@ -35,7 +36,8 @@
 		"build": "craco build",
 		"test": "craco test",
 		"eject": "craco eject",
-		"format": "prettier -w --config=.prettierrc src public"
+		"format": "prettier -w --config=.prettierrc src public",
+		"lint": "eslint src --max-warnings=0 --exit-on-fatal-error"
 	},
 	"eslintConfig": {
 		"extends": [
