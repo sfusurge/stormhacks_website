@@ -14,6 +14,10 @@ inputs:
     description: "Install code formatters"
     required: false
     default: "false"
+  install_linters:
+    description: "Install code linters"
+    required: false
+    default: "false"
 
 runs:
   using: "composite"
@@ -36,6 +40,18 @@ runs:
         bash "${GITHUB_ACTION_PATH}/npm-install-only.sh" \
           prettier \
           @sfusurge/prettier-config
+
+    - name: Install linters
+      if: ${{ inputs.minimal == 'true' && inputs.install_linters == 'true' }}
+      shell: bash
+      env:
+        NODE_AUTH_TOKEN: ${{ inputs.github_token }}
+      run: |
+        echo "==> Installing eslint"
+        bash "${GITHUB_ACTION_PATH}/npm-install-only.sh" \
+          eslint @sfusurge/eslint-config \
+          prettier @sfusurge/prettier-config \
+          react
 
     - name: Restore package.json
       shell: bash
