@@ -24,6 +24,7 @@
 		"@types/react": "^18.0.21",
 		"@types/react-dom": "^18.0.6",
 		"craco": "^0.0.3",
+		"prettier": "^2.7.1",
 		"react-app-alias": "^2.2.2",
 		"sass": "^1.55.0",
 		"typescript": "^4.8.4"
@@ -32,7 +33,8 @@
 		"start": "craco start",
 		"build": "craco build",
 		"test": "craco test",
-		"eject": "craco eject"
+		"eject": "craco eject",
+		"format": "prettier -w --config=.prettierrc src public"
 	},
 	"eslintConfig": {
 		"extends": [
