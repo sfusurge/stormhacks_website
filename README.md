@@ -14,6 +14,7 @@ Hosted by <a href="https://sfusurge.com/"><img src=".github/assets/surge.svg" he
    - [Setup (The Easy Way)](#setup-the-easy-way)
    - [Setup (The Hard Way)](#setup-the-hard-way)
    - [Development](#development)
+      - [VS Code](#vs-code)
    - [Workflow](#workflow)
 
 
@@ -72,6 +73,12 @@ Hosted by <a href="https://sfusurge.com/"><img src=".github/assets/surge.svg" he
 ### Development
 
 Run `npm start` to open a local dev server for the StormHacks website.
+
+#### VS Code
+
+If you prefer using Visual Studio Code for development, this repository contains an already-configured workspace with recommended folder layouts and settings.
+
+To open the workspace, open the `Stormhacks.code-workspace` folder through your file browser, or with `File: Open Workspace from File...` in the VS Code command palette.
 
 ### Workflow
 
