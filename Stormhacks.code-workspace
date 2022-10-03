@@ -37,6 +37,7 @@
 			"src/app": true,
 			"src/pages": true,
 			"src/components": true,
+			"src/assets": true,
 			"public": true,
 		},
 		
