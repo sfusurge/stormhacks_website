@@ -12,5 +12,18 @@
 	"arrowParens": "always",
 	"proseWrap": "preserve",
 	"htmlWhitespaceSensitivity": "strict",
-	"endOfLine": "lf"
+	"endOfLine": "lf",
+
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true,
+	"importOrder": [
+		"<THIRD_PARTY_MODULES>",
+		"^(react|recoil)(-.*)?(/.*)?$",
+		"^(\\$surge|surge-.*)(/.*)?$",
+		"^~(/.*)?$",
+		"^\\$page/(.*)$",
+		"^\\$asset/(.*)$",
+		"^[./](.*)\\.(ts|js)x?$",
+		"^[./]"
+	]
 }
