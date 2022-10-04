@@ -1,10 +1,5 @@
-const {CracoAliasPlugin} = require('react-app-alias');
+const surge = require("@sfusurge/craco-config");
 
-module.exports = {
-	plugins: [
-		{
-			plugin: CracoAliasPlugin,
-			options: {}
-		}
-	]
-};
+module.exports = surge({
+	// ...
+});
