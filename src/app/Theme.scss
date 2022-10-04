@@ -1,0 +1,10 @@
+body {
+	@include for-theme("dark") {
+		--primary: #222654;
+		--accent: #d0d0d0;
+	}
+	@include for-theme("light") {
+		--primary: #5A60F3;
+		--accent: #fff;
+	}
+}

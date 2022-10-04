@@ -1,0 +1,30 @@
+.info {
+	font-size: 1.2em;
+
+	margin-bottom: 1em;
+
+	@include for-mobile {
+		> div {
+			display: inline;
+		}
+	}
+}
+
+.link {
+}
+
+.stormy {
+	margin-top: 4rem;
+	margin-bottom: 2rem;
+
+	> svg {
+		width: 200px;
+		height: auto;
+		min-height: 0;
+	}
+
+	@include for-mobile {
+		margin-top: 3rem;
+		text-align: center;
+	}
+}

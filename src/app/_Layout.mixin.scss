@@ -1,0 +1,50 @@
+$layout-mobile-width: 600px;
+
+/**
+ * Applies only for the given layout.
+ * @param $layout The layout name. ("desktop", "mobile", "print")
+ */
+@mixin for-layout($layout) {
+	@if $layout == "desktop" {
+		@media screen and (min-width: $layout-mobile-width) {
+			@content;
+		}
+	} @else if $layout == "mobile" {
+		@media screen and (max-width: $layout-mobile-width) {
+			@content;
+		}
+	} @else if $layout == "print" {
+		@media print {
+			@content;
+		}
+	} @else {
+		@error "Unknown layout type: #{layout}";
+	}
+}
+
+/**
+ * Applies only for mobile devices.
+ */
+@mixin for-mobile {
+	@include for-layout("mobile") {
+		@content;
+	}
+}
+
+/**
+ * Applies only for desktop devices.
+ */
+@mixin for-desktop {
+	@include for-layout("desktop") {
+		@content;
+	}
+}
+
+/**
+ * Applies only for printing.
+ */
+@mixin for-print {
+	@include for-layout("desktop") {
+		@content;
+	}
+}

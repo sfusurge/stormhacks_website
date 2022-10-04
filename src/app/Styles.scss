@@ -1,0 +1,17 @@
+// Set the color based on the current theme.
+body {
+	background: var(--primary);
+	color: var(--accent);
+
+	font-family: "Barlow", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+		"Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+// Set the padding based on the layout.
+main {
+	padding: 4rem;
+
+	@include for-mobile {
+		padding: 1.8rem;
+	}
+}

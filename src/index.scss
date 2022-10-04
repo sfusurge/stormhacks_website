@@ -1,0 +1,30 @@
+// Globally apply box-sizing to make it easier to work with paddings.
+* {
+	box-sizing: border-box;
+}
+
+// Prevent the user-agent overrides for visited links.
+a:link,
+a:visited {
+	color: inherit;
+}
+
+// Make the body and root expand to be at least as tall as the viewport.
+html {
+	height: 100%;
+}
+
+body,
+#root {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	min-height: 100%;
+	margin: 0;
+}
+
+// Default font.
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

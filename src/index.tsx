@@ -1,14 +1,40 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import { ThemeProvider } from "@sfusurge/react-theme-utils";
 
-import App from "./App";
-import "./index.css";
+import React, { ReactNode } from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import { RecoilRoot } from "recoil";
+
+import Routes from "./app/Routes";
+import "./app/Styles.scss";
+import "./app/Theme.scss";
+import "./index.scss";
+import "./localization";
 import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+const rootElement = document.getElementById("root") as HTMLElement;
+const root = ReactDOM.createRoot(rootElement);
+
+/**
+ * Sets up the application within the root.
+ *
+ * @param children The children of the application.
+ */
+function Setup({ children }: { children: ReactNode }) {
+	return (
+		<RecoilRoot>
+			<ThemeProvider />
+			<BrowserRouter>{children}</BrowserRouter>
+		</RecoilRoot>
+	);
+}
+
+// Render the root.
 root.render(
 	<React.StrictMode>
-		<App />
+		<Setup>
+			<Routes />
+		</Setup>
 	</React.StrictMode>
 );
 
