@@ -61,8 +61,21 @@ Hosted by <a href="https://sfusurge.com/"><img src=".github/assets/surge.svg" he
    - [Fish Shell](https://github.com/jorgebucaran/nvm.fish)
    - [PowerShell](https://github.com/aaronpowell/ps-nvm) (Windows)
 
-   
-3. **Install development dependencies.**  
+3. **Log in to GitHub Packages with NPM**
+
+   Create a [Personal Access Token] for your GitHub account, then log in to the registry by running the following account
+
+   ```bash
+   npm login --registry=https://npm.pkg.github.com
+   ```
+
+   > ```
+   > Username: YOUR-GITHUB-USERNAME 
+   > Password: ghp_xxxx
+   > Email: YOUR-GITHUB-EMAIL
+   > ```
+
+4. **Install development dependencies.**  
    
    ```bash
    nvm use
