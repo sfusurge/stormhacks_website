@@ -16,16 +16,15 @@
 		"web-vitals": "^2.1.4"
 	},
 	"devDependencies": {
+		"@sfusurge/prettier-config": "^1.0.2",
 		"@testing-library/jest-dom": "^5.16.5",
 		"@testing-library/react": "^13.4.0",
 		"@testing-library/user-event": "^13.5.0",
-		"@trivago/prettier-plugin-sort-imports": "^3.3.0",
 		"@types/jest": "^27.5.2",
 		"@types/node": "^16.11.62",
 		"@types/react": "^18.0.21",
 		"@types/react-dom": "^18.0.6",
 		"craco": "^0.0.3",
-		"eslint-plugin-prettier": "^4.2.1",
 		"prettier": "^2.7.1",
 		"react-app-alias": "^2.2.2",
 		"sass": "^1.55.0",
@@ -36,7 +35,7 @@
 		"build": "craco build",
 		"test": "craco test",
 		"eject": "craco eject",
-		"format": "prettier -w --config=.prettierrc src public",
+		"format": "prettier -w src public",
 		"lint": "eslint src --max-warnings=0 --exit-on-fatal-error"
 	},
 	"eslintConfig": {
@@ -56,5 +55,6 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
-	}
+	},
+	"prettier": "@sfusurge/prettier-config"
 }
