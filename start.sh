@@ -96,6 +96,17 @@ get_dependency_checksum() {
 	return $?
 }
 
+# Log in to the GitHub Packages registry.
+if ! [ -f "$HOME/.npmrc" ] || ! grep '^//npm.pkg.github.com/:_authToken=' "$HOME/.npmrc" &>/dev/null; then
+	printf "\n\x1B[34mYou need to log in to the GitHub Packages registry.\x1B[0m\n"
+	printf "Please visit \x1B[34m%s\x1B[0m and generate a personal access token to use as your password.\n" \
+		"https://github.com/settings/tokens"
+
+	npm login --registry="https://npm.pkg.github.com"
+
+	printf "\n"
+fi
+
 # Install dependencies if node_modules is outdated/not installed.
 dependencies_need_updating=false
 if ! [ -d "node_modules" ] || ! [ -f ".dependencies.sha256" ]; then
