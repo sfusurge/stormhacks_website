@@ -6,6 +6,12 @@
 	"typescript.format.semicolons": "insert",
 	"typescript.preferences.quoteStyle": "double",
 
+	// Don't show formatting warnings in the IDE.
+	"eslint.rules.customizations": [
+		{ "rule": "prettier/*", "severity": "off"}
+	],
+
+	// Don't show build files or dependencies.
 	"files.exclude": {
 		".idea/**": true,
 		".dependencies.sha256": true,
