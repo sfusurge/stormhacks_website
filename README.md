@@ -93,6 +93,19 @@ If you prefer using Visual Studio Code for development, this repository contains
 
 To open the workspace, open the `Stormhacks.code-workspace` folder through your file browser, or with `File: Open Workspace from File...` in the VS Code command palette.
 
+#### IntelliJ / WebStorm
+
+All the settings required for development with IntelliJ-platform IDEs are included, but you need to do a tiny bit of setup first:
+
+1. Associate `tsconfig.paths.json` with the `TypeScript config` file type.  
+   Go to *Settings -> Editor -> File Types -> TypeScript config* and add  `tsconfig.paths.json` as a file name pattern.
+
+2. Enable `eslint`.  
+   Go to *Settings -> Languages & Frameworks -> JavaScript -> Code Quality Tools -> ESLint* and select "Manual ESLint configuration".
+
+3. If you don't already have the Prettier plugin installed, please install it.
+
+
 ### Workflow
 
 1. **Checkout the latest `main` branch and create a feature branch.**

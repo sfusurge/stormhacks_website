@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Website" pattern="(file[App]:*/||file[Bundled Assets]:*/||file[Pages]:*/||file[Static Assets]:*/||file[Repository]:src/*)&amp;&amp;!file:*.code-workspace&amp;&amp;!file[Repository]:build/*&amp;&amp;!file[Repository]:.vscode/*" />
+</component>
