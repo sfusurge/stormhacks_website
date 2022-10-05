@@ -1,4 +1,5 @@
 {
+	"extends": "@sfusurge/typescript-config",
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
