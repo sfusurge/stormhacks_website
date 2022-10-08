@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/Components.iml" filepath="$PROJECT_DIR$/.idea/Components.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Bundled Assets.iml" filepath="$PROJECT_DIR$/.idea/Bundled Assets.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Static Assets.iml" filepath="$PROJECT_DIR$/.idea/Static Assets.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Translations.iml" filepath="$PROJECT_DIR$/.idea/Translations.iml" />
     </modules>
   </component>
 </project>
