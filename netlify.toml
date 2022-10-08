@@ -1,0 +1,18 @@
+[build]
+base = "."
+publish = "build/"
+command = "npm run build"
+
+# Redirect from Netlify domain to public domain.
+[[redirects]]
+from = "https://stormhacks.netlify.app/*"
+to = "https://stormhacks.com/:splat"
+status = 301
+force = true
+
+# Serve everything to the index.
+# We route internally with react-router-dom.
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
