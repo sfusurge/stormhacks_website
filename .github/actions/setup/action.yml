@@ -23,6 +23,7 @@ runs:
       shell: bash
       env:
         NODE_AUTH_TOKEN: ${{ inputs.node_auth_token }}
+        NODE_AUTH_TOKEN_GITHUB: ${{ inputs.node_auth_token }}
       run: |
         echo "==> Installing Build Tools"
         npm install
