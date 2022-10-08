@@ -18,12 +18,12 @@ jobs:
       - name: Setup
         uses: ./.github/actions/setup
         with:
-          github_token: "${{ secrets.GITHUB_TOKEN }}"
+          node_auth_token: "${{ secrets.NODE_AUTH_TOKEN_GITHUB || secrets.GITHUB_TOKEN }}"
       
       - name: Test
         uses: mattallty/jest-github-action@12c8c9a48ae4543fdcf5faa4d126e922d69783a8
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         with:
           test-command: "npm test"
           coverage-comment: ${{ github.event.issue.pull_request && true || false }}

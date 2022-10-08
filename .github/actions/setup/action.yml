@@ -3,21 +3,9 @@ author: "eth-p"
 description: "A reusable action for setting up linting jobs."
 
 inputs:
-  github_token:
+  node_auth_token:
     description: "The GITHUB_TOKEN"
     required: true
-  minimal:
-    description: "Only install a minimal subset of tools"
-    required: false
-    default: "false"
-  install_formatters:
-    description: "Install code formatters"
-    required: false
-    default: "false"
-  install_linters:
-    description: "Install code linters"
-    required: false
-    default: "false"
 
 runs:
   using: "composite"
@@ -28,46 +16,13 @@ runs:
         node-version-file: ".nvmrc"
         registry-url: 'https://npm.pkg.github.com'
         scope: 'sfusurge'
-        token: "${{ inputs.github_token }}"
-
-    - name: Install formatters
-      if: ${{ inputs.minimal == 'true' && inputs.install_formatters == 'true' }}
-      shell: bash
-      env:
-        NODE_AUTH_TOKEN: ${{ inputs.github_token }}
-      run: |
-        echo "==> Installing Prettier"
-        bash "${GITHUB_ACTION_PATH}/npm-install-only.sh" \
-          prettier \
-          @sfusurge/prettier-config
-
-    - name: Install linters
-      if: ${{ inputs.minimal == 'true' && inputs.install_linters == 'true' }}
-      shell: bash
-      env:
-        NODE_AUTH_TOKEN: ${{ inputs.github_token }}
-      run: |
-        echo "==> Installing eslint"
-        bash "${GITHUB_ACTION_PATH}/npm-install-only.sh" \
-          eslint @sfusurge/eslint-config \
-          prettier @sfusurge/prettier-config \
-          react
-
-    - name: Restore package.json
-      shell: bash
-      env:
-        NODE_AUTH_TOKEN: ${{ inputs.github_token }}
-      run: |
-        if test -f "_package.json"; then
-          mv _package.json package.json
-          mv _package-lock.json package-lock.json
-        fi
+        token: "${{ inputs.node_auth_token }}"
 
     - name: Install full build tools
       if: ${{ inputs.minimal != 'true' }}
       shell: bash
       env:
-        NODE_AUTH_TOKEN: ${{ inputs.github_token }}
+        NODE_AUTH_TOKEN: ${{ inputs.node_auth_token }}
       run: |
         echo "==> Installing Build Tools"
         npm install
