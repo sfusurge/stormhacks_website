@@ -9,36 +9,24 @@
 	},
 	"private": true,
 	"dependencies": {
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-router-dom": "^6.4.1",
-		"react-scripts": "5.0.1",
 		"web-vitals": "^2.1.4"
 	},
 	"devDependencies": {
-		"@sfusurge/craco-config": "^1.0.2",
-		"@sfusurge/eslint-config": "^1.0.2",
-		"@sfusurge/prettier-config": "^1.0.2",
-		"@sfusurge/typescript-config": "^1.0.3",
-		"@testing-library/jest-dom": "^5.16.5",
-		"@testing-library/react": "^13.4.0",
-		"@testing-library/user-event": "^13.5.0",
-		"@types/jest": "^27.5.2",
-		"@types/node": "^16.11.62",
-		"@types/react": "^18.0.21",
-		"@types/react-dom": "^18.0.6",
-		"craco": "^0.0.3",
-		"prettier": "^2.7.1",
-		"sass": "^1.55.0",
-		"typescript": "^4.8.4"
+		"@sfusurge/surge-scripts": "^2.0.2",
+		"@sfusurge/typescript-react-site": "^2.0.2"
+	},
+	"peerDependencies": {
+		"react": "*",
+		"react-dom": "*",
+		"react-router-dom": "*",
+		"typescript": "*"
 	},
 	"scripts": {
-		"start": "craco start",
-		"build": "craco build",
-		"test": "craco test",
-		"eject": "craco eject",
-		"format": "prettier -w src public",
-		"lint": "eslint src --max-warnings=0 --exit-on-fatal-error"
+		"start": "surge-scripts start",
+		"build": "surge-scripts build",
+		"test": "surge-scripts test",
+		"format": "surge-scripts format src public",
+		"lint": "surge-scripts lint --max-warnings=0 --exit-on-fatal-error src"
 	},
 	"eslintConfig": {
 		"extends": [

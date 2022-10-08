@@ -1,5 +1,5 @@
 {
-	"extends": "@sfusurge/typescript-config",
+	"extends": "@sfusurge/typescript-react-site",
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
