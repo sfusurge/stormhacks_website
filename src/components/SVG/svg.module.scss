@@ -1,0 +1,20 @@
+.inline {
+	position: relative;
+	display: inline-block;
+
+	> svg {
+		height: 0.7em;
+		width: auto;
+	}
+
+	// Hack to add text-decoration to the SVG.
+	:link &::before {
+		content: "\00A0";
+		overflow: hidden;
+		position: absolute;
+		text-decoration: underline;
+		right: -1px;
+		left: -1px;
+		letter-spacing: 1000px;
+	}
+}
