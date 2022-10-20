@@ -1,7 +1,10 @@
-import React from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
-import { ReactComponent as Stormy } from "$asset/stormy.svg";
+import Page from "~/Page";
+import { InlineSVG } from "~/SVG";
+import { Surge } from "~/Surge";
+
+import { ReactComponent as StormHacksIcon } from "$asset/stormhacks-icon.svg";
 
 import Styles from "./Placeholder.module.scss";
 
@@ -11,19 +14,37 @@ import Styles from "./Placeholder.module.scss";
 function Placeholder() {
 	const { t } = useTranslation();
 	return (
-		<main>
-			<div className={Styles.stormy}>
-				<Stormy />
-			</div>
-			<div className={Styles.info}>
-				<div>{t("placeholder.main")} </div>
-				<div>{t("placeholder.timeline")} </div>
-				<div>{t("placeholder.thanks")} </div>
-			</div>
-			<div className={Styles.link}>
-				<a href={"https://archive.stormhacks.com/"}>{t("visitArchive")}</a>
-			</div>
-		</main>
+		<Page>
+			{/* Hosted By SFU Surge */}
+			<aside>
+				<div className={Styles.hostedBy}>
+					<Trans
+						i18nKey={"placeholder.hosted-by"}
+						components={{
+							surge: <Surge hasLink hasIcon />,
+						}}
+					/>
+				</div>
+			</aside>
+
+			{/* Header */}
+			<header className={Styles.header}>
+				<h1>
+					{t("brand.stormhacks")} <InlineSVG svg={StormHacksIcon} />
+				</h1>
+				<h2>{t("brand.stormhacks-slogan")}</h2>
+			</header>
+
+			{/* Body */}
+			<main className={Styles.main}>
+				<div className={Styles.message}>
+					<div>{t("placeholder.message")} </div>
+				</div>
+				<div className={Styles.archiveLink}>
+					<a href={"https://archive.stormhacks.com/"}>{t("placeholder.visit-archive")}</a>
+				</div>
+			</main>
+		</Page>
 	);
 }
 

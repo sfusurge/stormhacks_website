@@ -1,8 +1,12 @@
 {
-	"placeholder": {
-		"main": "The StormHacks 2023 website construction is underway.",
-		"timeline": "We're aiming to be done by mid-February 2023.",
-		"thanks": "When everything is ready, this page will be updated."
+	"brand": {
+		"surge": "SFU Surge",
+		"stormhacks": "StormHacks",
+		"stormhacks-slogan": "SFU's Premier Hackathon"
 	},
-	"visitArchive": "To see previous years' StormHacks websites, click here."
+	"placeholder": {
+		"message": "The StormHacks 2023 website construction is underway. We're aiming to be done by mid-February 2023. When everything is ready, this page will be updated.",
+		"hosted-by": "Hosted by <surge/>",
+		"visit-archive": "View our previous sites"
+	}
 }
