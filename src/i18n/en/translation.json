@@ -13,7 +13,8 @@
 	"header": {
 		"link": {
 			"faq": "FAQ",
-			"sponsors": "Sponsors"
+			"sponsors": "Sponsors",
+			"about-us": "About Us"
 		},
 		"button": {
 			"apply": "Apply Now"

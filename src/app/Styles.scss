@@ -1,20 +1,48 @@
 // Set the color based on the current theme.
 body {
-	background-color: var(--page-background-color);
-	background: var(--page-background-gradient);
-	background-size: 100vw calc(max(3000px, 100vh)); // Ensure the gradient is large enough.
+	background: var(--header-background);
 	color: var(--text);
 
 	@include font-primary;
+}
+
+#root {
+	background-color: var(--page-background-color);
+	background: var(--page-background-gradient);
+	background-size: 100vw calc(max(3000px, 100vh)); // Ensure the gradient is large enough.
+}
+
+body {
+	--animation-fast: 0.05s;
+	--animation-slow: 0.2s;
+
+	@media (prefers-reduced-motion) {
+		--animation-fast: 0s;
+		--animation-slow: 0s;
+	}
 }
 
 // Size Variables
 body {
 	--width-limited-size: 1000px;
 
-	--size-large: 1rem;
-	--size-medium: 0.5rem;
-	--size-small: 0.25rem;
+	--size-larger: 3rem;
+	--size-large: 2rem;
+	--size-medium: 1rem;
+	--size-small: 0.8rem;
+	--size-smaller: 0.5rem;
+
+	--header-link-spacing: 1rem;
+
+	@include for-mobile {
+		--size-larger: 1.4rem;
+		--size-large: 1.4rem;
+		--size-medium: 0.6rem;
+		--size-small: 0.3rem;
+		--size-smaller: 0.3rem;
+
+		--header-link-spacing: 0.5rem;
+	}
 }
 
 // Limited width pages.
@@ -22,5 +50,6 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 
-	width: calc(min(100vw, var(--width-limited-size)));
+	width: 100%;
+	max-width: var(--width-limited-size);
 }

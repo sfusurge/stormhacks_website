@@ -1,0 +1,148 @@
+.header {
+	position: relative;
+	background: var(--header-background);
+
+	--padding: var(--size-small) var(--size-larger);
+	--padding-side: var(--size-small);
+	@include for-mobile {
+		--padding: var(--size-smaller);
+		--padding-side: var(--size-medium);
+	}
+
+	// Disable selecting link text.
+	@include select-disabled;
+
+	// Sticky header for desktop.
+	@include for-desktop {
+		position: sticky;
+		top: 0;
+	}
+
+	// Scrollable header for mobile.
+	@include for-mobile {
+		overflow-x: auto;
+		overflow-y: hidden;
+		-webkit-overflow-scrolling: touch;
+
+		// Prevent word wrapping.
+		.headerContents a,
+		.headerContents button {
+			word-wrap: normal;
+			word-break: keep-all;
+			white-space: nowrap;
+		}
+
+		// Sticky items.
+		.headerStickyLeft,
+		.headerStickyRight {
+			position: sticky;
+			background: var(--header-background);
+		}
+
+		.headerStickyLeft,
+		.headerStickyLeft::before {
+			left: 0;
+			--shadow-offset: 2px;
+		}
+
+		.headerStickyRight,
+		.headerStickyRight::before {
+			right: 0;
+			--shadow-offset: -2px;
+		}
+
+		// Indicators for each side being scrollable.
+		.headerStickyLeft::before,
+		.headerStickyRight::before {
+			position: absolute;
+			top: 0;
+
+			z-index: 2;
+			width: 1px;
+			height: 100%;
+
+			content: "";
+		}
+
+		&[data-scrollable-left="yes"] .headerStickyLeft::before,
+		&[data-scrollable-right="yes"] .headerStickyRight::before {
+			background: var(--header-scrollable-color);
+			box-shadow: var(--header-scrollable-color) var(--shadow-offset) 0px 3px;
+		}
+	}
+}
+
+// Alignment.
+.headerContents > .spacer {
+	flex: 1 1;
+}
+
+.headerContents {
+	display: flex;
+	align-items: stretch;
+
+	> * {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+}
+
+// Links.
+.headerContents a {
+	text-align: center;
+	text-decoration: none;
+}
+
+.logoLink {
+	font-size: 3em;
+	line-height: 0.33em;
+}
+
+// Spacing between links.
+.headerContents,
+.linkContainer {
+	gap: var(--header-link-spacing);
+}
+
+.headerStickyLeft,
+.headerStickyRight {
+	padding: var(--padding);
+}
+
+.headerStickyLeft {
+	padding-right: var(--padding-side);
+}
+
+.headerStickyRight {
+	padding-left: var(--padding-side);
+}
+
+// Make header visible on mobile only when scrolling up.
+@include for-mobile {
+	.header {
+		position: sticky;
+		top: -1px; // -1 accounts for half-pixels.
+
+		will-change: transform;
+		transform: translateY(calc(-100% + min(var(--scroll-offset-since-touch) * -1, 100%)));
+	}
+
+	body[data-scroll-position="top"] .header {
+		transform: none !important;
+	}
+
+	body[data-scroll-direction="up"] .header {
+		animation: show-header var(--animation-slow) 2s linear forwards;
+	}
+}
+
+@keyframes show-header {
+	0% {
+		// transform: translateY(calc(-100% + min(var(--scroll-offset-since-touch) * -1, 100%)));
+	}
+
+	100% {
+		transform: translateY(0px);
+	}
+}

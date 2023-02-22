@@ -1,6 +1,7 @@
 .inline {
 	position: relative;
 	display: inline-block;
+	text-decoration: inherit;
 
 	> svg {
 		height: 0.7em;
@@ -12,7 +13,7 @@
 		content: "\00A0";
 		overflow: hidden;
 		position: absolute;
-		text-decoration: underline;
+		text-decoration: inherit;
 		right: -1px;
 		left: -1px;
 		letter-spacing: 1000px;
