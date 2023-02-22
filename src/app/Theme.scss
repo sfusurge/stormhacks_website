@@ -3,9 +3,15 @@ body {
 	--page-background-gradient: linear-gradient(180deg, #0f1011 0%, #1c1a24 32.36%, #111015 77.11%, #1f1c28 100.55%);
 
 	--header-background: #181818;
-	--header-scrollable-color: #f00;
+	--header-scrollable-color: #777;
 
 	--text: #fff;
+	--accent: #f5b523;
+
+	--button-accent: #f5b523;
+
+	--surge-yellow: #f5b523;
+	--surge-purple: #5a60f3;
 
 	// @include for-theme("dark") {
 	// 	--primary: #222654;
