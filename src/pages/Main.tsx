@@ -1,4 +1,7 @@
+import { useLocation } from "react-router-dom";
+
 import Page from "~/Page";
+import ScrollAnchor from "~/ScrollAnchor";
 
 import { AboutStormhacksSection } from "./AboutStormhacks";
 import { AboutSurgeSection } from "./AboutSurge";
@@ -22,10 +25,18 @@ function MainPage() {
 export function Main() {
 	return (
 		<>
-			<AboutStormhacksSection />
-			<SponsorsSection />
-			<FAQSection />
-			<AboutSurgeSection />
+			<ScrollAnchor id="/">
+				<AboutStormhacksSection />
+			</ScrollAnchor>
+			<ScrollAnchor id="/sponsors">
+				<SponsorsSection />
+			</ScrollAnchor>
+			<ScrollAnchor id="/faq">
+				<FAQSection />
+			</ScrollAnchor>
+			<ScrollAnchor id="/about-us">
+				<AboutSurgeSection />
+			</ScrollAnchor>
 		</>
 	);
 }

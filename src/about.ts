@@ -28,6 +28,38 @@ export const SurgeInfo = {
 			name: "Example 2",
 			photo: "/logo192.png",
 		},
+		{
+			name: "Example 2",
+			photo: "/logo192.png",
+		},
+		{
+			name: "Example 2",
+			photo: "/logo192.png",
+		},
+		{
+			name: "Example 2",
+			photo: "/logo192.png",
+		},
+		{
+			name: "Example 2",
+			photo: "/logo192.png",
+		},
+		{
+			name: "Example 2",
+			photo: "/logo192.png",
+		},
+		{
+			name: "Example 2",
+			photo: "/logo192.png",
+		},
+		{
+			name: "Example 2",
+			photo: "/logo192.png",
+		},
+		{
+			name: "Example 2",
+			photo: "/logo192.png",
+		},
 	],
 };
 

@@ -14,6 +14,7 @@ function Routes() {
 			<Route index element={mainPageInstance} />
 			<Route path="/sponsors" element={mainPageInstance} />
 			<Route path="/faq" element={mainPageInstance} />
+			<Route path="/about-us" element={mainPageInstance} />
 		</Pages>
 	);
 }

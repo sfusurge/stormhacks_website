@@ -5,6 +5,8 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 
+import { isAnimatedScrolling } from "~/ScrollAnchor/util";
+
 import Header from "./app/Header";
 import Routes from "./app/Routes";
 import "./app/Styles.scss";
@@ -50,6 +52,11 @@ window.addEventListener(
 	() => {
 		requestAnimationFrame(() => {
 			const body = document.body;
+			if (isAnimatedScrolling(body.parentElement as HTMLHtmlElement)) {
+				body.setAttribute("data-scroll-direction", "up");
+				body.style.setProperty("--scroll-offset-since-touch", "999999");
+				return;
+			}
 
 			const scrollY = window.scrollY;
 			const deltaScrollY = scrollY - lastScrollY;

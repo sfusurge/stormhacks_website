@@ -5,7 +5,7 @@
 	--padding: var(--size-small) var(--size-larger);
 	--padding-side: var(--size-small);
 	@include for-mobile {
-		--padding: var(--size-smaller);
+		--padding: var(--size-small);
 		--padding-side: var(--size-medium);
 	}
 
@@ -118,6 +118,10 @@
 .logoLink {
 	font-size: 3em;
 	line-height: 0.33em;
+}
+
+a.currentSection {
+	color: var(--header-current-section);
 }
 
 // Spacing between links.

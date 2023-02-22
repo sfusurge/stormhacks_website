@@ -1,10 +1,12 @@
 import cx from "classnames";
 
-import { useEffect, useRef } from "react";
+import { ComponentProps, ReactElement, useEffect, useRef } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useHref, useLinkClickHandler, useLocation, useMatch, useMatches } from "react-router-dom";
 
 import InlineSVG from "~/SVG";
+import { scrollToAnchor } from "~/ScrollAnchor";
 import SurgeSocialLinks from "~/SurgeSocialLinks";
 
 import { ReactComponent as StormhacksIcon } from "$asset/icon/stormhacks.svg";
@@ -15,20 +17,64 @@ import Styles from "./Header.module.scss";
  * Navigation links.
  */
 function NavLinks() {
-	const { t } = useTranslation();
-
 	return (
 		<nav className={Styles.linkContainer}>
-			<Link to={"/sponsors"}>{t("header.link.sponsors")}</Link>
-			<Link to={"/faq"}>{t("header.link.faq")}</Link>
-			<Link to={"/about-us"}>{t("header.link.about-us")}</Link>
+			<LinkToSection path={"/sponsors"} tKey="header.link.sponsors" />
+			<LinkToSection path={"/faq"} tKey="header.link.faq" />
+			<LinkToSection path={"/about-us"} tKey="header.link.about-us" />
 			<a href="about:blank">A Long Link</a>
 			<a href="about:blank">Even More Links</a>
 		</nav>
 	);
 }
 
-function NavLinkToMain() {
+/**
+ * A link to a section of the main page.
+ * If the link is the current section, it will have an extra class applied to it.
+ */
+const LinkToSection = React.forwardRef(
+	({
+		path,
+		tKey,
+		replace,
+		state,
+		target,
+	}: { path: string; tKey: string } & Pick<ComponentProps<typeof Link>, "replace" | "state" | "target">) => {
+		const { t } = useTranslation();
+
+		const isCurrent = useMatch(path);
+		const href = useHref(path);
+		const handleClick = useLinkClickHandler(path, {
+			replace,
+			state,
+			target,
+		});
+
+		return (
+			<a
+				href={href}
+				className={isCurrent ? Styles.currentSection : undefined}
+				onClick={(event) => {
+					if (!event.defaultPrevented) {
+						handleClick(event);
+						scrollToAnchor(path);
+					}
+				}}>
+				{t(tKey)}
+			</a>
+		);
+
+		{
+			/* <a href={path}
+		<NavLink to={path} className={({ isActive }) => (isActive ? Styles.currentSection : undefined)}>
+			{t(tKey)}
+		</NavLink>
+	); */
+		}
+	}
+);
+
+function LinkToMain() {
 	return (
 		<nav className={Styles.headerStickyLeft}>
 			<Link to={"/"} className={Styles.logoLink}>
@@ -53,7 +99,6 @@ function Header() {
 	const headerRef = useRef<HTMLElement>(null);
 
 	useEffect(() => {
-		console.log("REF", headerRef);
 		const headerEl = headerRef.current;
 		if (headerEl == null) return;
 
@@ -77,7 +122,7 @@ function Header() {
 	return (
 		<header className={cx(Styles.header, "width-limited")} ref={headerRef}>
 			<div className={Styles.headerContents}>
-				<NavLinkToMain />
+				<LinkToMain />
 				<NavLinks />
 				<div className={Styles.spacer} />
 				<div className={Styles.linkContainer}>
