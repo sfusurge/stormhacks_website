@@ -16,8 +16,8 @@
 		"web-vitals": "^2.1.4"
 	},
 	"devDependencies": {
-		"@sfusurge/surge-scripts": "^2.0.2",
-		"@sfusurge/typescript-react-site": "^2.0.2"
+		"@sfusurge/surge-scripts": "^2.1.0",
+		"@sfusurge/typescript-react-site": "^2.1.0"
 	},
 	"peerDependencies": {
 		"react": "*",
