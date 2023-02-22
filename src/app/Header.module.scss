@@ -37,37 +37,58 @@
 		.headerStickyRight {
 			position: sticky;
 			background: var(--header-background);
+			box-shadow: var(--header-background) var(--shadow-offset) 0px 10px;
 		}
 
-		.headerStickyLeft,
-		.headerStickyLeft::before {
+		.headerStickyLeft {
 			left: 0;
 			--shadow-offset: 2px;
+			&::after {
+				left: calc(100% + 5px);
+			}
 		}
 
-		.headerStickyRight,
-		.headerStickyRight::before {
+		.headerStickyRight {
 			right: 0;
 			--shadow-offset: -2px;
+			&::after {
+				right: calc(100% + 5px);
+			}
 		}
 
-		// Indicators for each side being scrollable.
-		.headerStickyLeft::before,
-		.headerStickyRight::before {
+		// Scroll indicators.
+		.headerStickyLeft::after,
+		.headerStickyRight::after {
 			position: absolute;
-			top: 0;
+			top: calc(50% - 0.5em);
+			z-index: -1;
+			line-height: 100%;
+			width: 1em;
 
-			z-index: 2;
-			width: 1px;
-			height: 100%;
+			opacity: 0;
+			transition: opacity var(--animation-slow);
+			color: var(--header-scrollable-color);
+			background: var(--header-background);
+			box-shadow: var(--header-background) 0px 0px 15px 15px;
+			border-radius: 100%;
 
-			content: "";
+			text-align: center;
 		}
 
-		&[data-scrollable-left="yes"] .headerStickyLeft::before,
-		&[data-scrollable-right="yes"] .headerStickyRight::before {
-			background: var(--header-scrollable-color);
-			box-shadow: var(--header-scrollable-color) var(--shadow-offset) 0px 3px;
+		.headerStickyLeft::after {
+			content: "\2190";
+		}
+
+		.headerStickyRight::after {
+			content: "\2192";
+		}
+
+		&[data-scrollable-left="yes"] .headerStickyLeft::after {
+			opacity: 1;
+		}
+
+		&[data-scrollable-right="yes"] .headerStickyRight::after {
+			opacity: 1;
 		}
 	}
 }
