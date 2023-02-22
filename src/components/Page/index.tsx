@@ -1,3 +1,5 @@
+import cx from "classnames";
+
 import React, { PropsWithChildren } from "react";
 
 import Styles from "./page.module.scss";
@@ -7,8 +9,13 @@ import Styles from "./page.module.scss";
  *
  * This adds margins.
  */
-function Page(props: PropsWithChildren<{}>) {
-	return <div className={Styles.page}>{props.children}</div>;
+function Page({
+	className,
+	children,
+}: PropsWithChildren<{
+	className?: string;
+}>) {
+	return <div className={cx(Styles.page, className)}>{children}</div>;
 }
 
 export default Page;

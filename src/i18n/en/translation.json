@@ -4,9 +4,29 @@
 		"stormhacks": "StormHacks",
 		"stormhacks-slogan": "SFU's Premier Hackathon"
 	},
-	"placeholder": {
-		"message": "The StormHacks 2023 website construction is underway. We're aiming to be done by mid-February 2023. When everything is ready, this page will be updated.",
-		"hosted-by": "Hosted by <surge/>",
-		"visit-archive": "View our previous sites"
+	"social-link": {
+		"email": {
+			"title": "Send an email to {{identity}}.",
+			"text": "Email {{identity}}"
+		}
+	},
+	"header": {
+		"link": {
+			"faq": "FAQ",
+			"sponsors": "Sponsors"
+		},
+		"button": {
+			"apply": "Apply Now"
+		}
+	},
+	"faqs": {
+		"title": "Frequently <1>Asked Questions</1>",
+		"example": {
+			"question": "Your Question",
+			"answer": "An answer goes here."
+		}
+	},
+	"sponsors": {
+		"title": "Why Sponsor Us?"
 	}
 }

@@ -1,10 +1,14 @@
 body {
-	@include for-theme("dark") {
-		--primary: #222654;
-		--accent: #d0d0d0;
-	}
-	@include for-theme("light") {
-		--primary: #fff;
-		--accent: #8960ff;
-	}
+	--page-background-color: #0f1011;
+	--page-background-gradient: linear-gradient(180deg, #0f1011 0%, #1c1a24 32.36%, #111015 77.11%, #1f1c28 100.55%);
+	--text: #fff;
+
+	// @include for-theme("dark") {
+	// 	--primary: #222654;
+	// 	--accent: #d0d0d0;
+	// }
+	// @include for-theme("light") {
+	// 	--primary: #fff;
+	// 	--accent: #8960ff;
+	// }
 }

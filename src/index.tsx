@@ -5,6 +5,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 
+import Header from "./app/Header";
 import Routes from "./app/Routes";
 import "./app/Styles.scss";
 import "./app/Theme.scss";
@@ -33,6 +34,7 @@ function Setup({ children }: { children: ReactNode }) {
 root.render(
 	<React.StrictMode>
 		<Setup>
+			<Header />
 			<Routes />
 		</Setup>
 	</React.StrictMode>
