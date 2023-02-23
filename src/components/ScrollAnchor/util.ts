@@ -111,6 +111,7 @@ export function scrollToElement(el: HTMLElement, options?: ScrollToElementOption
 		cancelAnimate = true;
 		scrollTarget.removeEventListener("touchstart", animateEnded);
 		scrollTarget.removeEventListener("mousewheel", animateEnded);
+		window.removeEventListener("popstate", animateEnded);
 		delete (scrollTarget as ScrollToElementElement)[ScrollingCancelFn];
 
 		// Scroll events still may be queued.
@@ -161,6 +162,7 @@ export function scrollToElement(el: HTMLElement, options?: ScrollToElementOption
 		options?.onScrollCancel?.(el, scrollTarget);
 	};
 
+	window.addEventListener("popstate", animateEnded);
 	scrollTarget.addEventListener("mousewheel", animateEnded);
 	scrollTarget.addEventListener("touchstart", animateEnded);
 	requestAnimationFrame(animate);
