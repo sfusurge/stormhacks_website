@@ -99,8 +99,10 @@ export function scrollToElement(el: HTMLElement, options?: ScrollToElementOption
 	}
 
 	// Determine scroll start and end positions.
+	// We need to clamp it to between `0 <= desired <= max`.
+	const scrollTopMax = scrollTarget.scrollHeight - scrollTarget.clientHeight;
 	const scrollPosStart = scrollTarget?.scrollTop;
-	const scrollPosEnd = getScrollPosition(el, scrollTarget);
+	const scrollPosEnd = Math.max(0, Math.min(getScrollPosition(el, scrollTarget), scrollTopMax));
 	const scrollDelta = scrollPosEnd - scrollPosStart;
 
 	// Determine animation parameters.
@@ -116,7 +118,6 @@ export function scrollToElement(el: HTMLElement, options?: ScrollToElementOption
 	const animationEndTime = Date.now() + scrollSpeed;
 
 	let cancelAnimate = false;
-	let lastAnimateScrollTop = null;
 
 	const animateEnded = () => {
 		cancelAnimate = true;
@@ -153,14 +154,7 @@ export function scrollToElement(el: HTMLElement, options?: ScrollToElementOption
 
 		// Update the scroll top.
 		// If it hasn't changed since the last scroll event, we can't scroll any further.
-		lastAnimateScrollTop = scrollTarget.scrollTop;
 		scrollTarget.scrollTop = desiredScrollTop;
-		if (animationPercentage > 0.1 && scrollTarget.scrollTop === lastAnimateScrollTop) {
-			scrollTarget.scrollTop = scrollPosEnd;
-			animateEnded();
-			options?.onScrollFinish?.(el, scrollTarget);
-			return;
-		}
 
 		// Request next frame.
 		requestAnimationFrame(animate);
