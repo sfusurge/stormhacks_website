@@ -1,13 +1,17 @@
 import cx from "classnames";
 
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import { ComponentProps, PropsWithChildren, ReactElement } from "react";
 import { Link, useHref, useLinkClickHandler, useMatch } from "react-router-dom";
 
-import { encodeAnchorId, scrollToAnchor } from "./util";
+import { getScrollObserver } from "./observer";
+import { encodeAnchorId, getScrollParent, scrollToAnchor } from "./util";
 
 export type ScrollAnchorProps = PropsWithChildren<{
 	id: string;
+
+	onVisible?: (id: string) => void;
+	onHidden?: (id: string) => void;
 }>;
 
 /**
@@ -15,8 +19,39 @@ export type ScrollAnchorProps = PropsWithChildren<{
  *
  * This creates an element that can be scrolled to using the {@link scrollToAnchor} function.
  */
-export function ScrollAnchor({ children, id }: ScrollAnchorProps): ReactElement {
-	return <div id={encodeAnchorId(id)}>{children}</div>;
+export function ScrollAnchor({ children, id, onVisible, onHidden }: ScrollAnchorProps): ReactElement {
+	const ref = useRef<HTMLDivElement>(null);
+	useEffect(() => {
+		if (!onVisible && !onHidden) return;
+
+		const el = ref.current;
+		if (el == null) return;
+
+		const scrollObserver = getScrollObserver(el);
+		if (scrollObserver == null) return;
+
+		// Add the metadata for this anchor and start observing intersections.
+		scrollObserver.anchors.set(el, {
+			id,
+			visible: false,
+			events: {
+				onVisible,
+				onHidden,
+			},
+		});
+
+		scrollObserver.observer.observe(el);
+		return () => {
+			scrollObserver.observer.unobserve(el);
+			scrollObserver.anchors.delete(el);
+		};
+	}, [id, ref, onHidden, onVisible]);
+
+	return (
+		<div id={encodeAnchorId(id)} ref={ref}>
+			{children}
+		</div>
+	);
 }
 
 type ScrollAnchorLinkProps = PropsWithChildren<{

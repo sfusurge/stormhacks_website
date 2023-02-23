@@ -19,7 +19,7 @@ const _Duration = HackathonInfo.time.hours;
 function AboutStormhacksPage() {
 	// This is not directly used.
 	return (
-		<Page>
+		<Page className="width-limited">
 			<AboutStormhacksSection />
 		</Page>
 	);

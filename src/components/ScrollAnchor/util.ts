@@ -32,6 +32,17 @@ export function getScrollParent(el: HTMLElement): HTMLElement | null {
 		if (current.scrollHeight > current.clientHeight) {
 			break;
 		}
+
+		// Special case: the HTML element.
+		if (current.nodeName === "HTML") {
+			break;
+		}
+
+		// Try checking the overflow property.
+		const { overflowY } = window.getComputedStyle(current);
+		if (overflowY === "scroll" || overflowY === "auto") {
+			break;
+		}
 	}
 
 	return current;

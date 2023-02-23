@@ -16,7 +16,7 @@ const SurgeExecs = SurgeInfo.execs;
 function AboutSurgePage() {
 	// This is not directly used.
 	return (
-		<Page>
+		<Page className="width-limited">
 			<AboutSurgeSection />
 		</Page>
 	);

@@ -2,7 +2,6 @@ import cx from "classnames";
 
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 
 import InlineSVG from "~/SVG";
 import { ScrollAnchorNavLink } from "~/ScrollAnchor/components";
@@ -11,21 +10,7 @@ import SurgeSocialLinks from "~/SurgeSocialLinks";
 import { ReactComponent as StormhacksIcon } from "$asset/icon/stormhacks.svg";
 
 import Styles from "./Header.module.scss";
-
-/**
- * Navigation links.
- */
-function NavLinks() {
-	return (
-		<nav className={Styles.linkContainer}>
-			<LinkToSection path={"/sponsors"} tKey="header.link.sponsors" />
-			<LinkToSection path={"/faq"} tKey="header.link.faq" />
-			<LinkToSection path={"/about-us"} tKey="header.link.about-us" />
-			<a href="about:blank">A Long Link</a>
-			<a href="about:blank">Even More Links</a>
-		</nav>
-	);
-}
+import { RouteLinks } from "./Routes";
 
 /**
  * A link to a section of the main page.
@@ -89,7 +74,9 @@ function Header() {
 		<header className={Styles.header} ref={headerRef} id="header">
 			<div className={cx(Styles.headerContents, "width-limited")}>
 				<LinkToMain />
-				<NavLinks />
+				<nav className={Styles.linkContainer}>
+					<RouteLinks Link={LinkToSection} />
+				</nav>
 				<div className={Styles.spacer} />
 				<div className={Styles.linkContainer}>
 					<SurgeSocialLinks />

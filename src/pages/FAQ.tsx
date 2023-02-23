@@ -22,7 +22,7 @@ const FAQs = ["example"];
 function FAQPage() {
 	// This is not directly used.
 	return (
-		<Page>
+		<Page className="width-limited">
 			<FAQSection />
 		</Page>
 	);

@@ -16,7 +16,7 @@ import Styles from "./Sponsors.module.scss";
 function SponsorsPage() {
 	// This is not directly used.
 	return (
-		<Page>
+		<Page className="width-limited">
 			<SponsorsSection />
 		</Page>
 	);
