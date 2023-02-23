@@ -117,31 +117,41 @@ export function scrollToElement(el: HTMLElement, options?: ScrollToElementOption
 	// Animation functions.
 	const animationEndTime = Date.now() + scrollSpeed;
 
-	let cancelAnimate = false;
+	let finishedAnimate = false;
+	let clearedProps = false;
 
 	const animateEnded = () => {
-		cancelAnimate = true;
 		scrollTarget.removeEventListener("touchstart", animateEnded);
 		scrollTarget.removeEventListener("mousewheel", animateEnded);
 		window.removeEventListener("popstate", animateEnded);
 		delete (scrollTarget as ScrollToElementElement)[ScrollingCancelFn];
 
+		if (!finishedAnimate) {
+			options?.onScrollCancel?.(el, scrollTarget);
+		}
+
 		// Scroll events still may be queued.
 		// Wait 30ms then mark the element as no longer scrolling from an animation.
-		setTimeout(() => {
-			delete (scrollTarget as ScrollToElementElement)[Scrolling];
-		}, 30);
+
+		if (!clearedProps) {
+			clearedProps = true;
+			setTimeout(() => {
+				delete (scrollTarget as ScrollToElementElement)[Scrolling];
+			}, 30);
+		}
+
+		finishedAnimate = true;
 	};
 
 	const animate = () => {
-		if (cancelAnimate) {
-			options?.onScrollCancel?.(el, scrollTarget);
+		if (finishedAnimate) {
 			return;
 		}
 
 		const now = Date.now();
 		if (now >= animationEndTime) {
 			scrollTarget.scrollTop = scrollPosEnd;
+			finishedAnimate = true;
 			animateEnded();
 			options?.onScrollFinish?.(el, scrollTarget);
 			return;
@@ -163,8 +173,8 @@ export function scrollToElement(el: HTMLElement, options?: ScrollToElementOption
 	// Add listeners to cancel animation on user scroll and start the animation.
 	(scrollTarget as ScrollToElementElement)[Scrolling] = true;
 	(scrollTarget as ScrollToElementElement)[ScrollingCancelFn] = () => {
+		clearedProps = true; // The animation was preempted by another one.
 		animateEnded();
-		options?.onScrollCancel?.(el, scrollTarget);
 	};
 
 	window.addEventListener("popstate", animateEnded);
