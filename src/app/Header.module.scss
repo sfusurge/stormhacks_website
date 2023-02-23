@@ -121,7 +121,7 @@
 }
 
 a.currentSection {
-	color: var(--header-current-section);
+	color: var(--header-current-section) !important;
 }
 
 // Spacing between links.
