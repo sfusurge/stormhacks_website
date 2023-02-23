@@ -71,18 +71,24 @@ type ScrollAnchorLinkProps = PropsWithChildren<{
 	 */
 	className?: string;
 
+	/**
+	 * The link title.
+	 */
+	title?: string;
+
 	onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
 }>;
 
 /**
  * A link that causes the page to scroll to a {@link ScrollAnchor}.
  */
-export function ScrollAnchorLink({ id, href, onClick, children, ...rest }: ScrollAnchorLinkProps) {
+export function ScrollAnchorLink({ id, href, title, onClick, children, ...rest }: ScrollAnchorLinkProps) {
 	const aHref = useMemo(() => href ?? `#${encodeAnchorId(id)}`, [id, href]);
 	return (
 		<a
 			{...rest}
 			href={aHref}
+			title={title}
 			onClick={(event) => {
 				onClick?.(event);
 				if (!event.defaultPrevented) {

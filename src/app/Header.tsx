@@ -1,52 +1,17 @@
 import cx from "classnames";
 
 import { useEffect, useRef } from "react";
-import { useTranslation } from "react-i18next";
 
-import InlineSVG from "~/SVG";
-import { ScrollAnchorNavLink } from "~/ScrollAnchor/components";
 import SurgeSocialLinks from "~/SurgeSocialLinks";
 
-import { ReactComponent as StormhacksIcon } from "$asset/icon/stormhacks.svg";
-
 import Styles from "./Header.module.scss";
-import { RouteLinks } from "./Routes";
-
-/**
- * A link to a section of the main page.
- * If the link is the current section, it will have an extra class applied to it.
- */
-function LinkToSection({ path, tKey }: { path: string; tKey: string }) {
-	const { t } = useTranslation();
-	return (
-		<ScrollAnchorNavLink path={path} activeClassName={Styles.currentSection}>
-			{t(tKey)}
-		</ScrollAnchorNavLink>
-	);
-}
-
-function LinkToMain() {
-	return (
-		<nav className={Styles.headerStickyLeft}>
-			<ScrollAnchorNavLink path={"/"} className={Styles.logoLink}>
-				<InlineSVG svg={StormhacksIcon} />
-			</ScrollAnchorNavLink>
-		</nav>
-	);
-}
-
-function HeaderApplyButton() {
-	return (
-		<div className={Styles.headerStickyRight}>
-			<button>Apply</button>
-		</div>
-	);
-}
+import HeaderNav from "./HeaderNav";
+import { AppRoute } from "./Routes";
 
 /**
  * The header for the StormHacks 2023 website.
  */
-function Header() {
+function Header({ appRoutes }: { appRoutes: AppRoute[] }) {
 	const headerRef = useRef<HTMLElement>(null);
 
 	useEffect(() => {
@@ -73,10 +38,7 @@ function Header() {
 	return (
 		<header className={Styles.header} ref={headerRef} id="header">
 			<div className={cx(Styles.headerContents, "width-limited")}>
-				<LinkToMain />
-				<nav className={Styles.linkContainer}>
-					<RouteLinks Link={LinkToSection} />
-				</nav>
+				<HeaderNav appRoutes={appRoutes} />
 				<div className={Styles.spacer} />
 				<div className={Styles.linkContainer}>
 					<SurgeSocialLinks />
@@ -84,6 +46,14 @@ function Header() {
 				<HeaderApplyButton />
 			</div>
 		</header>
+	);
+}
+
+function HeaderApplyButton() {
+	return (
+		<div className={Styles.headerStickyRight}>
+			<button>Apply</button>
+		</div>
 	);
 }
 

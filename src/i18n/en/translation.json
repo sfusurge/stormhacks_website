@@ -11,10 +11,11 @@
 		}
 	},
 	"header": {
-		"link": {
-			"faq": "FAQ",
-			"sponsors": "Sponsors",
-			"about-us": "About Us"
+		"links": {
+			"about-stormhacks": { "title": "StormHacks 2023" },
+			"faq": { "text": "FAQ", "title": "FAQ - StormHacks 2023" },
+			"sponsors": { "text": "Sponsors", "title": "Sponsors - StormHacks 2023" },
+			"about-us": { "text": "About Us", "title": "About SFU Surge - StormHacks 2023" }
 		},
 		"button": {
 			"apply": "Apply Now"
