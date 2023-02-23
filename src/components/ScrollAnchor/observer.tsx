@@ -78,7 +78,7 @@ export function getTopmostVisibleAnchor(el: HTMLElement, threshold?: number): st
 	const observer = getScrollObserver(el);
 	if (observer == null) return null;
 
-	const thresh = threshold ?? 0;
+	const _thresh = threshold ?? 0; // TODO(eth-p): Implement me
 	const sortedVisible = Array.from(observer.anchors.entries())
 		.filter(([_, { visible }]) => visible)
 		.sort((a, b) => a[0].getBoundingClientRect().top - b[0].getBoundingClientRect().top);

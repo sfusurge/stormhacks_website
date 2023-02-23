@@ -5,7 +5,7 @@ import { ComponentProps, PropsWithChildren, ReactElement } from "react";
 import { Link, useHref, useLinkClickHandler, useMatch } from "react-router-dom";
 
 import { getScrollObserver } from "./observer";
-import { encodeAnchorId, getScrollParent, scrollToAnchor } from "./util";
+import { encodeAnchorId, scrollToAnchor } from "./util";
 
 export type ScrollAnchorProps = PropsWithChildren<{
 	id: string;
