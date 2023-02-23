@@ -86,8 +86,8 @@ function Header() {
 	}, [headerRef]);
 
 	return (
-		<header className={cx(Styles.header, "width-limited")} ref={headerRef} id="header">
-			<div className={Styles.headerContents}>
+		<header className={Styles.header} ref={headerRef} id="header">
+			<div className={cx(Styles.headerContents, "width-limited")}>
 				<LinkToMain />
 				<NavLinks />
 				<div className={Styles.spacer} />
