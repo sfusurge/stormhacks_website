@@ -9,7 +9,7 @@ body {
 #root {
 	background-color: var(--page-background-color);
 	background: var(--page-background-gradient);
-	background-size: 100vw calc(max(3000px, 100vh)); // Ensure the gradient is large enough.
+	background-size: 100vw calc(max(3000px, 100vh, 100%)); // Ensure the gradient is large enough.
 }
 
 body {
