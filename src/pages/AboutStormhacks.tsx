@@ -35,12 +35,12 @@ function AboutStormhacksPage() {
 export function AboutStormhacksSection() {
 	return (
 		<article className={Styles.container}>
-			<div className={cx(Styles.section, Styles.primary)}>
-				<SectionGraphic />
-				<div className={cx(Styles.primaryAbout)}>
-					<SectionLogo />
-					<SectionApplyForms />
-				</div>
+			<div className={cx(Styles.section, Styles.graphics)}>
+				<ThemeGraphic />
+				<Logo />
+			</div>
+			<div className={(Styles.section, Styles.applyForms)}>
+				<SectionApplyForms />
 			</div>
 			<div className={cx(Styles.section, Styles.eventInfo)}>
 				<SectionEventInfo />
@@ -49,11 +49,11 @@ export function AboutStormhacksSection() {
 	);
 }
 
-function SectionLogo() {
+function Logo() {
 	const { t } = useTranslation();
 	return (
-		<div className={Styles.aboutBox}>
-			<div className={Styles.aboutPlace}>
+		<div className={Styles.logoBox}>
+			<div className={Styles.logoPlace}>
 				<Trans i18nKey="event.date-and-location">
 					DATE
 					<span className={Styles.eventType}>In-Person</span>
@@ -74,9 +74,9 @@ function SectionLogo() {
 	);
 }
 
-function SectionGraphic() {
+function ThemeGraphic() {
 	return (
-		<figure className={Styles.primaryGraphic}>
+		<figure className={Styles.themeGraphic}>
 			<Cards />
 		</figure>
 	);
@@ -85,7 +85,7 @@ function SectionGraphic() {
 function SectionApplyForms() {
 	const { t } = useTranslation();
 	return (
-		<div className={Styles.applyForms}>
+		<>
 			<div className={Styles.applyFormsButtons}>
 				<ButtonLink style={ButtonStyle.Accented} href="#" i18n-title="event.links.apply.title">
 					{t("event.links.apply.text")}
@@ -99,7 +99,7 @@ function SectionApplyForms() {
 					{t("event.links.sponsor.text")}
 				</Link>
 			</div>
-		</div>
+		</>
 	);
 }
 

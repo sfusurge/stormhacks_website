@@ -1,13 +1,20 @@
 .container {
+	--v-margin: var(--size-larger);
 }
 
-.section.primary {
+.section.graphics {
 	display: flex;
 	flex-direction: row-reverse;
 	gap: var(--size-larger);
 
-	align-items: stretch;
+	margin: var(--v-margin) 0;
+
+	align-items: center;
 	justify-content: center;
+
+	@include for-tablet {
+		gap: var(--size-large);
+	}
 
 	@include for-mobile {
 		flex-direction: column;
@@ -15,8 +22,8 @@
 	}
 }
 
-.primaryGraphic {
-	flex: 1 2 auto;
+.themeGraphic {
+	flex: 5 1 auto;
 	margin: 0;
 
 	svg {
@@ -26,32 +33,21 @@
 
 	@include for-tablet {
 		// Limit the width on tablet.
+		width: 1vw;
 		max-width: 200px;
 	}
 
 	@include for-mobile {
 		// scale the width on mobile.
+		margin: auto;
 		width: 50vw;
 		max-width: unset;
 	}
 }
 
-.primaryAbout {
-	flex: 0 1 auto;
-
-	@include for-mobile {
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	// Use column flexbox so we can push the apply buttons to the bottom.
-	display: flex;
-	flex-direction: column;
-}
-
 // The box containing the date/time and StormHacks logo.
-.aboutBox {
-	flex: 1 0 auto;
+.logoBox {
+	flex: 0 0 auto;
 	position: relative;
 	font-size: 12pt;
 
@@ -159,7 +155,7 @@
 	}
 
 	// "May 20-21" ...
-	.aboutPlace {
+	.logoPlace {
 		position: relative;
 		bottom: -0.5em;
 		padding: 0 $clip-left;
@@ -194,6 +190,10 @@
 }
 
 .applyForms {
+	position: relative;
+	top: calc(var(--v-margin) * -1.5);
+	left: 12px;
+
 	.applyFormsButtons {
 		display: flex;
 		gap: var(--size-small);
@@ -204,8 +204,14 @@
 		font-size: 0.84em;
 	}
 
+	@include for-tablet {
+		top: calc(max(-60px, var(--v-margin) * -1.5));
+		left: 1.2vw;
+	}
+
 	@include for-mobile {
 		text-align: center;
+		left: 0;
 
 		--button-padding: var(--size-medium);
 		padding: var(--size-larger-2);
