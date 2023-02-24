@@ -36,11 +36,11 @@ const Routes: AppRoute[] = [
 			{ path: "/about-us", id: "about-us", page: () => <AboutSurgePage /> },
 		],
 	},
-	{
-		type: "external",
-		id: "temp",
-		href: "about:blank",
-	},
+	// {
+	// 	type: "external",
+	// 	id: "temp",
+	// 	href: "about:blank",
+	// },
 ];
 
 export function getRouteIdFromPath(routes: AppRoute[], path: string): string | undefined {
