@@ -2,12 +2,196 @@
 }
 
 .section.primary {
+	display: flex;
+	flex-direction: row-reverse;
+	gap: var(--size-larger);
+
+	align-items: center;
+	justify-content: center;
+
+	@include for-mobile {
+		flex-direction: column;
+		margin-top: var(--size-larger);
+	}
+}
+
+.primaryGraphic {
+	flex: 1 2 auto;
+	margin: 0;
+
+	svg {
+		min-width: 100px;
+		min-height: auto;
+	}
+
+	@include for-tablet {
+		// Limit the width on tablet.
+		max-width: 200px;
+	}
+
+	@include for-mobile {
+		// scale the width on mobile.
+		width: 50vw;
+		max-width: unset;
+	}
+}
+
+.primaryAbout {
+	flex: 0 1 auto;
+
+	@include for-mobile {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+// The box containing the date/time and StormHacks logo.
+.aboutBox {
+	position: relative;
+	font-size: 12pt;
+
+	// Define clipping regions for the logo.
+	$clip-left: 2%;
+	$clip-left-where-text: 27%;
+	$clip-top: 15%;
+	$clip-bottom: 67%;
+	$mobile-clip: 12pt;
+
+	// Logo and its clipping box.
+	.logo,
+	.logoClipBox {
+		// Only use as much space as needed.
+		display: inline-block;
+	}
+
+	.logo > span,
+	.logoSubtitle {
+		white-space: nowrap;
+		text-transform: uppercase;
+	}
+
+	.logoClipBox {
+		clip-path: polygon(
+			$clip-left $clip-top,
+			100% $clip-top,
+			100% $clip-bottom,
+			$clip-left-where-text $clip-bottom,
+			$clip-left-where-text 100%,
+			$clip-left 100%
+		);
+
+		// Clip in a square for mobile.
+		@include for-mobile {
+			text-align: center;
+			clip-path: inset(0 $mobile-clip $mobile-clip $mobile-clip);
+		}
+	}
+
+	// "StormHacks"
+	.logo {
+		display: inline-flex;
+
+		font-size: 4.55em;
+
+		font-family: "Redaction";
+		font-weight: bold;
+
+		color: var(--logo-color);
+
+		@include for-mobile {
+			flex-direction: column;
+			line-height: 0.8em;
+		}
+	}
+
+	// "Play your hand forward"
+	.logoSubtitle {
+		font-size: 1.7em;
+		color: var(--logo-subtitle);
+
+		// Place the text over the logo.
+		position: relative;
+		padding-left: $clip-left;
+		top: -1em;
+		right: 0;
+		bottom: 0;
+
+		// Align the line and text.
+		display: flex;
+		align-items: center;
+
+		// Remove the line and make it consume the full width on mobile.
+		@include for-mobile {
+			top: -10pt;
+			padding: 0;
+			font-size: 1.135em;
+
+			.logoSubtitleText {
+				text-align: center;
+				flex: 1 0 auto;
+			}
+
+			.logoSubtitleLine {
+				display: none;
+			}
+		}
+	}
+
+	.logoSubtitleText {
+		font-family: "Redaction";
+		font-weight: normal;
+		text-align: right;
+
+		margin: 0 0.2em;
+	}
+
+	.logoSubtitleLine {
+		height: 1px;
+		flex: 1 10 auto;
+		background: currentColor;
+
+		margin-right: 0.2em;
+	}
+
+	// "May 20-21" ...
+	.aboutPlace {
+		position: relative;
+		bottom: -0.5em;
+		padding: 0 $clip-left;
+		font-family: "Redaction";
+
+		.eventType,
+		.eventLocation {
+			font-style: italic;
+		}
+
+		@include for-mobile {
+			font-size: 0.67em;
+			bottom: 0.2em;
+		}
+	}
+
+	// Change size on tablet.
+	@include for-tablet {
+		font-size: 1.7vw;
+	}
+
+	// Change padding on mobile.
+	@include for-mobile {
+		font-size: 4.7vw;
+		text-align: center;
+
+		.logoSubtitle,
+		.aboutPlace {
+			padding: 0 12pt;
+		}
+	}
 }
 
 .section.about {
 }
 
-.logo {
+.logoClipBox {
 }
 
 .graphic {

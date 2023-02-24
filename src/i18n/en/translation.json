@@ -2,8 +2,13 @@
 	"brand": {
 		"surge": "SFU Surge",
 		"stormhacks": "StormHacks",
-		"stormhacks-slogan": "SFU's Premier Hackathon"
+		"stormhacks-theme": "Play Your Hand Forward"
 	},
+
+	"event": {
+		"date-and-location": "May 20 - 21, 2023 • <1>In-Person @ </1><2>SFU Burnaby Campus</2>"
+	},
+
 	"social-link": {
 		"email": {
 			"title": "Send an email to {{identity}}.",

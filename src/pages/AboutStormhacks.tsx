@@ -1,7 +1,11 @@
 import { HackathonInfo } from "$constants/about";
 import cx from "classnames";
 
+import { Trans, useTranslation } from "react-i18next";
+
 import Page from "~/Page";
+
+import { ReactComponent as Cards } from "$asset/cards.svg";
 
 import Styles from "./AboutStormhacks.module.scss";
 
@@ -30,30 +34,57 @@ export function AboutStormhacksSection() {
 	return (
 		<article className={Styles.container}>
 			<div className={cx(Styles.section, Styles.primary)}>
-				<SectionLogo />
 				<SectionGraphic />
-				<SectionApplyForms />
+				<div className={cx(Styles.primaryAbout)}>
+					<SectionLogo />
+					<SectionApplyForms />
+				</div>
 			</div>
-			<div className={cx(Styles.section, Styles.about)}>
-				<SectionAbout />
+			<div className={cx(Styles.section, Styles.eventInfo)}>
+				<SectionEventInfo />
 			</div>
 		</article>
 	);
 }
 
 function SectionLogo() {
-	return <span>TODO: SectionLogo</span>;
+	const { t } = useTranslation();
+	return (
+		<div className={Styles.aboutBox}>
+			<div className={Styles.aboutPlace}>
+				<Trans i18nKey="event.date-and-location">
+					DATE
+					<span className={Styles.eventType}>In-Person</span>
+					<span className={Styles.eventLocation}>Location</span>
+				</Trans>
+			</div>
+			<div className={Styles.logoClipBox}>
+				<div className={Styles.logo}>
+					<span>Storm</span>
+					<span>Hacks</span>
+				</div>
+			</div>
+			<div className={Styles.logoSubtitle}>
+				<div className={Styles.logoSubtitleLine} />
+				<div className={Styles.logoSubtitleText}>{t("brand.stormhacks-theme")}</div>
+			</div>
+		</div>
+	);
 }
 
 function SectionGraphic() {
-	return <figure>TODO: SectionGraphic</figure>;
+	return (
+		<figure className={Styles.primaryGraphic}>
+			<Cards />
+		</figure>
+	);
 }
 
 function SectionApplyForms() {
 	return <span>TODO: SectionApplyForms</span>;
 }
 
-function SectionAbout() {
+function SectionEventInfo() {
 	// TODO:
 	// https://www.figma.com/file/0NDG2Z2hR9z1cVwtvB8SkF/StormHacks-2023?node-id=5891%3A40&t=ZE4j1r7BKRLQV905-0
 	//
