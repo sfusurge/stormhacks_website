@@ -4,6 +4,7 @@ import { getScrollParent } from "./util";
 const ScrollObserverKey = Symbol();
 export type ScrollObserver = {
 	observer: IntersectionObserver;
+	scrollListener: (evt: Event) => void;
 	anchors: Map<Element, ScrollObserverAnchor>;
 };
 
@@ -36,14 +37,28 @@ export function getScrollObserver(el: HTMLElement): ScrollObserver | null {
 	let observer = (scrollEl as HTMLElement & { [ScrollObserverKey]?: ScrollObserver })[ScrollObserverKey];
 	if (observer != null) return observer;
 
-	// Create a new observer.
 	const root = scrollEl.nodeName === "HTML" ? undefined : scrollEl; /* <html> is browser viewport */
+
+	// Create a scroll listener.
+	//
+	// We cross-reference this with the intersection observer to ensure that we only call the callbacks
+	// as a result of user scrolling.
+	let lastScrollTime = -10000;
+	const scrollListener = (evt: Event) => {
+		lastScrollTime = evt.timeStamp;
+	};
+
+	(root ?? window).addEventListener("scroll", scrollListener);
+
+	// Create a new observer.
 
 	observer = {
 		anchors: new Map(),
+		scrollListener,
 		observer: new IntersectionObserver(
 			(entries) => {
 				for (const entry of entries) {
+					if (entry.time - lastScrollTime > 200) continue;
 					const anchorData = observer!.anchors.get(entry.target);
 					if (anchorData == null) {
 						console.warn("Still tracking discarded element on intersection observer.", entry.target);
