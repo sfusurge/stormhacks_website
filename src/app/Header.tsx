@@ -1,7 +1,9 @@
 import cx from "classnames";
 
 import { useEffect, useRef, useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
 
+import ButtonLink from "~/ButtonLink";
 import { getScrollParent, isAnimatedScrolling } from "~/ScrollAnchor/util";
 import SurgeSocialLinks from "~/SurgeSocialLinks";
 
@@ -146,9 +148,13 @@ function createHeaderTouchCallback(
 }
 
 function HeaderApplyButton() {
+	const { t } = useTranslation();
 	return (
 		<div className={Styles.headerStickyRight}>
-			<button>Apply</button>
+			<ButtonLink href="/apply" i18n-title="header.apply.title">
+				<span className={Styles.applyButtonDesktop}>{t("header.apply.text-on-desktop")}</span>
+				<span className={Styles.applyButtonMobile}>{t("header.apply.text-on-mobile")}</span>
+			</ButtonLink>
 		</div>
 	);
 }

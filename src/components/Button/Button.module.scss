@@ -1,0 +1,18 @@
+// Reset the default appearance of buttons.
+.button {
+	appearance: none;
+	padding: var(--button-padding);
+}
+
+.regular {
+	color: var(--text-inverted);
+	background: var(--text);
+}
+
+.knockout {
+}
+
+.accent {
+	color: var(--text-on-accent);
+	background-color: var(--accent);
+}

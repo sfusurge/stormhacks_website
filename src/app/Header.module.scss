@@ -192,6 +192,19 @@
 	}
 }
 
+.applyButtonDesktop {
+	display: none;
+	@include for-desktop {
+		display: block;
+	}
+}
+
+.applyButtonMobile {
+	@include for-desktop {
+		display: none;
+	}
+}
+
 // Make header visible on landscape mobile only when scrolling up.
 @media screen and (max-height: 600px) {
 	.header {

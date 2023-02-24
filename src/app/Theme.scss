@@ -15,9 +15,10 @@ body {
 	--header-current-section: #f7dd9f;
 
 	--text: #fff;
-	--accent: #f5b523;
+	--text-on-accent: #1d1d1d;
+	--text-inverted: #1d1d1d; // For when the background is var(--text)
 
-	--button-accent: #f5b523;
+	--accent: #f5b523;
 
 	--surge-yellow: #f5b523;
 	--surge-purple: #5a60f3;

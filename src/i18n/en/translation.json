@@ -38,8 +38,10 @@
 			"sponsors": { "text": "Sponsors", "title": "Sponsors - StormHacks 2023" },
 			"about-us": { "text": "About Us", "title": "About SFU Surge - StormHacks 2023" }
 		},
-		"button": {
-			"apply": "Apply Now"
+		"apply": {
+			"text-on-desktop": "Apply Now",
+			"text-on-mobile": "Apply",
+			"title": "Apply for StormHacks 2023!"
 		}
 	},
 	"faqs": {

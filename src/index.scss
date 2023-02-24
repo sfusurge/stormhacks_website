@@ -4,9 +4,8 @@
 }
 
 // Prevent the user-agent overrides for visited links.
-a:link,
-a:visited {
-	color: inherit;
+a {
+	color: unset;
 }
 
 // Make the body and root expand to be at least as tall as the viewport.
