@@ -2,17 +2,23 @@
 .button {
 	appearance: none;
 	padding: var(--button-padding);
+	text-decoration: none;
+	border: 1px transparent solid;
 }
 
 .regular {
 	color: var(--text-inverted);
+	border-color: var(--text-inverted);
 	background: var(--text);
 }
 
 .knockout {
+	border-color: var(--text);
+	color: var(--text);
 }
 
 .accent {
 	color: var(--text-on-accent);
+	border-color: var(--accent);
 	background-color: var(--accent);
 }

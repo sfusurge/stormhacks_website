@@ -26,6 +26,6 @@ export function applyClassName(className?: string, style?: ButtonStyle): string 
 	return cx(className, Styles.button, {
 		[Styles.regular]: style == null || style === ButtonStyle.Regular,
 		[Styles.accent]: style === ButtonStyle.Accented,
-		[Styles.knockout]: ButtonStyle.Knockout,
+		[Styles.knockout]: style === ButtonStyle.Knockout,
 	});
 }

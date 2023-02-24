@@ -2,7 +2,10 @@ import { HackathonInfo } from "$constants/about";
 import cx from "classnames";
 
 import { Trans, useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
+import Button, { ButtonStyle } from "~/Button";
+import ButtonLink from "~/ButtonLink";
 import Page from "~/Page";
 
 import { ReactComponent as Cards } from "$asset/cards.svg";
@@ -30,7 +33,6 @@ function AboutStormhacksPage() {
 }
 
 export function AboutStormhacksSection() {
-	// TODO: This section.
 	return (
 		<article className={Styles.container}>
 			<div className={cx(Styles.section, Styles.primary)}>
@@ -81,7 +83,24 @@ function SectionGraphic() {
 }
 
 function SectionApplyForms() {
-	return <span>TODO: SectionApplyForms</span>;
+	const { t } = useTranslation();
+	return (
+		<div className={Styles.applyForms}>
+			<div className={Styles.applyFormsButtons}>
+				<ButtonLink style={ButtonStyle.Accented} href="#" i18n-title="event.links.apply.title">
+					{t("event.links.apply.text")}
+				</ButtonLink>
+				<ButtonLink style={ButtonStyle.Knockout} href="#" i18n-title="event.links.mentor.title">
+					{t("event.links.mentor.text")}
+				</ButtonLink>
+			</div>
+			<div className={Styles.applyFormsLinks}>
+				<Link to={"#"} title={t("event.links.sponsor.title")}>
+					{t("event.links.sponsor.text")}
+				</Link>
+			</div>
+		</div>
+	);
 }
 
 function SectionEventInfo() {

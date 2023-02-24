@@ -6,7 +6,12 @@
 	},
 
 	"event": {
-		"date-and-location": "May 20 - 21, 2023 • <1>In-Person @ </1><2>SFU Burnaby Campus</2>"
+		"date-and-location": "May 20 - 21, 2023 • <1>In-Person @ </1><2>SFU Burnaby Campus</2>",
+		"links": {
+			"apply": { "text": "Apply Now", "title": "Apply for StormHacks 2023!" },
+			"mentor": { "text": "Become a Mentor", "title": "Become a StormHacks 2023 mentor!" },
+			"sponsor": { "text": "Interested in sponsoring us?", "title": "Sponsor StormHacks 2023!" }
+		}
 	},
 
 	"social-link": {
@@ -31,6 +36,7 @@
 			"text": "{{identity}}'s LinkedIn Profile"
 		}
 	},
+
 	"header": {
 		"links": {
 			"about-stormhacks": { "title": "StormHacks 2023" },
@@ -44,6 +50,7 @@
 			"title": "Apply for StormHacks 2023!"
 		}
 	},
+
 	"faqs": {
 		"title": "Frequently <1>Asked Questions</1>",
 		"example": {
@@ -51,6 +58,7 @@
 			"answer": "An answer goes here."
 		}
 	},
+
 	"sponsors": {
 		"title": "Why Sponsor Us?"
 	}
