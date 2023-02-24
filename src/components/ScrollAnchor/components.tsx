@@ -4,9 +4,9 @@ import React, { useEffect, useMemo, useRef } from "react";
 import { ComponentProps, PropsWithChildren, ReactElement } from "react";
 import { Link, useHref, useLinkClickHandler, useMatch } from "react-router-dom";
 
-import { useMaybeMoveToScrollAnchorCallback } from "./move-to-anchor";
+import { useMaybeMoveToScrollAnchorCallback, useMoveToScrollAnchor } from "./move-to-anchor";
 import { getScrollObserver } from "./observer";
-import { encodeAnchorId, scrollToAnchor } from "./util";
+import { encodeAnchorId } from "./util";
 
 export type ScrollAnchorProps = PropsWithChildren<{
 	id: string;
@@ -25,7 +25,8 @@ export type ScrollAnchorProps = PropsWithChildren<{
 /**
  * A scroll anchor.
  *
- * This creates an element that can be scrolled to using the {@link scrollToAnchor} function.
+ * This creates an element that can be scrolled to using the {@link useMoveToScrollAnchor} hook or
+ * {@link ScrollAnchorLink} component.
  */
 export function ScrollAnchor({ children, id, onVisible, onHidden, onTop }: ScrollAnchorProps): ReactElement {
 	const maybeScrollToMe = useMaybeMoveToScrollAnchorCallback(id);
@@ -101,6 +102,7 @@ type ScrollAnchorLinkProps = PropsWithChildren<{
  */
 export function ScrollAnchorLink({ id, href, title, onClick, children, ...rest }: ScrollAnchorLinkProps) {
 	const aHref = useMemo(() => href ?? `#${encodeAnchorId(id)}`, [id, href]);
+	const moveToScrollAnchor = useMoveToScrollAnchor();
 	return (
 		<a
 			{...rest}
@@ -109,7 +111,7 @@ export function ScrollAnchorLink({ id, href, title, onClick, children, ...rest }
 			onClick={(event) => {
 				onClick?.(event);
 				if (!event.defaultPrevented) {
-					scrollToAnchor(id);
+					moveToScrollAnchor(id, { delay: 50 });
 				}
 
 				event.preventDefault();
@@ -140,30 +142,38 @@ type ScrollAnchorNavLinkProps = PropsWithChildren<
  * A navigation link that changes the page using `react-router-dom` and then scrolls to an anchor
  * on the page.
  */
-export const ScrollAnchorNavLink = React.forwardRef(
-	({ id, path, activeClassName, replace, state, target, children, className, onClick }: ScrollAnchorNavLinkProps) => {
-		const isCurrent = useMatch(path);
-		const href = useHref(path);
-		const handleClick = useLinkClickHandler(path, {
-			replace,
-			state,
-			target,
-		});
+export function ScrollAnchorNavLink({
+	id,
+	path,
+	activeClassName,
+	replace,
+	state,
+	target,
+	children,
+	className,
+	onClick,
+}: ScrollAnchorNavLinkProps) {
+	const isCurrent = useMatch(path);
+	const href = useHref(path);
+	const handleClick = useLinkClickHandler(path, {
+		replace,
+		state,
+		target,
+	});
 
-		return (
-			<ScrollAnchorLink
-				id={id ?? path}
-				href={href}
-				className={cx([className, isCurrent ? activeClassName : undefined])}
-				onClick={(event) => {
-					onClick?.(event);
-					if (!event.defaultPrevented) {
-						handleClick(event);
-						event.defaultPrevented = false; // Allow the ScrollAnchorLink to work.
-					}
-				}}>
-				{children}
-			</ScrollAnchorLink>
-		);
-	}
-);
+	return (
+		<ScrollAnchorLink
+			id={id ?? path}
+			href={href}
+			className={cx([className, isCurrent ? activeClassName : undefined])}
+			onClick={(event) => {
+				onClick?.(event);
+				if (!event.defaultPrevented) {
+					handleClick(event);
+					event.defaultPrevented = false; // Allow the ScrollAnchorLink to work.
+				}
+			}}>
+			{children}
+		</ScrollAnchorLink>
+	);
+}
