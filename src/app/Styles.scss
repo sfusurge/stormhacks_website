@@ -34,22 +34,35 @@ body {
 	--size-small: 0.8rem;
 	--size-smaller: 0.5rem;
 
-	--button-padding: 0.35em 0.9em;
-
-	--header-section-spacing: 1.4rem;
-	--header-link-spacing: 1.8rem;
-	--header-link-spacing-smaller: 0.5rem;
-	--header-text-size: 1rem;
-	--header-icon-size: 1.3rem;
-
 	@include for-mobile {
 		--size-larger: 1.4rem;
 		--size-large: 1.4rem;
 		--size-medium: 0.6rem;
 		--size-small: 0.45rem;
 		--size-smaller: 0.3rem;
+	}
 
-		--header-section-spacing: 0.6rem;
+	--button-padding: 0.35em 0.9em;
+
+	--header-padding: var(--size-small);
+	--header-section-spacing: 1.4rem;
+	--header-button-padding: 0.35em 0.9em;
+	--header-link-spacing: 1.8rem;
+	--header-icon-spacing: 1.5rem;
+	--header-text-size: 1rem;
+	--header-icon-size: 1.3rem;
+
+	@include for-tablet {
+		--header-padding: var(--size-smaller);
+		--header-button-padding: 0.3em 0.8em;
+		--header-section-spacing: 0.8rem;
+		--header-link-spacing: 0.7rem;
+		--header-icon-spacing: 1rem;
+	}
+
+	@include for-mobile {
+		--header-section-spacing: 0.8rem;
+		--header-button-padding: 0.2em 0.6em;
 		--header-link-spacing: 0.5rem;
 	}
 }

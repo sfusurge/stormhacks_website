@@ -7,7 +7,7 @@ $layout-tablet-width: 900px;
  */
 @mixin for-layout($layout) {
 	@if $layout == "desktop" {
-		@media screen and (min-width: $layout-mobile-width) {
+		@media screen and (min-width: $layout-tablet-width) {
 			@content;
 		}
 	} @else if $layout == "tablet" {

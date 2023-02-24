@@ -6,8 +6,8 @@ import { ScrollAnchorNavLink } from "~/ScrollAnchor/components";
 
 import { ReactComponent as StormhacksIcon } from "$asset/icon/stormhacks.svg";
 
+import { AppRoute } from "../../app/Routes";
 import Styles from "./Header.module.scss";
-import { AppRoute } from "./Routes";
 
 /**
  * A link to a section in a page.

@@ -3,22 +3,12 @@
 	position: relative;
 	background: var(--header-background);
 
-	--padding: var(--size-small) var(--size-larger);
-	--padding-side: var(--size-small);
-
-	@include for-mobile {
-		--padding: var(--size-small);
-		--padding-side: var(--size-medium);
-	}
+	--padding: var(--header-padding) var(--size-larger);
+	--padding-side: var(--header-padding);
 
 	@include for-tablet {
-		--padding: var(--size-small);
-		--header-link-spacing: var(--header-link-spacing-smaller);
-		--header-section-spacing: var(--header-link-spacing-smaller);
-
-		.socialLinks {
-			--header-link-spacing: var(--size-small);
-		}
+		--padding: var(--header-padding);
+		--padding-side: 0;
 	}
 
 	// Disable selecting link text.
@@ -180,9 +170,12 @@
 
 .socialLinks {
 	gap: 0;
+	flex: 1 1 auto;
+	justify-content: right;
+
 	.iconLink {
-		padding: 0.3em calc(var(--header-link-spacing) / 4);
-		margin: 0 calc(var(--header-link-spacing) / 4);
+		padding: 0.3em calc(var(--header-icon-spacing) / 4);
+		margin: 0 calc(var(--header-icon-spacing) / 4);
 		&:first-child {
 			margin-left: 0;
 		}
@@ -190,6 +183,11 @@
 			margin-right: 0;
 		}
 	}
+}
+
+// Apply button.
+.applyButton {
+	padding: var(--header-button-padding);
 }
 
 .applyButtonDesktop {

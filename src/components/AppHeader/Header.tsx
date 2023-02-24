@@ -1,15 +1,14 @@
 import cx from "classnames";
+import { AppRoute } from "src/app/Routes";
 
 import { useEffect, useRef, useState } from "react";
-import { Trans, useTranslation } from "react-i18next";
 
-import ButtonLink from "~/ButtonLink";
 import { getScrollParent, isAnimatedScrolling } from "~/ScrollAnchor/util";
 import SurgeSocialLinks from "~/SurgeSocialLinks";
 
 import Styles from "./Header.module.scss";
+import HeaderApplyButton from "./HeaderApplyButton";
 import HeaderNav from "./HeaderNav";
-import { AppRoute } from "./Routes";
 
 /**
  * The header for the StormHacks 2023 website.
@@ -145,18 +144,6 @@ function createHeaderTouchCallback(
 	return () => {
 		state.lastScrollAtTouch = getScrollY();
 	};
-}
-
-function HeaderApplyButton() {
-	const { t } = useTranslation();
-	return (
-		<div className={Styles.headerStickyRight}>
-			<ButtonLink href="/apply" i18n-title="header.apply.title">
-				<span className={Styles.applyButtonDesktop}>{t("header.apply.text-on-desktop")}</span>
-				<span className={Styles.applyButtonMobile}>{t("header.apply.text-on-mobile")}</span>
-			</ButtonLink>
-		</div>
-	);
 }
 
 export default Header;

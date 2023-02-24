@@ -6,10 +6,10 @@ import { useTranslation } from "react-i18next";
 import { BrowserRouter, PathRouteProps, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 
+import Header from "~/AppHeader";
 import Pager from "~/Pager";
 import { MoveToScrollAnchorAtLoad } from "~/ScrollAnchor";
 
-import Header from "./app/Header";
 import AppRoutes, { AppRoute, getRouteIdFromPath } from "./app/Routes";
 import "./app/Styles.scss";
 import "./app/Theme.scss";
