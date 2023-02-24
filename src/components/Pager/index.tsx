@@ -50,7 +50,7 @@ function Pager({ pages, onPageChange }: PagerProps) {
 	const pageMetadata = new Map(pages.map(({ id, metadata }) => [id, metadata]));
 	const cb = () => {
 		const el = ref.current;
-		if (el == null) return;
+		if (el == null) return false;
 
 		const scrollEl = getScrollParent(el);
 		if (scrollEl == null || isAnimatedScrolling(scrollEl)) {
@@ -62,6 +62,8 @@ function Pager({ pages, onPageChange }: PagerProps) {
 			setLastPage(currentPage);
 			onPageChange?.(currentPage, pageMetadata.get(currentPage));
 		}
+
+		return;
 	};
 
 	// Memoize the pages within the pager.
@@ -75,7 +77,7 @@ function Pager({ pages, onPageChange }: PagerProps) {
 	return (
 		<div ref={ref}>
 			{memoizedPages.map(({ id, pageEl }) => (
-				<ScrollAnchor key={id} id={id} onVisible={cb} onHidden={cb}>
+				<ScrollAnchor key={id} id={id} onTop={cb}>
 					{pageEl}
 				</ScrollAnchor>
 			))}

@@ -13,6 +13,13 @@ export type ScrollAnchorProps = PropsWithChildren<{
 
 	onVisible?: (id: string) => void;
 	onHidden?: (id: string) => void;
+
+	/**
+	 * Called when the anchor is the top-most anchor within its container.
+	 * @param id The anchor ID.
+	 * @returns If false, the callback will fire again next scroll.
+	 */
+	onTop?: (id: string) => void | false;
 }>;
 
 /**
@@ -20,11 +27,11 @@ export type ScrollAnchorProps = PropsWithChildren<{
  *
  * This creates an element that can be scrolled to using the {@link scrollToAnchor} function.
  */
-export function ScrollAnchor({ children, id, onVisible, onHidden }: ScrollAnchorProps): ReactElement {
+export function ScrollAnchor({ children, id, onVisible, onHidden, onTop }: ScrollAnchorProps): ReactElement {
 	const maybeScrollToMe = useMaybeMoveToScrollAnchorCallback(id);
 	const ref = useRef<HTMLDivElement>(null);
 	useEffect(() => {
-		if (!onVisible && !onHidden) return;
+		if (!onVisible && !onHidden && !onTop) return;
 
 		const el = ref.current;
 		if (el == null) return;
@@ -37,6 +44,7 @@ export function ScrollAnchor({ children, id, onVisible, onHidden }: ScrollAnchor
 			id,
 			visible: false,
 			events: {
+				onTop,
 				onVisible,
 				onHidden,
 			},
@@ -47,7 +55,7 @@ export function ScrollAnchor({ children, id, onVisible, onHidden }: ScrollAnchor
 			scrollObserver.observer.unobserve(el);
 			scrollObserver.anchors.delete(el);
 		};
-	}, [id, ref, onHidden, onVisible]);
+	}, [id, ref, onHidden, onVisible, onTop]);
 
 	useEffect(() => {
 		const el = ref.current;

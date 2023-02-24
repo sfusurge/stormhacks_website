@@ -8,7 +8,6 @@ import { RecoilRoot } from "recoil";
 
 import Pager from "~/Pager";
 import { MoveToScrollAnchorAtLoad } from "~/ScrollAnchor";
-import { isAnimatedScrolling } from "~/ScrollAnchor/util";
 
 import Header from "./app/Header";
 import AppRoutes, { AppRoute, getRouteIdFromPath } from "./app/Routes";
