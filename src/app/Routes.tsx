@@ -1,4 +1,4 @@
-import { ReactElement, createContext } from "react";
+import { ReactElement } from "react";
 
 import AboutStormhacksPage from "$page/AboutStormhacks";
 import AboutSurgePage from "$page/AboutSurge";

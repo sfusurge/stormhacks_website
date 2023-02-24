@@ -86,7 +86,7 @@ function SetupRoutes({ appRoutes }: { appRoutes: AppRoute[] }) {
 	);
 
 	// Calculate the app routes.
-	type AppPage = Extract<typeof AppRoutes[0], { type: "paged" } | { type: "single" }>;
+	type AppPage = Extract<AppRoute, { type: "paged" } | { type: "single" }>;
 	type AppPages = AppPage[];
 	const appPages = useMemo(
 		() => appRoutes.filter(({ type }) => type === "paged" || type === "single") as AppPages,
