@@ -190,24 +190,9 @@
 		top: -1px; // -1 accounts for half-pixels.
 
 		will-change: transform;
-		transform: translateY(calc(-100% + min(var(--scroll-offset-since-touch) * -1, 100%)));
 	}
 
-	body[data-scroll-position="top"] .header {
-		transform: none !important;
-	}
-
-	body[data-scroll-direction="up"] .header {
-		animation: show-header var(--animation-slow) 2s linear forwards;
-	}
-}
-
-@keyframes show-header {
-	0% {
-		// transform: translateY(calc(-100% + min(var(--scroll-offset-since-touch) * -1, 100%)));
-	}
-
-	100% {
-		transform: translateY(0px);
+	.header:not(.forceVisible) {
+		transform: translateY(calc(min(var(--header-hide-offset) * -1, 0px)));
 	}
 }
