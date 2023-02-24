@@ -52,7 +52,7 @@ function isFirstNavigate() {
  */
 function Setup({ children }: { children: ReactNode }) {
 	const initialSection = getRouteIdFromPath(AppRoutes, window.location.pathname);
-	console.log(isFirstNavigate());
+	console.debug(`Should scroll to anchor '${initialSection}' in URL?`, isFirstNavigate());
 	return (
 		<RecoilRoot>
 			<ThemeProvider />
