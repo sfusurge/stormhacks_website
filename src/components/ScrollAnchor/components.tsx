@@ -4,6 +4,7 @@ import React, { useEffect, useMemo, useRef } from "react";
 import { ComponentProps, PropsWithChildren, ReactElement } from "react";
 import { Link, useHref, useLinkClickHandler, useMatch } from "react-router-dom";
 
+import { useMaybeMoveToScrollAnchorCallback } from "./move-to-anchor";
 import { getScrollObserver } from "./observer";
 import { encodeAnchorId, scrollToAnchor } from "./util";
 
@@ -20,6 +21,7 @@ export type ScrollAnchorProps = PropsWithChildren<{
  * This creates an element that can be scrolled to using the {@link scrollToAnchor} function.
  */
 export function ScrollAnchor({ children, id, onVisible, onHidden }: ScrollAnchorProps): ReactElement {
+	const maybeScrollToMe = useMaybeMoveToScrollAnchorCallback(id);
 	const ref = useRef<HTMLDivElement>(null);
 	useEffect(() => {
 		if (!onVisible && !onHidden) return;
@@ -46,6 +48,13 @@ export function ScrollAnchor({ children, id, onVisible, onHidden }: ScrollAnchor
 			scrollObserver.anchors.delete(el);
 		};
 	}, [id, ref, onHidden, onVisible]);
+
+	useEffect(() => {
+		const el = ref.current;
+		if (el == null) return;
+
+		maybeScrollToMe(el);
+	}, [maybeScrollToMe, ref]);
 
 	return (
 		<div id={encodeAnchorId(id)} ref={ref}>

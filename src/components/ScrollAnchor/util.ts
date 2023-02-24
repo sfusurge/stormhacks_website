@@ -191,12 +191,12 @@ export function scrollToElement(el: HTMLElement, options?: ScrollToElementOption
  * @param options Options and callbacks.
  */
 export function scrollToAnchor(
-	id: string,
+	anchor: string | HTMLElement,
 	options?: Pick<ScrollToElementOptions, "onScrollCancel" | "onScrollFinish">
 ): void {
-	const el = document.getElementById(encodeAnchorId(id));
+	const el = typeof anchor === "string" ? document.getElementById(encodeAnchorId(anchor)) : anchor;
 	if (el == null) {
-		console.warn("No scroll anchor with ID:", id);
+		console.warn("No scroll anchor with ID:", anchor);
 		return;
 	}
 

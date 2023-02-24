@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { ReactElement, createContext } from "react";
 
 import AboutStormhacksPage from "$page/AboutStormhacks";
 import AboutSurgePage from "$page/AboutSurge";
@@ -42,5 +42,18 @@ const Routes: AppRoute[] = [
 		href: "about:blank",
 	},
 ];
+
+export function getRouteIdFromPath(routes: AppRoute[], path: string): string | undefined {
+	for (const route of routes) {
+		if (route.type === "single" && route.path === path) return route.id;
+		if (route.type === "paged") {
+			for (const page of route.pages) {
+				if (page.path === path) return page.id;
+			}
+		}
+	}
+
+	return undefined;
+}
 
 export default Routes;

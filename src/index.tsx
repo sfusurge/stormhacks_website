@@ -7,10 +7,11 @@ import { BrowserRouter, PathRouteProps, Route, Routes, useLocation, useNavigate 
 import { RecoilRoot } from "recoil";
 
 import Pager from "~/Pager";
+import { MoveToScrollAnchorAtLoad } from "~/ScrollAnchor";
 import { isAnimatedScrolling } from "~/ScrollAnchor/util";
 
 import Header from "./app/Header";
-import AppRoutes, { AppRoute } from "./app/Routes";
+import AppRoutes, { AppRoute, getRouteIdFromPath } from "./app/Routes";
 import "./app/Styles.scss";
 import "./app/Theme.scss";
 import "./index.scss";
@@ -21,15 +22,42 @@ const rootElement = document.getElementById("root") as HTMLElement;
 const root = ReactDOM.createRoot(rootElement);
 
 /**
+ * Checks if this is the first navigation to the page within the history session.
+ * We need to know this to prevent our scrolling from overriding the user-agent's initial page scroll.
+ *
+ * @returns
+ */
+function isFirstNavigate() {
+	// Navigation Timing Level 2
+	try {
+		if ((performance.getEntriesByType?.("navigation")?.[0] as PerformanceNavigationTiming)?.type === "navigate") {
+			return true;
+		}
+	} catch (_ex) {}
+
+	// Navigation Timing Level 1
+	try {
+		if (performance.navigation.type === performance.navigation.TYPE_NAVIGATE) {
+			return true;
+		}
+	} catch (_ex) {}
+
+	return false;
+}
+
+/**
  * Sets up the application within the root.
  *
  * @param children The children of the application.
  */
 function Setup({ children }: { children: ReactNode }) {
+	const initialSection = getRouteIdFromPath(AppRoutes, window.location.pathname);
+	console.log(isFirstNavigate());
 	return (
 		<RecoilRoot>
 			<ThemeProvider />
 			<BrowserRouter>{children}</BrowserRouter>
+			{isFirstNavigate() && initialSection && <MoveToScrollAnchorAtLoad id={initialSection} delay={200} />}
 		</RecoilRoot>
 	);
 }
@@ -51,10 +79,10 @@ function SetupRoutes({ appRoutes }: { appRoutes: AppRoute[] }) {
 	// Callback to replace the navigation URL.
 	const onPageChange = useCallback(
 		(id: string, { path }: { path: string }) => {
-			console.debug("Scrolled into page", path);
+			console.debug("Scrolled into anchor", id);
 			navigateContainer.navigate(path, { replace: true });
 		},
-		[navigateContainer, t]
+		[navigateContainer]
 	);
 
 	// Calculate the app routes.

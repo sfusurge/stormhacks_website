@@ -51,7 +51,6 @@ export function getScrollObserver(el: HTMLElement): ScrollObserver | null {
 	(root ?? window).addEventListener("scroll", scrollListener);
 
 	// Create a new observer.
-
 	observer = {
 		anchors: new Map(),
 		scrollListener,
