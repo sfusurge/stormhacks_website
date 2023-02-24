@@ -8,6 +8,22 @@
 		"email": {
 			"title": "Send an email to {{identity}}.",
 			"text": "Email {{identity}}"
+		},
+		"github": {
+			"title": "{{identity}}'s GitHub",
+			"text": "{{identity}}'s GitHub Organization"
+		},
+		"instagram": {
+			"title": "{{identity}}'s GitHub",
+			"text": "{{identity}}'s GitHub Page"
+		},
+		"facebook": {
+			"title": "{{identity}}'s Facebook",
+			"text": "{{identity}}'s Facebook Page"
+		},
+		"linkedin": {
+			"title": "{{identity}}'s LinkedIn",
+			"text": "{{identity}}'s LinkedIn Profile"
 		}
 	},
 	"header": {

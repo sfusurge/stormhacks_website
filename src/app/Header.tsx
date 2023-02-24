@@ -40,8 +40,8 @@ function Header({ appRoutes }: { appRoutes: AppRoute[] }) {
 			<div className={cx(Styles.headerContents, "width-limited")}>
 				<HeaderNav appRoutes={appRoutes} />
 				<div className={Styles.spacer} />
-				<div className={Styles.linkContainer}>
-					<SurgeSocialLinks />
+				<div className={cx(Styles.linkContainer, Styles.socialLinks)}>
+					<SurgeSocialLinks className={Styles.iconLink} />
 				</div>
 				<HeaderApplyButton />
 			</div>

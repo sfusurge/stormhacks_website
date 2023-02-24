@@ -9,6 +9,8 @@
 		--padding-side: var(--size-medium);
 	}
 
+	@include font-header;
+
 	// Disable selecting link text.
 	@include select-disabled;
 
@@ -93,6 +95,19 @@
 	}
 }
 
+// Header border.
+.header {
+	border-bottom: var(--header-border) 1px solid;
+
+	@include for-desktop {
+		transition: border-bottom-color var(--animation-slow);
+	}
+
+	body[data-scroll-position="top"] & {
+		border-bottom-color: transparent;
+	}
+}
+
 // Alignment.
 .headerContents > .spacer {
 	flex: 1 1;
@@ -109,23 +124,11 @@
 	}
 }
 
-// Links.
-.headerContents a {
-	text-align: center;
-	text-decoration: none;
-}
-
-.logoLink {
-	font-size: 3em;
-	line-height: 0.33em;
-}
-
-a.currentSection {
-	color: var(--header-current-section) !important;
-}
-
 // Spacing between links.
-.headerContents,
+.headerContents {
+	gap: var(--header-section-spacing);
+}
+
 .linkContainer {
 	gap: var(--header-link-spacing);
 }
@@ -141,6 +144,43 @@ a.currentSection {
 
 .headerStickyRight {
 	padding-left: var(--padding-side);
+}
+
+// Links.
+.headerContents {
+	font-size: var(--header-text-size);
+
+	a {
+		text-align: center;
+		text-decoration: none;
+	}
+
+	a.currentSection {
+		color: var(--header-current-section) !important;
+	}
+}
+
+.logoLink {
+	font-size: 3em;
+	line-height: 0.33em;
+}
+
+.iconLink {
+	font-size: var(--header-icon-size);
+}
+
+.socialLinks {
+	gap: 0;
+	.iconLink {
+		padding: 0.3em calc(var(--header-link-spacing) / 4);
+		margin: 0 calc(var(--header-link-spacing) / 4);
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
 }
 
 // Make header visible on mobile only when scrolling up.

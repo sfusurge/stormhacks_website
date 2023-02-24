@@ -14,6 +14,7 @@ function SocialLink({
 	icon,
 	type,
 	children,
+	className,
 }: PropsWithChildren<{
 	/**
 	 * The identity of the link.
@@ -37,6 +38,11 @@ function SocialLink({
 	 * If unspecified, will default to `true`.
 	 */
 	icon?: boolean | ReactElement;
+
+	/**
+	 * Classes to add to the element.
+	 */
+	className?: string;
 }>) {
 	const { t } = useTranslation();
 	const { i18n: ikey } = SocialLinkTypeInfo[type];
@@ -47,7 +53,7 @@ function SocialLink({
 	const iconEl = shouldHaveIcon && (shouldCreateIcon ? <SocialLinkIcon type={type} /> : icon);
 
 	return (
-		<a href={href} title={t(`${ikey}.title`, { identity })}>
+		<a href={href} title={t(`${ikey}.title`, { identity })} className={className}>
 			{iconEl}
 			{!children && !iconEl && t(`${ikey}.text`, { identity })}
 			{children}

@@ -34,7 +34,10 @@ body {
 	--size-small: 0.8rem;
 	--size-smaller: 0.5rem;
 
-	--header-link-spacing: 1rem;
+	--header-section-spacing: 1.4rem;
+	--header-link-spacing: 1.8rem;
+	--header-text-size: 1rem;
+	--header-icon-size: 1.3rem;
 
 	@include for-mobile {
 		--size-larger: 1.4rem;
@@ -43,6 +46,7 @@ body {
 		--size-small: 0.45rem;
 		--size-smaller: 0.3rem;
 
+		--header-section-spacing: 0.6rem;
 		--header-link-spacing: 0.5rem;
 	}
 }

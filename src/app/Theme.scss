@@ -1,8 +1,16 @@
 body {
 	--page-background-color: #0f1011;
-	--page-background-gradient: linear-gradient(180deg, #0f1011 0%, #1c1a24 32.36%, #111015 77.11%, #1f1c28 100.55%);
+	--page-background-gradient: linear-gradient(
+		180deg,
+		181818 0%,
+		#0f1011 5%,
+		#1c1a24 32.36%,
+		#111015 77.11%,
+		#1f1c28 100.55%
+	);
 
 	--header-background: #181818;
+	--header-border: #fff;
 	--header-scrollable-color: #777;
 	--header-current-section: #f7dd9f;
 
