@@ -24,11 +24,9 @@
 	// Disable selecting link text.
 	@include select-disabled;
 
-	// Sticky header for desktop.
-	@include for-desktop {
-		position: sticky;
-		top: 0;
-	}
+	// Sticky header.
+	position: sticky;
+	top: 0;
 
 	// Scrollable header for mobile.
 	@include for-mobile {
@@ -194,8 +192,8 @@
 	}
 }
 
-// Make header visible on mobile only when scrolling up.
-@include for-mobile {
+// Make header visible on landscape mobile only when scrolling up.
+@media screen and (max-height: 600px) {
 	.header {
 		position: sticky;
 		top: -1px; // -1 accounts for half-pixels.
