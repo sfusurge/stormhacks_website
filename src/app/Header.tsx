@@ -1,6 +1,6 @@
 import cx from "classnames";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { getScrollParent, isAnimatedScrolling } from "~/ScrollAnchor/util";
 import SurgeSocialLinks from "~/SurgeSocialLinks";

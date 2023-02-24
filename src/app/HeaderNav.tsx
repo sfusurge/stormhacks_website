@@ -45,7 +45,11 @@ function LinkToMain({ routeId }: { routeId: string }) {
 	const { t } = useTranslation();
 	return (
 		<nav className={Styles.headerStickyLeft}>
-			<ScrollAnchorNavLink path={"/"} className={Styles.logoLink} title={t(`header.links.${routeId}.title`)}>
+			<ScrollAnchorNavLink
+				path={"/"}
+				id={routeId}
+				className={Styles.logoLink}
+				title={t(`header.links.${routeId}.title`)}>
 				<InlineSVG svg={StormhacksIcon} />
 			</ScrollAnchorNavLink>
 		</nav>
