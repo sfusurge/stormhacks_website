@@ -1,15 +1,25 @@
 .header {
+	@include font-header;
 	position: relative;
 	background: var(--header-background);
 
 	--padding: var(--size-small) var(--size-larger);
 	--padding-side: var(--size-small);
+
 	@include for-mobile {
 		--padding: var(--size-small);
 		--padding-side: var(--size-medium);
 	}
 
-	@include font-header;
+	@include for-tablet {
+		--padding: var(--size-small);
+		--header-link-spacing: var(--header-link-spacing-smaller);
+		--header-section-spacing: var(--header-link-spacing-smaller);
+
+		.socialLinks {
+			--header-link-spacing: var(--size-small);
+		}
+	}
 
 	// Disable selecting link text.
 	@include select-disabled;
@@ -98,12 +108,13 @@
 // Header border.
 .header {
 	border-bottom: var(--header-border) 1px solid;
+	transition: border-bottom-color var(--animation-slow);
+	z-index: 10;
 
 	@include for-desktop {
-		transition: border-bottom-color var(--animation-slow);
 	}
 
-	body[data-scroll-position="top"] & {
+	&.atContainerTop {
 		border-bottom-color: transparent;
 	}
 }

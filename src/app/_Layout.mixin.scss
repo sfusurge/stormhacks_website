@@ -1,4 +1,5 @@
 $layout-mobile-width: 600px;
+$layout-tablet-width: 900px;
 
 /**
  * Applies only for the given layout.
@@ -7,6 +8,10 @@ $layout-mobile-width: 600px;
 @mixin for-layout($layout) {
 	@if $layout == "desktop" {
 		@media screen and (min-width: $layout-mobile-width) {
+			@content;
+		}
+	} @else if $layout == "tablet" {
+		@media screen and (max-width: $layout-tablet-width) {
 			@content;
 		}
 	} @else if $layout == "mobile" {
@@ -27,6 +32,15 @@ $layout-mobile-width: 600px;
  */
 @mixin for-mobile {
 	@include for-layout("mobile") {
+		@content;
+	}
+}
+
+/**
+ * Applies only for tablet devices.
+ */
+@mixin for-tablet {
+	@include for-layout("tablet") {
 		@content;
 	}
 }
