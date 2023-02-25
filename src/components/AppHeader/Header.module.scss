@@ -96,7 +96,6 @@
 // Header border.
 .header {
 	border-bottom: var(--header-border) 1px solid;
-	transition: border-bottom-color var(--animation-slow);
 	z-index: 10;
 
 	@include for-desktop {
@@ -104,6 +103,10 @@
 
 	&.atContainerTop {
 		border-bottom-color: transparent;
+	}
+
+	&.animationDelayDone {
+		transition: border-bottom-color var(--animation-slow);
 	}
 }
 

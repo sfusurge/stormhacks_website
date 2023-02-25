@@ -56,6 +56,9 @@ function Header({ appRoutes }: { appRoutes: AppRoute[] }) {
 				? [window, () => window.scrollY]
 				: [scrollTarget, () => scrollTarget.scrollTop];
 
+		headerEl.classList.toggle(Styles.atContainerTop, getScrollY() <= 0);
+		setTimeout(() => headerEl.classList.add(Styles.animationDelayDone), 250);
+
 		const onTouch = createHeaderTouchCallback(headerEl, scrollTarget, getScrollY, scrollInfo);
 		const onScroll = createHeaderScrollCallback(headerEl, scrollTarget, getScrollY, scrollInfo);
 
@@ -69,7 +72,7 @@ function Header({ appRoutes }: { appRoutes: AppRoute[] }) {
 	}, [headerRef, scrollInfo]);
 
 	return (
-		<header className={Styles.header} ref={headerRef} id="header">
+		<header className={cx(Styles.header)} ref={headerRef} id="header">
 			<div className={cx(Styles.headerContents, "width-limited")}>
 				<HeaderNav appRoutes={appRoutes} />
 				<div className={Styles.spacer} />
