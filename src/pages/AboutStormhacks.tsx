@@ -14,9 +14,9 @@ import { ReactComponent as IconGlobe } from "$asset/icon/globe.svg";
 import { ReactComponent as IconPerson } from "$asset/icon/person.svg";
 import { ReactComponent as IconTimer } from "$asset/icon/timer.svg";
 import { ReactComponent as IconTrophy } from "$asset/icon/trophy.svg";
+import { ReactComponent as SQBottomLeft } from "$asset/squares-bottom-left.svg";
+import { ReactComponent as SQTopRight } from "$asset/squares-top-right.svg";
 
-// import { ReactComponent as SQBottomLeft } from "$asset/squares-bottom-left.svg";
-// import { ReactComponent as SQBottomRight } from "$asset/squares-bottom-right.svg";
 import Styles from "./AboutStormhacks.module.scss";
 
 const Participants = HackathonInfo.participants.count;
@@ -133,8 +133,10 @@ function SectionEventStats() {
 							"i18n-key": "event.info.projects",
 							"i18n-props": { number: Projects },
 						},
-					]}
-				/>
+					]}>
+					<SQBottomLeft className={cx(Styles.boxesGraphic, Styles.boxesGraphicBottomLeft)} />
+					<SQTopRight className={cx(Styles.boxesGraphic, Styles.boxesGraphicTopRight)} />
+				</EventStatBox>
 			</div>
 			<div className={Styles.placeAndTime}>
 				<EventStatBox
