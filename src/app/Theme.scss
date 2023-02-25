@@ -17,6 +17,7 @@ body {
 	--text: #fff;
 	--text-on-accent: #1d1d1d;
 	--text-inverted: #1d1d1d; // For when the background is var(--text)
+	--separator: #2f2e30;
 
 	--accent: #f5b523;
 
@@ -25,6 +26,9 @@ body {
 
 	--logo-color: #5a60f3;
 	--logo-subtitle: #f5b523;
+
+	--statsbox-dark-background: #000;
+	--statsbox-dark-text: #fff;
 
 	// @include for-theme("dark") {
 	// 	--primary: #222654;

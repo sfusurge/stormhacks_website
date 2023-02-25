@@ -11,6 +11,14 @@
 			"apply": { "text": "Apply Now", "title": "Apply for StormHacks 2023!" },
 			"mentor": { "text": "Become a Mentor", "title": "Become a StormHacks 2023 mentor!" },
 			"sponsor": { "text": "Interested in sponsoring us?", "title": "Sponsor StormHacks 2023!" }
+		},
+		"info": {
+			"participants": "{{number}}+ Total Hackers",
+			"prizes": "${{value}}k+ Prize Value",
+			"projects": "{{number}} Diverse Projects",
+			"duration": "{{number}} hours",
+			"location": "In-Person",
+			"new-this-year-label": "New This Year"
 		}
 	},
 

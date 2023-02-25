@@ -1,0 +1,11 @@
+.stat {
+	display: flex;
+	align-items: center;
+	gap: var(--size-small);
+
+	font-weight: 500;
+}
+
+.icon {
+	font-size: 2em;
+}

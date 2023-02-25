@@ -4,18 +4,25 @@ import cx from "classnames";
 import { Trans, useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
-import Button, { ButtonStyle } from "~/Button";
+import { ButtonStyle } from "~/Button";
 import ButtonLink from "~/ButtonLink";
+import EventStatBox, { EventStatBoxLabel, EventStatBoxStyle } from "~/EventStatBox";
 import Page from "~/Page";
 
 import { ReactComponent as Cards } from "$asset/cards.svg";
+import { ReactComponent as IconGlobe } from "$asset/icon/globe.svg";
+import { ReactComponent as IconPerson } from "$asset/icon/person.svg";
+import { ReactComponent as IconTimer } from "$asset/icon/timer.svg";
+import { ReactComponent as IconTrophy } from "$asset/icon/trophy.svg";
 
+// import { ReactComponent as SQBottomLeft } from "$asset/squares-bottom-left.svg";
+// import { ReactComponent as SQBottomRight } from "$asset/squares-bottom-right.svg";
 import Styles from "./AboutStormhacks.module.scss";
 
-const _Participants = HackathonInfo.participants.count;
-const _Projects = HackathonInfo.projects.count;
-const _Prizes = HackathonInfo.prizes.value;
-const _Duration = HackathonInfo.time.hours;
+const Participants = HackathonInfo.participants.count;
+const Projects = HackathonInfo.projects.count;
+const Prizes = HackathonInfo.prizes.value;
+const Duration = HackathonInfo.time.hours;
 
 /**
  * The "About StormHacks" page.
@@ -42,8 +49,8 @@ export function AboutStormhacksSection() {
 			<div className={(Styles.section, Styles.applyForms)}>
 				<SectionApplyForms />
 			</div>
-			<div className={cx(Styles.section, Styles.eventInfo)}>
-				<SectionEventInfo />
+			<div className={cx(Styles.section, Styles.stats)}>
+				<SectionEventStats />
 			</div>
 		</article>
 	);
@@ -103,23 +110,52 @@ function SectionApplyForms() {
 	);
 }
 
-function SectionEventInfo() {
-	// TODO:
-	// https://www.figma.com/file/0NDG2Z2hR9z1cVwtvB8SkF/StormHacks-2023?node-id=5891%3A40&t=ZE4j1r7BKRLQV905-0
-	//
-	//  Box 1:
-	//    - [Icon] "{{participants}}+ Total Hackers"
-	//    - [Icon] "{{Math.floor(prizes / 1000)}}k+ Prize Value"
-	//    - [Icon] "{{projects}}+ Diverse Projects"
-	//
-	//  Box 2:
-	//    Title: "New This Year" (use CSS to capitalize)
-	//    - [Icon] "{{duration}} hours"
-	//    - [Icon] "In-Person"
-	//
-	// Make sure the text is localized.
-	// See https://www.i18next.com/translation-function/interpolation
-	return <span>TODO: SectionAbout</span>;
+function SectionEventStats() {
+	return (
+		<>
+			<div className={Styles.projectsAndParticipants}>
+				<EventStatBox
+					className={Styles.statsBox}
+					style={EventStatBoxStyle.Inverted}
+					stats={[
+						{
+							icon: IconPerson,
+							"i18n-key": "event.info.participants",
+							"i18n-props": { number: Participants },
+						},
+						{
+							icon: IconTrophy,
+							"i18n-key": "event.info.prizes",
+							"i18n-props": { value: Math.floor(Prizes / 1000) },
+						},
+						{
+							icon: IconTrophy,
+							"i18n-key": "event.info.projects",
+							"i18n-props": { number: Projects },
+						},
+					]}
+				/>
+			</div>
+			<div className={Styles.placeAndTime}>
+				<EventStatBox
+					className={Styles.statsBox}
+					label-i18n-key="event.info.new-this-year-label"
+					label-location={EventStatBoxLabel.TOP_RIGHT}
+					label-className={Styles.statsBoxLabel}
+					stats={[
+						{
+							icon: IconTimer,
+							"i18n-key": "event.info.duration",
+							"i18n-props": { number: Duration },
+						},
+						{
+							icon: IconGlobe,
+							"i18n-key": "event.info.location",
+						},
+					]}></EventStatBox>
+			</div>
+		</>
+	);
 }
 
 export default AboutStormhacksPage;

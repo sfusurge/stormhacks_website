@@ -228,5 +228,58 @@
 	}
 }
 
-.about {
+.section.stats {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.projectsAndParticipants .statsBox {
+		--component-bg: var(--statsbox-dark-background);
+		--component-fg: var(--statsbox-dark-text);
+	}
+
+	.placeAndTime .statsBox {
+		position: relative;
+		left: calc(var(--size-medium) * -1);
+
+		.statsBoxLabel {
+			--component-label-bg: var(--statsbox-dark-background);
+			--component-label-fg: var(--statsbox-dark-text);
+			--component-label-border: var(--statsbox-dark-text);
+
+			text-transform: uppercase;
+			font-family: "Roboto Mono";
+			font-weight: 400;
+			font-size: 0.75em;
+		}
+	}
+
+	padding-top: var(--size-larger-2);
+
+	@include for-mobile {
+		font-size: 0.95em;
+
+		// Move slightly upwards and add a separator.
+		top: calc(var(--size-large) * -1);
+		border-top: var(--separator) 1px solid;
+
+		// Reposition the boxes to stack vertically.
+		flex-direction: column;
+
+		.projectsAndParticipants .statsBox {
+			left: unset;
+		}
+
+		.placeAndTime .statsBox {
+			left: 50%;
+		}
+
+		// Move the label to the center.
+		.placeAndTime .statsBox .statsBoxLabel {
+			right: unset !important;
+			left: unset;
+			margin: auto 0;
+		}
+	}
 }
