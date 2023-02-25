@@ -51,12 +51,13 @@ function isFirstNavigate() {
  */
 function Setup({ children }: { children: ReactNode }) {
 	const initialSection = getRouteIdFromPath(AppRoutes, window.location.pathname);
-	console.debug(`Should scroll to anchor '${initialSection}' in URL?`, isFirstNavigate());
+	const firstNavigate = isFirstNavigate();
+	console.debug(`Should scroll to anchor '${initialSection}' in URL?`, firstNavigate);
 	return (
 		<RecoilRoot>
 			<ThemeProvider />
 			<BrowserRouter>{children}</BrowserRouter>
-			{isFirstNavigate() && initialSection && <MoveToScrollAnchorAtLoad id={initialSection} delay={200} />}
+			{firstNavigate && initialSection && <MoveToScrollAnchorAtLoad id={initialSection} delay={200} />}
 		</RecoilRoot>
 	);
 }

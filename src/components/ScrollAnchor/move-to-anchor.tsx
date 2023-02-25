@@ -1,5 +1,4 @@
 import { ReactElement } from "react";
-import { SetterOrUpdater, atom, useRecoilState } from "recoil";
 
 import { encodeAnchorId, scrollToAnchor } from "./util";
 
@@ -11,17 +10,13 @@ interface StateData {
 	delay: number;
 }
 
-const State = atom<StateData>({
-	key: "MoveToScrollAnchor",
-	default: {
-		foundAnchor: false,
-		wantedAnchor: false,
-		timeoutAt: false,
-
-		delayTimeout: null,
-		delay: 0,
-	},
-});
+const State: StateData = {
+	foundAnchor: false,
+	wantedAnchor: false,
+	timeoutAt: false,
+	delayTimeout: null,
+	delay: 0,
+};
 
 type MoveToScrollAnchorFunction = (id: string, options?: { delay?: number }) => void;
 
@@ -29,16 +24,17 @@ type MoveToScrollAnchorFunction = (id: string, options?: { delay?: number }) => 
  * A React hook that allows for moving to a scroll anchor.
  */
 export function useMoveToScrollAnchor(): MoveToScrollAnchorFunction {
-	const [state, setState] = useRecoilState(State);
 	return (id, opts) => {
-		if (state.wantedAnchor !== id) {
-			const delay = opts?.delay ?? 0;
-			setState(({ ...data }) => ({ ...data, wantedAnchor: id, foundAnchor: false, delay: delay ?? 0 }));
+		if (State.wantedAnchor !== id) {
+			Object.assign(State, {
+				wantedAnchor: id,
+				foundAnchor: false,
+				delay: opts?.delay ?? 0,
+			});
 		}
 
 		if (id == null) return;
-		if (id !== state.wantedAnchor) return;
-		if (state.foundAnchor) return;
+		if (State.foundAnchor) return;
 
 		const anchorElementId = encodeAnchorId(id);
 		const el = document.getElementById(anchorElementId);
@@ -47,7 +43,7 @@ export function useMoveToScrollAnchor(): MoveToScrollAnchorFunction {
 			return;
 		}
 
-		doMoveToScrollAnchor(id, el, state, setState);
+		doMoveToScrollAnchor(id, el);
 	};
 }
 
@@ -61,54 +57,46 @@ export function MoveToScrollAnchor({ id, delay }: { id: string; delay?: number }
 }
 
 export function useMaybeMoveToScrollAnchorCallback(id: string): (el: HTMLElement) => void {
-	const [state, setState] = useRecoilState(State);
 	return (el: HTMLElement) => {
-		if (state.foundAnchor) return;
-		if (state.wantedAnchor !== id) return;
+		if (State.foundAnchor) return;
+		if (State.wantedAnchor !== id) return;
+		State.foundAnchor = true;
 
-		if (state.timeoutAt !== false && Date.now() >= state.timeoutAt) {
-			setState(({ ...data }) => ({ ...data, foundAnchor: true }));
-			return;
+		if (State.timeoutAt === false || Date.now() < State.timeoutAt) {
+			doMoveToScrollAnchor(id, el);
 		}
-
-		doMoveToScrollAnchor(id, el, state, setState);
 	};
 }
 
-function doMoveToScrollAnchor(id: string, el: HTMLElement, state: StateData, setState: SetterOrUpdater<StateData>) {
-	if (state.delayTimeout != null) {
-		clearTimeout(state.delayTimeout);
-	}
-
-	function endScroll() {
-		setState((data) => ({ ...data, wantedAnchor: data.wantedAnchor === id ? false : data.wantedAnchor }));
+function doMoveToScrollAnchor(id: string, el: HTMLElement) {
+	State.foundAnchor = true;
+	if (State.delayTimeout != null) {
+		clearTimeout(State.delayTimeout);
 	}
 
 	function doScroll() {
+		const onEndScroll = () => {
+			State.wantedAnchor = State.wantedAnchor === id ? false : State.wantedAnchor;
+		};
+
 		console.debug("Scrolling to anchor", id);
 		scrollToAnchor(el, {
-			onScrollCancel: endScroll,
-			onScrollFinish: endScroll,
+			onScrollCancel: onEndScroll,
+			onScrollFinish: onEndScroll,
 		});
 	}
 
 	// Immediately scroll.
-	if (state.delay <= 0) {
+	if (State.delay <= 0) {
 		doScroll();
-		setState((data) => ({ ...data, delayTimeout: null, foundAnchor: true }));
+		Object.assign(State, { delayTimeout: null, foundAnchor: true });
 		return;
 	}
 
 	// Scroll after a debounced delay.
-	const timeout = setTimeout(() => {
-		clearTimeout(timeout);
-		setState((data) => ({ ...data, delayTimeout: null }));
+	State.delayTimeout = setTimeout(() => {
+		State.delayTimeout = null;
+		State.delay = 0;
 		doScroll();
-	}, state.delay);
-
-	setState((data) => ({
-		...data,
-		foundAnchor: true,
-		delayTimeout: timeout,
-	}));
+	}, State.delay);
 }
