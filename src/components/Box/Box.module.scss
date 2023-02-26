@@ -63,6 +63,18 @@
 	}
 }
 
+.body {
+	> h1:first-child,
+	> h2:first-child,
+	> p:first-child {
+		margin-top: 0;
+	}
+
+	> p:last-child {
+		margin-bottom: 0;
+	}
+}
+
 // Styles.
 .regular {
 	--box-border: var(--text);
