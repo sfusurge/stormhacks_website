@@ -12,7 +12,18 @@ import Styles from "./FAQ.module.scss";
  * The list of frequently asked questions to show.
  * Each entry should be the translation key for `faq.[{key}]` in the translation.json file.
  */
-const FAQs = ["example"];
+const FAQs = [
+	"what-is-a-hackathon",
+	"what-if-its-my-first-time",
+	"who-can-participate",
+	"how-many-people-on-a-team",
+	"virtual-or-in-person",
+	"what-kind-of-activities",
+	"what-platform-is-the-event-on",
+	"how-will-we-receive-swag",
+	"does-admission-cost-money",
+	"more-questions",
+];
 
 /**
  * The "Frequently Asked Questions" page.
@@ -29,12 +40,6 @@ function FAQPage() {
 }
 
 export function FAQSection() {
-	// TODO:
-	// https://www.figma.com/file/0NDG2Z2hR9z1cVwtvB8SkF/StormHacks-2023?node-id=5891%3A40&t=ZE4j1r7BKRLQV905-0
-	//
-	//  - You will need to follow up with other teams to get the list of questions and answers.
-	//  - The basic FrequentlyAskedQuestion component has been created. You need to style it.
-
 	const { i18n } = useTranslation();
 
 	// Use a memo so we don't re-render repeatedly.
@@ -43,9 +48,9 @@ export function FAQSection() {
 			<FrequentlyAskedQuestion
 				i18n={i18n}
 				key={key}
-				open
-				questionKey={`faq.${key}.question`}
-				answerKey={`faq.${key}.answer`}
+				className={Styles.faqBox}
+				questionKey={`faqs.${key}.question`}
+				answerKey={`faqs.${key}.answer`}
 			/>
 		));
 	}, [i18n]);
@@ -53,7 +58,7 @@ export function FAQSection() {
 	return (
 		<article className={Styles.container}>
 			<h1 className={Styles.title}>
-				<Trans i18nKey={"faq.title"}>
+				<Trans i18nKey={"faqs.title"}>
 					F<strong>AQ</strong>
 				</Trans>
 			</h1>

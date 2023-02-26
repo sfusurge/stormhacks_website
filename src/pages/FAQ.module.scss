@@ -1,13 +1,28 @@
 .container {
 }
 
-.section.faqs {
-}
-
 .title {
 	font-weight: normal;
 
 	strong {
 		font-weight: bold;
+	}
+}
+
+.section.faqs {
+	--faq-box-width: 300px;
+
+	display: grid;
+	gap: var(--size-medium);
+	grid-template-columns: repeat(auto-fill, minmax(max(40%, var(--faq-box-width)), 1fr));
+
+	@include for-mobile {
+		--min-image-width: 150px;
+	}
+
+	.faqBox {
+		display: flex;
+		align-items: stretch;
+		height: 100%;
 	}
 }

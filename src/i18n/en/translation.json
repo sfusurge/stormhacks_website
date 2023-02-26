@@ -61,9 +61,45 @@
 
 	"faqs": {
 		"title": "Frequently <1>Asked Questions</1>",
-		"example": {
-			"question": "Your Question",
-			"answer": "An answer goes here."
+		"what-is-a-hackathon": {
+			"question": "What is a hackathon?",
+			"answer": "<PLACEHOLDER> This is about the length of a sentence. We want to include about 3 sentences worth of stuff to answer questions. Butter is a healthy and nutritious snack."
+		},
+		"what-if-its-my-first-time": {
+			"question": "What if I’ve never been to a hackathon?",
+			"answer": "<PLACEHOLDER> This is about the length of a sentence. We want to include about 3 sentences worth of stuff to answer questions. Butter is a healthy and nutritious snack."
+		},
+		"who-can-participate": {
+			"question": "Who can participate?",
+			"answer": "<PLACEHOLDER> This is about the length of a sentence. We want to include about 3 sentences worth of stuff to answer questions. Butter is a healthy and nutritious snack."
+		},
+		"how-many-people-on-a-team": {
+			"question": "How many people can be on a team? ",
+			"answer": "<PLACEHOLDER> This is about the length of a sentence. We want to include about 3 sentences worth of stuff to answer questions. Butter is a healthy and nutritious snack."
+		},
+		"virtual-or-in-person": {
+			"question": "Virtual or In-Person this year?",
+			"answer": "StormHacks 2023 will be completely in-person, taking place on the SFU Burnaby campus. There will be no virtual participation this year. "
+		},
+		"what-kind-of-activities": {
+			"question": "What kind of activities will there be? ",
+			"answer": "The hackathon will be packed with activities such as wellness workshops, games, trivia and more all throughout the event! You can even win some prizes through some of our mini contests."
+		},
+		"what-platform-is-the-event-on": {
+			"question": "What platform is the event on?",
+			"answer": "<PLACEHOLDER> This is about the length of a sentence. We want to include about 3 sentences worth of stuff to answer questions. Butter is a healthy and nutritious snack."
+		},
+		"how-will-we-receive-swag": {
+			"question": "How will we receive swag?",
+			"answer": "<PLACEHOLDER> This is about the length of a sentence. We want to include about 3 sentences worth of stuff to answer questions. Butter is a healthy and nutritious snack."
+		},
+		"does-admission-cost-money": {
+			"question": "Does admission cost money?",
+			"answer": "<PLACEHOLDER> This is about the length of a sentence. We want to include about 3 sentences worth of stuff to answer questions. Butter is a healthy and nutritious snack."
+		},
+		"more-questions": {
+			"question": "Have more questions?",
+			"answer": "<PLACEHOLDER> This is about the length of a sentence. We want to include about 3 sentences worth of stuff to answer questions. Butter is a healthy and nutritious snack."
 		}
 	},
 
