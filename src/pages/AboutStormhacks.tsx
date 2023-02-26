@@ -4,9 +4,10 @@ import cx from "classnames";
 import { Trans, useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
+import { BoxLabelPosition, BoxStyle } from "~/Box";
 import { ButtonStyle } from "~/Button";
 import ButtonLink from "~/ButtonLink";
-import EventStatBox, { EventStatBoxLabel, EventStatBoxStyle } from "~/EventStatBox";
+import EventStatBox from "~/EventStatBox";
 import Page from "~/Page";
 
 import { ReactComponent as Cards } from "$asset/cards.svg";
@@ -94,10 +95,10 @@ function SectionApplyForms() {
 	return (
 		<>
 			<div className={Styles.applyFormsButtons}>
-				<ButtonLink style={ButtonStyle.Accented} href="#" i18n-title="event.links.apply.title">
+				<ButtonLink style={ButtonStyle.Accented} href="/apply" i18n-title="event.links.apply.title">
 					{t("event.links.apply.text")}
 				</ButtonLink>
-				<ButtonLink style={ButtonStyle.Knockout} href="#" i18n-title="event.links.mentor.title">
+				<ButtonLink style={ButtonStyle.Knockout} href="/apply-mentor" i18n-title="event.links.mentor.title">
 					{t("event.links.mentor.text")}
 				</ButtonLink>
 			</div>
@@ -116,7 +117,7 @@ function SectionEventStats() {
 			<div className={Styles.projectsAndParticipants}>
 				<EventStatBox
 					className={Styles.statsBox}
-					style={EventStatBoxStyle.Inverted}
+					style={BoxStyle.Inverted}
 					stats={[
 						{
 							icon: IconPerson,
@@ -142,7 +143,7 @@ function SectionEventStats() {
 				<EventStatBox
 					className={Styles.statsBox}
 					label-i18n-key="event.info.new-this-year-label"
-					label-location={EventStatBoxLabel.TOP_RIGHT}
+					label-position={BoxLabelPosition.TopRight}
 					label-className={Styles.statsBoxLabel}
 					stats={[
 						{

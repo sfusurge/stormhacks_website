@@ -1,40 +1,11 @@
 .component {
 	position: relative;
-	padding: var(--size-smaller) var(--size-large);
-
-	background-color: var(--component-bg);
-	color: var(--component-fg);
-	border: var(--component-border) 1px solid;
-
-	--component-label-fg: var(--component-bg);
-	--component-label-bg: var(--component-fg);
-	--component-label-border: var(--component-fg);
-}
-
-.regular {
-	--component-fg: var(--text-inverted);
-	--component-bg: var(--text);
-	--component-border: var(--text);
-}
-
-.inverted {
-	--component-fg: var(--text);
-	--component-bg: var(--text-inverted);
+	--box-padding-v: var(--size-smaller);
+	--box-padding-h: var(--size-large);
 }
 
 .label {
-	border: var(--component-label-border) 1px solid;
-	background-color: var(--component-label-bg);
-	color: var(--component-label-fg);
-
 	padding: var(--size-smaller-2) var(--size-small);
 	font-size: 0.9em;
-	z-index: 1;
-	position: absolute;
 	white-space: nowrap;
-
-	&.top-right {
-		top: -1em;
-		right: -20%;
-	}
 }

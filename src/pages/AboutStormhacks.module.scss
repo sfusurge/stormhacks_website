@@ -235,8 +235,9 @@
 	justify-content: center;
 
 	.projectsAndParticipants .statsBox {
-		--component-bg: var(--statsbox-dark-background);
-		--component-fg: var(--statsbox-dark-text);
+		--box-background: var(--statsbox-dark-background);
+		--box-border: var(--statsbox-dark-background);
+		--box-text: var(--statsbox-dark-text);
 
 		.boxesGraphic {
 			position: absolute;
@@ -264,9 +265,9 @@
 		left: calc(var(--size-medium) * -1);
 
 		.statsBoxLabel {
-			--component-label-bg: var(--statsbox-dark-background);
-			--component-label-fg: var(--statsbox-dark-text);
-			--component-label-border: var(--statsbox-dark-text);
+			--box-label-background: var(--statsbox-dark-background);
+			--box-label-text: var(--statsbox-dark-text);
+			--box-label-border: var(--statsbox-dark-text);
 
 			text-transform: uppercase;
 			font-family: "Roboto Mono";
@@ -298,8 +299,8 @@
 		// Move the label to the center.
 		.placeAndTime .statsBox .statsBoxLabel {
 			right: unset !important;
-			left: unset;
-			margin: auto 0;
+			left: 50% !important;
+			transform: translate(-50%, -50%);
 		}
 	}
 }

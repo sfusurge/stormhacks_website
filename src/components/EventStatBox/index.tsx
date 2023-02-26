@@ -3,37 +3,16 @@ import cx from "classnames";
 import { ComponentProps, PropsWithChildren, ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 
+import Box, { BoxBody, BoxLabel, BoxLabelPosition, BoxStyle } from "~/Box";
 import EventStat, { EventStat_UNLOCALIZED as EVENTSTAT_UNLOCALIZED } from "~/EventStat";
 
 import Styles from "./EventStatBox.module.scss";
-
-/**
- * Available style of event statistic boxes.
- */
-export const enum EventStatBoxStyle {
-	/**
-	 * A regular box with primary background color and inverted foreground color.
-	 */
-	Regular = "regular",
-
-	/**
-	 * An inverted box with inverted background color and primary foreground color.
-	 */
-	Inverted = "inverted",
-}
-
-/**
- * Available label locations.
- */
-export const enum EventStatBoxLabel {
-	TOP_RIGHT = "top-right",
-}
 
 type BaseEventStatBoxProps = PropsWithChildren<{
 	/**
 	 * The style of box to use.
 	 */
-	style?: EventStatBoxStyle;
+	style?: BoxStyle;
 
 	/**
 	 * The stats to display in this box.
@@ -50,20 +29,20 @@ type BaseEventStatBoxProps = PropsWithChildren<{
 export default function EventStatBox({
 	"label-i18n-key": labelI18nKey,
 	"label-i18n-props": labelI18nProps,
-	"label-location": labelLocation,
+	"label-position": labelPosition,
 	...props
 }: BaseEventStatBoxProps &
 	(
 		| {
 				"label-i18n-key": string;
 				"label-i18n-props"?: Record<string, unknown>;
-				"label-location": EventStatBoxLabel;
+				"label-position": BoxLabelPosition;
 				"label-className"?: string;
 		  }
 		| {
 				"label-i18n-key"?: undefined;
 				"label-i18n-props"?: undefined;
-				"label-location"?: undefined;
+				"label-position"?: undefined;
 				"label-className"?: undefined;
 		  }
 	)) {
@@ -71,7 +50,7 @@ export default function EventStatBox({
 	return EventStatBox_UNLOCALIZED({
 		...props,
 		label: labelI18nKey == null ? undefined : t(labelI18nKey, labelI18nProps),
-		"label-location": labelLocation,
+		"label-position": labelPosition,
 	});
 }
 
@@ -85,11 +64,11 @@ export function EventStatBox_UNLOCALIZED({
 	statsClassName,
 	children,
 	label,
-	"label-location": labelLocation,
+	"label-position": labelPosition,
 	"label-className": labelClassName,
 }: BaseEventStatBoxProps & {
 	label?: string | ReactElement;
-	"label-location"?: EventStatBoxLabel;
+	"label-position"?: BoxLabelPosition;
 	"label-className"?: string;
 }) {
 	const statsEls = stats.map((stat, i) => {
@@ -103,16 +82,18 @@ export function EventStatBox_UNLOCALIZED({
 	});
 
 	return (
-		<div
-			className={cx(Styles.component, className, {
-				[Styles.regular]: style == null || style === EventStatBoxStyle.Regular,
-				[Styles.inverted]: style === EventStatBoxStyle.Inverted,
-			})}>
+		<Box style={style} className={cx(Styles.component, className)}>
 			{label != null && (
-				<div className={cx(Styles.label, labelClassName, Styles[labelLocation as any])}>{label}</div>
+				<BoxLabel
+					position={labelPosition ?? BoxLabelPosition.TopCenter}
+					className={cx(Styles.label, labelClassName)}>
+					{label}
+				</BoxLabel>
 			)}
-			{statsEls}
-			{children && <div className={Styles.extra}>{children}</div>}
-		</div>
+			<BoxBody>
+				{statsEls}
+				{children && <div className={Styles.extra}>{children}</div>}
+			</BoxBody>
+		</Box>
 	);
 }
