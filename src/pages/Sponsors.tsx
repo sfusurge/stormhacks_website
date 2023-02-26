@@ -1,9 +1,11 @@
 import { Sponsors } from "$constants/about";
 import cx from "classnames";
 
-import { useMemo } from "react";
-import { useTranslation } from "react-i18next";
+import { Fragment, useMemo } from "react";
+import { Trans, useTranslation } from "react-i18next";
 
+import ButtonLink, { ButtonStyle } from "~/ButtonLink";
+import Image from "~/Image";
 import Page from "~/Page";
 
 import Styles from "./Sponsors.module.scss";
@@ -24,34 +26,63 @@ function SponsorsPage() {
 
 export function SponsorsSection() {
 	const { t } = useTranslation();
-	const previousSponsors = useMemo(() => <SectionPreviousSponsors />, []);
+	const sponsors = useMemo(() => <SectionSponsorGrid />, []);
 
-	// TODO: This section.
 	return (
 		<article className={Styles.container}>
 			<h1 className={Styles.title}>{t("sponsors.title")}</h1>
 			<SectionWhySponsorUs />
-			{previousSponsors}
+			<ButtonLink
+				style={ButtonStyle.Accented}
+				className={Styles.sponsorButton}
+				href="#"
+				i18n-title="sponsors.button.title">
+				{t("sponsors.button.text")}
+			</ButtonLink>
+			{sponsors}
 		</article>
 	);
 }
 
 function SectionWhySponsorUs() {
-	return <div className={cx(Styles.section, Styles.sponsorUs)}>TODO: SectionWhySponsorUs</div>;
+	const { t } = useTranslation();
+	const benefits = [1, 2, 3];
+
+	return (
+		<div className={cx(Styles.section, Styles.sponsorUs)}>
+			<p className={Styles.whySponsorUs}>{t("sponsors.paragraph")}</p>
+			<div className={Styles.benefits}>
+				{benefits.map((n) => (
+					<Fragment key={n}>
+						<h2>
+							<Trans i18nKey={`sponsors.benefits.${n}.header`}>
+								<span className={Styles.mobileLineBreaker}>...</span>
+							</Trans>
+						</h2>
+						<p>{t(`sponsors.benefits.${n}.paragraph`)}</p>
+					</Fragment>
+				))}
+			</div>
+		</div>
+	);
 }
 
-function SectionPreviousSponsors() {
-	// TODO: Create a component instead of the map function.
+function SectionSponsorGrid() {
+	const { t } = useTranslation();
 	return (
 		<div className={cx(Styles.section, Styles.sponsors)}>
-			{Sponsors.map((sponsor) => {
-				return (
-					<div>
-						{sponsor.name}
-						<img alt={sponsor.name} src={sponsor.photo} />
-					</div>
-				);
-			})}
+			<h2>{t("sponsors.sponsors-heading")}</h2>
+			<div className={Styles.sponsorLinks}>
+				{Sponsors.map((sponsor) => {
+					return (
+						<div>
+							<a href={sponsor.link}>
+								<Image fallbackSrc={sponsor.photo} src={[]} />
+							</a>
+						</div>
+					);
+				})}
+			</div>
 		</div>
 	);
 }

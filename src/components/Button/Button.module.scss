@@ -1,5 +1,6 @@
 // Reset the default appearance of buttons.
 .button {
+	display: inline-block;
 	appearance: none;
 	padding: var(--button-padding);
 	text-decoration: none;

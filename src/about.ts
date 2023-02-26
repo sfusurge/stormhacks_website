@@ -66,12 +66,32 @@ export const SurgeInfo = {
 export const Sponsors = [
 	{
 		name: "Example",
-		photo: "/logo192.png",
+		photo: "https://via.placeholder.com/290x235/fff/666",
 		link: "about:blank",
 	},
 	{
 		name: "Example 2",
-		photo: "/logo192.png",
+		photo: "https://via.placeholder.com/290x235/fff/666",
+		link: "about:blank",
+	},
+	{
+		name: "Example 3",
+		photo: "https://via.placeholder.com/290x235/fff/666",
+		link: "about:blank",
+	},
+	{
+		name: "Example 4",
+		photo: "https://via.placeholder.com/290x235/fff/666",
+		link: "about:blank",
+	},
+	{
+		name: "Example 5",
+		photo: "https://via.placeholder.com/290x235/fff/666",
+		link: "about:blank",
+	},
+	{
+		name: "Example 6",
+		photo: "https://via.placeholder.com/290x235/fff/666",
 		link: "about:blank",
 	},
 ];

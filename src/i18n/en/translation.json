@@ -68,6 +68,29 @@
 	},
 
 	"sponsors": {
-		"title": "Why Sponsor Us?"
+		"title": "Why Sponsor Us?",
+		"paragraph": "We’re looking for passionate companies and organizations looking to foster talent across the global tech community—people hoping to take on young and innovative minds, presenting meaningful opportunities and challenge students’ limits.",
+
+		"button": {
+			"title": "Sponsor StormHacks 2023!",
+			"text": "Sponsor Us"
+		},
+
+		"benefits": {
+			"1": {
+				"header": "Recruit for the best,<0></0> recruit for the future",
+				"paragraph": "Get exposure and access to a huge pool of top technical talent across the Canadian West Coast. Find the next set of candidates who will grow your competitive advantage."
+			},
+			"2": {
+				"header": "Promote products & receive feedback",
+				"paragraph": "With options for sponsoring your own prize & challenge, you can highlight the potential of your product or API as hackers gain hands-on experience using your platform."
+			},
+			"3": {
+				"header": "Spread the word and share your vision",
+				"paragraph": "Boost your brand awareness by sharing company swag, or sponsoring a fun event. Directly engage with hackers from Vancouver’s growing tech community and beyond!"
+			}
+		},
+
+		"sponsors-heading": "Previous Sponsors"
 	}
 }

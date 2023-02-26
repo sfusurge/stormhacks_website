@@ -103,7 +103,7 @@ function Image({ alt, src, fallbackSrc, ...rest }: ImageProps | ImagePropsWithSi
 	return (
 		<picture {...rest}>
 			{sourceEls}
-			<img src={fallbackSrc} alt={alt} />
+			<img src={fallbackSrc} alt={alt} style={{ minWidth: 0, minHeight: 0 }} />
 		</picture>
 	);
 }

@@ -1,11 +1,113 @@
-.container {
-}
+@use "sass:math";
 
-.section.sponsors {
+.container {
+	display: flex;
+	flex-direction: column;
+
+	text-align: center;
+	@include for-mobile {
+		text-align: left;
+	}
+
+	h1 {
+		margin-bottom: 0.5em;
+	}
 }
 
 .section.sponsorUs {
+	p.whySponsorUs {
+		margin: auto;
+		padding: 0 var(--size-larger-2);
+		max-width: 45em;
+
+		@include for-mobile {
+			padding: 0;
+		}
+	}
+
+	.benefits {
+		margin: var(--size-larger) 0;
+		text-align: left;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: var(--size-small);
+
+		h2 {
+			grid-row: 1;
+			margin-bottom: 0.2em;
+			font-size: 0.95em;
+			font-weight: bold;
+		}
+
+		p {
+			grid-row: 2;
+			margin: 0;
+			font-size: 0.8em;
+		}
+
+		@include for-mobile {
+			h2 {
+				padding-top: var(--size-larger);
+				text-transform: uppercase;
+				color: var(--accent);
+				font-size: 1em;
+			}
+
+			p {
+				font-size: 0.9em;
+			}
+
+			display: block;
+
+			.mobileLineBreaker {
+				display: block;
+			}
+		}
+	}
 }
 
-.title {
+.sponsorButton {
+	font-weight: bold;
+	align-self: center;
+	text-align: center;
+
+	padding: var(--size-smaller) var(--size-large);
+
+	@include for-mobile {
+		margin: var(--size-larger) auto;
+		width: calc(max(200px, 60%));
+	}
+}
+
+.section.sponsors {
+	h2 {
+		margin: var(--size-larger) 0 var(--size-small) 0;
+		color: var(--accent);
+		text-transform: uppercase;
+		font-size: 1em;
+		font-weight: bold;
+		text-align: left;
+	}
+
+	.sponsorLinks {
+		--min-image-width: 200px;
+
+		display: grid;
+		gap: var(--size-medium);
+		grid-template-columns: repeat(auto-fit, minmax(max(30%, var(--min-image-width)), 1fr));
+
+		div,
+		a,
+		picture,
+		img {
+			aspect-ratio: 290 / 235;
+			display: block;
+			width: 100%;
+		}
+
+		@include for-mobile {
+			--min-image-width: 150px;
+		}
+	}
 }

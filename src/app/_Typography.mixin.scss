@@ -19,6 +19,6 @@ $backup-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen"
  * Font for headings.
  */
 @mixin font-heading() {
-	font-family: "Roboto Mono", $backup-fonts;
+	font-family: "Redaction", "Times New Roman", $backup-fonts;
 	font-weight: 500;
 }
