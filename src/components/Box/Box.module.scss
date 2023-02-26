@@ -1,0 +1,110 @@
+.component {
+	--box-text: red;
+	--box-border: red;
+	--box-background: green;
+	--box-label-text: green;
+	--box-label-background: red;
+	--box-label-border: green;
+
+	--box-padding-v: var(--size-small);
+	--box-padding-h: var(--size-small);
+
+	--box-title-padding-v: var(--size-smaller);
+	--box-title-padding-h: var(--size-small);
+	--box-label-padding-v: var(--size-smaller-2);
+	--box-label-padding-h: var(--size-smaller);
+
+	position: relative;
+	border: var(--box-border) 1px solid;
+	color: var(--box-text);
+	background: var(--box-background);
+}
+
+.component > .title {
+	border-bottom: var(--box-text) 1px solid;
+
+	padding: var(--box-title-padding-v) 0;
+	margin: 0 var(--box-title-padding-h);
+	font-weight: 500;
+}
+
+.component > .body {
+	padding: var(--box-padding-v) var(--box-padding-h);
+}
+
+.component > .label {
+	position: absolute;
+	background: var(--box-label-background);
+	color: var(--box-label-text);
+	border: var(--box-label-border) 1px solid;
+
+	padding: var(--box-label-padding-v) var(--box-label-padding-h);
+	font-weight: 500;
+
+	&.top-right {
+		right: 0;
+		top: 0;
+
+		transform: translate(50%, -50%);
+	}
+
+	&.top-center {
+		left: 50%;
+		top: 0;
+
+		transform: translate(-50%, -50%);
+	}
+
+	&.top-left {
+		left: 0;
+		top: 0;
+
+		transform: translate(-50%, -50%);
+	}
+}
+
+// Styles.
+.regular {
+	--box-border: var(--text);
+	--box-background: var(--text);
+	--box-text: var(--text-inverted);
+
+	--box-label-text: var(--text);
+	--box-label-border: var(--text);
+	--box-label-background: var(--text-inverted);
+}
+
+.inverted {
+	--box-border: var(--text-inverted);
+	--box-background: var(--text-inverted);
+	--box-text: var(--text);
+
+	--box-label-text: var(--text-inverted);
+	--box-label-border: var(--text-inverted);
+	--box-label-background: var(--text);
+}
+
+.accent {
+	--box-border: var(--accent);
+	--box-background: var(--accent);
+	--box-text: var(--text-on-accent);
+
+	--box-label-text: var(--accent);
+	--box-label-border: var(--accent);
+	--box-label-background: var(--text-on-accent);
+}
+
+.knockout {
+	--box-border: var(--text);
+	--box-background: transparent;
+	--box-text: var(--text);
+
+	--box-label-text: var(--text-inverted);
+	--box-label-border: var(--text);
+	--box-label-background: var(--text);
+
+	> .title {
+		padding: var(--box-title-padding-v) var(--box-title-padding-h);
+		margin: 0;
+	}
+}
