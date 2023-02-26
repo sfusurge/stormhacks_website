@@ -19,10 +19,4 @@
 	@include for-mobile {
 		--min-image-width: 150px;
 	}
-
-	.faqBox {
-		display: flex;
-		align-items: stretch;
-		height: 100%;
-	}
 }

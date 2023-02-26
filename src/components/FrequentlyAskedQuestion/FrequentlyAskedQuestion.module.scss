@@ -1,59 +1,14 @@
 .component {
-	--component-padding-h: var(--size-small);
-	--component-padding-v: var(--size-small);
-	--component-answer-padding-h: var(--size-small);
-	--component-answer-padding-v: var(--size-large);
-}
-
-.details {
-	flex: 1 1 auto;
-	flex-direction: column;
-	display: flex;
+	--box-title-padding-h: var(--size-small);
+	--box-title-padding-v: var(--size-small);
+	--box-padding-h: var(--size-small);
+	--box-padding-v: var(--size-large);
 }
 
 .question {
-	padding: var(--component-padding-v) var(--component-padding-h);
-	position: relative;
-	border: var(--text) 1px solid;
-
 	font-weight: 500;
 }
 
 .answer {
-	border: var(--text) 1px solid;
-	border-top: none;
-
-	padding: var(--component-answer-padding-v) var(--component-answer-padding-h);
-	flex-grow: 1;
-
 	font-size: 0.9em;
-}
-
-// Replace the built-in arrow with a custom one.
-summary.question {
-	list-style-type: none !important;
-}
-
-.component > .details::marker,
-.component > .details::-webkit-details-marker {
-	display: none !important;
-}
-
-.component > .details[data-can-close] > .question::after {
-	position: absolute;
-	right: calc(var(--component-padding-h) * 1.5);
-	height: 100%;
-	top: 0;
-	bottom: 0;
-}
-
-.component > .details[data-can-close][data-open] > .question::after {
-	top: 16%;
-	content: "⌄";
-}
-
-.component > .details[data-can-close]:not([data-open]) > .question::after {
-	top: 23%;
-	padding-right: 0.1em;
-	content: "-";
 }

@@ -3,6 +3,8 @@ import { i18n } from "i18next";
 
 import { useTranslation } from "react-i18next";
 
+import Box, { BoxBody, BoxStyle, BoxTitle } from "~/Box";
+
 import Styles from "./FrequentlyAskedQuestion.module.scss";
 
 export type FrequentlyAskedQuestionProps = {
@@ -33,12 +35,10 @@ function FrequentlyAskedQuestion({ questionKey, answerKey, i18n, className }: Fr
 	const t = i18n?.t ?? useTranslationT.t;
 
 	return (
-		<div className={cx(Styles.component, className)}>
-			<div className={Styles.details} data-open={true}>
-				<summary className={Styles.question}>{t(questionKey)}</summary>
-				<div className={Styles.answer}>{t(answerKey)}</div>
-			</div>
-		</div>
+		<Box style={BoxStyle.Knockout} className={cx(Styles.component, className)}>
+			<BoxTitle className={Styles.question}>{t(questionKey)}</BoxTitle>
+			<BoxBody className={Styles.answer}>{t(answerKey)}</BoxBody>
+		</Box>
 	);
 }
 
