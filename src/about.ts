@@ -16,6 +16,11 @@ export const HackathonInfo = {
 	prizes: {
 		value: 20000,
 	},
+
+	register: {
+		hacker: "https://www.surveymonkey.ca/r/TB87RY5",
+		mentor: "https://www.surveymonkey.ca/r/TB825RJ",
+	},
 };
 
 export const SurgeInfo = {

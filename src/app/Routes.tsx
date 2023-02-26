@@ -2,6 +2,8 @@ import { ReactElement } from "react";
 
 import AboutStormhacksPage from "$page/AboutStormhacks";
 import AboutSurgePage from "$page/AboutSurge";
+import ApplyHackerPage from "$page/ApplyHacker";
+import ApplyMentorPage from "$page/ApplyMentor";
 import FAQPage from "$page/FAQ";
 import SponsorsPage from "$page/Sponsors";
 
@@ -12,6 +14,7 @@ export type AppRoute =
 				id: string;
 				path: string;
 				page: () => ReactElement;
+				hiddenOnNav?: boolean;
 			}>;
 	  }
 	| {
@@ -19,11 +22,13 @@ export type AppRoute =
 			id: string;
 			path: string;
 			page: () => ReactElement;
+			hiddenOnNav?: boolean;
 	  }
 	| {
 			type: "external";
 			id: string;
 			href: string;
+			hiddenOnNav?: boolean;
 	  };
 
 const Routes: AppRoute[] = [
@@ -35,6 +40,20 @@ const Routes: AppRoute[] = [
 			{ path: "/faq", id: "faq", page: () => <FAQPage /> },
 			{ path: "/about-us", id: "about-us", page: () => <AboutSurgePage /> },
 		],
+	},
+	{
+		type: "single",
+		id: "apply-hacker",
+		path: "/apply",
+		page: () => <ApplyHackerPage />,
+		hiddenOnNav: true,
+	},
+	{
+		type: "single",
+		id: "apply-mentor",
+		path: "/apply-mentor",
+		page: () => <ApplyMentorPage />,
+		hiddenOnNav: true,
 	},
 	// {
 	// 	type: "external",

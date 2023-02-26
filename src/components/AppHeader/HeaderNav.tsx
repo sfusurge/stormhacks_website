@@ -64,19 +64,25 @@ function HeaderNav({ appRoutes }: { appRoutes: AppRoute[] }) {
 	type LinkDeclaration = {
 		href: string;
 		id: string;
+		hidden: boolean;
 		component: (props: { path: string; routeId: string }) => ReactElement;
 	};
 
 	const links: Array<LinkDeclaration> = appRoutes.flatMap((route) => {
 		if (route.type === "paged") {
-			return route.pages.map(({ path, id }) => ({ href: path, id, component: LinkToSection }));
+			return route.pages.flatMap(({ path, id, hiddenOnNav }) => ({
+				href: path,
+				id,
+				hidden: hiddenOnNav ?? false,
+				component: LinkToSection,
+			}));
 		}
 
 		if (route.type === "single") {
-			return [{ href: route.path, id: route.id, component: LinkToSection }];
+			return [{ href: route.path, id: route.id, hidden: route.hiddenOnNav ?? false, component: LinkToSection }];
 		}
 
-		return { href: route.href, id: route.id, component: LinkToExternal };
+		return [{ href: route.href, id: route.id, hidden: route.hiddenOnNav ?? false, component: LinkToExternal }];
 	});
 
 	const mainRouteId = links.find(({ href }) => href === "/")!.id;
@@ -85,7 +91,7 @@ function HeaderNav({ appRoutes }: { appRoutes: AppRoute[] }) {
 			<LinkToMain routeId={mainRouteId} />
 			<nav className={Styles.linkContainer}>
 				{links
-					.filter(({ href }) => href !== "/")
+					.filter(({ href, hidden }) => href !== "/" && !hidden)
 					.map(({ href, id, component: Link }) => (
 						<Link key={href} path={href} routeId={id} />
 					))}
