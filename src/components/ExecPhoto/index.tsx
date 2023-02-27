@@ -26,6 +26,7 @@ function ExecPhoto({ name, photo }: ExecPhotoProps) {
 
 		return (
 			<Image
+				className={Styles.photo}
 				alt={name}
 				fallbackSrc={photo}
 				src={[
@@ -39,7 +40,7 @@ function ExecPhoto({ name, photo }: ExecPhotoProps) {
 		);
 	}, [name, photo]);
 
-	return <div className={Styles.photo}>{image}</div>;
+	return <div className={Styles.container}>{image}</div>;
 }
 
 const EXTENSION_TO_MIME = {

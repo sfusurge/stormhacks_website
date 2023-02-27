@@ -74,7 +74,7 @@ export type ImageSource = {
  *
  * https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
  */
-function Image({ alt, src, fallbackSrc, ...rest }: ImageProps | ImagePropsWithSize) {
+function Image({ alt, src, fallbackSrc, className, ...rest }: ImageProps | ImagePropsWithSize) {
 	const sourceMap = new Map<string, ImageSource[]>();
 	for (const source of src) {
 		// Create a key that is a tuple of properties that represent a unique <source> element.
@@ -101,7 +101,7 @@ function Image({ alt, src, fallbackSrc, ...rest }: ImageProps | ImagePropsWithSi
 	});
 
 	return (
-		<picture {...rest}>
+		<picture {...rest} className={className}>
 			{sourceEls}
 			<img src={fallbackSrc} alt={alt} style={{ minWidth: 0, minHeight: 0 }} />
 		</picture>

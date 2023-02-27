@@ -1,4 +1,5 @@
 .container {
+	text-align: center;
 }
 
 .section.about {
@@ -7,5 +8,14 @@
 .section.execs {
 }
 
-.exec-grid {
+.execGridContainer {
+	> .execGrid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+
+		justify-content: stretch;
+
+		margin: auto;
+		gap: var(--size-smaller);
+	}
 }
