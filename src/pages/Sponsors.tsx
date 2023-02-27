@@ -1,7 +1,7 @@
 import { HackathonInfo, Sponsors } from "$constants/about";
 import cx from "classnames";
 
-import { Fragment, useMemo } from "react";
+import { Fragment, FunctionComponent, ReactElement, SVGProps, useMemo } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
 import ButtonLink, { ButtonStyle } from "~/ButtonLink";
@@ -73,16 +73,34 @@ function SectionSponsorGrid() {
 		<div className={cx(Styles.section, Styles.sponsors)}>
 			<h2>{t("sponsors.sponsors-heading")}</h2>
 			<div className={Styles.sponsorLinks}>
-				{Sponsors.map((sponsor) => {
-					return (
-						<div>
-							<a href={sponsor.link}>
-								<Image fallbackSrc={sponsor.photo} src={[]} />
-							</a>
-						</div>
-					);
-				})}
+				{Sponsors.map((sponsor) => (
+					<Sponsor {...sponsor} />
+				))}
 			</div>
+		</div>
+	);
+}
+
+function Sponsor({
+	name,
+	photo,
+	link,
+	svg: SVG,
+}: {
+	name: string;
+	link?: string;
+	photo?: string;
+	svg?: FunctionComponent<SVGProps<SVGSVGElement>>;
+}): ReactElement {
+	const image = SVG == null ? <Image fallbackSrc={photo as string} alt={name} src={[]} /> : <SVG />;
+	return (
+		<div>
+			{link && (
+				<a className={Styles.sponsorLink} href={link} title={link}>
+					{image}
+				</a>
+			)}
+			{!link && image}
 		</div>
 	);
 }

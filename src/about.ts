@@ -1,3 +1,19 @@
+import { ReactComponent as SponsorAssemblyAI } from "$asset/sponsor/assemblyai.svg";
+import { ReactComponent as SponsorEcho3D } from "$asset/sponsor/echo3d.svg";
+import { ReactComponent as SponsorErgonomyx } from "$asset/sponsor/ergonomyx.svg";
+import { ReactComponent as SponsorGitHub } from "$asset/sponsor/github.svg";
+import { ReactComponent as SponsorGuusto } from "$asset/sponsor/guusto.svg";
+import { ReactComponent as SponsorHSBC } from "$asset/sponsor/hsbc.svg";
+import { ReactComponent as SponsorIntact } from "$asset/sponsor/intact.svg";
+import { ReactComponent as SponsorIntactLab } from "$asset/sponsor/intactlab.svg";
+import { ReactComponent as SponsorMLH } from "$asset/sponsor/mlh.svg";
+import { ReactComponent as SponsorRedbull } from "$asset/sponsor/redbull.svg";
+import { ReactComponent as SponsorSAP } from "$asset/sponsor/sap.svg";
+import { ReactComponent as SponsorSFSS } from "$asset/sponsor/sfss.svg";
+import { ReactComponent as SponsorSSSS } from "$asset/sponsor/sfu-ssss.svg";
+import { ReactComponent as SponsorWICS } from "$asset/sponsor/sfu-wics.svg";
+import { ReactComponent as SponsorStickermule } from "$asset/sponsor/stickermule.svg";
+
 export const HackathonInfo = {
 	time: {
 		start: "2023-05-21T00:00-0800", // TODO: When is the actual start time?
@@ -242,33 +258,67 @@ export const SurgeInfo = {
 
 export const Sponsors = [
 	{
-		name: "Example",
-		photo: "https://via.placeholder.com/290x235/fff/666",
-		link: "about:blank",
+		name: "HSBC",
+		svg: SponsorHSBC,
 	},
 	{
-		name: "Example 2",
-		photo: "https://via.placeholder.com/290x235/fff/666",
-		link: "about:blank",
+		name: "Simon Fraser Student Society",
+		svg: SponsorSFSS,
 	},
 	{
-		name: "Example 3",
-		photo: "https://via.placeholder.com/290x235/fff/666",
-		link: "about:blank",
+		name: "Intactlab",
+		svg: SponsorIntactLab,
 	},
 	{
-		name: "Example 4",
-		photo: "https://via.placeholder.com/290x235/fff/666",
-		link: "about:blank",
+		name: "Intact",
+		svg: SponsorIntact,
 	},
 	{
-		name: "Example 5",
-		photo: "https://via.placeholder.com/290x235/fff/666",
-		link: "about:blank",
+		name: "SAP",
+		svg: SponsorSAP,
 	},
 	{
-		name: "Example 6",
-		photo: "https://via.placeholder.com/290x235/fff/666",
-		link: "about:blank",
+		name: "Guusto",
+		svg: SponsorGuusto,
+	},
+	{
+		name: "MLH",
+		svg: SponsorMLH,
+	},
+	{
+		name: "Ergonomyx",
+		svg: SponsorErgonomyx,
+	},
+	{
+		name: "Software Systems Student Society",
+		svg: SponsorSSSS,
+	},
+	{
+		name: "Women in Computing Science",
+		svg: SponsorWICS,
+	},
+	{
+		name: "AssemblyAI",
+		svg: SponsorAssemblyAI,
+	},
+	{
+		name: "echo3D",
+		svg: SponsorEcho3D,
+	},
+	{
+		name: "Leading Learners",
+		photo: "/sponsor/leading-learners.png",
+	},
+	{
+		name: "Red Bull",
+		svg: SponsorRedbull,
+	},
+	{
+		name: "stickermule",
+		svg: SponsorStickermule,
+	},
+	{
+		name: "GitHub",
+		svg: SponsorGitHub,
 	},
 ];
