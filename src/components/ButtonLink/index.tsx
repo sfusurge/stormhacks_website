@@ -71,6 +71,15 @@ export function ButtonLink_UNLOCALIZED({
 		className: applyClassName(className, style),
 	};
 
+	// If the href is "#", it's reasonable to assume we disabled the link on purpose.
+	if (href === "#") {
+		return (
+			<span {...props} {...linkProps}>
+				{children}
+			</span>
+		);
+	}
+
 	if (withinRouter && isLocalLink) {
 		// If within `react-router-dom`, use the `<Link>` component.
 		return (
