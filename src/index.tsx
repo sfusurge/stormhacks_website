@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { BrowserRouter, PathRouteProps, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 
+import Footer from "~/AppFooter";
 import Header from "~/AppHeader";
 import Pager from "~/Pager";
 import { MoveToScrollAnchorAtLoad } from "~/ScrollAnchor";
@@ -152,7 +153,10 @@ root.render(
 	<React.StrictMode>
 		<Setup>
 			<Header appRoutes={AppRoutes} />
-			<SetupRoutes appRoutes={AppRoutes} />
+			<div id="page-contents">
+				<SetupRoutes appRoutes={AppRoutes} />
+			</div>
+			<Footer />
 		</Setup>
 	</React.StrictMode>
 );

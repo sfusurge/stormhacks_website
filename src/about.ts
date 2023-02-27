@@ -18,6 +18,7 @@ export const HackathonInfo = {
 	},
 
 	register: {
+		sponsor: "#",
 		hacker: "https://www.surveymonkey.ca/r/TB87RY5",
 		mentor: "https://www.surveymonkey.ca/r/TB825RJ",
 	},

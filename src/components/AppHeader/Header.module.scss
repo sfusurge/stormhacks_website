@@ -186,6 +186,11 @@
 			margin-right: 0;
 		}
 	}
+
+	@include for-mobile {
+		// We have these on the footer for the mobile site.
+		display: none;
+	}
 }
 
 // Apply button.

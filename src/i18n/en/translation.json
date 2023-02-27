@@ -146,5 +146,12 @@
 			"SFU Surge is an all-inclusive, student-led organization founded in 2019. Our mission is to promote curiosity and excitement for a future in technology, while guiding students on their paths to career success.",
 			"We are an innovative community empowering students with projects, events, and networking opportunities. StormHacks combines these three aspects over the course of a memorable weekend filled with mini-contests, workshops, sponsor booths, and more."
 		]
+	},
+
+	"footer": {
+		"mlh-code-of-conduct": "MLH Code of Conduct",
+		"become-a-sponsor": "Become a Sponsor",
+		"email-us": "Email Us",
+		"copyright": "Copyright © StormHacks, 2023"
 	}
 }

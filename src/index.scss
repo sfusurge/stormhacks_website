@@ -22,6 +22,11 @@ body,
 	margin: 0;
 }
 
+// Make the footer stick to the bottom of the page.
+#page-contents {
+	flex: 1 1 auto;
+}
+
 // Default font.
 body {
 	-webkit-font-smoothing: antialiased;
