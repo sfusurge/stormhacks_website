@@ -2,7 +2,6 @@ import { HackathonInfo } from "$constants/about";
 import cx from "classnames";
 
 import { Trans, useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 
 import { BoxLabelPosition, BoxStyle } from "~/Box";
 import { ButtonStyle } from "~/Button";
@@ -103,9 +102,9 @@ function SectionApplyForms() {
 				</ButtonLink>
 			</div>
 			<div className={Styles.applyFormsLinks}>
-				<Link to={"#"} title={t("event.links.sponsor.title")}>
+				<a href={HackathonInfo.register.sponsor} title={t("event.links.sponsor.title")}>
 					{t("event.links.sponsor.text")}
-				</Link>
+				</a>
 			</div>
 		</>
 	);

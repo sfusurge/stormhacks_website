@@ -1,4 +1,4 @@
-import { Sponsors } from "$constants/about";
+import { HackathonInfo, Sponsors } from "$constants/about";
 import cx from "classnames";
 
 import { Fragment, useMemo } from "react";
@@ -35,7 +35,7 @@ export function SponsorsSection() {
 			<ButtonLink
 				style={ButtonStyle.Accented}
 				className={Styles.sponsorButton}
-				href="#"
+				href={HackathonInfo.register.sponsor}
 				i18n-title="sponsors.button.title">
 				{t("sponsors.button.text")}
 			</ButtonLink>
