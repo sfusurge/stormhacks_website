@@ -164,9 +164,9 @@ export const SurgeInfo = {
 			photo: "/exec/024.jpg",
 		},
 		{
-			name: "TODO 026",
+			name: "TODO 025",
 			role: "TODO",
-			photo: "/exec/026.jpg",
+			photo: "/exec/025.jpg",
 		},
 		{
 			name: "TODO 026",
