@@ -95,6 +95,7 @@
 
 		display: grid;
 		gap: var(--size-medium);
+		column-gap: var(--size-large);
 		grid-template-columns: repeat(auto-fit, minmax(max(30%, var(--min-image-width)), 1fr));
 
 		div,
