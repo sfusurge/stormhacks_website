@@ -73,23 +73,35 @@
 		"title": "Frequently <1>Asked Questions</1>",
 		"what-is-a-hackathon": {
 			"question": "What is a hackathon?",
-			"answer": "<PLACEHOLDER> This is about the length of a sentence. We want to include about 3 sentences worth of stuff to answer questions. Butter is a healthy and nutritious snack."
+			"answer": "A hackathon is an event where teams collaborate on a project, or \"hack\", given a certain time limit. At Stormhacks, teams of 1-4 collaborate over 24 hours to brainstorm and innovate solutions to real-world problems. Or they are free to work on whatever fun/silly ideas they have in mind, the door is open. We will be inviting various mentors, judges, and guests working in the tech industry to share their expertise and knowledge to our participants. Winning teams will be selected based on various criteria that will be revealed closer to our event."
 		},
 		"what-if-its-my-first-time": {
 			"question": "What if I’ve never been to a hackathon?",
-			"answer": "<PLACEHOLDER> This is about the length of a sentence. We want to include about 3 sentences worth of stuff to answer questions. Butter is a healthy and nutritious snack."
+			"answer": "Don't worry about it! We have a workshop series to get you bootstrapped for our hackathon, called “Road to Stormhacks”."
 		},
 		"who-can-participate": {
 			"question": "Who can participate?",
-			"answer": "<PLACEHOLDER> This is about the length of a sentence. We want to include about 3 sentences worth of stuff to answer questions. Butter is a healthy and nutritious snack."
+			"answer": "Our event is open to any student coming from any background/major. As long as you (or your team, if you have one already) can attend in person, you're welcome to join!"
+		},
+		"finding-team-members": {
+			"question": "Do I bring a team? Or do I find teammates at the event?",
+			"answer": "It's completely up to you. If you plan to join Stormhacks with a team ahead of time, please make sure that all group members sign-up together and mention each other in your application. We will also be facilitating team-formation at our event, so if you are short on members and/or want work with bright-minded peers, look forward to that :)"
+		},
+		"when-can-i-start": {
+			"question": "When can I start working on my project?",
+			"answer": "You may begin to work on your project/idea once the hacking period commences on the first day of the event."
+		},
+		"what-can-i-work-on": {
+			"question": "What are we allowed to work on?",
+			"answer": "We will be providing hackers with themes/topics at the opening ceremony of the event. Hardware projects are allowed, but unfortunately are unable to provide any materials/supplies, so you will have to bring your own. "
 		},
 		"how-many-people-on-a-team": {
-			"question": "How many people can be on a team? ",
+			"question": "How many people can be on a team?",
 			"answer": "<PLACEHOLDER> This is about the length of a sentence. We want to include about 3 sentences worth of stuff to answer questions. Butter is a healthy and nutritious snack."
 		},
 		"virtual-or-in-person": {
 			"question": "Virtual or In-Person this year?",
-			"answer": "StormHacks 2023 will be completely in-person, taking place on the SFU Burnaby campus. There will be no virtual participation this year. "
+			"answer": "StormHacks 2023 will be completely in-person, taking place on the SFU Burnaby campus. There will be no virtual participation this year."
 		},
 		"what-kind-of-activities": {
 			"question": "What kind of activities will there be? ",
@@ -104,12 +116,12 @@
 			"answer": "<PLACEHOLDER> This is about the length of a sentence. We want to include about 3 sentences worth of stuff to answer questions. Butter is a healthy and nutritious snack."
 		},
 		"does-admission-cost-money": {
-			"question": "Does admission cost money?",
-			"answer": "<PLACEHOLDER> This is about the length of a sentence. We want to include about 3 sentences worth of stuff to answer questions. Butter is a healthy and nutritious snack."
+			"question": "What does it cost to get in?",
+			"answer": "Nothing! MLH hackathon’s are completely free to join. We will be providing meals throughout the event, but if you would like to purchase your own food during our event, you are free to do so."
 		},
 		"more-questions": {
 			"question": "Have more questions?",
-			"answer": "<PLACEHOLDER> This is about the length of a sentence. We want to include about 3 sentences worth of stuff to answer questions. Butter is a healthy and nutritious snack."
+			"answer": "Contact us through any of the social media links or at info@stormhacks.com!"
 		}
 	},
 
