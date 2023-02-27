@@ -7,7 +7,11 @@
 
 	"apply": {
 		"title": "Welcome, {{type}}!",
-		"text": ["We're still getting things ready!", "Please come back in late March."],
+		"text": {
+			"pre-open": ["We're still getting things ready!", "Please come back in late March."],
+			"opened": ["We're just getting things ready for you!", "The page will reload shortly."],
+			"closed": ["Sorry, applications are closed!", ""]
+		},
 
 		"type": {
 			"hacker": "Hacker",
@@ -18,9 +22,19 @@
 	"event": {
 		"date-and-location": "May 20 - 21, 2023 • <1>In-Person @ </1><2>SFU Burnaby Campus</2>",
 		"links": {
-			"apply": { "text": "Apply Now", "title": "Apply for StormHacks 2023!" },
-			"mentor": { "text": "Become a Mentor", "title": "Become a StormHacks 2023 mentor!" },
-			"sponsor": { "text": "Interested in sponsoring us?", "title": "Sponsor StormHacks 2023!" }
+			"sponsor": { "text": "Interested in sponsoring us?", "title": "Sponsor StormHacks 2023!" },
+			"apply": {
+				"title": "Apply for StormHacks 2023!",
+				"text-pre-open": "Applications Open Soon",
+				"text-opened": "Apply Now",
+				"text-closed": "Applications Closed"
+			},
+			"mentor": {
+				"title": "Become a StormHacks 2023 mentor!",
+				"text-pre-open": "Mentor Applications open in {{remaining}}",
+				"text-opened": "Become a Mentor",
+				"text-closed": "Mentor Applications Closed <<This should not be visible>>"
+			}
 		},
 		"info": {
 			"participants": "{{number}}+ Total Hackers",

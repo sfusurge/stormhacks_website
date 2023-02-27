@@ -226,6 +226,10 @@
 			font-size: 1em;
 		}
 	}
+
+	.applyButtonClosed {
+		cursor: not-allowed;
+	}
 }
 
 .section.stats {

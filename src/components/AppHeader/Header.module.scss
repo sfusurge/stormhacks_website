@@ -197,6 +197,10 @@
 .applyButton {
 	padding: var(--header-button-padding);
 	font-weight: 500;
+
+	&[data-open="false"] {
+		display: none;
+	}
 }
 
 .applyButtonDesktop {
