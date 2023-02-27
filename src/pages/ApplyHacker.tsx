@@ -1,11 +1,11 @@
+import { HackathonInfo } from "$constants/about";
+
 import { useTranslation } from "react-i18next";
 
 import Box, { BoxStyle, BoxTitle } from "~/Box";
 import { BoxBody } from "~/Box/components";
 import ExternalRedirect from "~/ExternalRedirect";
 import Page from "~/Page";
-
-import { HackathonInfo } from "../about";
 
 /**
  * A page for applying to StormHacks 2023 as a hacker.
