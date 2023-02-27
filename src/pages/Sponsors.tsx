@@ -74,7 +74,7 @@ function SectionSponsorGrid() {
 			<h2>{t("sponsors.sponsors-heading")}</h2>
 			<div className={Styles.sponsorLinks}>
 				{Sponsors.map((sponsor) => (
-					<Sponsor {...sponsor} />
+					<Sponsor {...sponsor} key={sponsor.name} />
 				))}
 			</div>
 		</div>
