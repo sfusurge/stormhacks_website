@@ -22,7 +22,7 @@ function ApplyMentorPage() {
 					<p>{t("apply.text.1", { type })}</p>
 				</BoxBody>
 			</Box>
-			<ExternalRedirect href={HackathonInfo.register.hacker} replace />
+			{/* <ExternalRedirect href={HackathonInfo.register.hacker} replace /> */}
 		</Page>
 	);
 }
