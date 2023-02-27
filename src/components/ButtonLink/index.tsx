@@ -66,11 +66,12 @@ export function ButtonLink_UNLOCALIZED({
 	"i18n-title"?: undefined;
 }): ReactElement {
 	const withinRouter = useInRouterContext();
+	const isLocalLink = /^[.]+:/i.test(href) && !href.startsWith("//");
 	const linkProps = {
 		className: applyClassName(className, style),
 	};
 
-	if (withinRouter) {
+	if (withinRouter && isLocalLink) {
 		// If within `react-router-dom`, use the `<Link>` component.
 		return (
 			<Link {...props} {...linkProps} to={href}>
