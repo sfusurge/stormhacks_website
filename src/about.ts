@@ -34,7 +34,8 @@ export const HackathonInfo = {
 	},
 
 	register: {
-		sponsor: "#",
+		sponsor:
+			"mailto:info@stormhacks.com?subject=2023%20Sponsorship%20-%20(Your%20Company%20Here)&body=(Send%20us%20an%20email!%20We're%20happy%20to%20hear%20from%20you)",
 		hacker: "https://www.surveymonkey.ca/r/TB87RY5",
 		mentor: "https://www.surveymonkey.ca/r/TB825RJ",
 	},
