@@ -1,8 +1,7 @@
-import { HackathonInfo } from "$constants/about";
+import { HackathonInfo, isHackerApplicationOpen } from "$constants/about";
 
 import { useTranslation } from "react-i18next";
 
-import { useApplicationFormsTimespan } from "~/ApplyButton";
 import Box, { BoxStyle, BoxTitle } from "~/Box";
 import { BoxBody } from "~/Box/components";
 import ExternalRedirect from "~/ExternalRedirect";
@@ -13,7 +12,7 @@ import Page from "~/Page";
  */
 function ApplyHackerPage() {
 	const { t } = useTranslation();
-	const ts = useApplicationFormsTimespan("hacker");
+	const [open] = isHackerApplicationOpen();
 	const type = t("apply.type.hacker");
 
 	return (
@@ -21,11 +20,11 @@ function ApplyHackerPage() {
 			<Box style={BoxStyle.Knockout}>
 				<BoxTitle>{t("apply.title", { type })}</BoxTitle>
 				<BoxBody>
-					<p>{t(`apply.text.${ts.state}.0`, { type })}</p>
-					<p>{t(`apply.text.${ts.state}.1`, { type })}</p>
+					<p>{t(`apply.text.${open}.0`, { type })}</p>
+					<p>{t(`apply.text.${open}.1`, { type })}</p>
 				</BoxBody>
 			</Box>
-			{ts.state === "opened" && <ExternalRedirect href={HackathonInfo.register.hacker} replace />}
+			{open === "opened" && <ExternalRedirect href={HackathonInfo.register.hacker.link} replace />}
 		</Page>
 	);
 }

@@ -1,8 +1,7 @@
-import { HackathonInfo } from "$constants/about";
+import { HackathonInfo, isMentorApplicationOpen } from "$constants/about";
 
 import { useTranslation } from "react-i18next";
 
-import { useApplicationFormsTimespan } from "~/ApplyButton";
 import Box, { BoxBody, BoxStyle, BoxTitle } from "~/Box";
 import ExternalRedirect from "~/ExternalRedirect";
 import Page from "~/Page";
@@ -12,7 +11,7 @@ import Page from "~/Page";
  */
 function ApplyMentorPage() {
 	const { t } = useTranslation();
-	const ts = useApplicationFormsTimespan("mentor");
+	const [open] = isMentorApplicationOpen();
 	const type = t("apply.type.mentor");
 
 	return (
@@ -20,11 +19,11 @@ function ApplyMentorPage() {
 			<Box style={BoxStyle.Knockout}>
 				<BoxTitle>{t("apply.title", { type })}</BoxTitle>
 				<BoxBody>
-					<p>{t(`apply.text.${ts.state}.0`, { type })}</p>
-					<p>{t(`apply.text.${ts.state}.1`, { type })}</p>
+					<p>{t(`apply.text.${open}.0`, { type })}</p>
+					<p>{t(`apply.text.${open}.1`, { type })}</p>
 				</BoxBody>
 			</Box>
-			{ts.state === "opened" && <ExternalRedirect href={HackathonInfo.register.mentor} replace />}
+			{open === "opened" && <ExternalRedirect href={HackathonInfo.register.mentor.link} replace />}
 		</Page>
 	);
 }

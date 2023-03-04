@@ -36,21 +36,38 @@ export const HackathonInfo = {
 	register: {
 		sponsor:
 			"mailto:info@stormhacks.com?subject=2023%20Sponsorship%20-%20(Your%20Company%20Here)&body=(Send%20us%20an%20email!%20We're%20happy%20to%20hear%20from%20you)",
-		hacker: "https://www.surveymonkey.ca/r/TB87RY5",
-		mentor: "https://www.surveymonkey.ca/r/TB825RJ",
 
-		timespan: {
-			hacker: {
-				opens: new Date("2023-03-03T22:00-0800"),
-				closes: null as Date | null,
-			},
-			mentor: {
-				opens: new Date("2023-03-03T22:00-0800"),
-				closes: null as Date | null,
-			},
+		hacker: {
+			link: "https://www.surveymonkey.ca/r/TB87RY5",
+			opens: new Date("2023-03-03T22:00-0800"),
+			closes: null,
+		},
+
+		mentor: {
+			link: "https://www.surveymonkey.ca/r/TB825RJ",
+			opens: new Date("2023-03-03T22:00-0800"),
+			closes: null,
 		},
 	},
 };
+
+export function isHackerApplicationOpen(): ["opened" | "pre-open" | "closed", null | Date] {
+	const { opens, closes } = HackathonInfo.register.hacker;
+	const now = Date.now();
+	if (opens == null) return ["pre-open", null];
+	if (now < (opens as Date).getTime()) return ["pre-open", opens];
+	if (closes != null && now > (closes as Date).getTime()) return ["closed", closes];
+	return ["opened", null];
+}
+
+export function isMentorApplicationOpen(): ["opened" | "pre-open" | "closed", null | Date] {
+	const { opens, closes } = HackathonInfo.register.mentor;
+	const now = Date.now();
+	if (opens == null) return ["pre-open", null];
+	if (now < (opens as Date).getTime()) return ["pre-open", opens];
+	if (closes != null && now > (closes as Date).getTime()) return ["closed", closes];
+	return ["opened", null];
+}
 
 export const SurgeInfo = {
 	execs: [

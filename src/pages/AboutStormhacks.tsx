@@ -1,14 +1,14 @@
-import { HackathonInfo } from "$constants/about";
+import { HackathonInfo, isHackerApplicationOpen, isMentorApplicationOpen } from "$constants/about";
 import cx from "classnames";
 
 import { Trans, useTranslation } from "react-i18next";
 
-import { useApplicationFormsTimespan } from "~/ApplyButton";
 import { BoxLabelPosition, BoxStyle } from "~/Box";
 import { ButtonStyle } from "~/Button";
 import ButtonLink from "~/ButtonLink";
 import EventStatBox from "~/EventStatBox";
 import Page from "~/Page";
+import { Now, formatTimeSpan, useUpdatingTimeSpan } from "~/TimeSpan";
 
 import { ReactComponent as Cards } from "$asset/cards.svg";
 import { ReactComponent as IconGlobe } from "$asset/icon/globe.svg";
@@ -92,31 +92,12 @@ function ThemeGraphic() {
 
 function SectionApplyForms() {
 	const { t } = useTranslation();
-	const tsHacker = useApplicationFormsTimespan("hacker");
-	const tsMentor = useApplicationFormsTimespan("mentor");
-
-	const shouldShowMentorButton =
-		tsMentor.state === "opened" || (tsMentor.state === "pre-open" && tsMentor.timeRemaining !== undefined);
 
 	return (
 		<>
 			<div className={Styles.applyFormsButtons}>
-				<ButtonLink
-					style={ButtonStyle.Accented}
-					href={tsMentor.state === "opened" ? "/apply" : "#"}
-					i18n-title="event.links.apply.title"
-					className={tsHacker.state === "opened" ? undefined : Styles.applyButtonClosed}>
-					{t(`event.links.apply.text-${tsHacker.state}`, { remaining: tsHacker.timeRemainingString })}
-				</ButtonLink>
-				{shouldShowMentorButton && (
-					<ButtonLink
-						style={ButtonStyle.Knockout}
-						href={tsMentor.state === "opened" ? "/apply-mentor" : "#"}
-						i18n-title="event.links.mentor.title"
-						className={tsMentor.state === "opened" ? undefined : Styles.applyButtonClosed}>
-						{t(`event.links.mentor.text-${tsMentor.state}`, { remaining: tsMentor.timeRemainingString })}
-					</ButtonLink>
-				)}
+				<ApplyAsHackerButton />
+				<ApplyAsMentorButton />
 			</div>
 			<div className={Styles.applyFormsLinks}>
 				<a href={HackathonInfo.register.sponsor} title={t("event.links.sponsor.title")}>
@@ -124,6 +105,47 @@ function SectionApplyForms() {
 				</a>
 			</div>
 		</>
+	);
+}
+
+function ApplyAsHackerButton() {
+	const [hackerFormOpen, hackerFormOpensAt] = isHackerApplicationOpen();
+	const hackerTs = useUpdatingTimeSpan(Now, hackerFormOpensAt);
+
+	const { t } = useTranslation();
+	const tVariant = `text-${hackerFormOpen}${hackerTs == null ? "" : "-with-time"}`;
+
+	return (
+		<ButtonLink
+			style={ButtonStyle.Accented}
+			href={hackerFormOpen === "opened" ? "/apply" : "#"}
+			i18n-title="event.links.apply.title"
+			className={hackerFormOpen === "opened" ? undefined : Styles.applyButtonClosed}>
+			{t(`event.links.apply.${tVariant}`, { time: formatTimeSpan(t, hackerTs) })}
+		</ButtonLink>
+	);
+}
+
+function ApplyAsMentorButton() {
+	const [mentorFormOpen, mentorFormOpensAt] = isMentorApplicationOpen();
+	const mentorTs = useUpdatingTimeSpan(Now, mentorFormOpensAt);
+
+	const { t } = useTranslation();
+	const tVariant = `text-${mentorFormOpen}${mentorTs == null ? "" : "-with-time"}`;
+
+	const shouldShowMentorButton =
+		mentorFormOpen === "opened" || (mentorFormOpen === "pre-open" && mentorFormOpensAt != null);
+
+	if (!shouldShowMentorButton) return <></>;
+
+	return (
+		<ButtonLink
+			style={ButtonStyle.Knockout}
+			href={mentorFormOpen === "opened" ? "/apply-mentor" : "#"}
+			i18n-title="event.links.mentor.title"
+			className={mentorFormOpen === "opened" ? undefined : Styles.applyButtonClosed}>
+			{t(`event.links.mentor.${tVariant}`, { time: formatTimeSpan(t, mentorTs) })}
+		</ButtonLink>
 	);
 }
 
