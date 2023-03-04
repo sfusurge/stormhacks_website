@@ -24,7 +24,7 @@ function ApplyMentorPage() {
 					<p>{t(`apply.text.${ts.state}.1`, { type })}</p>
 				</BoxBody>
 			</Box>
-			{ts.state === "opened" && <ExternalRedirect href={HackathonInfo.register.hacker} replace />}
+			{ts.state === "opened" && <ExternalRedirect href={HackathonInfo.register.mentor} replace />}
 		</Page>
 	);
 }
