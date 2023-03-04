@@ -25,13 +25,13 @@
 			"sponsor": { "text": "Interested in sponsoring us?", "title": "Sponsor StormHacks 2023!" },
 			"apply": {
 				"title": "Apply for StormHacks 2023!",
-				"text-pre-open": "Applications Open Soon",
+				"text-pre-open": "Applications Open in {{remaining}}",
 				"text-opened": "Apply Now",
 				"text-closed": "Applications Closed"
 			},
 			"mentor": {
 				"title": "Become a StormHacks 2023 mentor!",
-				"text-pre-open": "Mentor Applications open in {{remaining}}",
+				"text-pre-open": "Mentor Applications Open in {{remaining}}",
 				"text-opened": "Become a Mentor",
 				"text-closed": "Mentor Applications Closed <<This should not be visible>>"
 			}

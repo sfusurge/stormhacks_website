@@ -41,11 +41,11 @@ export const HackathonInfo = {
 
 		timespan: {
 			hacker: {
-				opens: null as Date | null,
+				opens: new Date("2023-03-03T22:00-0800"),
 				closes: null as Date | null,
 			},
 			mentor: {
-				opens: null as Date | null,
+				opens: new Date("2023-03-03T22:00-0800"),
 				closes: null as Date | null,
 			},
 		},
