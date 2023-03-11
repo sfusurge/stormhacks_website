@@ -9,6 +9,7 @@ import SurgeSocialLinks from "~/SurgeSocialLinks";
 import Styles from "./Header.module.scss";
 import HeaderApplyButton from "./HeaderApplyButton";
 import HeaderNav from "./HeaderNav";
+import MLHBadge from "./MLHBadge";
 
 /**
  * The header for the StormHacks 2023 website.
@@ -80,6 +81,7 @@ function Header({ appRoutes }: { appRoutes: AppRoute[] }) {
 					<SurgeSocialLinks className={Styles.iconLink} />
 				</div>
 				<HeaderApplyButton />
+				<MLHBadge />
 			</div>
 		</header>
 	);
