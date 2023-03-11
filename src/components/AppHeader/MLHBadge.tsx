@@ -1,5 +1,3 @@
-import Styles from "./Header.module.scss";
-
 function MLHBadge() {
 	const badge_style = {
 		display: "block",
