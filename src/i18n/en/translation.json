@@ -90,12 +90,12 @@
 	"faqs": {
 		"title": "Frequently <1>Asked Questions</1>",
 		"what-is-a-hackathon": {
-			"question": "What is a hackathon?",
+			"question": "What is this event about?",
 			"answer": "A hackathon is an event where teams collaborate on a project, or \"hack\", given a certain time limit. At Stormhacks, teams of 1-4 collaborate over 24 hours to brainstorm and innovate solutions to real-world problems. Or they are free to work on whatever fun/silly ideas they have in mind, the door is open. We will be inviting various mentors, judges, and guests working in the tech industry to share their expertise and knowledge to our participants. Winning teams will be selected based on various criteria that will be revealed closer to our event."
 		},
 		"what-if-its-my-first-time": {
-			"question": "What if I’ve never been to a hackathon?",
-			"answer": "Don't worry about it! We have a workshop series to get you bootstrapped for our hackathon, called “Road to Stormhacks”."
+			"question": "What experience do I need?",
+			"answer": "Don't even worry about it. Our event is open to any student coming from any background/major. We also have a workshop series to get you bootstrapped for our hackathon, called “Road to Stormhacks”."
 		},
 		"who-can-participate": {
 			"question": "Who can participate?",
@@ -111,31 +111,43 @@
 		},
 		"what-can-i-work-on": {
 			"question": "What are we allowed to work on?",
-			"answer": "We will be providing hackers with themes/topics at the opening ceremony of the event. Hardware projects are allowed, but unfortunately are unable to provide any materials/supplies, so you will have to bring your own. "
+			"answer": "We will be providing hackers with themes/topics at the opening ceremony of the event. Hardware projects are allowed, but unfortunately are unable to provide any materials/supplies, so you will have to bring your own."
 		},
-		"how-many-people-on-a-team": {
-			"question": "How many people can be on a team?",
-			"answer": "<PLACEHOLDER> This is about the length of a sentence. We want to include about 3 sentences worth of stuff to answer questions. Butter is a healthy and nutritious snack."
+		"what-should-i-bring": {
+			"question": "What should I bring?",
+			"answer": "Your laptop and any cables/chargers for your devices are highly recommended. If your project requires any additional equipment or hardware you will be responsible for bringing it in. We also recommend you to bring personal toiletries such as such a tooth brush and toothpaste if you plan on staying overnight."
+		},
+		"admission-requirements": {
+			"question": "What are the requirements to join?",
+			"answer": "The only requirement we have is that you are a university undergraduate that can attend the event in-person. We're absolutely open to all individuals of any major or experience-level!"
+		},
+		"travel-reimbursements": {
+			"question": "Do you offer travel reimbursements?",
+			"answer": "We unfortunately do not provide travel reimbursements for this event."
+		},
+		"limitations-postsecondary": {
+			"question": "Is this event limited to post-secondary students only?",
+			"answer": "Unfortunately, due to the limited spots we have available this year, we are only allowing post-secondary students to partipate. Look out in the coming years for whether or not this changes!"
 		},
 		"virtual-or-in-person": {
 			"question": "Virtual or In-Person this year?",
 			"answer": "StormHacks 2023 will be completely in-person, taking place on the SFU Burnaby campus. There will be no virtual participation this year."
 		},
 		"what-kind-of-activities": {
-			"question": "What kind of activities will there be? ",
+			"question": "What kind of activities will there be?",
 			"answer": "The hackathon will be packed with activities such as wellness workshops, games, trivia and more all throughout the event! You can even win some prizes through some of our mini contests."
-		},
-		"what-platform-is-the-event-on": {
-			"question": "What platform is the event on?",
-			"answer": "<PLACEHOLDER> This is about the length of a sentence. We want to include about 3 sentences worth of stuff to answer questions. Butter is a healthy and nutritious snack."
-		},
-		"how-will-we-receive-swag": {
-			"question": "How will we receive swag?",
-			"answer": "<PLACEHOLDER> This is about the length of a sentence. We want to include about 3 sentences worth of stuff to answer questions. Butter is a healthy and nutritious snack."
 		},
 		"does-admission-cost-money": {
 			"question": "What does it cost to get in?",
-			"answer": "Nothing! MLH hackathon’s are completely free to join. We will be providing meals throughout the event, but if you would like to purchase your own food during our event, you are free to do so."
+			"answer": "Nothing! MLH hackathons are completely free to join. We will be providing meals throughout the event, but if you would like to purchase your own food during our event, you are free to do so."
+		},
+		"when-do-applications-open": {
+			"question": "When do applications open?",
+			"answer": "TBD, but look out for news around early April on when registration opens!"
+		},
+		"when-and-where-is-the-event": {
+			"question": "When and where is the event happening?",
+			"answer": "The event is taking place on May 20-21st, 2023. The venue is on SFU's Burnaby campus, and will be fully disclosed as we approach the event date."
 		},
 		"more-questions": {
 			"question": "Have more questions?",
