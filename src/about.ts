@@ -1,3 +1,5 @@
+import { FunctionComponent, SVGProps } from "react";
+
 import { ReactComponent as SponsorAssemblyAI } from "$asset/sponsor/assemblyai.svg";
 import { ReactComponent as SponsorEcho3D } from "$asset/sponsor/echo3d.svg";
 import { ReactComponent as SponsorErgonomyx } from "$asset/sponsor/ergonomyx.svg";
@@ -12,6 +14,7 @@ import { ReactComponent as SponsorSAP } from "$asset/sponsor/sap.svg";
 import { ReactComponent as SponsorSFSS } from "$asset/sponsor/sfss.svg";
 import { ReactComponent as SponsorSSSS } from "$asset/sponsor/sfu-ssss.svg";
 import { ReactComponent as SponsorWICS } from "$asset/sponsor/sfu-wics.svg";
+import { ReactComponent as SponsorStandOutStickers } from "$asset/sponsor/standoutstickers.svg";
 import { ReactComponent as SponsorStickermule } from "$asset/sponsor/stickermule.svg";
 
 export const HackathonInfo = {
@@ -284,6 +287,26 @@ export const SurgeInfo = {
 		},
 	],
 };
+
+export enum SponsorTier {
+	IN_KIND = 0,
+	TEST = 99,
+}
+
+export type SponsorInfo = {
+	name: string;
+	type: SponsorTier;
+	link?: string;
+} & (
+	| {
+			svg: FunctionComponent<SVGProps<SVGSVGElement>>;
+	  }
+	| {
+			photo: string;
+	  }
+);
+
+export const Sponsors: Array<SponsorInfo> = [];
 
 export const PastSponsors = [
 	{

@@ -1,5 +1,6 @@
-import { HackathonInfo, PastSponsors } from "$constants/about";
+import { HackathonInfo, PastSponsors, SponsorInfo, SponsorTier, Sponsors } from "$constants/about";
 import cx from "classnames";
+import { shuffle } from "fast-shuffle";
 
 import { Fragment, FunctionComponent, ReactElement, SVGProps, useMemo } from "react";
 import { Trans, useTranslation } from "react-i18next";
@@ -26,7 +27,15 @@ function SponsorsPage() {
 
 export function SponsorsSection() {
 	const { t } = useTranslation();
-	const sponsors = useMemo(() => <SectionSponsorGrid />, []);
+	const sponsors = useMemo(
+		() => (
+			<>
+				<SponsorGrid i18nKey="sponsors.sponsors-heading" sponsors={SortedSponsors} />
+				<SponsorGrid i18nKey="sponsors.past-sponsors-heading" sponsors={PastSponsors as SponsorInfo[]} />
+			</>
+		),
+		[]
+	);
 
 	return (
 		<article className={Styles.container}>
@@ -67,13 +76,32 @@ function SectionWhySponsorUs() {
 	);
 }
 
-function SectionSponsorGrid() {
+const SortedSponsors = (() => {
+	// Collect the sponsors by their tier.
+	const byTier = new Map<SponsorTier, Array<SponsorInfo>>();
+	Object.entries(SponsorTier).forEach(([_, type]) => typeof type === "number" && byTier.set(type, []));
+	Sponsors.forEach((sponsor) => byTier.get(sponsor.type)?.push(sponsor));
+
+	// For fairness, shuffle the sponsors in each respective tier.
+	for (const [tier, sponsorsInTier] of byTier) {
+		byTier.set(tier, shuffle(sponsorsInTier));
+	}
+
+	// Join all the sponsors back together into a single array.
+	return Array.from(byTier.entries())
+		.sort((a, b) => b[0] - a[0])
+		.map(([_, sponsorsInTier]) => sponsorsInTier)
+		.flat();
+})();
+
+function SponsorGrid({ i18nKey, sponsors }: { i18nKey: string; sponsors: SponsorInfo[] }) {
 	const { t } = useTranslation();
+
 	return (
 		<div className={cx(Styles.section, Styles.sponsors)}>
-			<h2>{t("sponsors.sponsors-heading")}</h2>
+			<h2>{t(i18nKey)}</h2>
 			<div className={Styles.sponsorLinks}>
-				{PastSponsors.map((sponsor) => (
+				{sponsors.map((sponsor: SponsorInfo) => (
 					<Sponsor {...sponsor} key={sponsor.name} />
 				))}
 			</div>
