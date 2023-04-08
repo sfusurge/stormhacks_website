@@ -98,6 +98,11 @@
 		column-gap: var(--size-large);
 		grid-template-columns: repeat(auto-fit, minmax(max(30%, var(--min-image-width)), 1fr));
 
+		> *:first-child:last-child {
+			// Prevent a sponsor from becoming a hero image if it's the only one in the grid.
+			max-width: 30%;
+		}
+
 		div,
 		a,
 		picture,
