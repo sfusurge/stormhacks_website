@@ -27,7 +27,7 @@ body {
 
 // Size Variables
 body {
-	--width-limited-size: 1000px;
+	--width-limited-size: #{$layout-max-content-width};
 
 	--size-larger-2: 4rem;
 	--size-larger: 3rem;
