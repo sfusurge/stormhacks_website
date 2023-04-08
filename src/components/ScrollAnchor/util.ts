@@ -29,9 +29,10 @@ export function getScrollSpeed(el: HTMLElement): number {
 export function getScrollParent(el: HTMLElement): HTMLElement | null {
 	let current: HTMLElement | null = el;
 	for (; current != null; current = current.parentElement) {
-		if (current.scrollHeight > current.clientHeight) {
-			break;
-		}
+		// REMOVED: This breaks on elements that have a child with `position: absolute`.
+		// if (current.scrollHeight > current.clientHeight) {
+		// 	break;
+		// }
 
 		// Special case: the HTML element.
 		if (current.nodeName === "HTML") {
