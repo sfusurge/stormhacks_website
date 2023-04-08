@@ -1,4 +1,4 @@
-import { HackathonInfo, Sponsors } from "$constants/about";
+import { HackathonInfo, PastSponsors } from "$constants/about";
 import cx from "classnames";
 
 import { Fragment, FunctionComponent, ReactElement, SVGProps, useMemo } from "react";
@@ -73,7 +73,7 @@ function SectionSponsorGrid() {
 		<div className={cx(Styles.section, Styles.sponsors)}>
 			<h2>{t("sponsors.sponsors-heading")}</h2>
 			<div className={Styles.sponsorLinks}>
-				{Sponsors.map((sponsor) => (
+				{PastSponsors.map((sponsor) => (
 					<Sponsor {...sponsor} key={sponsor.name} />
 				))}
 			</div>

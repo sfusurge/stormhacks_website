@@ -285,7 +285,7 @@ export const SurgeInfo = {
 	],
 };
 
-export const Sponsors = [
+export const PastSponsors = [
 	{
 		name: "HSBC",
 		svg: SponsorHSBC,
