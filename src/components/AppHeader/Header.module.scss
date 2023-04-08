@@ -17,7 +17,9 @@
 	// Sticky header.
 	position: sticky;
 	top: 0;
+}
 
+.headerScrollable {
 	// Scrollable header for mobile.
 	@include for-mobile {
 		overflow-x: auto;
