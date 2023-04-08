@@ -14,17 +14,17 @@ import Styles from "./FAQ.module.scss";
  */
 const FAQs = [
 	"what-is-a-hackathon",
+	"when-and-where-is-the-event",
+	"does-admission-cost-money",
 	"what-if-its-my-first-time",
-	"who-can-participate",
-	// "how-many-people-on-a-team",
+	"when-do-applications-open",
 	"finding-team-members",
-	"virtual-or-in-person",
-	"what-kind-of-activities",
-	// "what-platform-is-the-event-on",
 	"when-can-i-start",
 	"what-can-i-work-on",
-	// "how-will-we-receive-swag",
-	"does-admission-cost-money",
+	"what-should-i-bring",
+	"admission-requirements",
+	"travel-reimbursements",
+	"limitations-postsecondary",
 	"more-questions",
 ];
 
