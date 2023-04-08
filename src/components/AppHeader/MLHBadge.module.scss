@@ -6,6 +6,8 @@ $desktop-badge-width: 100px;
 
 	top: unset;
 	z-index: 100000;
+	width: var(--max-badge-width, unset);
+	text-align: center;
 
 	--badge-width: #{$desktop-badge-width};
 
@@ -15,6 +17,7 @@ $desktop-badge-width: 100px;
 	// When there's space between the header and the right of the page:
 	//  -> Align it to the right of the apply button.
 	@media screen and (min-width: ($layout-max-content-width + $desktop-badge-width + 45px)) {
+		width: unset;
 		right: var(--size-small) !important;
 		top: 0;
 	}
@@ -37,4 +40,5 @@ $desktop-badge-width: 100px;
 
 .badge {
 	width: var(--badge-width);
+	max-width: var(--max-badge-width);
 }
