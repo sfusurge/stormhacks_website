@@ -306,7 +306,14 @@ export type SponsorInfo = {
 	  }
 );
 
-export const Sponsors: Array<SponsorInfo> = [];
+export const Sponsors: Array<SponsorInfo> = [
+	{
+		name: "StandOut Stickers",
+		type: SponsorTier.IN_KIND,
+		link: "https://www.standoutstickers.com/?utm_campaign=events-league-organizers-spring2022&utm_medium=email&utm_source=customerio-zoho_creator_-_standout_sticker_intro",
+		svg: SponsorStandOutStickers,
+	},
+];
 
 export const PastSponsors = [
 	{
