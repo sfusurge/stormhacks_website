@@ -74,15 +74,17 @@ function Header({ appRoutes }: { appRoutes: AppRoute[] }) {
 
 	return (
 		<header className={cx(Styles.header)} ref={headerRef} id="header">
-			<div className={cx(Styles.headerContents, "width-limited")}>
-				<HeaderNav appRoutes={appRoutes} />
-				<div className={Styles.spacer} />
-				<div className={cx(Styles.linkContainer, Styles.socialLinks)}>
-					<SurgeSocialLinks className={Styles.iconLink} />
+			<div className={Styles.headerScrollable}>
+				<div className={cx(Styles.headerContents, "width-limited")}>
+					<HeaderNav appRoutes={appRoutes} />
+					<div className={Styles.spacer} />
+					<div className={cx(Styles.linkContainer, Styles.socialLinks)}>
+						<SurgeSocialLinks className={Styles.iconLink} />
+					</div>
+					<HeaderApplyButton />
 				</div>
-				<HeaderApplyButton />
-				<MLHBadge />
 			</div>
+			<MLHBadge />
 		</header>
 	);
 }
