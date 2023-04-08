@@ -16,6 +16,7 @@ import MLHBadge from "./MLHBadge";
  */
 function Header({ appRoutes }: { appRoutes: AppRoute[] }) {
 	const headerRef = useRef<HTMLElement>(null);
+	const applyButtonRef = useRef<HTMLElement>(null);
 
 	// Register listeners for showing scroll indicators when on mobile layout.
 	useEffect(() => {
@@ -81,10 +82,10 @@ function Header({ appRoutes }: { appRoutes: AppRoute[] }) {
 					<div className={cx(Styles.linkContainer, Styles.socialLinks)}>
 						<SurgeSocialLinks className={Styles.iconLink} />
 					</div>
-					<HeaderApplyButton />
+					<HeaderApplyButton ref={applyButtonRef} />
 				</div>
 			</div>
-			<MLHBadge />
+			<MLHBadge constrainToWidthOfElement={applyButtonRef} />
 		</header>
 	);
 }
