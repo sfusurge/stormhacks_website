@@ -105,8 +105,11 @@
 			max-width: 30%;
 		}
 
+		> div a {
+			display: flex;
+		}
+
 		div,
-		a,
 		picture,
 		img {
 			aspect-ratio: 290 / 235;
