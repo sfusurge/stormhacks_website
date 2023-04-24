@@ -15,6 +15,7 @@ import Styles from "./FAQ.module.scss";
 const FAQs = [
 	"what-is-a-hackathon",
 	"when-and-where-is-the-event",
+	"first-day",
 	"does-admission-cost-money",
 	"what-if-its-my-first-time",
 	"when-do-applications-open",
