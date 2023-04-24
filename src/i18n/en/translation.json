@@ -152,6 +152,10 @@
 		"more-questions": {
 			"question": "Have more questions?",
 			"answer": "Contact us through any of the social media links or at info@stormhacks.com!"
+		},
+		"first-day": {
+			"question": "How will the event run day-of?",
+			"answer": "Stormhacks 2023 will not have an overnight venue space. Participants will receive an event itinerary prior to the event, including the opening and closing times for each day. When our venue closes, students will have the option to go home and continue working on their projects, or find a space somewhere on SFU’s Burnaby campus, which is open 24/7."
 		}
 	},
 
