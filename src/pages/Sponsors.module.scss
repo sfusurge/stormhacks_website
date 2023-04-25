@@ -91,34 +91,4 @@
 		font-weight: bold;
 		text-align: left;
 	}
-
-	.sponsorLinks {
-		--min-image-width: 200px;
-
-		display: grid;
-		gap: var(--size-medium);
-		column-gap: var(--size-large);
-		grid-template-columns: repeat(auto-fit, minmax(max(30%, var(--min-image-width)), 1fr));
-
-		> *:first-child:last-child {
-			// Prevent a sponsor from becoming a hero image if it's the only one in the grid.
-			max-width: 30%;
-		}
-
-		> div a {
-			display: flex;
-		}
-
-		div,
-		picture,
-		img {
-			aspect-ratio: 290 / 235;
-			display: block;
-			width: 100%;
-		}
-
-		@include for-mobile {
-			--min-image-width: 150px;
-		}
-	}
 }
