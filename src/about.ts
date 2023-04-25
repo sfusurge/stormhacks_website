@@ -12,6 +12,7 @@ import { ReactComponent as SponsorMLH } from "$asset/sponsor/mlh.svg";
 import { ReactComponent as SponsorRedbull } from "$asset/sponsor/redbull.svg";
 import { ReactComponent as SponsorSAP } from "$asset/sponsor/sap.svg";
 import { ReactComponent as SponsorSFSS } from "$asset/sponsor/sfss.svg";
+import { ReactComponent as SponsorCSSS } from "$asset/sponsor/sfu-csss.svg";
 import { ReactComponent as SponsorSSSS } from "$asset/sponsor/sfu-ssss.svg";
 import { ReactComponent as SponsorWICS } from "$asset/sponsor/sfu-wics.svg";
 import { ReactComponent as SponsorStandOutStickers } from "$asset/sponsor/standoutstickers.svg";
@@ -319,6 +320,12 @@ export const Sponsors: Array<SponsorInfo> = [
 		type: SponsorTier.IN_KIND,
 		link: "https://www.leading-learners.com/",
 		photo: "/sponsor/leading-learners.png",
+	},
+	{
+		name: "SFU Computing Science Student Society",
+		type: SponsorTier.IN_KIND,
+		link: "https://sfucsss.org/",
+		svg: SponsorCSSS,
 	},
 	{
 		name: "SAP",
