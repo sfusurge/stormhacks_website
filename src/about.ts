@@ -290,7 +290,8 @@ export const SurgeInfo = {
 
 export enum SponsorTier {
 	IN_KIND = 0,
-	TEST = 99,
+	SILVER = 1,
+	GOLD = 2,
 }
 
 export type SponsorInfo = {
@@ -313,6 +314,12 @@ export const Sponsors: Array<SponsorInfo> = [
 		link: "https://www.standoutstickers.com/?utm_campaign=events-league-organizers-spring2022&utm_medium=email&utm_source=customerio-zoho_creator_-_standout_sticker_intro",
 		svg: SponsorStandOutStickers,
 	},
+	{
+		name: "SAP",
+		type: SponsorTier.SILVER,
+		link: "https://www.sap.com/canada/index.html",
+		svg: SponsorSAP,
+	},
 ];
 
 export const PastSponsors = [
@@ -331,10 +338,6 @@ export const PastSponsors = [
 	{
 		name: "Intact",
 		svg: SponsorIntact,
-	},
-	{
-		name: "SAP",
-		svg: SponsorSAP,
 	},
 	{
 		name: "Guusto",
