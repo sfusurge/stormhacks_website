@@ -46,7 +46,8 @@
 			"projects": "{{number}} Diverse Projects",
 			"duration": "{{number}} hours",
 			"location": "Hybrid",
-			"new-this-year-label": "New This Year"
+			"new-this-year-label": "New This Year",
+			"last-year-label": "Last Year"
 		}
 	},
 

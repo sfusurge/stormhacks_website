@@ -152,9 +152,12 @@ function ApplyAsMentorButton() {
 function SectionEventStats() {
 	return (
 		<>
-			<div className={Styles.projectsAndParticipants}>
+			<div className={Styles.lastYear}>
 				<EventStatBox
 					className={Styles.statsBox}
+					label-i18n-key="event.info.last-year-label"
+					label-position={BoxLabelPosition.TopLeft}
+					label-className={Styles.statsBoxLabel}
 					style={BoxStyle.Inverted}
 					stats={[
 						{
@@ -172,12 +175,9 @@ function SectionEventStats() {
 							"i18n-key": "event.info.projects",
 							"i18n-props": { number: Projects },
 						},
-					]}>
-					<SQBottomLeft className={cx(Styles.boxesGraphic, Styles.boxesGraphicBottomLeft)} />
-					<SQTopRight className={cx(Styles.boxesGraphic, Styles.boxesGraphicTopRight)} />
-				</EventStatBox>
+					]}></EventStatBox>
 			</div>
-			<div className={Styles.placeAndTime}>
+			<div className={Styles.thisYear}>
 				<EventStatBox
 					className={Styles.statsBox}
 					label-i18n-key="event.info.new-this-year-label"

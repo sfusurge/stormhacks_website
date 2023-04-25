@@ -24,6 +24,7 @@ body {
 	--separator: #2f2e30;
 
 	--accent: #f5b523;
+	--accent-alt: #5a60f3;
 
 	--surge-yellow: #f5b523;
 	--surge-purple: #5a60f3;
@@ -31,8 +32,21 @@ body {
 	--logo-color: #5a60f3;
 	--logo-subtitle: #f5b523;
 
-	--statsbox-dark-background: #000;
-	--statsbox-dark-text: #fff;
+	--statsbox-lastyear-text: #fff;
+	--statsbox-lastyear-border: var(--accent-alt);
+	--statsbox-lastyear-background: #000;
+
+	--statsbox-thisyear-text: #fff;
+	--statsbox-thisyear-border: #fff;
+	--statsbox-thisyear-background-p1: linear-gradient(
+		133.14deg,
+		rgba(33, 41, 115, 0.5) 3.72%,
+		rgba(64, 10, 65, 0.5) 74.19%
+	);
+
+	--statsbox-label-background: #000;
+	--statsbox-label-text: var(--accent);
+	--statsbox-label-border: #fff;
 
 	// @include for-theme("dark") {
 	// 	--primary: #222654;

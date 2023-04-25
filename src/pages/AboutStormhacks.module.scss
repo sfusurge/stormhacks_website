@@ -238,49 +238,40 @@
 	align-items: center;
 	justify-content: center;
 
-	.projectsAndParticipants .statsBox {
-		--box-background: var(--statsbox-dark-background);
-		--box-border: var(--statsbox-dark-background);
-		--box-text: var(--statsbox-dark-text);
+	padding-top: var(--size-larger-2);
+	font-size: 1.2em;
 
-		.boxesGraphic {
-			position: absolute;
-			color: var(--statsbox-dark-background);
-			width: auto;
+	// Adjust colors, padding, and positions of the stats boxes.
+	.lastYear .statsBox {
+		--box-background: var(--statsbox-lastyear-background);
+		--box-border: var(--statsbox-lastyear-border);
+		--box-text: var(--statsbox-lastyear-text);
 
-			&.boxesGraphicTopRight {
-				height: 30px;
-				top: 0;
-				right: 0;
-				transform: translate(45%, -80%);
-			}
-
-			&.boxesGraphicBottomLeft {
-				height: 40px;
-				bottom: 0;
-				left: 0;
-				transform: translate(-40%, 30%);
-			}
-		}
+		box-shadow: var(--statsbox-lastyear-border) 0px 0px 80px;
+		--box-padding-h: var(--size-larger);
 	}
 
-	.placeAndTime .statsBox {
+	.thisYear .statsBox {
+		--box-background: linear-gradient(133.14deg, rgba(33, 41, 115, 0.5) 3.72%, rgba(64, 10, 65, 0.5) 74.19%);
+		--box-border: var(--statsbox-thisyear-border);
+		--box-text: var(--statsbox-thisyear-text);
+
 		position: relative;
 		left: calc(var(--size-medium) * -1);
-
-		.statsBoxLabel {
-			--box-label-background: var(--statsbox-dark-background);
-			--box-label-text: var(--statsbox-dark-text);
-			--box-label-border: var(--statsbox-dark-text);
-
-			text-transform: uppercase;
-			font-family: "Roboto Mono";
-			font-weight: 400;
-			font-size: 0.75em;
-		}
+		--box-padding-h: var(--size-large);
 	}
 
-	padding-top: var(--size-larger-2);
+	// Override label colors.
+	.statsBoxLabel {
+		--box-label-background: var(--statsbox-label-background);
+		--box-label-text: var(--statsbox-label-text);
+		--box-label-border: var(--statsbox-label-border);
+
+		text-transform: uppercase;
+		font-family: "Roboto Mono";
+		font-weight: 500;
+		font-size: 0.75em;
+	}
 
 	@include for-mobile {
 		font-size: 0.95em;
@@ -292,16 +283,16 @@
 		// Reposition the boxes to stack vertically.
 		flex-direction: column;
 
-		.projectsAndParticipants .statsBox {
+		.lastYear .statsBox {
 			left: unset;
 		}
 
-		.placeAndTime .statsBox {
+		.thisYear .statsBox {
 			left: 50%;
 		}
 
 		// Move the label to the center.
-		.placeAndTime .statsBox .statsBoxLabel {
+		.thisYear .statsBox .statsBoxLabel {
 			right: unset !important;
 			left: 50% !important;
 			transform: translate(-50%, -50%);
