@@ -4,7 +4,10 @@ import { FunctionComponent, SVGProps } from "react";
 
 import Styles from "./svg.module.scss";
 
-type SVGComponent = FunctionComponent<SVGProps<SVGSVGElement> & { title?: string }>;
+/**
+ * A SVG component imported from webpack using `import {ReactComponent} from "/path/to/a.svg"`.
+ */
+export type SVGComponent = FunctionComponent<SVGProps<SVGSVGElement> & { title?: string }>;
 
 /**
  * An inline SVG.
