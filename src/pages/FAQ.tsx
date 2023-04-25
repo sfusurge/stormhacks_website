@@ -44,7 +44,7 @@ function FAQPage() {
 }
 
 export function FAQSection() {
-	const { i18n } = useTranslation();
+	const { i18n, t } = useTranslation();
 
 	// Use a memo so we don't re-render repeatedly.
 	const boxes = useMemo(() => {
@@ -61,11 +61,7 @@ export function FAQSection() {
 
 	return (
 		<article className={Styles.container}>
-			<h1 className={Styles.title}>
-				<Trans i18nKey={"faqs.title"}>
-					F<strong>AQ</strong>
-				</Trans>
-			</h1>
+			<h1 className={Styles.title}>{t("faqs.title")}</h1>
 			<div className={cx(Styles.section, Styles.faqs)}>{boxes}</div>
 		</article>
 	);
