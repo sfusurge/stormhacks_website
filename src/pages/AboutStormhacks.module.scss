@@ -1,6 +1,9 @@
 .container {
 	--v-margin: var(--size-larger);
 
+	--stormhacks-glow-inset: 100px;
+	--stormhacks-glow-blur: 15px;
+
 	--horizontal-line-offset-from-bottom: calc(1em * 0.61);
 	--horizontal-line-width: 150%;
 	--horizontal-line-occlusion-overlap: 2.5em;
@@ -15,6 +18,7 @@
 	}
 }
 
+// Container for the logo and grapics.
 .section.graphics {
 	position: relative;
 	display: flex;
@@ -147,19 +151,40 @@
 	}
 
 	// "StormHacks"
-	.logo {
-		display: inline-flex;
+	.logoStormhacksContainer {
+		position: relative;
 
-		font-size: 4.55em;
+		.logo {
+			position: relative;
+			z-index: $layout-z-foreground-text;
+			display: inline-flex;
 
-		font-family: "Redaction";
-		font-weight: bold;
+			font-size: 4.55em;
 
-		color: var(--logo-color);
+			font-family: "Redaction";
+			font-weight: bold;
 
-		@include for-mobile {
-			flex-direction: column;
-			line-height: 0.8em;
+			color: transparent;
+			background: linear-gradient(to right, var(--logo-color), var(--logo-subtitle));
+			background-clip: text;
+
+			@include for-mobile {
+				flex-direction: column;
+				line-height: 0.8em;
+			}
+		}
+
+		// The second instance, overlaid underneath the first one and blurred to use as a glow.
+		.asGlow {
+			user-select: none;
+			position: absolute;
+			inset: calc(var(--stormhacks-glow-inset) * -1);
+			right: 0; // Prevents blowout.
+			padding: var(--stormhacks-glow-inset);
+
+			z-index: $layout-z-foreground-text - 1;
+			filter: blur(var(--stormhacks-glow-blur));
+			opacity: 0.5;
 		}
 	}
 
@@ -168,8 +193,6 @@
 		font-size: 1.7em;
 		color: var(--logo-subtitle);
 		text-shadow: var(--logo-subtitle) 0px 0px 20px;
-
-		z-index: $layout-z-foreground-text;
 
 		// Place the text over the logo.
 		position: relative;

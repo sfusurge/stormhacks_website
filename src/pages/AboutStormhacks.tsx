@@ -56,6 +56,19 @@ export function AboutStormhacksSection() {
 }
 
 function Logo() {
+	function ClippedStormHacks({ className }: { className?: string }) {
+		return (
+			<>
+				<div className={cx(Styles.logoClipBox, className)}>
+					<div className={Styles.logo}>
+						<span>Storm</span>
+						<span>Hacks</span>
+					</div>
+				</div>
+			</>
+		);
+	}
+
 	const { t } = useTranslation();
 	return (
 		<div className={Styles.logoBox}>
@@ -67,11 +80,11 @@ function Logo() {
 				</Trans>
 			</div>
 			<div className={Styles.logoBoxLineV} />
-			<div className={Styles.logoClipBox}>
-				<div className={Styles.logo}>
-					<span>Storm</span>
-					<span>Hacks</span>
+			<div className={Styles.logoStormhacksContainer}>
+				<div className={Styles.asGlow}>
+					<ClippedStormHacks />
 				</div>
+				<ClippedStormHacks />
 			</div>
 			<div className={Styles.logoSubtitleContainer}>
 				<div className={Styles.logoBoxLineH} />
