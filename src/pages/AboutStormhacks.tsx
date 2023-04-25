@@ -10,13 +10,11 @@ import EventStatBox from "~/EventStatBox";
 import Page from "~/Page";
 import { Now, formatTimeSpan, useUpdatingTimeSpan } from "~/TimeSpan";
 
-import { ReactComponent as Cards } from "$asset/cards.svg";
+import { ReactComponent as Otter } from "$asset/ar-otter.svg";
 import { ReactComponent as IconGlobe } from "$asset/icon/globe.svg";
 import { ReactComponent as IconPerson } from "$asset/icon/person.svg";
 import { ReactComponent as IconTimer } from "$asset/icon/timer.svg";
 import { ReactComponent as IconTrophy } from "$asset/icon/trophy.svg";
-import { ReactComponent as SQBottomLeft } from "$asset/squares-bottom-left.svg";
-import { ReactComponent as SQTopRight } from "$asset/squares-top-right.svg";
 
 import Styles from "./AboutStormhacks.module.scss";
 
@@ -68,15 +66,19 @@ function Logo() {
 					<span className={Styles.eventLocation}>Location</span>
 				</Trans>
 			</div>
+			<div className={Styles.logoBoxLineV} />
 			<div className={Styles.logoClipBox}>
 				<div className={Styles.logo}>
 					<span>Storm</span>
 					<span>Hacks</span>
 				</div>
 			</div>
-			<div className={Styles.logoSubtitle}>
-				<div className={Styles.logoSubtitleLine} />
-				<div className={Styles.logoSubtitleText}>{t("brand.stormhacks-theme")}</div>
+			<div className={Styles.logoSubtitleContainer}>
+				<div className={Styles.logoBoxLineH} />
+				<div className={Styles.logoSubtitle}>
+					<div className={Styles.logoSubtitleLine} />
+					<div className={Styles.logoSubtitleText}>{t("brand.stormhacks-theme")}</div>
+				</div>
 			</div>
 		</div>
 	);
@@ -85,7 +87,7 @@ function Logo() {
 function ThemeGraphic() {
 	return (
 		<figure className={Styles.themeGraphic}>
-			<Cards />
+			<Otter />
 		</figure>
 	);
 }

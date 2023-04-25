@@ -1,11 +1,24 @@
 .container {
 	--v-margin: var(--size-larger);
+
+	--horizontal-line-offset-from-bottom: calc(1em * 0.61);
+	--horizontal-line-width: 150%;
+	--horizontal-line-occlusion-overlap: 2.5em;
+
+	@include for-tablet {
+		--horizontal-line-width: 133%;
+	}
+
+	@include for-mobile {
+		--horizontal-line-width: 110%;
+		--horizontal-line-occlusion-overlap: 0.5em;
+	}
 }
 
 .section.graphics {
+	position: relative;
 	display: flex;
 	flex-direction: row-reverse;
-	gap: var(--size-larger);
 
 	margin: var(--v-margin) 0;
 
@@ -13,12 +26,13 @@
 	justify-content: center;
 
 	@include for-tablet {
-		gap: var(--size-large);
+		gap: var(--size-small);
 	}
 
 	@include for-mobile {
 		flex-direction: column;
 		margin-top: var(--size-larger);
+		gap: var(--size-larger);
 	}
 }
 
@@ -43,6 +57,50 @@
 		width: 50vw;
 		max-width: unset;
 	}
+}
+
+// The vertical line to the left of the logo and graphic.
+.logoBoxLineV,
+.logoBoxLineH {
+	position: absolute;
+	z-index: $layout-z-foreground;
+	opacity: 0.6;
+}
+
+.logoBoxLineV {
+	bottom: var(--size-medium);
+	width: 1px;
+
+	background: linear-gradient(to bottom, transparent, var(--text-on-logo) 5% 90%, transparent 95%);
+
+	top: calc(var(--size-larger) * -3.25);
+	left: calc(var(--size-smaller) - 3px);
+
+	@include for-tablet {
+		top: calc(var(--size-larger) * -2);
+		left: var(--size-smaller-2);
+	}
+
+	@include for-mobile {
+		top: calc(var(--size-larger) * -0.5);
+		left: var(--size-medium);
+	}
+}
+
+.logoBoxLineH {
+	width: var(--horizontal-line-width);
+	height: 1px;
+	bottom: var(--horizontal-line-offset-from-bottom);
+	left: calc(var(--size-larger) * -1);
+
+	background: linear-gradient(to right, transparent, var(--logo-subtitle) 5% 90%, transparent 95%);
+}
+
+.logoBoxLineV,
+.logoBoxLineH,
+.logoSubtitleLine {
+	// Prevent page blowout.
+	max-width: 100vw;
 }
 
 // The box containing the date/time and StormHacks logo.
@@ -106,9 +164,12 @@
 	}
 
 	// "Play your hand forward"
-	.logoSubtitle {
+	.logoSubtitleContainer {
 		font-size: 1.7em;
 		color: var(--logo-subtitle);
+		text-shadow: var(--logo-subtitle) 0px 0px 20px;
+
+		z-index: $layout-z-foreground-text;
 
 		// Place the text over the logo.
 		position: relative;
@@ -120,6 +181,28 @@
 		// Align the line and text.
 		display: flex;
 		align-items: center;
+		justify-content: right;
+
+		// Add a line to occlude the horizontal yellow line overlapping the text.
+		.logoSubtitleLine {
+			position: absolute;
+			left: calc(var(--horizontal-line-occlusion-overlap) * -1);
+			width: calc(100% + var(--horizontal-line-occlusion-overlap) * 2);
+			bottom: var(--horizontal-line-offset-from-bottom);
+			height: 1px;
+
+			background: linear-gradient(to right, transparent, var(--page-background-color) 10% 85%, transparent);
+			z-index: $layout-z-foreground + 1;
+		}
+
+		.logoSubtitle {
+			position: relative; // To constrain the line.
+		}
+
+		.logoSubtitleText {
+			position: relative;
+			z-index: $layout-z-foreground-text + 1;
+		}
 
 		// Remove the line and make it consume the full width on mobile.
 		@include for-mobile {
@@ -127,31 +210,16 @@
 			padding: 0;
 			font-size: 1.135em;
 
-			.logoSubtitleText {
-				text-align: center;
-				flex: 1 0 auto;
-			}
-
-			.logoSubtitleLine {
-				display: none;
-			}
+			justify-content: center;
 		}
 	}
 
-	.logoSubtitleText {
+	.logoSubtitle {
 		font-family: "Redaction";
 		font-weight: normal;
 		text-align: right;
 
 		margin: 0 0.2em;
-	}
-
-	.logoSubtitleLine {
-		height: 1px;
-		flex: 1 10 auto;
-		background: currentColor;
-
-		margin-right: 0.2em;
 	}
 
 	// "May 20-21" ...
@@ -160,6 +228,8 @@
 		bottom: -0.5em;
 		padding: 0 $clip-left;
 		font-family: "Redaction";
+
+		z-index: $layout-z-foreground-text;
 
 		.eventType,
 		.eventLocation {
@@ -189,6 +259,7 @@
 	}
 }
 
+// The buttons linking to the application forms.
 .applyForms {
 	position: relative;
 	top: calc(var(--v-margin) * -1.5);
@@ -197,6 +268,7 @@
 	.applyFormsButtons {
 		display: flex;
 		gap: var(--size-small);
+		font-weight: 600;
 	}
 
 	.applyFormsLinks {
