@@ -80,7 +80,10 @@ body {
 }
 
 // Headings.
-h1,
+h1 {
+	@include font-heading("h1");
+}
+
 h2 {
-	@include font-heading;
+	@include font-heading("h2");
 }

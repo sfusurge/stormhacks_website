@@ -18,7 +18,8 @@ body {
 	--footer-background: #0f0d17;
 	--footer-border: #fff;
 
-	--text: #fff;
+	--text: #d9d9d9;
+	--text-bright: #fff;
 	--text-on-logo: #fff;
 	--text-on-accent: #1d1d1d;
 	--text-inverted: #1d1d1d; // For when the background is var(--text)
@@ -49,6 +50,7 @@ body {
 	--statsbox-label-text: var(--accent);
 	--statsbox-label-border: #fff;
 
+	--sponsor-logo: #fff;
 	// @include for-theme("dark") {
 	// 	--primary: #222654;
 	// 	--accent: #d0d0d0;
