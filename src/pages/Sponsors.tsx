@@ -2,12 +2,13 @@ import { HackathonInfo, PastSponsors, SponsorInfo, SponsorTier, Sponsors } from 
 import cx from "classnames";
 import { shuffle } from "fast-shuffle";
 
-import { Fragment, FunctionComponent, ReactElement, SVGProps, useMemo } from "react";
+import { ComponentProps, Fragment, useMemo } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
 import ButtonLink, { ButtonStyle } from "~/ButtonLink";
-import Image from "~/Image";
 import Page from "~/Page";
+import SponsorGrid from "~/SponsorGrid";
+import SponsorLogo from "~/SponsorLogo/component";
 
 import Styles from "./Sponsors.module.scss";
 
@@ -27,16 +28,6 @@ function SponsorsPage() {
 
 export function SponsorsSection() {
 	const { t } = useTranslation();
-	const sponsors = useMemo(
-		() => (
-			<>
-				<SponsorGrid i18nKey="sponsors.sponsors-heading" sponsors={SortedSponsors} />
-				<SponsorGrid i18nKey="sponsors.past-sponsors-heading" sponsors={PastSponsors as SponsorInfo[]} />
-			</>
-		),
-		[]
-	);
-
 	return (
 		<article className={Styles.container}>
 			<h1 className={Styles.title}>{t("sponsors.title")}</h1>
@@ -48,7 +39,9 @@ export function SponsorsSection() {
 				i18n-title="sponsors.button.title">
 				{t("sponsors.button.text")}
 			</ButtonLink>
-			{sponsors}
+			<div className={cx(Styles.section, Styles.sponsors)}>
+				<SponsorsGrids />
+			</div>
 		</article>
 	);
 }
@@ -94,43 +87,53 @@ const SortedSponsors = (() => {
 		.flat();
 })();
 
-function SponsorGrid({ i18nKey, sponsors }: { i18nKey: string; sponsors: SponsorInfo[] }) {
+function SponsorsGrids() {
 	const { t } = useTranslation();
+	return useMemo(() => {
+		const common: ComponentProps<typeof SponsorGrid> = {
+			aspectRatio: "290:235",
+			minItemWidth: 180,
+			minItemWidthMobile: 125,
+			minColumns: 2,
+			maxColumns: 3,
+		};
 
-	return (
-		<div className={cx(Styles.section, Styles.sponsors)}>
-			<h2>{t(i18nKey)}</h2>
-			<div className={Styles.sponsorLinks}>
-				{sponsors.map((sponsor: SponsorInfo) => (
-					<Sponsor {...sponsor} key={sponsor.name} />
-				))}
-			</div>
-		</div>
-	);
-}
-
-function Sponsor({
-	name,
-	photo,
-	link,
-	svg: SVG,
-}: {
-	name: string;
-	link?: string;
-	photo?: string;
-	svg?: FunctionComponent<SVGProps<SVGSVGElement>>;
-}): ReactElement {
-	const image = SVG == null ? <Image fallbackSrc={photo as string} alt={name} src={[]} /> : <SVG />;
-	return (
-		<div>
-			{link && (
-				<a className={Styles.sponsorLink} href={link} title={link}>
-					{image}
-				</a>
-			)}
-			{!link && image}
-		</div>
-	);
+		return (
+			<>
+				<section>
+					<h2>{t("sponsors.sponsors-heading")}</h2>
+					<SponsorGrid {...common} maxColumns={2} minItemWidth={250}>
+						{SortedSponsors.filter((s) => s.type !== SponsorTier.IN_KIND).map((s) => (
+							<SponsorLogo
+								key={s.name}
+								name={s.name}
+								href={s.link}
+								logo={(s as any).svg ?? (s as any).photo}
+							/>
+						))}
+					</SponsorGrid>
+					<SponsorGrid {...common}>
+						{SortedSponsors.filter((s) => s.type === SponsorTier.IN_KIND).map((s) => (
+							<SponsorLogo
+								key={s.name}
+								name={s.name}
+								href={s.link}
+								logo={(s as any).svg ?? (s as any).photo}
+							/>
+						))}
+					</SponsorGrid>
+				</section>
+				<section>
+					<h2>{t("sponsors.past-sponsors-heading")}</h2>
+					<SponsorGrid {...common}>
+						{PastSponsors.map((s) => (
+							<SponsorLogo key={s.name} name={s.name} logo={(s as any).svg ?? (s as any).photo} />
+						))}
+					</SponsorGrid>
+				</section>
+			</>
+		);
+	}, [t]);
 }
 
 export default SponsorsPage;
