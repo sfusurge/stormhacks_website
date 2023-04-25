@@ -172,15 +172,15 @@
 		"benefits": {
 			"1": {
 				"header": "Recruit for the future",
-				"paragraph": "Get exposure and access to a huge pool of top technical talent across the Canadian West Coast. Find the next set of candidates who will grow your competitive advantage."
+				"paragraph": "Get exposure and <0>access to a huge pool of top technical talent</0> across the Canadian West Coast. Find the next set of candidates who will <0>grow your competitive advantage</0>."
 			},
 			"2": {
 				"header": "Promotion + receive feedback",
-				"paragraph": "With options for sponsoring your own prize & challenge, you can highlight the potential of your product or API as hackers gain hands-on experience using your platform."
+				"paragraph": "With options for sponsoring your own prize & challenge, you can <0>highlight the potential of your product or API</0> as hackers gain hands-on experience using your platform."
 			},
 			"3": {
 				"header": "Make an impression",
-				"paragraph": "Boost your brand awareness by sharing company swag, or sponsoring a fun event. Directly engage with hackers from Vancouver’s growing tech community and beyond!"
+				"paragraph": "<0>Boost your brand awareness by sharing company swag</0>, or sponsoring a fun event. <0>Directly engage with hackers</0> from Vancouver's growing tech community and beyond!"
 			}
 		},
 

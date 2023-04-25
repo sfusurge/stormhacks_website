@@ -56,12 +56,12 @@ function SectionWhySponsorUs() {
 			<div className={Styles.benefits}>
 				{benefits.map((n) => (
 					<Fragment key={n}>
-						<h2>
-							<Trans i18nKey={`sponsors.benefits.${n}.header`}>
-								<span className={Styles.mobileLineBreaker}>...</span>
+						<h2>{t(`sponsors.benefits.${n}.header`)}</h2>
+						<p>
+							<Trans i18nKey={`sponsors.benefits.${n}.paragraph`}>
+								<strong />
 							</Trans>
-						</h2>
-						<p>{t(`sponsors.benefits.${n}.paragraph`)}</p>
+						</p>
 					</Fragment>
 				))}
 			</div>

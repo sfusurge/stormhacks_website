@@ -47,6 +47,10 @@
 			font-size: 0.95em;
 		}
 
+		strong {
+			font-weight: 600;
+		}
+
 		@include for-mobile {
 			h2 {
 				padding-top: var(--size-larger);
@@ -59,10 +63,8 @@
 			}
 
 			display: block;
-
-			.mobileLineBreaker {
-				display: block;
-			}
+			max-width: 400px;
+			margin: auto;
 		}
 	}
 }
