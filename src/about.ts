@@ -315,6 +315,12 @@ export const Sponsors: Array<SponsorInfo> = [
 		svg: SponsorStandOutStickers,
 	},
 	{
+		name: "Leading Learners",
+		type: SponsorTier.IN_KIND,
+		link: "https://www.leading-learners.com/",
+		photo: "/sponsor/leading-learners.png",
+	},
+	{
 		name: "SAP",
 		type: SponsorTier.SILVER,
 		link: "https://www.sap.com/canada/index.html",
@@ -366,10 +372,6 @@ export const PastSponsors = [
 	{
 		name: "echo3D",
 		svg: SponsorEcho3D,
-	},
-	{
-		name: "Leading Learners",
-		photo: "/sponsor/leading-learners.png",
 	},
 	{
 		name: "Red Bull",
