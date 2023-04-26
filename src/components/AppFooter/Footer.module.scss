@@ -1,8 +1,14 @@
+.footerMargin {
+	margin-top: calc(var(--size-larger) * 1.5);
+}
+
 .footer {
 	border-top: var(--footer-border) 1px solid;
 	background: var(--footer-background);
 	padding: var(--size-larger) var(--size-large);
-	margin-top: calc(var(--size-larger) * 1.5);
+
+	position: relative;
+	z-index: $layout-z-foreground;
 }
 
 .footerContents {
