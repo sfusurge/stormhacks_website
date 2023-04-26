@@ -67,38 +67,66 @@
 		}
 
 		@include for-mobile {
-			grid-template-columns: var(--card-graphic-width) 1fr;
+			grid-template-columns: var(--card-graphic-width) minmax(1fr, 350px) var(--card-graphic-width);
+			margin-top: 0;
 
+			// Reset grid row/column properties.
 			h2,
+			p,
 			.benefitsGraphic {
-				margin-top: var(--size-larger-2);
+				grid-row: unset;
+				grid-column: unset;
 			}
 
-			h2 {
-				grid-column: 2;
-				grid-row: unset;
+			// Set a maximum size for the text.
+			h2,
+			p {
+				max-width: 350px;
+				margin: auto;
+			}
 
+			// Change font sizes.
+			h2 {
+				width: 100%;
 				font-size: 1em;
-				letter-spacing: normal;
 			}
 
 			p {
-				grid-column: 2;
-				grid-row: unset;
-				justify-self: center;
-
-				font-size: 0.9em;
-				max-width: 350px;
+				font-size: 0.95em;
 			}
 
+			// Add spacing between groups.
+			h2,
 			.benefitsGraphic {
-				grid-row: span 2;
-				align-self: center;
-
+				margin-top: var(--size-larger-2);
 				margin-bottom: 0;
 			}
 
-			margin: auto;
+			// Odd rows: Text on the right.
+			h2:nth-of-type(2n - 1),
+			p:nth-of-type(2n - 1) {
+				grid-column: 2 / 4;
+				margin-left: 0;
+			}
+
+			.benefitsGraphic:nth-of-type(2n - 1) {
+				grid-row: span 2;
+				grid-column: 1;
+				justify-self: end;
+			}
+
+			// Even rows: Text on the left.
+			h2:nth-of-type(2n),
+			p:nth-of-type(2n) {
+				grid-column: 1 / 3;
+				margin-right: 0;
+			}
+
+			.benefitsGraphic:nth-of-type(2n) {
+				grid-row: span 3;
+				grid-column: 3;
+				justify-self: start;
+			}
 		}
 	}
 }
