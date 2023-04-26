@@ -16,6 +16,7 @@
 
 	// Sticky header.
 	position: sticky;
+	z-index: $layout-z-header;
 	top: 0;
 }
 
@@ -98,7 +99,6 @@
 // Header border.
 .header {
 	border-bottom: var(--header-border) 1px solid;
-	z-index: 10;
 
 	@include for-desktop {
 	}
