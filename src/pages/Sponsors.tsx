@@ -7,8 +7,13 @@ import { Trans, useTranslation } from "react-i18next";
 
 import ButtonLink, { ButtonStyle } from "~/ButtonLink";
 import Page from "~/Page";
+import { SVGComponent } from "~/SVG";
 import SponsorGrid from "~/SponsorGrid";
 import SponsorLogo from "~/SponsorLogo/component";
+
+import { ReactComponent as CardMegaphone } from "$asset/card-megaphone.svg";
+import { ReactComponent as CardStar } from "$asset/card-star.svg";
+import { ReactComponent as CardStocks } from "$asset/card-stonks.svg";
 
 import Styles from "./Sponsors.module.scss";
 
@@ -48,14 +53,21 @@ export function SponsorsSection() {
 
 function SectionWhySponsorUs() {
 	const { t } = useTranslation();
-	const benefits = [1, 2, 3];
+	const benefits: Array<[number, SVGComponent]> = [
+		[1, CardStocks],
+		[2, CardMegaphone],
+		[3, CardStar],
+	];
 
 	return (
 		<div className={cx(Styles.section, Styles.sponsorUs)}>
 			<p className={Styles.whySponsorUs}>{t("sponsors.paragraph")}</p>
 			<div className={Styles.benefits}>
-				{benefits.map((n) => (
+				{benefits.map(([n, Graphic]) => (
 					<Fragment key={n}>
+						<div className={Styles.benefitsGraphic}>
+							<Graphic />
+						</div>
 						<h2>{t(`sponsors.benefits.${n}.header`)}</h2>
 						<p>
 							<Trans i18nKey={`sponsors.benefits.${n}.paragraph`}>

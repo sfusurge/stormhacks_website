@@ -26,6 +26,8 @@
 	}
 
 	.benefits {
+		--card-graphic-width: 65px;
+
 		margin: var(--size-larger) 0;
 		text-align: center;
 
@@ -34,36 +36,68 @@
 		column-gap: var(--size-large);
 
 		h2 {
-			text-transform: uppercase;
+			grid-row: 2;
 
-			grid-row: 1;
+			text-transform: uppercase;
 			margin-bottom: 0.4em;
 			font-size: 1.1em;
 		}
 
 		p {
-			grid-row: 2;
+			grid-row: 3;
+
 			margin: 0;
 			font-size: 0.95em;
+
+			strong {
+				font-weight: 600;
+			}
 		}
 
-		strong {
-			font-weight: 600;
+		.benefitsGraphic {
+			grid-row: 1;
+
+			display: flex;
+			justify-content: center;
+			margin-bottom: var(--size-small);
+
+			> svg {
+				width: var(--card-graphic-width);
+			}
 		}
 
 		@include for-mobile {
+			grid-template-columns: var(--card-graphic-width) 1fr;
+
+			h2,
+			.benefitsGraphic {
+				margin-top: var(--size-larger-2);
+			}
+
 			h2 {
-				padding-top: var(--size-larger);
+				grid-column: 2;
+				grid-row: unset;
+
 				font-size: 1em;
 				letter-spacing: normal;
 			}
 
 			p {
+				grid-column: 2;
+				grid-row: unset;
+				justify-self: center;
+
 				font-size: 0.9em;
+				max-width: 350px;
 			}
 
-			display: block;
-			max-width: 400px;
+			.benefitsGraphic {
+				grid-row: span 2;
+				align-self: center;
+
+				margin-bottom: 0;
+			}
+
 			margin: auto;
 		}
 	}
