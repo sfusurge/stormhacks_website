@@ -53,6 +53,7 @@ export function FAQSection() {
 				i18n={i18n}
 				key={key}
 				className={Styles.faqBox}
+				collapsible={true}
 				questionKey={`faqs.${key}.question`}
 				answerKey={`faqs.${key}.answer`}
 			/>

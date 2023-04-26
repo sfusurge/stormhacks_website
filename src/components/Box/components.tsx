@@ -1,6 +1,6 @@
 import cx from "classnames";
 
-import React from "react";
+import { MouseEventHandler } from "react";
 import { PropsWithChildren, ReactElement } from "react";
 
 import Styles from "./Box.module.scss";
@@ -22,8 +22,16 @@ const BoxLabelID = 2;
 /**
  * The title of the box.
  */
-export function BoxTitle({ className, children }: PropsWithChildren<{ className?: string }>): ReactElement {
-	return <div className={cx(Styles.title, className)}>{children}</div>;
+export function BoxTitle({
+	className,
+	children,
+	onClick,
+}: PropsWithChildren<{ className?: string; onClick?: MouseEventHandler }>): ReactElement {
+	return (
+		<div onClick={onClick} className={cx(Styles.title, className)}>
+			{children}
+		</div>
+	);
 }
 
 BoxTitle[TypeID] = BoxTitleID;

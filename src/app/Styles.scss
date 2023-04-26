@@ -15,11 +15,13 @@ body {
 body {
 	--animation-fast: 0.05s;
 	--animation-slow: 0.2s;
+	--animation-slower: 1s;
 	--animation-scroll: 3s;
 
 	@media (prefers-reduced-motion) {
 		--animation-fast: 0s;
 		--animation-slow: 0s;
+		--animation-slower: 0s;
 		--animation-scroll: 0s;
 	}
 }
