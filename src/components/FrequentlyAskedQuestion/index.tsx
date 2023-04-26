@@ -1,7 +1,7 @@
 import cx from "classnames";
 import { i18n } from "i18next";
 
-import { ReactElement, useCallback, useState } from "react";
+import { ReactElement, useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import Box, { BoxBody, BoxStyle, BoxTitle } from "~/Box";
@@ -53,10 +53,23 @@ function FrequentlyAskedQuestion({
 	const useTranslationT = useTranslation();
 	const t = i18n?.t ?? useTranslationT.t;
 
-	const [collapsed, setCollapsed] = useState<boolean>(startCollapsed ?? false);
+	const savedStateKey = `FAQ[${questionKey}]`;
+	const savedState =
+		useMemo(() => {
+			try {
+				return !!JSON.parse(localStorage.getItem(savedStateKey) ?? "");
+			} catch (_ex) {
+				return null;
+			}
+		}, [savedStateKey]) ?? startCollapsed;
+
+	const [collapsed, setCollapsed] = useState<boolean>(savedState ?? false);
 	const onClick = useCallback(() => {
-		setCollapsed((v) => !v);
-	}, [setCollapsed]);
+		setCollapsed((v) => {
+			localStorage.setItem(savedStateKey, JSON.stringify(!v));
+			return !v;
+		});
+	}, [setCollapsed, savedStateKey]);
 
 	return (
 		<Box
