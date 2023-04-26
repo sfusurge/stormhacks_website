@@ -54,6 +54,7 @@ export function FAQSection() {
 				key={key}
 				className={Styles.faqBox}
 				collapsible={true}
+				collapsed={true}
 				questionKey={`faqs.${key}.question`}
 				answerKey={`faqs.${key}.answer`}
 			/>
