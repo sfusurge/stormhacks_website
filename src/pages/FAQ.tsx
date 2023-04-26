@@ -1,7 +1,7 @@
 import cx from "classnames";
 
 import { useMemo } from "react";
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 import FrequentlyAskedQuestion from "~/FrequentlyAskedQuestion";
 import Page from "~/Page";
@@ -64,7 +64,10 @@ export function FAQSection() {
 	return (
 		<article className={Styles.container}>
 			<h1 className={Styles.title}>{t("faqs.title")}</h1>
-			<div className={cx(Styles.section, Styles.faqs)}>{boxes}</div>
+			<div className={cx(Styles.section, Styles.faqs)}>
+				<div className={Styles.columnLeft}>{boxes.filter((_, i) => (i & 1) === 0)}</div>
+				<div className={Styles.columnRight}>{boxes.filter((_, i) => (i & 1) === 1)}</div>
+			</div>
 		</article>
 	);
 }

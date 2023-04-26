@@ -1,14 +1,68 @@
 .container {
+	--faqs-gap: var(--size-medium);
 }
 
-.section.faqs {
-	--faq-box-width: 300px;
+// Two-column layout.
+.faqs {
+	display: flex;
+}
 
-	display: grid;
-	gap: var(--size-medium);
-	grid-template-columns: repeat(auto-fill, minmax(max(40%, var(--faq-box-width)), 1fr));
+.columnLeft,
+.columnRight {
+	display: inline-block;
+	width: calc(50% - (var(--faqs-gap) / 2));
+	flex-direction: row;
+	flex-wrap: wrap;
 
-	@include for-mobile {
-		--min-image-width: 150px;
+	> * {
+		width: 100%;
+
+		&:not(:first-child) {
+			margin-top: var(--faqs-gap);
+		}
+	}
+}
+
+.columnRight {
+	margin-left: var(--faqs-gap);
+}
+
+// Single-column layout.
+@include for-mobile {
+	.faqs {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: var(--faqs-gap);
+	}
+
+	.columnLeft,
+	.columnRight {
+		display: contents;
+		width: 100%;
+
+		> *:not(:first-child) {
+			margin-top: 0;
+		}
+	}
+
+	.columnRight {
+		margin-left: 0;
+
+		// We need to interleave the items from both grids.
+		// We can do that by manually assigning a row to the items on the right column.
+		//
+		// [l1]
+		// [r1]
+		// [l2]
+		// [r2]
+		// ....
+		//
+		// There's no way to do that dynamically, so I used a SCSS for-loop to generate code for the first 20 items.
+		// That should be more than enough.
+		@for $i from 0 through 20 {
+			> *:nth-child(#{$i}) {
+				grid-row: $i * 2;
+			}
+		}
 	}
 }
