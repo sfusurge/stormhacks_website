@@ -1,10 +1,10 @@
 import { ReactElement } from "react";
 
-import AboutStormhacksPage from "$page/AboutStormhacks";
 import AboutSurgePage from "$page/AboutSurge";
 import ApplyHackerPage from "$page/ApplyHacker";
 import ApplyMentorPage from "$page/ApplyMentor";
 import FAQPage from "$page/FAQ";
+import IntroPage from "$page/Intro";
 import SponsorsPage from "$page/Sponsors";
 
 export type AppRoute =
@@ -35,7 +35,7 @@ const Routes: AppRoute[] = [
 	{
 		type: "paged",
 		pages: [
-			{ path: "/", id: "about-stormhacks", page: () => <AboutStormhacksPage /> },
+			{ path: "/", id: "intro", page: () => <IntroPage /> },
 			{ path: "/sponsors", id: "sponsors", page: () => <SponsorsPage /> },
 			{ path: "/faq", id: "faq", page: () => <FAQPage /> },
 			{ path: "/about-us", id: "about-us", page: () => <AboutSurgePage /> },

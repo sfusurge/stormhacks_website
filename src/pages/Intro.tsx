@@ -16,7 +16,7 @@ import { ReactComponent as IconPerson } from "$asset/icon/person.svg";
 import { ReactComponent as IconTimer } from "$asset/icon/timer.svg";
 import { ReactComponent as IconTrophy } from "$asset/icon/trophy.svg";
 
-import Styles from "./AboutStormhacks.module.scss";
+import Styles from "./Intro.module.scss";
 
 const Participants = HackathonInfo.participants.count;
 const Projects = HackathonInfo.projects.count;
@@ -24,21 +24,19 @@ const Prizes = HackathonInfo.prizes.value;
 const Duration = HackathonInfo.time.hours;
 
 /**
- * The "About StormHacks" page.
+ * The "Intro" page.
  *
- * This contains the StormHacks logo, event date and time, and card graphic.
- * In addition, it
+ * This contains the StormHacks logo, event date and time, and VR otter graphic.
  */
-function AboutStormhacksPage() {
-	// This is not directly used.
+function IntroPage() {
 	return (
 		<Page className="width-limited">
-			<AboutStormhacksSection />
+			<IntroSection />
 		</Page>
 	);
 }
 
-export function AboutStormhacksSection() {
+export function IntroSection() {
 	return (
 		<article className={Styles.container}>
 			<div className={cx(Styles.section, Styles.graphics)}>
@@ -214,4 +212,4 @@ function SectionEventStats() {
 	);
 }
 
-export default AboutStormhacksPage;
+export default IntroPage;
