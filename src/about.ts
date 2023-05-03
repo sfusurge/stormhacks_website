@@ -378,6 +378,12 @@ export const Sponsors: Array<SponsorInfo> = [
 		link: "https://sfss.ca/",
 		svg: SponsorSFSS,
 	},
+	{
+		name: "Guusto",
+		type: SponsorTier.IN_KIND /* TODO */,
+		link: "https://guusto.com/",
+		svg: SponsorGuusto,
+	},
 ];
 
 export const PastSponsors = [
@@ -392,10 +398,6 @@ export const PastSponsors = [
 	{
 		name: "Intact",
 		svg: SponsorIntact,
-	},
-	{
-		name: "Guusto",
-		svg: SponsorGuusto,
 	},
 	{
 		name: "MLH",
