@@ -149,6 +149,7 @@ function SetupRoutes({ appRoutes }: { appRoutes: AppRoute[] }) {
 }
 
 // Add a resize listener to set the zoom factor for large screens.
+let wasZoomed = false;
 function rezoomPage() {
 	const width = window.innerWidth;
 	const zoomWidth = 1500;
@@ -156,7 +157,13 @@ function rezoomPage() {
 	if (width > zoomWidth /* TODO: query me */) {
 		const factor = width / zoomWidth;
 		requestAnimationFrame(() => {
+			wasZoomed = true;
 			rootElement.style.setProperty("zoom", factor.toString());
+		});
+	} else if (wasZoomed) {
+		requestAnimationFrame(() => {
+			wasZoomed = false;
+			rootElement.style.removeProperty("zoom");
 		});
 	}
 }
