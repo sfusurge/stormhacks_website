@@ -148,6 +148,22 @@ function SetupRoutes({ appRoutes }: { appRoutes: AppRoute[] }) {
 	);
 }
 
+// Add a resize listener to set the zoom factor for large screens.
+function rezoomPage() {
+	const width = window.innerWidth;
+	const zoomWidth = 1500;
+
+	if (width > zoomWidth /* TODO: query me */) {
+		const factor = width / zoomWidth;
+		requestAnimationFrame(() => {
+			rootElement.style.setProperty("zoom", factor.toString());
+		});
+	}
+}
+
+window.addEventListener("resize", rezoomPage);
+rezoomPage();
+
 // Render the root.
 root.render(
 	<React.StrictMode>
