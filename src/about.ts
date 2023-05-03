@@ -17,6 +17,7 @@ import { ReactComponent as SponsorCSSS } from "$asset/sponsor/sfu-csss.svg";
 import { ReactComponent as SponsorSSSS } from "$asset/sponsor/sfu-ssss.svg";
 import { ReactComponent as SponsorWICS } from "$asset/sponsor/sfu-wics.svg";
 import { ReactComponent as SponsorStandOutStickers } from "$asset/sponsor/standoutstickers.svg";
+import { ReactComponent as SponsorStevesPokeBar } from "$asset/sponsor/stevespokebar.svg";
 import { ReactComponent as SponsorStickermule } from "$asset/sponsor/stickermule.svg";
 import { ReactComponent as SponsorWizeprep } from "$asset/sponsor/wizeprep.svg";
 import { ReactComponent as SponsorWolfram } from "$asset/sponsor/wolfram.svg";
@@ -395,6 +396,12 @@ export const Sponsors: Array<SponsorInfo> = [
 		type: SponsorTier.IN_KIND /* TODO */,
 		link: "https://www.redbull.com/ca-en/",
 		svg: SponsorRedbull,
+	},
+	{
+		name: "Steve's Poke Bar",
+		type: SponsorTier.IN_KIND /* TODO */,
+		link: "https://www.stevespokebar.ca/",
+		svg: SponsorStevesPokeBar,
 	},
 ];
 
