@@ -124,28 +124,7 @@ export const SurgeInfo = {
 		{
 			name: "TODO 010",
 			role: "TODO",
-			photo: "/exec/__placeholder__.jpg",
-		},
-		{
-			name: "TODO 011",
-			role: "TODO",
-			photo: "/exec/011.jpg",
-		},
-		{
-			name: "Ethan Pini",
-			link: "https://www.github.com/eth-p",
-			role: "TODO",
-			photo: "/exec/012.jpg",
-		},
-		{
-			name: "TODO 013",
-			role: "TODO",
-			photo: "/exec/013.jpg",
-		},
-		{
-			name: "TODO 014",
-			role: "TODO",
-			photo: "/exec/__placeholder__.jpg",
+			photo: "/exec/010.jpg",
 		},
 		{
 			name: "TODO 015",
@@ -170,37 +149,7 @@ export const SurgeInfo = {
 		{
 			name: "TODO 019",
 			role: "TODO",
-			photo: "/exec/__placeholder__.jpg",
-		},
-		{
-			name: "TODO 020",
-			role: "TODO",
-			photo: "/exec/020.jpg",
-		},
-		{
-			name: "TODO 021",
-			role: "TODO",
-			photo: "/exec/021.jpg",
-		},
-		{
-			name: "TODO 022",
-			role: "TODO",
-			photo: "/exec/022.jpg",
-		},
-		{
-			name: "TODO 023",
-			role: "TODO",
-			photo: "/exec/__placeholder__.jpg",
-		},
-		{
-			name: "TODO 024",
-			role: "TODO",
-			photo: "/exec/024.jpg",
-		},
-		{
-			name: "TODO 025",
-			role: "TODO",
-			photo: "/exec/025.jpg",
+			photo: "/exec/019.jpg",
 		},
 		{
 			name: "TODO 026",
@@ -218,6 +167,16 @@ export const SurgeInfo = {
 			photo: "/exec/028.jpg",
 		},
 		{
+			name: "TODO 011",
+			role: "TODO",
+			photo: "/exec/011.jpg",
+		},
+		{
+			name: "TODO 023",
+			role: "TODO",
+			photo: "/exec/023.jpg",
+		},
+		{
 			name: "TODO 029",
 			role: "TODO",
 			photo: "/exec/029.jpg",
@@ -231,31 +190,6 @@ export const SurgeInfo = {
 			name: "TODO 031",
 			role: "TODO",
 			photo: "/exec/031.jpg",
-		},
-		{
-			name: "TODO 032",
-			role: "TODO",
-			photo: "/exec/032.jpg",
-		},
-		{
-			name: "TODO 033",
-			role: "TODO",
-			photo: "/exec/033.jpg",
-		},
-		{
-			name: "TODO 034",
-			role: "TODO",
-			photo: "/exec/034.jpg",
-		},
-		{
-			name: "TODO 035",
-			role: "TODO",
-			photo: "/exec/__placeholder__.jpg",
-		},
-		{
-			name: "TODO 036",
-			role: "TODO",
-			photo: "/exec/__placeholder__.jpg",
 		},
 		{
 			name: "TODO 037",
@@ -278,14 +212,85 @@ export const SurgeInfo = {
 			photo: "/exec/040.jpg",
 		},
 		{
-			name: "TODO 041",
+			name: "TODO 035",
 			role: "TODO",
-			photo: "/exec/__placeholder__.jpg",
+			photo: "/exec/035.jpg",
+		},
+		{
+			name: "TODO 036",
+			role: "TODO",
+			photo: "/exec/036.jpg",
+		},
+		{
+			name: "TODO 032",
+			role: "TODO",
+			photo: "/exec/032.jpg",
+		},
+		{
+			name: "TODO 020",
+			role: "TODO",
+			photo: "/exec/020.jpg",
+		},
+		{
+			name: "TODO 021",
+			role: "TODO",
+			photo: "/exec/021.jpg",
+		},
+		{
+			name: "TODO 022",
+			role: "TODO",
+			photo: "/exec/022.jpg",
 		},
 		{
 			name: "TODO 042",
 			role: "TODO",
-			photo: "/exec/__placeholder__.jpg",
+			photo: "/exec/042.jpg",
+		},
+		{
+			name: "TODO 024",
+			role: "TODO",
+			photo: "/exec/024.jpg",
+		},
+		{
+			name: "TODO 025",
+			role: "TODO",
+			photo: "/exec/025.jpg",
+		},
+		{
+			name: "TODO 033",
+			role: "TODO",
+			photo: "/exec/033.jpg",
+		},
+		{
+			name: "TODO 034",
+			role: "TODO",
+			photo: "/exec/034.jpg",
+		},
+		{
+			name: "TODO 041",
+			role: "TODO",
+			photo: "/exec/041.jpg",
+		},
+		{
+			name: "TODO 043",
+			role: "TODO",
+			photo: "/exec/043.jpg",
+		},
+		{
+			name: "Ethan Pini",
+			link: "https://www.github.com/eth-p",
+			role: "TODO",
+			photo: "/exec/ethan.jpg",
+		},
+		{
+			name: "TODO 013",
+			role: "TODO",
+			photo: "/exec/013.jpg",
+		},
+		{
+			name: "TODO 014",
+			role: "TODO",
+			photo: "/exec/014.jpg",
 		},
 	],
 };
