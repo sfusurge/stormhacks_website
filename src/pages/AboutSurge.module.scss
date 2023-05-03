@@ -1,8 +1,72 @@
+.page {
+	overflow: hidden;
+}
+
 .container {
 	text-align: center;
 }
 
 .section.about {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: var(--size-larger-2);
+
+	> * {
+		// Stacking.
+		// https://stackoverflow.com/a/50086485
+		// This is pretty awesome.
+		grid-row-start: 1;
+		grid-column-start: 1;
+	}
+
+	.graphic {
+		font-size: 0;
+		.blurred {
+			filter: blur(10px);
+			margin-top: -100%;
+		}
+	}
+
+	.description {
+		z-index: $layout-z-foreground;
+		text-shadow: var(--aboutsurge-text-shadow) 0px 1px 10px;
+
+		padding: var(--size-larger);
+		margin: var(--size-larger);
+
+		background: radial-gradient(
+			closest-side,
+			var(--aboutsurge-background-gradient-start) 50%,
+			var(--aboutsurge-background-gradient-end)
+		);
+
+		@include for-mobile {
+			background: radial-gradient(
+				closest-side,
+				var(--aboutsurge-background-gradient-start-mobile) 80%,
+				var(--aboutsurge-background-gradient-end)
+			);
+		}
+	}
+
+	.otterLeft,
+	.otterRight {
+		position: absolute;
+		bottom: 10%;
+	}
+
+	.otterLeft {
+		left: 0;
+		transform: translateX(-25%);
+	}
+
+	.otterRight {
+		right: 0;
+		transform: translateX(30%);
+	}
 }
 
 .section.execs {
