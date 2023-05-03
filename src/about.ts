@@ -1,6 +1,7 @@
 import { FunctionComponent, SVGProps } from "react";
 
 import { ReactComponent as SponsorAssemblyAI } from "$asset/sponsor/assemblyai.svg";
+import { ReactComponent as SponsorBGC } from "$asset/sponsor/bgc.svg";
 import { ReactComponent as SponsorEcho3D } from "$asset/sponsor/echo3d.svg";
 import { ReactComponent as SponsorErgonomyx } from "$asset/sponsor/ergonomyx.svg";
 import { ReactComponent as SponsorGitHub } from "$asset/sponsor/github.svg";
@@ -402,6 +403,12 @@ export const Sponsors: Array<SponsorInfo> = [
 		type: SponsorTier.IN_KIND /* TODO */,
 		link: "https://www.stevespokebar.ca/",
 		svg: SponsorStevesPokeBar,
+	},
+	{
+		name: "BGC Engineering",
+		type: SponsorTier.IN_KIND /* TODO */,
+		link: "https://www.bgcengineering.ca/",
+		svg: SponsorBGC,
 	},
 ];
 
