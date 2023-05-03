@@ -384,6 +384,12 @@ export const Sponsors: Array<SponsorInfo> = [
 		link: "https://guusto.com/",
 		svg: SponsorGuusto,
 	},
+	{
+		name: "Software Systems Student Society",
+		type: SponsorTier.IN_KIND /* TODO */,
+		link: "https://www.sfussss.org/",
+		svg: SponsorSSSS,
+	},
 ];
 
 export const PastSponsors = [
@@ -406,10 +412,6 @@ export const PastSponsors = [
 	{
 		name: "Ergonomyx",
 		svg: SponsorErgonomyx,
-	},
-	{
-		name: "Software Systems Student Society",
-		svg: SponsorSSSS,
 	},
 	{
 		name: "Women in Computing Science",
