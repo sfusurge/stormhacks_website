@@ -18,113 +18,115 @@
 	p.whySponsorUs {
 		margin: auto;
 		padding: 0 var(--size-larger-2);
+		margin-bottom: var(--size-medium);
 		max-width: 45em;
 
 		@include for-mobile {
 			padding: 0;
 		}
 	}
+}
 
-	.benefits {
-		--card-graphic-width: 65px;
+.section.sponsorBenefits {
+	--card-graphic-width: 65px;
 
-		margin: var(--size-larger) 0;
-		text-align: center;
+	margin: var(--size-larger) 0;
+	margin-top: var(--size-larger-2);
+	text-align: center;
 
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		column-gap: var(--size-large);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: var(--size-large);
 
+	h2 {
+		grid-row: 2;
+
+		text-transform: uppercase;
+		margin-bottom: 0.4em;
+	}
+
+	p {
+		grid-row: 3;
+
+		margin: 0;
+		font-size: 0.95em;
+
+		strong {
+			font-weight: 600;
+		}
+	}
+
+	.benefitsGraphic {
+		grid-row: 1;
+
+		display: flex;
+		justify-content: center;
+		margin-bottom: var(--size-small);
+
+		> svg {
+			width: var(--card-graphic-width);
+		}
+	}
+
+	@include for-mobile {
+		grid-template-columns: var(--card-graphic-width) minmax(1fr, 350px) var(--card-graphic-width);
+		margin-top: 0;
+
+		// Reset grid row/column properties.
+		h2,
+		p,
+		.benefitsGraphic {
+			grid-row: unset;
+			grid-column: unset;
+		}
+
+		// Set a maximum size for the text.
+		h2,
+		p {
+			max-width: 350px;
+			margin: auto;
+		}
+
+		// Change font sizes.
 		h2 {
-			grid-row: 2;
-
-			text-transform: uppercase;
-			margin-bottom: 0.4em;
+			width: 100%;
 		}
 
 		p {
-			grid-row: 3;
-
-			margin: 0;
 			font-size: 0.95em;
-
-			strong {
-				font-weight: 600;
-			}
 		}
 
+		// Add spacing between groups.
+		h2,
 		.benefitsGraphic {
-			grid-row: 1;
-
-			display: flex;
-			justify-content: center;
-			margin-bottom: var(--size-small);
-
-			> svg {
-				width: var(--card-graphic-width);
-			}
+			margin-top: var(--size-larger-2);
+			margin-bottom: 0;
 		}
 
-		@include for-mobile {
-			grid-template-columns: var(--card-graphic-width) minmax(1fr, 350px) var(--card-graphic-width);
-			margin-top: 0;
+		// Odd rows: Text on the right.
+		h2:nth-of-type(2n - 1),
+		p:nth-of-type(2n - 1) {
+			grid-column: 2 / 4;
+			margin-left: 0;
+		}
 
-			// Reset grid row/column properties.
-			h2,
-			p,
-			.benefitsGraphic {
-				grid-row: unset;
-				grid-column: unset;
-			}
+		.benefitsGraphic:nth-of-type(2n - 1) {
+			grid-row: span 2;
+			grid-column: 1;
+			justify-self: end;
+		}
 
-			// Set a maximum size for the text.
-			h2,
-			p {
-				max-width: 350px;
-				margin: auto;
-			}
+		// Even rows: Text on the left.
+		h2:nth-of-type(2n),
+		p:nth-of-type(2n) {
+			grid-column: 1 / 3;
+			margin-right: 0;
+		}
 
-			// Change font sizes.
-			h2 {
-				width: 100%;
-			}
-
-			p {
-				font-size: 0.95em;
-			}
-
-			// Add spacing between groups.
-			h2,
-			.benefitsGraphic {
-				margin-top: var(--size-larger-2);
-				margin-bottom: 0;
-			}
-
-			// Odd rows: Text on the right.
-			h2:nth-of-type(2n - 1),
-			p:nth-of-type(2n - 1) {
-				grid-column: 2 / 4;
-				margin-left: 0;
-			}
-
-			.benefitsGraphic:nth-of-type(2n - 1) {
-				grid-row: span 2;
-				grid-column: 1;
-				justify-self: end;
-			}
-
-			// Even rows: Text on the left.
-			h2:nth-of-type(2n),
-			p:nth-of-type(2n) {
-				grid-column: 1 / 3;
-				margin-right: 0;
-			}
-
-			.benefitsGraphic:nth-of-type(2n) {
-				grid-row: span 3;
-				grid-column: 3;
-				justify-self: start;
-			}
+		.benefitsGraphic:nth-of-type(2n) {
+			grid-row: span 3;
+			grid-column: 3;
+			justify-self: start;
 		}
 	}
 }

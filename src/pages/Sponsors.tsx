@@ -44,6 +44,7 @@ export function SponsorsSection() {
 				i18n-title="sponsors.button.title">
 				{t("sponsors.button.text")}
 			</ButtonLink>
+			<SectionSponsorBenefits />
 			<div className={cx(Styles.section, Styles.sponsors)}>
 				<SponsorsGrids />
 			</div>
@@ -53,6 +54,15 @@ export function SponsorsSection() {
 
 function SectionWhySponsorUs() {
 	const { t } = useTranslation();
+	return (
+		<div className={cx(Styles.section, Styles.sponsorUs)}>
+			<p className={Styles.whySponsorUs}>{t("sponsors.paragraph")}</p>
+		</div>
+	);
+}
+
+function SectionSponsorBenefits() {
+	const { t } = useTranslation();
 	const benefits: Array<[number, SVGComponent]> = [
 		[1, CardStocks],
 		[2, CardMegaphone],
@@ -60,23 +70,20 @@ function SectionWhySponsorUs() {
 	];
 
 	return (
-		<div className={cx(Styles.section, Styles.sponsorUs)}>
-			<p className={Styles.whySponsorUs}>{t("sponsors.paragraph")}</p>
-			<div className={Styles.benefits}>
-				{benefits.map(([n, Graphic]) => (
-					<Fragment key={n}>
-						<div className={Styles.benefitsGraphic}>
-							<Graphic />
-						</div>
-						<h2>{t(`sponsors.benefits.${n}.header`)}</h2>
-						<p>
-							<Trans i18nKey={`sponsors.benefits.${n}.paragraph`}>
-								<strong />
-							</Trans>
-						</p>
-					</Fragment>
-				))}
-			</div>
+		<div className={cx(Styles.section, Styles.sponsorBenefits)}>
+			{benefits.map(([n, Graphic]) => (
+				<Fragment key={n}>
+					<div className={Styles.benefitsGraphic}>
+						<Graphic />
+					</div>
+					<h2>{t(`sponsors.benefits.${n}.header`)}</h2>
+					<p>
+						<Trans i18nKey={`sponsors.benefits.${n}.paragraph`}>
+							<strong />
+						</Trans>
+					</p>
+				</Fragment>
+			))}
 		</div>
 	);
 }
