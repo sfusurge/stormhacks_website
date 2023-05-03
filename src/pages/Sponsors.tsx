@@ -1,4 +1,4 @@
-import { HackathonInfo, PastSponsors, SponsorInfo, SponsorTier, Sponsors } from "$constants/about";
+import { HackathonInfo, SponsorInfo, SponsorTier, Sponsors } from "$constants/about";
 import cx from "classnames";
 import { shuffle } from "fast-shuffle";
 
@@ -139,14 +139,6 @@ function SponsorsGrids() {
 								href={s.link}
 								logo={(s as any).svg ?? (s as any).photo}
 							/>
-						))}
-					</SponsorGrid>
-				</section>
-				<section>
-					<h2>{t("sponsors.past-sponsors-heading")}</h2>
-					<SponsorGrid {...common}>
-						{PastSponsors.map((s) => (
-							<SponsorLogo key={s.name} name={s.name} logo={(s as any).svg ?? (s as any).photo} />
 						))}
 					</SponsorGrid>
 				</section>
