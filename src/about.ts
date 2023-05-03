@@ -4,6 +4,7 @@ import { ReactComponent as SponsorAssemblyAI } from "$asset/sponsor/assemblyai.s
 import { ReactComponent as SponsorEcho3D } from "$asset/sponsor/echo3d.svg";
 import { ReactComponent as SponsorErgonomyx } from "$asset/sponsor/ergonomyx.svg";
 import { ReactComponent as SponsorGitHub } from "$asset/sponsor/github.svg";
+import { ReactComponent as SponsorGoldbeckRecruiting } from "$asset/sponsor/goldbeck-recruiting.svg";
 import { ReactComponent as SponsorGuusto } from "$asset/sponsor/guusto.svg";
 import { ReactComponent as SponsorHSBC } from "$asset/sponsor/hsbc.svg";
 import { ReactComponent as SponsorIntact } from "$asset/sponsor/intact.svg";
@@ -298,8 +299,9 @@ export const SurgeInfo = {
 
 export enum SponsorTier {
 	IN_KIND = 0,
-	SILVER = 1,
-	GOLD = 2,
+	BRONZE = 1,
+	SILVER = 2,
+	GOLD = 3,
 }
 
 export type SponsorInfo = {
@@ -357,6 +359,12 @@ export const Sponsors: Array<SponsorInfo> = [
 		type: SponsorTier.IN_KIND,
 		link: "https://www.echo3d.com/",
 		svg: SponsorEcho3D,
+	},
+	{
+		name: "Goldbeck Recruiting",
+		type: SponsorTier.BRONZE,
+		link: "https://www.goldbeck.com/",
+		svg: SponsorGoldbeckRecruiting,
 	},
 ];
 
