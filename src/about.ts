@@ -372,16 +372,18 @@ export const Sponsors: Array<SponsorInfo> = [
 		link: "https://www.github.com/",
 		svg: SponsorGitHub,
 	},
+	{
+		name: "Simon Fraser Student Society",
+		type: SponsorTier.IN_KIND /* TODO */,
+		link: "https://sfss.ca/",
+		svg: SponsorSFSS,
+	},
 ];
 
 export const PastSponsors = [
 	{
 		name: "HSBC",
 		svg: SponsorHSBC,
-	},
-	{
-		name: "Simon Fraser Student Society",
-		svg: SponsorSFSS,
 	},
 	{
 		name: "Intactlab",
