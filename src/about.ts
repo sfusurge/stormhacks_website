@@ -16,6 +16,7 @@ import { ReactComponent as SponsorRedbull } from "$asset/sponsor/redbull.svg";
 import { ReactComponent as SponsorSAP } from "$asset/sponsor/sap.svg";
 import { ReactComponent as SponsorSFSS } from "$asset/sponsor/sfss.svg";
 import { ReactComponent as SponsorCSSS } from "$asset/sponsor/sfu-csss.svg";
+import { ReactComponent as SponsorFAS } from "$asset/sponsor/sfu-fas.svg";
 import { ReactComponent as SponsorSSSS } from "$asset/sponsor/sfu-ssss.svg";
 import { ReactComponent as SponsorWICS } from "$asset/sponsor/sfu-wics.svg";
 import { ReactComponent as SponsorStandOutStickers } from "$asset/sponsor/standoutstickers.svg";
@@ -423,6 +424,12 @@ export const Sponsors: Array<SponsorInfo> = [
 		type: SponsorTier.IN_KIND /* TODO */,
 		link: "https://www.teck.com/",
 		svg: SponsorTeck,
+	},
+	{
+		name: "SFU Faculty of Applied Sciences",
+		type: SponsorTier.IN_KIND /* TODO */,
+		link: "http://www.sfu.ca/fas.html",
+		svg: SponsorFAS,
 	},
 ];
 
