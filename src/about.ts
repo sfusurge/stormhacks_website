@@ -11,6 +11,7 @@ import { ReactComponent as SponsorHSBC } from "$asset/sponsor/hsbc.svg";
 import { ReactComponent as SponsorIntact } from "$asset/sponsor/intact.svg";
 import { ReactComponent as SponsorIntactLab } from "$asset/sponsor/intactlab.svg";
 import { ReactComponent as SponsorMLH } from "$asset/sponsor/mlh.svg";
+import { ReactComponent as SponsorNNECT } from "$asset/sponsor/nnect.svg";
 import { ReactComponent as SponsorRedbull } from "$asset/sponsor/redbull.svg";
 import { ReactComponent as SponsorSAP } from "$asset/sponsor/sap.svg";
 import { ReactComponent as SponsorSFSS } from "$asset/sponsor/sfss.svg";
@@ -409,6 +410,12 @@ export const Sponsors: Array<SponsorInfo> = [
 		type: SponsorTier.IN_KIND /* TODO */,
 		link: "https://www.bgcengineering.ca/",
 		svg: SponsorBGC,
+	},
+	{
+		name: "NNECT",
+		type: SponsorTier.IN_KIND /* TODO */,
+		link: "https://www.nnect.ca/",
+		svg: SponsorNNECT,
 	},
 ];
 
