@@ -24,6 +24,17 @@ body {
 	--footer-graphics-skyline-gradient-1: #3f46ff;
 	--footer-graphics-skyline-gradient-2: #0000;
 
+	--card-graphics-stroke: #fff;
+	--card-graphics-clipboard-inner-stroke: #ffbe5b;
+	--card-graphics-clipboard-gradient-light: #f9b443;
+	--card-graphics-clipboard-gradient-dark: #fb6464;
+	--card-graphics-pen-inner-stroke: #d99cff;
+	--card-graphics-pen-gradient-light: #745eff;
+	--card-graphics-pen-gradient-dark: #0711ff;
+	--card-graphics-code-inner-stroke: #58b1f2;
+	--card-graphics-code-gradient-light: #307dc5;
+	--card-graphics-code-gradient-dark: #307dc5;
+
 	// EXPERIMENTAL: {
 	--footer-background: #090413;
 	--footer-border: #1e1154;
@@ -31,6 +42,7 @@ body {
 
 	--text: #d9d9d9;
 	--text-bright: #fff;
+	--text-dim: #7c7c7c;
 	--text-on-logo: #fff;
 	--text-on-accent: #1d1d1d;
 	--text-inverted: #1d1d1d; // For when the background is var(--text)
@@ -62,6 +74,7 @@ body {
 	--statsbox-label-border: #fff;
 
 	--sponsor-logo: #fff;
+	--photo-border: #fff;
 	// @include for-theme("dark") {
 	// 	--primary: #222654;
 	// 	--accent: #d0d0d0;

@@ -77,6 +77,7 @@
 	"header": {
 		"links": {
 			"intro": { "title": "StormHacks 2023" },
+			"about-stormhacks": { "text": "About", "title": "StormHacks 2023" },
 			"faq": { "text": "FAQ", "title": "FAQ - StormHacks 2023" },
 			"sponsors": { "text": "Sponsors", "title": "Sponsors - StormHacks 2023" },
 			"about-us": { "text": "Surge", "title": "About SFU Surge - StormHacks 2023" }
@@ -186,6 +187,20 @@
 
 		"sponsors-heading": "Our Sponsors",
 		"past-sponsors-heading": "Previous Sponsors"
+	},
+
+	"about-stormhacks": {
+		"title": "About Us",
+		"beginner-friendly": {
+			"heading": "Beginner-Friendly",
+			"text": "Make your first hackathon special at StormHacks 2023. In past events, 46% of participants have been new hackers— SH23 is one of the top places for you to join other beginners in tech and self-starters for life-long learning, challenges and more.",
+			"image-subtitle": "Pictures from our previous in-person SFU Surge events!"
+		},
+		"coding-not-required": {
+			"heading": "Coding is not a \"Must-Have\" <icon/>",
+			"text-1": "One of the most challenging things about a hackathon can be developing your final submission, especially for hackers who are aiming to build their design skills, sharing their ideas and stories through visuals and experiences. This can often lead to people feeling left out or discouraged from even entering their first hackathon, especially if you're entering on your own.",
+			"text-2": "For all you designers, we're hosting prizes and workshops to help support your no-code solutions and prototypes!"
+		}
 	},
 
 	"about-surge": {
