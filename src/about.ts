@@ -45,13 +45,13 @@ export const HackathonInfo = {
 		hacker: {
 			link: "https://www.surveymonkey.ca/r/TB87RY5",
 			opens: new Date("2023-03-03T22:00-0800"),
-			closes: null,
+			closes: new Date("2023-05-07T00:00-0800"),
 		},
 
 		mentor: {
 			link: "https://www.surveymonkey.ca/r/TB825RJ",
 			opens: new Date("2023-03-03T22:00-0800"),
-			closes: null,
+			closes: new Date("2023-05-07T00:00-0800"),
 		},
 	},
 };
