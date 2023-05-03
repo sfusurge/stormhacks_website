@@ -177,6 +177,8 @@
 		// The second instance, overlaid underneath the first one and blurred to use as a glow.
 		.asGlow {
 			user-select: none;
+			pointer-events: none;
+
 			position: absolute;
 			inset: calc(var(--stormhacks-glow-inset) * -1);
 			right: 0; // Prevents blowout.
@@ -285,6 +287,7 @@
 // The buttons linking to the application forms.
 .applyForms {
 	position: relative;
+	z-index: $layout-z-foreground;
 	top: calc(var(--v-margin) * -1.5);
 	left: 12px;
 

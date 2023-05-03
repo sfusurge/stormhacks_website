@@ -152,7 +152,7 @@ function SetupRoutes({ appRoutes }: { appRoutes: AppRoute[] }) {
 let wasZoomed = false;
 function rezoomPage() {
 	const width = window.innerWidth;
-	const zoomWidth = 1500;
+	const zoomWidth = 2000;
 
 	if (width > zoomWidth /* TODO: query me */) {
 		const factor = width / zoomWidth;
