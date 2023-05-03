@@ -24,10 +24,6 @@ export class TimeSpanInfo {
 	public constructor(from: Date, to: Date) {
 		this.from = from;
 		this.to = to;
-
-		if (from.getTime() > to.getTime()) {
-			throw new Error("Provided time span is invalid. End cannot occur before start.");
-		}
 	}
 
 	/**
@@ -63,6 +59,13 @@ export class TimeSpanInfo {
 	 */
 	public get days(): number {
 		return Math.floor(this.milliseconds / TIME_DAYS);
+	}
+
+	/**
+	 * Returns true if the time span is over.
+	 */
+	public get isOver(): boolean {
+		return this.from >= this.to;
 	}
 
 	public toFormattingArguments(): TimeSpanInfoFormattingArguments {
