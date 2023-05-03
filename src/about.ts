@@ -352,6 +352,12 @@ export const Sponsors: Array<SponsorInfo> = [
 		link: "https://www.wizeprep.com/",
 		svg: SponsorWizeprep,
 	},
+	{
+		name: "echo3D",
+		type: SponsorTier.IN_KIND,
+		link: "https://www.echo3d.com/",
+		svg: SponsorEcho3D,
+	},
 ];
 
 export const PastSponsors = [
@@ -394,10 +400,6 @@ export const PastSponsors = [
 	{
 		name: "AssemblyAI",
 		svg: SponsorAssemblyAI,
-	},
-	{
-		name: "echo3D",
-		svg: SponsorEcho3D,
 	},
 	{
 		name: "Red Bull",
