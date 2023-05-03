@@ -21,6 +21,7 @@ import { ReactComponent as SponsorWICS } from "$asset/sponsor/sfu-wics.svg";
 import { ReactComponent as SponsorStandOutStickers } from "$asset/sponsor/standoutstickers.svg";
 import { ReactComponent as SponsorStevesPokeBar } from "$asset/sponsor/stevespokebar.svg";
 import { ReactComponent as SponsorStickermule } from "$asset/sponsor/stickermule.svg";
+import { ReactComponent as SponsorTeck } from "$asset/sponsor/teck.svg";
 import { ReactComponent as SponsorWizeprep } from "$asset/sponsor/wizeprep.svg";
 import { ReactComponent as SponsorWolfram } from "$asset/sponsor/wolfram.svg";
 
@@ -416,6 +417,12 @@ export const Sponsors: Array<SponsorInfo> = [
 		type: SponsorTier.IN_KIND /* TODO */,
 		link: "https://www.nnect.ca/",
 		svg: SponsorNNECT,
+	},
+	{
+		name: "Teck",
+		type: SponsorTier.IN_KIND /* TODO */,
+		link: "https://www.teck.com/",
+		svg: SponsorTeck,
 	},
 ];
 
