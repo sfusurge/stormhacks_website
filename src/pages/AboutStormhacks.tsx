@@ -1,9 +1,12 @@
+import { HackathonInfo } from "$constants/about";
 import cx from "classnames";
 
 import { Trans, useTranslation } from "react-i18next";
 
 import Page from "~/Page";
+import { RegistrationCountdown } from "~/RegistrationCountdown/component";
 import InlineSVG from "~/SVG";
+import { Now, useUpdatingTimeSpan } from "~/TimeSpan";
 
 import { ReactComponent as CardClipboard } from "$asset/card-clipboard.svg";
 import { ReactComponent as CardCode } from "$asset/card-code.svg";
@@ -14,8 +17,6 @@ import Styles from "./AboutStormhacks.module.scss";
 
 /**
  * The "About Stormhacks" page.
- *
- * This contains a.
  */
 function AboutStormhacksPage() {
 	return (
@@ -23,7 +24,7 @@ function AboutStormhacksPage() {
 			<Page className="width-limited">
 				<AboutStormhacksSection />
 			</Page>
-			<div>
+			<div className={Styles.countdownContainer}>
 				<Page className="width-limited">
 					<CountdownSection />
 				</Page>
@@ -103,7 +104,26 @@ export function AboutStormhacksSection() {
 
 export function CountdownSection() {
 	const { t } = useTranslation();
-	return <article className={Styles.container}>{/* <h1>{t("about-stormhacks.title")}</h1> */}</article>;
+	const ts = useUpdatingTimeSpan(Now, HackathonInfo.register.hacker.closes);
+	const closed = ts == null || ts.isOver;
+	const suffix = closed ? "_closed" : "";
+	return (
+		<article className={Styles.countdown}>
+			<div className={Styles.countdownHeading}>
+				<h1>{t(`about-stormhacks.countdown.heading${suffix}`)}</h1>
+				<h2>{t(`about-stormhacks.countdown.subheading${suffix}`)}</h2>
+			</div>
+			{ts != null && !closed && (
+				<RegistrationCountdown
+					className={Styles.countdownComponent}
+					days={ts.days}
+					hours={ts.hours % 24}
+					minutes={ts.minutes % 60}
+					seconds={ts.seconds % 60}
+				/>
+			)}
+		</article>
+	);
 }
 
 export default AboutStormhacksPage;

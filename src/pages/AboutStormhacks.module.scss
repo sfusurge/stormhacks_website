@@ -110,3 +110,38 @@
 		gap: var(--size-larger);
 	}
 }
+
+// The countdown.
+.countdownContainer {
+	border: var(--countdown-section-border) 1px solid;
+	border-left: none;
+	border-right: none;
+	box-shadow: var(--countdown-section-glow) 0px 0px 30px 10px;
+	margin: calc(var(--size-larger-2) * 2) 0;
+
+	h2 {
+		text-transform: uppercase;
+	}
+}
+
+.countdown {
+	.countdownHeading {
+		display: flex;
+		flex-direction: column-reverse;
+		text-align: center;
+
+		h1,
+		h2 {
+			margin: 0;
+		}
+
+		h2 {
+			margin-bottom: var(--size-small);
+		}
+	}
+
+	.countdownComponent {
+		margin: auto;
+		margin-top: var(--size-medium);
+	}
+}
