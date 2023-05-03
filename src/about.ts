@@ -17,6 +17,7 @@ import { ReactComponent as SponsorSSSS } from "$asset/sponsor/sfu-ssss.svg";
 import { ReactComponent as SponsorWICS } from "$asset/sponsor/sfu-wics.svg";
 import { ReactComponent as SponsorStandOutStickers } from "$asset/sponsor/standoutstickers.svg";
 import { ReactComponent as SponsorStickermule } from "$asset/sponsor/stickermule.svg";
+import { ReactComponent as SponsorWizeprep } from "$asset/sponsor/wizeprep.svg";
 import { ReactComponent as SponsorWolfram } from "$asset/sponsor/wolfram.svg";
 
 export const HackathonInfo = {
@@ -344,6 +345,12 @@ export const Sponsors: Array<SponsorInfo> = [
 		type: SponsorTier.SILVER,
 		link: "https://www.sap.com/canada/index.html",
 		svg: SponsorSAP,
+	},
+	{
+		name: "Wizeprep",
+		type: SponsorTier.IN_KIND,
+		link: "https://www.wizeprep.com/",
+		svg: SponsorWizeprep,
 	},
 ];
 
