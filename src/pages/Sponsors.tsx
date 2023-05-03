@@ -114,15 +114,31 @@ function SponsorsGrids() {
 			minItemWidth: 180,
 			minItemWidthMobile: 125,
 			minColumns: 2,
-			maxColumns: 3,
+			maxColumns: 4,
 		};
+
+		const sponsorsGold = SortedSponsors.filter((s) => s.type === SponsorTier.GOLD);
+		const sponsorsSilverBronze = SortedSponsors.filter(
+			(s) => s.type === SponsorTier.SILVER || s.type === SponsorTier.BRONZE
+		);
+		const sponsorsInKind = SortedSponsors.filter((s) => s.type === SponsorTier.IN_KIND);
 
 		return (
 			<>
 				<section>
 					<h2>{t("sponsors.sponsors-heading")}</h2>
 					<SponsorGrid {...common} maxColumns={2} minItemWidth={250}>
-						{SortedSponsors.filter((s) => s.type !== SponsorTier.IN_KIND).map((s) => (
+						{sponsorsGold.map((s) => (
+							<SponsorLogo
+								key={s.name}
+								name={s.name}
+								href={s.link}
+								logo={(s as any).svg ?? (s as any).photo}
+							/>
+						))}
+					</SponsorGrid>
+					<SponsorGrid {...common} maxColumns={3} minItemWidth={225}>
+						{sponsorsSilverBronze.map((s) => (
 							<SponsorLogo
 								key={s.name}
 								name={s.name}
@@ -132,7 +148,7 @@ function SponsorsGrids() {
 						))}
 					</SponsorGrid>
 					<SponsorGrid {...common}>
-						{SortedSponsors.filter((s) => s.type === SponsorTier.IN_KIND).map((s) => (
+						{sponsorsInKind.map((s) => (
 							<SponsorLogo
 								key={s.name}
 								name={s.name}
