@@ -50,6 +50,8 @@
 	}
 
 	.answer {
+		margin: 0;
+
 		will-change: transform;
 		transform: translateY(0);
 		transition: transform var(--animation-slow) ease;

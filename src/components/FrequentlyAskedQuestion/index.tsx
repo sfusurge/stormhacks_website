@@ -83,7 +83,7 @@ function FrequentlyAskedQuestion({
 				{collapsible && <Collapser />}
 			</BoxTitle>
 			<BoxBody className={Styles.answerContainer}>
-				<div className={Styles.answer}>{t(answerKey)}</div>
+				<p className={Styles.answer}>{t(answerKey)}</p>
 			</BoxBody>
 		</Box>
 	);
