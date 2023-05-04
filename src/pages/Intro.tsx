@@ -113,8 +113,8 @@ function SectionApplyForms() {
 				<ApplyAsMentorButton />
 			</div>
 			<div className={Styles.applyFormsLinks}>
-				<a href={HackathonInfo.register.sponsor} title={t("event.links.sponsor.title")}>
-					{t("event.links.sponsor.text")}
+				<a href={HackathonInfo.register.volunteer} title={t("event.links.volunteer.title")}>
+					{t("event.links.volunteer.text")}
 				</a>
 			</div>
 		</>

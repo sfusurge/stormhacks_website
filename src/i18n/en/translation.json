@@ -23,6 +23,7 @@
 		"date-and-location": "May 20 - 21, 2023 • <1>Hybrid @ </1><2>SFU Burnaby Campus</2>",
 		"links": {
 			"sponsor": { "text": "Interested in sponsoring us?", "title": "Sponsor StormHacks 2023!" },
+			"volunteer": { "text": "Apply as a volunteer.", "title": "Volunteer for StormHacks 2023!" },
 			"apply": {
 				"title": "Apply for StormHacks 2023!",
 				"text-pre-open": "Applications Open Soon",
