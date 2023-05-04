@@ -90,3 +90,7 @@ h2 {
 	@include font-heading("h2");
 	font-size: 1.2em;
 }
+
+p {
+	line-height: 1.45;
+}
