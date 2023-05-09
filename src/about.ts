@@ -67,6 +67,7 @@ export const HackathonInfo = {
 	},
 
 	incidentsEmail: "info@stormhacks.com",
+	archiveSite: "https://archive.stormhacks.com",
 };
 
 export function isHackerApplicationOpen(): ["opened" | "pre-open" | "closed", null | Date] {

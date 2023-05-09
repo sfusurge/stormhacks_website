@@ -43,6 +43,7 @@ function AppFooter() {
 						<Link to="/code-of-conduct">{t("footer.mlh-code-of-conduct")}</Link>
 						<a href={emailLink ?? "#"}>{t("footer.email-us")}</a>
 						<a href={HackathonInfo.register.sponsor}>{t("footer.become-a-sponsor")}</a>
+						<a href={HackathonInfo.archiveSite}>{t("footer.archive-site")}</a>
 					</div>
 					<div className={cx(Styles.copyright)}>{t("footer.copyright")}</div>
 				</div>
