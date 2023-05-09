@@ -1,9 +1,11 @@
 import { HackathonInfo } from "$constants/about";
 
+import { useEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
 import Box, { BoxStyle } from "~/Box";
 import Page from "~/Page";
+import { scrollToElement } from "~/ScrollAnchor/util";
 
 /**
  * A page for applying to StormHacks 2023 as a hacker.
@@ -15,6 +17,15 @@ function CodeOfConductPage() {
 	function IncidentsEmail(_props: {}) {
 		return <a href={`mailto:${HackathonInfo.incidentsEmail}`}>{HackathonInfo.incidentsEmail}</a>;
 	}
+
+	useEffect(() => {
+		// Scroll to the top of the page.
+		scrollToElement(document.body, {
+			animationSpeedModifier(ms, _scrollDelta, _scrollEl) {
+				return ms * 0.15;
+			},
+		});
+	}, []);
 
 	const components = {
 		p: <p>Paragraph</p>,
