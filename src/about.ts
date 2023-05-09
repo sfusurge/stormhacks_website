@@ -65,6 +65,8 @@ export const HackathonInfo = {
 			closes: new Date("2023-05-07T00:00-0800"),
 		},
 	},
+
+	incidentsEmail: "info@stormhacks.com",
 };
 
 export function isHackerApplicationOpen(): ["opened" | "pre-open" | "closed", null | Date] {

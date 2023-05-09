@@ -94,3 +94,10 @@ h2 {
 p {
 	line-height: 1.45;
 }
+
+// Hr.
+hr {
+	margin: var(--size-larger) 0;
+	border: none;
+	border-top: var(--text-dim) 1px solid;
+}

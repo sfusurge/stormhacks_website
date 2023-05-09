@@ -4,6 +4,7 @@ import AboutStormhacksPage from "$page/AboutStormhacks";
 import AboutSurgePage from "$page/AboutSurge";
 import ApplyHackerPage from "$page/ApplyHacker";
 import ApplyMentorPage from "$page/ApplyMentor";
+import CodeOfConductPage from "$page/CodeOfConduct";
 import FAQPage from "$page/FAQ";
 import IntroPage from "$page/Intro";
 import SponsorsPage from "$page/Sponsors";
@@ -55,6 +56,13 @@ const Routes: AppRoute[] = [
 		id: "apply-mentor",
 		path: "/apply-mentor",
 		page: () => <ApplyMentorPage />,
+		hiddenOnNav: true,
+	},
+	{
+		type: "single",
+		id: "code-of-conduct",
+		path: "/code-of-conduct",
+		page: () => <CodeOfConductPage />,
 		hiddenOnNav: true,
 	},
 	// {

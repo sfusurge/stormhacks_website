@@ -2,6 +2,7 @@ import { HackathonInfo } from "$constants/about";
 import cx from "classnames";
 
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 import { SocialLinkType } from "~/SocialLink";
 import SurgeSocialLinks, { getSurgeSocialLinks } from "~/SurgeSocialLinks";
@@ -39,9 +40,7 @@ function AppFooter() {
 						<SurgeSocialLinks />
 					</div>
 					<div className={cx(Styles.links)}>
-						<a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">
-							{t("footer.mlh-code-of-conduct")}
-						</a>
+						<Link to="/code-of-conduct">{t("footer.mlh-code-of-conduct")}</Link>
 						<a href={emailLink ?? "#"}>{t("footer.email-us")}</a>
 						<a href={HackathonInfo.register.sponsor}>{t("footer.become-a-sponsor")}</a>
 					</div>
