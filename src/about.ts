@@ -416,7 +416,7 @@ export const Sponsors: Array<SponsorInfo> = [
 	},
 	{
 		name: "BGC Engineering",
-		type: SponsorTier.GOLD,
+		type: SponsorTier.BRONZE,
 		link: "https://www.bgcengineering.ca/",
 		svg: SponsorBGC,
 	},
