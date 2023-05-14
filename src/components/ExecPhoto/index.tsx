@@ -39,10 +39,8 @@ export type ExecPhotoProps = {
  * A photo of one of the execs.
  */
 function ExecPhoto({ name, photo, onClick, className, active, ...props }: ExecPhotoProps) {
-	const onClickCallback = useCallback(
-		() => onClick?.({ name, photo, active, ...props }),
-		[onClick, name, photo, active, props]
-	);
+	const onClickData = useMemo(() => ({ name, photo, active, ...props }), [name, photo, active, props]);
+	const onClickCallback = useCallback(() => onClick?.(onClickData), [onClick, onClickData]);
 
 	const image = useMemo(() => {
 		const type = inferType(photo) ?? "image/jpeg";
