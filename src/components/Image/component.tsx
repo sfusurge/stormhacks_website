@@ -1,4 +1,5 @@
 // TODO(eth-p): Refactor me into my own package at some point.
+import { MouseEvent } from "react";
 
 export type ImageProps = {
 	/**
@@ -20,6 +21,12 @@ export type ImageProps = {
 	 * Class names to add.
 	 */
 	className?: string;
+
+	/**
+	 * Mouse click event handler.
+	 * @param evt The event.
+	 */
+	onClick?: (evt: MouseEvent) => void;
 };
 
 export type ImagePropsWithSize = ImageProps & {
