@@ -1,3 +1,5 @@
+import cx from "classnames";
+
 import { useCallback, useMemo } from "react";
 
 import Image from "~/Image";
@@ -20,13 +22,18 @@ export type ExecPhotoProps = {
 	 */
 	link?: string;
 
+	/**
+	 * An extra CSS class to apply.
+	 */
+	className?: string;
+
 	onClick?: (exec: Omit<ExecPhotoProps, "onClick" | "className">) => void;
 };
 
 /**
  * A photo of one of the execs.
  */
-function ExecPhoto({ name, photo, onClick, ...props }: ExecPhotoProps) {
+function ExecPhoto({ name, photo, onClick, className, ...props }: ExecPhotoProps) {
 	const onClickCallback = useCallback(() => onClick?.({ name, photo, ...props }), [onClick, name, photo, props]);
 
 	const image = useMemo(() => {
@@ -35,7 +42,7 @@ function ExecPhoto({ name, photo, onClick, ...props }: ExecPhotoProps) {
 
 		return (
 			<Image
-				className={Styles.photo}
+				className={cx(className, Styles.photo)}
 				alt={name}
 				fallbackSrc={photo}
 				onClick={onClickCallback}
@@ -48,7 +55,7 @@ function ExecPhoto({ name, photo, onClick, ...props }: ExecPhotoProps) {
 				]}
 			/>
 		);
-	}, [name, photo, onClickCallback]);
+	}, [name, photo, className, onClickCallback]);
 
 	return <div className={Styles.container}>{image}</div>;
 }
