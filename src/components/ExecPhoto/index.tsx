@@ -2,7 +2,7 @@ import cx from "classnames";
 
 import { useCallback, useMemo } from "react";
 
-import Image from "~/Image";
+import Image, { inferType } from "~/Image";
 
 import Styles from "./ExecPhoto.module.scss";
 
@@ -45,8 +45,7 @@ function ExecPhoto({ name, photo, onClick, className, active, ...props }: ExecPh
 	);
 
 	const image = useMemo(() => {
-		const ext = /(\..+)$/.exec(photo)?.[1]?.toLowerCase();
-		const type = EXTENSION_TO_MIME[ext as keyof typeof EXTENSION_TO_MIME];
+		const type = inferType(photo) ?? "image/jpeg";
 
 		return (
 			<Image
@@ -67,11 +66,5 @@ function ExecPhoto({ name, photo, onClick, className, active, ...props }: ExecPh
 
 	return <div className={Styles.container}>{image}</div>;
 }
-
-const EXTENSION_TO_MIME = {
-	".png": "image/png",
-	".jpg": "image/jpeg",
-	".jpeg": "image/jpeg",
-};
 
 export default ExecPhoto;

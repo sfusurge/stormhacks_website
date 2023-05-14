@@ -22,6 +22,5 @@ export function inferType(url: string | URL): string | null {
 	}
 
 	const extname = matches[1].toLowerCase();
-	console.log(extname);
 	return mimeByExtension.get(extname) ?? `image/${extname.substring(1) /* this is probably fine? */}`;
 }
