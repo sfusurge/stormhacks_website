@@ -70,6 +70,29 @@
 }
 
 .section.execs {
+	.exec {
+		will-change: opacity, box-shadow;
+		transition: opacity ease var(--animation-slow);
+	}
+	.unselectedExec {
+		opacity: 0.5;
+	}
+
+	.execInfo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 4em;
+
+		font-weight: normal;
+
+		.execInfoDecoration {
+			color: var(--accent-alt);
+			opacity: 0.5;
+			margin: 0 var(--size-smaller-2);
+			font-weight: bold;
+		}
+	}
 }
 
 .execGridContainer {

@@ -1,6 +1,7 @@
 import { SurgeInfo } from "$constants/about";
 import cx from "classnames";
 
+import { ComponentProps, useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import ExecPhoto from "~/ExecPhoto";
@@ -56,12 +57,38 @@ function SectionAbout() {
 }
 
 function SectionExecs() {
+	type ClickHandler = Exclude<ComponentProps<typeof ExecPhoto>["onClick"], undefined>;
+	const [currentExec, setCurrentExec] = useState<undefined | Parameters<ClickHandler>[0]>(undefined);
+	const onClick = useCallback<ClickHandler>((exec) => setCurrentExec(exec), [setCurrentExec]);
+
 	return (
-		<div className={cx(Styles.section, Styles.execs)}>
+		<div className={cx(Styles.section, Styles.execs)} onMouseLeave={() => setCurrentExec(undefined)}>
 			<div className={Styles.execGridContainer}>
 				<div className={Styles.execGrid}>
-					{[SurgeExecs.map((exec) => <ExecPhoto key={exec.name} {...exec} />)]}
+					{[
+						SurgeExecs.map((exec) => (
+							<ExecPhoto
+								key={exec.name}
+								{...exec}
+								onClick={onClick}
+								active={currentExec?.name === exec.name}
+								className={cx({
+									[Styles.exec]: true,
+									[Styles.unselectedExec]: currentExec != null && currentExec.name !== exec.name,
+								})}
+							/>
+						)),
+					]}
 				</div>
+			</div>
+			<div className={Styles.execInfo}>
+				{currentExec && (
+					<>
+						<span className={Styles.execInfoDecoration}>{"{{"}&nbsp;</span>
+						{(currentExec.link && <a href={currentExec.link}>{currentExec.name}</a>) || currentExec.name}
+						<span className={Styles.execInfoDecoration}>&nbsp;{"}}"}</span>
+					</>
+				)}
 			</div>
 		</div>
 	);
