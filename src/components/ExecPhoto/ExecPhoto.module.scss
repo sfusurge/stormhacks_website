@@ -19,3 +19,7 @@
 		aspect-ratio: 75 / var(--photo-height, 100px);
 	}
 }
+
+.active {
+	box-shadow: var(--accent-alt) 0px 0px 5px 2px;
+}

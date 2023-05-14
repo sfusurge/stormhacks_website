@@ -23,6 +23,11 @@ export type ExecPhotoProps = {
 	link?: string;
 
 	/**
+	 * If active, the photo will have a border.
+	 */
+	active?: boolean;
+
+	/**
 	 * An extra CSS class to apply.
 	 */
 	className?: string;
@@ -33,8 +38,11 @@ export type ExecPhotoProps = {
 /**
  * A photo of one of the execs.
  */
-function ExecPhoto({ name, photo, onClick, className, ...props }: ExecPhotoProps) {
-	const onClickCallback = useCallback(() => onClick?.({ name, photo, ...props }), [onClick, name, photo, props]);
+function ExecPhoto({ name, photo, onClick, className, active, ...props }: ExecPhotoProps) {
+	const onClickCallback = useCallback(
+		() => onClick?.({ name, photo, active, ...props }),
+		[onClick, name, photo, active, props]
+	);
 
 	const image = useMemo(() => {
 		const ext = /(\..+)$/.exec(photo)?.[1]?.toLowerCase();
@@ -42,7 +50,7 @@ function ExecPhoto({ name, photo, onClick, className, ...props }: ExecPhotoProps
 
 		return (
 			<Image
-				className={cx(className, Styles.photo)}
+				className={cx(className, Styles.photo, { [Styles.active]: active })}
 				alt={name}
 				fallbackSrc={photo}
 				onClick={onClickCallback}
@@ -55,7 +63,7 @@ function ExecPhoto({ name, photo, onClick, className, ...props }: ExecPhotoProps
 				]}
 			/>
 		);
-	}, [name, photo, className, onClickCallback]);
+	}, [name, photo, className, active, onClickCallback]);
 
 	return <div className={Styles.container}>{image}</div>;
 }
