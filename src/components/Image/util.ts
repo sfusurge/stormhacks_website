@@ -16,11 +16,12 @@ const mimeByExtension = new Map(
  */
 export function inferType(url: string | URL): string | null {
 	const pathname = typeof url === "string" ? url : url.pathname;
-	const matches = /\.([^/.]+)$/g.exec(pathname);
+	const matches = /(\.[^/.]+)$/g.exec(pathname);
 	if (matches == null) {
 		return null;
 	}
 
 	const extname = matches[1].toLowerCase();
+	console.log(extname);
 	return mimeByExtension.get(extname) ?? `image/${extname.substring(1) /* this is probably fine? */}`;
 }
