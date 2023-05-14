@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useCallback, useMemo } from "react";
 
 import Image from "~/Image";
 
@@ -14,12 +14,21 @@ export type ExecPhotoProps = {
 	 * The person's photo.
 	 */
 	photo: string;
+
+	/**
+	 * The person's chosen website URL.
+	 */
+	link?: string;
+
+	onClick?: (exec: Omit<ExecPhotoProps, "onClick" | "className">) => void;
 };
 
 /**
  * A photo of one of the execs.
  */
-function ExecPhoto({ name, photo }: ExecPhotoProps) {
+function ExecPhoto({ name, photo, onClick, ...props }: ExecPhotoProps) {
+	const onClickCallback = useCallback(() => onClick?.({ name, photo, ...props }), [onClick, name, photo, props]);
+
 	const image = useMemo(() => {
 		const ext = /(\..+)$/.exec(photo)?.[1]?.toLowerCase();
 		const type = EXTENSION_TO_MIME[ext as keyof typeof EXTENSION_TO_MIME];
@@ -29,6 +38,7 @@ function ExecPhoto({ name, photo }: ExecPhotoProps) {
 				className={Styles.photo}
 				alt={name}
 				fallbackSrc={photo}
+				onClick={onClickCallback}
 				src={[
 					{
 						src: photo,
@@ -38,7 +48,7 @@ function ExecPhoto({ name, photo }: ExecPhotoProps) {
 				]}
 			/>
 		);
-	}, [name, photo]);
+	}, [name, photo, onClickCallback]);
 
 	return <div className={Styles.container}>{image}</div>;
 }
