@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.paths.json",
+  "compilerOptions": {
+	  "types": ["./src/globals.d.ts"]
+  },
+  "include": [
+    "src"
+  ]
+}
