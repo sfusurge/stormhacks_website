@@ -126,7 +126,7 @@ function SponsorsGrids() {
 		return (
 			<>
 				<section>
-					<h2>{t("sponsors.sponsors-heading")}</h2>
+					<h2>{t("sponsors.past-sponsors-heading")}</h2>
 					<SponsorGrid {...common} maxColumns={2} minItemWidth={250}>
 						{sponsorsGold.map((s) => (
 							<SponsorLogo
