@@ -134,7 +134,7 @@ function ApplyAsHackerButton() {
 			href={hackerFormOpen === "opened" ? "/apply" : "#"}
 			i18n-title="event.links.apply.title"
 			className={hackerFormOpen === "opened" ? undefined : Styles.applyButtonClosed}>
-			{t(`event.links.apply.${tVariant}`, { time: formatTimeSpan(t, hackerTs) })}
+			{t(`event.links.apply.text-pre-open`, { time: formatTimeSpan(t, hackerTs) })}
 		</ButtonLink>
 	);
 }
