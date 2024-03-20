@@ -126,7 +126,7 @@ function ApplyAsHackerButton() {
 	const hackerTs = useUpdatingTimeSpan(Now, hackerFormOpensAt);
 
 	const { t } = useTranslation();
-	const tVariant = `text-${hackerFormOpen}${hackerTs == null || hackerFormOpen === "closed" ? "" : "-with-time"}`;
+	// const tVariant = `text-${hackerFormOpen}${hackerTs == null || hackerFormOpen === "closed" ? "" : "-with-time"}`;
 
 	return (
 		<ButtonLink
