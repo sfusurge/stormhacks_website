@@ -309,6 +309,7 @@ export enum SponsorTier {
 	BRONZE = 1,
 	SILVER = 2,
 	GOLD = 3,
+	TEMPORARY = 4,
 }
 
 export type SponsorInfo = {
@@ -444,6 +445,12 @@ export const Sponsors: Array<SponsorInfo> = [
 		type: SponsorTier.IN_KIND,
 		link: "https://hiveclimbing.com/",
 		svg: SponsorTheHive,
+	},
+	{
+		name: "StandOut Stickers",
+		type: SponsorTier.TEMPORARY,
+		link: "http://hackp.ac/mlh-StandOutStickers-hackathons",
+		svg: SponsorStandOutStickers,
 	},
 ];
 
