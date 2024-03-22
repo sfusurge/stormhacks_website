@@ -128,15 +128,15 @@ function SponsorsGrids() {
 			<>
 				<section>
 					<h2>{t("sponsors.sponsors-heading")}</h2>
-						<SponsorGrid {...common} maxColumns={2} minItemWidth={250}>
-							{sponsorsTemporary.map((s) => (
-								<SponsorLogo
-									key={s.name}
-									name={s.name}
-									href={s.link}
-									logo={(s as any).svg ?? (s as any).photo}
-								/>
-							))}
+					<SponsorGrid {...common} maxColumns={2} minItemWidth={250}>
+						{sponsorsTemporary.map((s) => (
+							<SponsorLogo
+								key={s.name}
+								name={s.name}
+								href={s.link}
+								logo={(s as any).svg ?? (s as any).photo}
+							/>
+						))}
 					</SponsorGrid>
 					<h2>{t("sponsors.past-sponsors-heading")}</h2>
 					<SponsorGrid {...common} maxColumns={2} minItemWidth={250}>

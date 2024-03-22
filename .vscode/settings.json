@@ -6,6 +6,7 @@
 	"typescript.format.semicolons": "insert",
 	"typescript.preferences.quoteStyle": "double",
 
+	
 	// Don't show formatting warnings in the IDE.
 	"eslint.rules.customizations": [
 		{ "rule": "prettier/*", "severity": "off"}
@@ -21,4 +22,6 @@
 
 		"package-lock.json": true
 	}
+
+	
 }
