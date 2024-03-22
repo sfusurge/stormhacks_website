@@ -122,10 +122,22 @@ function SponsorsGrids() {
 			(s) => s.type === SponsorTier.SILVER || s.type === SponsorTier.BRONZE
 		);
 		const sponsorsInKind = SortedSponsors.filter((s) => s.type === SponsorTier.IN_KIND);
+		const sponsorsTemporary = SortedSponsors.filter((s) => s.type === SponsorTier.TEMPORARY);
 
 		return (
 			<>
 				<section>
+					<h2>{t("sponsors.sponsors-heading")}</h2>
+						<SponsorGrid {...common} maxColumns={2} minItemWidth={250}>
+							{sponsorsTemporary.map((s) => (
+								<SponsorLogo
+									key={s.name}
+									name={s.name}
+									href={s.link}
+									logo={(s as any).svg ?? (s as any).photo}
+								/>
+							))}
+					</SponsorGrid>
 					<h2>{t("sponsors.past-sponsors-heading")}</h2>
 					<SponsorGrid {...common} maxColumns={2} minItemWidth={250}>
 						{sponsorsGold.map((s) => (
