@@ -96,7 +96,7 @@ function HeaderNav({ appRoutes }: { appRoutes: AppRoute[] }) {
 						<Link key={href} path={href} routeId={id} />
 					))}
 			</nav>
-			<a 
+			<a
 				id="mlh-trust-badge"
 				style={{
 					display: "block",
