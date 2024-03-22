@@ -113,9 +113,9 @@ function HeaderNav({ appRoutes }: { appRoutes: AppRoute[] }) {
 				<img
 					src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-white.svg"
 					alt="Major League Hacking 2024 Hackathon Season"
-					style={{ width: "100%" }}/>
+					style={{ width: "100%" }}
+				/>
 			</a>
-
 		</>
 	);
 }
