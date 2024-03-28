@@ -1,5 +1,4 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import CountdownClock from '@/components/CountdownClock';
 
 export async function getStaticProps({ locale }) {
   return {
