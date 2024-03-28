@@ -14,7 +14,6 @@ export default function Home() {
   return (
     <>
       <p>StormHacks 2024 is coming!</p>
-      <CountdownClock/>
     </>
     
   );
