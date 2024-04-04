@@ -38,11 +38,11 @@ function Landing() {
                 <button onClick={toggleNav}><Image src={NavIcon} height={40}/></button>
                 {showNav && 
                     <ul className=' items-center text-white'>
-                        <li className='text-customPurple border text-white py-1 px-4 rounded mt-5 mr-5 text-center'>Home</li>
-                        <li className='text-customPurple border text-white py-1 px-4 rounded mt-5 mr-5 text-center'>About</li>
-                        <li className='text-customPurple border text-white py-1 px-4 rounded  mt-5 mr-5 text-center'>Sponsors</li>
-                        <li className='text-customPurple border text-white py-1 px-4 rounded  mt-5 mr-5 text-center'>FAQ</li>
-                        <li className='text-customPurple border text-white py-1 px-4 rounded  mt-5 mr-5 text-center'>Surge</li>
+                        <li className='text-customPurple border text-white py-1 px-4 rounded mt-5 mr-5 text-center hover:bg-white hover:text-customPurple'>Home</li>
+                        <li className='text-customPurple border text-white py-1 px-4 rounded mt-1 mr-5 text-center hover:bg-white hover:text-customPurple'>About</li>
+                        <li className='text-customPurple border text-white py-1 px-4 rounded  mt-1 mr-5 text-center hover:bg-white hover:text-customPurple'>Sponsors</li>
+                        <li className='text-customPurple border text-white py-1 px-4 rounded  mt-1 mr-5 text-center hover:bg-white hover:text-customPurple'>FAQ</li>
+                        <li className='text-customPurple border text-white py-1 px-4 rounded  mt-1 mr-5 text-center hover:bg-white hover:text-customPurple'>Surge</li>
                     </ul>
                 }
             </div>

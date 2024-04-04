@@ -9,11 +9,11 @@ function NavBar() {
             <ul className='flex ml-5 items-center'>
                 <Image width={40} src={PlaceHoldImage2}/>
               
-                <li className='ml-5 mr-5'>Home</li>
-                <li className='mr-5'>About</li>
-                <li className='mr-5'>Sponsors</li>
-                <li className='mr-5'>FAQ</li>
-                <li className='mr-5'>Surge</li>
+                <li className='ml-5 mr-5 hover:underline'>Home</li>
+                <li className='mr-5 hover:underline'>About</li>
+                <li className='mr-5 hover:underline'>Sponsors</li>
+                <li className='mr-5 hover:underline'>FAQ</li>
+                <li className='mr-5 hover:underline'>Surge</li>
             </ul>
             <ul className='flex mr-5'>
                 <Image width={40} src={PlaceHoldImage2}/>
