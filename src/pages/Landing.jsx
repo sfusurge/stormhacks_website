@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from "../components/NavBar";
 import PlaceHoldImage from "../../public/images/placehold-img.png";
-
+import NavIcon from "../../public/images/navicon-img.png";
 import Image from 'next/image';
 
 function Landing() {
 
     const [isSmallScreen, setIsSmallScreen] = useState(false);
+    const [showNav, setShowNav] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsSmallScreen(window.innerWidth < 768); // Assuming small screen size is less than 768px
+            setIsSmallScreen(window.innerWidth < 768);
         };
 
     
@@ -25,10 +26,29 @@ function Landing() {
         };
     }, []);
 
+    const toggleNav = () => {
+        setShowNav(!showNav);
+    };
+
     return (
-        <div className=''>
+        <div className='bg-customPurple'>
             {!isSmallScreen && <NavBar />}
-            <div className={`${isSmallScreen ? 'items-start pt-20' : 'items-center h-[40vh]'} pl-5 flex flex-col bg-customPurple justify-center text-white`}>
+            {isSmallScreen && 
+                <div className='pl-5 pt-5 bg-customPurple'>
+                <button onClick={toggleNav}><Image src={NavIcon} height={40}/></button>
+                {showNav && 
+                    <ul className=' items-center text-white'>
+                        <li className='text-customPurple border text-white py-1 px-4 rounded mt-5 mr-5 text-center'>Home</li>
+                        <li className='text-customPurple border text-white py-1 px-4 rounded mt-5 mr-5 text-center'>About</li>
+                        <li className='text-customPurple border text-white py-1 px-4 rounded  mt-5 mr-5 text-center'>Sponsors</li>
+                        <li className='text-customPurple border text-white py-1 px-4 rounded  mt-5 mr-5 text-center'>FAQ</li>
+                        <li className='text-customPurple border text-white py-1 px-4 rounded  mt-5 mr-5 text-center'>Surge</li>
+                    </ul>
+                }
+            </div>
+            }
+            
+            <div className={`${isSmallScreen ? 'items-start mt-20' : 'items-center h-[40vh]'} pl-5 flex flex-col bg-customPurple justify-center text-white`}>
                 <h2>May 18–19, 2024 @ sfu burnaby</h2>
                 <h1 className='text-5xl mt-1 mb-5'>StormHacks 2024</h1>
                 <p className='text-xs justify-center'>Lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit.</p>

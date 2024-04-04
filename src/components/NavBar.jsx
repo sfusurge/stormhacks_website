@@ -3,6 +3,7 @@ import PlaceHoldImage2 from "../../public/images/placehold2-img.png";
 import Image from 'next/image';
 
 function NavBar() {
+
     return (
         <div className='pb-5 flex justify-between pt-5 bg-customPurple text-white'>
             <ul className='flex ml-5 items-center'>
