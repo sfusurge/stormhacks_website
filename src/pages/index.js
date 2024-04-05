@@ -1,4 +1,5 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import CurrentSponsors from "../sponsors/CurrentSponsors.jsx";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -13,7 +14,7 @@ export default function Home() {
   return (
     <>
       <p>StormHacks 2024 is coming!</p>
+      <CurrentSponsors />
     </>
-    
   );
 }

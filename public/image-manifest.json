@@ -1,0 +1,15 @@
+{
+  "images": {
+    "current_sponsors": [
+      {
+        "imagePath": "/sponsors/ea-logo.svg",
+        "altText": "Electronic Arts Company Logo"
+      },
+      {
+        "imagePath": "/sponsors/redbull.jpg",
+        "altText": "Red Bull Company Logo"
+      }
+    ],
+    "previous_sponsors": []
+  }
+}
