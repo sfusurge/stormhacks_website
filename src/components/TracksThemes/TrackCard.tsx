@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './TrackCard.module.css';
 
 interface TrackCardProps {
     imageUrl: string;
@@ -11,11 +10,12 @@ interface TrackCardProps {
 
 const TrackCard: React.FC<TrackCardProps> = ({ imageUrl, alt, trackSubtitle, trackTitle, trackDescription }) => {
     return (
-        <div className={styles['track-card-container']}>
-            <div className={styles['image-container']}>
+        <div className="desktop:w-[267px] mobile:w-[382px]">
+            <div className="mb-5 desktop:w-[267px] desktop:h-[217px] mobile:w-[382px] mobile:h-[200px]">
                 <img 
                     src={imageUrl}
                     alt={alt}
+                    className="w-full h-full object-cover"
                 />
             </div>
             <div className="mb-10">

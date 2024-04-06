@@ -1,11 +1,10 @@
 import React from 'react';
 import TrackCard from "@/components/TracksThemes/TrackCard";
 import TracksInfo from "./TracksInfo.json"
-import styles from './TracksThemes.module.css'; 
 
 const TracksThemes = () => {
     return (
-        <div className={styles.trackCardsContainer}>
+        <div className="flex desktop:flex-row mobile:flex-col justify-between items-center py-20 px-10 desktop:px-64">
             {TracksInfo.map((track, index) => (
                 <TrackCard 
                     key={index}
