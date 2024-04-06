@@ -1,4 +1,5 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Footer from "./Footer"
 
 export async function getStaticProps({ locale }) {
   return {
@@ -12,7 +13,7 @@ export async function getStaticProps({ locale }) {
 export default function Home() {
   return (
     <>
-      <p>StormHacks 2024 is coming!</p>
+      <Footer />
     </>
     
   );
