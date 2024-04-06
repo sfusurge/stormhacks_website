@@ -19,6 +19,24 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        silver: "#c4c4c4",
+        white: "#fff",
+        whitesmoke: "rgba(248, 248, 248, 0.04)",
+        gainsboro: {
+          "100": "#e6e6e6",
+          "200": "rgba(230, 230, 230, 0.09)",
+        },
+        gray: "#241c35",
+      },
+      fontFamily: {
+        vollkorn: "Vollkorn",
+        "vollkorn-sc": "'Vollkorn SC'",
+      },
+    },
+    fontSize: {
+      sm: "14px",
+      base: "16px",
     },
   },
   plugins: [],

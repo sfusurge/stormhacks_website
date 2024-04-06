@@ -1,4 +1,7 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import AboutUs from "./AboutUs";
+import DesignerFriendly from "./DesignerFriendly";
+import Register from "./Register";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -12,8 +15,11 @@ export async function getStaticProps({ locale }) {
 export default function Home() {
   return (
     <>
-      <p>StormHacks 2024 is coming!</p>
+      <div className="[background:linear-gradient(180deg,_#241b38,_#231f20)] flex flex-col box-border mobile:gap-[20px] desktop:gap-[80px]">
+        <AboutUs/>
+        <DesignerFriendly/>
+        <Register/>
+      </div>
     </>
-    
   );
 }
