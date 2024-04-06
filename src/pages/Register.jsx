@@ -13,6 +13,7 @@ const Register = () => {
             <div className="absolute inset-0 flex justify-center items-center">
               <img
                 className="rounded-lg"
+                alt=""
                 src={registerImageName}
                 style={{
                   maxWidth: "95%",

@@ -3,12 +3,13 @@ const AboutUs = () => {
 
   return (
     <>
-      <section className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full
+      <section className="self-stretch flex-row items-start justify-center py-0 px-5 box-border max-w-full
       text-left text-base text-white font-vollkorn-sc hidden mobile:flex">
         <div className="h-[240px] flex-1 relative min-w-[270px] max-w-full flex justify-center items-center">
           <div className="absolute top-[0px] left-[0px] rounded-md bg-whitesmoke w-full h-full" />
           <img
             className="rounded-lg"
+            alt=""
             src={beginnerFriendlyImageName}
             style={
               {
@@ -27,7 +28,7 @@ const AboutUs = () => {
           <div className="flex-1 flex flex-col items-start justify-start pt-4 px-0 pb-0 box-border min-w-[270px]
           max-w-full">
             <div className="self-stretch flex flex-col items-start justify-start gap-[20px]">
-              <div className="flex flex-col items-start justify-start gap-[4px]">
+              <div className="flex flex-col items-start justify-start gap-[5px]">
                 <div className="relative font-semibold inline-block min-w-[75px]">
                   about us
                 </div>

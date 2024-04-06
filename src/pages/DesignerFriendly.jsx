@@ -3,12 +3,13 @@ const DesignerFriendly = () => {
 
   return (
     <>
-      <section className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full
+      <section className="self-stretch flex-row items-start justify-center py-0 px-5 box-border max-w-full
       text-left text-base text-white font-vollkorn-sc hidden mobile:flex">
         <div className="h-[240px] flex-1 relative min-w-[270px] max-w-full flex justify-center items-center">
           <div className="absolute top-[0px] left-[0px] rounded-md bg-whitesmoke w-full h-full" />
           <img
             className="rounded-lg"
+            alt=""
             src={designerFriendlyImageName}
             style={
               {
@@ -24,11 +25,12 @@ const DesignerFriendly = () => {
       <section className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full
       text-left text-base text-white font-vollkorn-sc">
         <div className="w-[880px] flex flex-row flex-wrap items-start justify-center gap-[40px] max-w-full">
-          <div className="h-[340px] flex-1 relative min-w-[270px] max-w-full flex justify-center items-center
+          <div className="h-[340px] flex-1 relative min-w-[270px] max-w-full justify-center items-center
           hidden desktop:flex">
             <div className="absolute top-[0px] left-[0px] rounded-md bg-whitesmoke w-full h-full" />
             <img
               className="rounded-lg"
+              alt=""
               src={designerFriendlyImageName}
               style={
                 {
