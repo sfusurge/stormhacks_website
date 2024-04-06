@@ -23,7 +23,7 @@ const Footer = () => {
         {Object.values(PageLinkType).map((type) => {
           if (typeof type === 'string') return null;
           return (
-            <Link href={PageLinkTypeInfo[type].href} className="text-sm italic font-vollkorn">
+            <Link href={PageLinkTypeInfo[type].href} key={type} className="text-sm italic font-vollkorn">
               {PageLinkTypeInfo[type].name}
             </Link>
           );
