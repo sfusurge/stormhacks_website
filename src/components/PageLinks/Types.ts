@@ -8,6 +8,7 @@ export enum PageLinkType {
     Email 
 }
 
+// TODO: Update with the correct href values
 export const PageLinkTypeInfo: Record<PageLinkType, { name: string, href: string }> = {
     [PageLinkType.Home]: { name: "Home", href: "#" },
     [PageLinkType.About]: { name: "About", href: "#about" },
@@ -15,5 +16,5 @@ export const PageLinkTypeInfo: Record<PageLinkType, { name: string, href: string
     [PageLinkType.FAQ]: { name: "FAQ", href: "#faq" },
     [PageLinkType.Surge]: { name: "Surge", href: "#surge" },
     [PageLinkType.CodeOfConduct]: { name: "Code Of Conduct", href: "#code-of-conduct" },
-    [PageLinkType.Email]: { name: "Email", href: "#email" },
+    [PageLinkType.Email]: { name: "Email Us", href: "#email" },
 }

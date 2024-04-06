@@ -1,5 +1,6 @@
 import { SocialLinkType, SocialLinkTypeInfo } from "./Types";
 import Image from "next/image";
+import Link from "next/link";
 
 export interface SocialLinkIconProps {
 	type: SocialLinkType;
@@ -11,14 +12,14 @@ const SocialLinkIcon: React.FC<SocialLinkIconProps> = ({ type }) => {
 	const icon = SocialLinkTypeInfo[type].icon
 	
 	return (
-		<a href={href}>
+		<Link href={href}>
 			<Image 
 			src={icon}
 			alt={alt}
 			width={21.12}
 			height={20}
 			/>
-		</a>
+		</Link>
 	);
 }
 

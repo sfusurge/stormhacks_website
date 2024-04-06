@@ -8,8 +8,9 @@ export enum SocialLinkType {
     LinkedIn, 
 }
 
+// TODO: Update with social media icons
 export const SocialLinkTypeInfo: Record<SocialLinkType, { name: string, icon: string; href: string }> = {
-    [SocialLinkType.Email]: { name: "Email", icon: SocialIcon, href: "https://stormhacks.com/" },
+    [SocialLinkType.Email]: { name: "Email", icon: SocialIcon, href: "https://stormhacks.com/" }, // TODO: Update with email
     [SocialLinkType.GitHub]: { name: "GitHub", icon: SocialIcon, href: "https://github.com/sfusurge" },
     [SocialLinkType.Facebook]: { name: "Facebook", icon: SocialIcon, href: "https://www.facebook.com/sfusurge/" },
     [SocialLinkType.Instagram]: { name: "Instagram", icon: SocialIcon, href: "https://www.instagram.com/sfusurge/?hl=en" },

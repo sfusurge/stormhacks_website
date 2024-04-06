@@ -3,6 +3,7 @@ import SocialLinkIcon from "@/components/SocialIconLinks/Icon"
 import { SocialLinkType } from "@/components/SocialIconLinks/Types"
 import { PageLinkType, PageLinkTypeInfo } from "@/components/PageLinks/Types";
 import Image from "next/image"
+import Link from "next/link"
 import FooterImage from "@/../public/images/footer-img.svg"
 
 const Footer = () => {
@@ -22,9 +23,9 @@ const Footer = () => {
         {Object.values(PageLinkType).map((type) => {
           if (typeof type === 'string') return null;
           return (
-            <a href={PageLinkTypeInfo[type].href} className="text-sm italic">
+            <Link href={PageLinkTypeInfo[type].href} className="text-sm italic font-vollkorn">
               {PageLinkTypeInfo[type].name}
-            </a>
+            </Link>
           );
         })}
       </nav>
