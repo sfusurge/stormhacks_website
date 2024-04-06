@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "next/image";
 
 interface TrackCardProps {
     imageUrl: string;
@@ -12,11 +13,15 @@ const TrackCard: React.FC<TrackCardProps> = ({ imageUrl, alt, trackSubtitle, tra
     return (
         <div className="desktop:w-[267px] mobile:w-[382px]">
             <div className="mb-5 desktop:w-[267px] desktop:h-[217px] mobile:w-[382px] mobile:h-[200px]">
-                <img 
+
+               <Image 
                     src={imageUrl}
                     alt={alt}
+                    width={0}
+                    height={0}
                     className="w-full h-full object-cover"
                 />
+                
             </div>
             <div className="mb-10">
                 <h2 className="font-vollkorn font-semibold uppercase text-base">
