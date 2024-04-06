@@ -1,7 +1,7 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import AboutUs from "./AboutUs";
-import DesignerFriendly from "./DesignerFriendly";
-import Register from "./Register";
+import AboutUs from "../sections/AboutUs";
+import DesignerFriendly from "../sections/DesignerFriendly";
+import Register from "../sections/Register";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -16,9 +16,9 @@ export default function Home() {
   return (
     <>
       <div className="[background:linear-gradient(180deg,_#241b38,_#231f20)] flex flex-col box-border mobile:gap-[20px] desktop:gap-[80px]">
-        <AboutUs/>
-        <DesignerFriendly/>
-        <Register/>
+        <AboutUs />
+        <DesignerFriendly />
+        <Register />
       </div>
     </>
   );
