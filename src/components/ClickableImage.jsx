@@ -3,14 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 
-const ClickableImage = ({ imagePath, altText, width, height }) => {
-  useEffect(() => {
-    console.log(imagePath);
-  });
-
+const ClickableImage = ({ src, altText, imageUrl, width, height }) => {
   return (
-    <Link key="key" target="_blank" href="https://www.google.com">
-      <Image src={imagePath} alt={altText} width={width} height={height} />
+    <Link key="key" target="_blank" href={imageUrl}>
+      <Image src={src} alt={altText} width={width} height={height} />
     </Link>
   );
 };

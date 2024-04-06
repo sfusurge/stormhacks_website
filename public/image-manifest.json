@@ -3,10 +3,12 @@
     "current_sponsors": [
       {
         "imagePath": "/sponsors/ea-logo.svg",
+        "imageUrl": "https://www.ea.com/",
         "altText": "Electronic Arts Company Logo"
       },
       {
         "imagePath": "/sponsors/redbull.jpg",
+        "imageUrl": "https://www.redbull.com/",
         "altText": "Red Bull Company Logo"
       }
     ],
