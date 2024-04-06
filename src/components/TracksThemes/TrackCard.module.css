@@ -1,5 +1,20 @@
+.track-card-container {
+    width: 267px;
+}
+
 .image-container {
     margin-bottom: 20px;
+    width: 267px;
+    height: 217px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.text-container {
+    margin-bottom: 40px;
 }
 
 .trackSubtitle {
@@ -18,7 +33,14 @@
     font-weight: 400;
 }
 
-.text-container {
-    width: 267px;
+@media screen and (max-width: 768px) {
+    .track-card-container {
+        width: 382px;
+    }
 
+    .image-container {
+        margin-bottom: 20px;
+        width: 382px;
+        height: 200px;
+    }
 }

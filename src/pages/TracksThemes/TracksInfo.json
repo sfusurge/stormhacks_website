@@ -1,18 +1,18 @@
 [
     {
-      "alt": "Image Alt Text",
+      "alt": "Track 1 Image ALt Text",
       "trackSubtitle": "Track 1",
       "trackTitle": "Track 1",
       "trackDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra  sem vel lectus posuere cursus. Sed eu diam ullamcorper, sagittis mauris  sit amet."
     },
     {
-      "alt": "Image Alt Text",
+      "alt": "Track 2 Image Alt Text",
       "trackSubtitle": "Track 2",
       "trackTitle": "Track 2",
       "trackDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra  sem vel lectus posuere cursus. Sed eu diam ullamcorper, sagittis mauris  sit amet."
     },
     {
-      "alt": "Image Alt Text",
+      "alt": "Track 3 Image Alt Text",
       "trackSubtitle": "Track 3",
       "trackTitle": "Track 3",
       "trackDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra  sem vel lectus posuere cursus. Sed eu diam ullamcorper, sagittis mauris  sit amet."

@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from "next/image";
 import styles from './TrackCard.module.css';
 
 interface TrackCardProps {
@@ -14,11 +13,9 @@ const TrackCard: React.FC<TrackCardProps> = ({ imageUrl, alt, trackSubtitle, tra
     return (
         <div className={styles['track-card-container']}>
             <div className={styles['image-container']}>
-                <Image 
+                <img 
                     src={imageUrl}
                     alt={alt}
-                    width={267} 
-                    height={217}
                 />
             </div>
             <div className={styles['text-container']}>
