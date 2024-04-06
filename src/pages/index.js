@@ -12,9 +12,10 @@ export async function getStaticProps({ locale }) {
 
 export default function Home() {
   return (
-    <>
-      <p>StormHacks 2024 is coming!</p>
-      <CurrentSponsors />
-    </>
+    <div className="grid desktop:grid-cols-[1fr_min(65ch,_100%)_1fr] mobile:grid-cols-1 place-content-center">
+      <div className="col-start-2">
+        <CurrentSponsors />
+      </div>
+    </div>
   );
 }
