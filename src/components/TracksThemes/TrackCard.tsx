@@ -18,14 +18,14 @@ const TrackCard: React.FC<TrackCardProps> = ({ imageUrl, alt, trackSubtitle, tra
                     alt={alt}
                 />
             </div>
-            <div className={styles['text-container']}>
-                <h2 className={styles['trackSubtitle']}>
+            <div className="mb-10">
+                <h2 className="font-vollkorn font-semibold uppercase text-base">
                     {trackSubtitle}
                 </h2>
-                <h1 className={styles['trackTitle']}>
+                <h1 className="font-vollkorn text-[2.5rem]">
                     {trackTitle}
                 </h1>
-                <p className={styles['trackDescription']}>
+                <p className="font-vollkorn text-base">
                     {trackDescription}
                 </p>
             </div>
