@@ -20,7 +20,7 @@ function CurrentSponsors() {
   }, []);
 
   return (
-    <div className="grid desktop:full-bleed mobile:grid-cols-1 grid-flow-col place-content-center">
+    <div className="grid desktop:full-bleed grid-cols-3 place-content-center">
       <h4 className="text-2xl">THANK YOU TO</h4>
       <h2 className="text-4xl">Our Sponsors</h2>
 
