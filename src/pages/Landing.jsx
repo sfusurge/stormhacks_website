@@ -3,7 +3,6 @@ import NavBar from "../components/NavBar";
 import PlaceHoldImage from "../../public/images/placehold-img.png";
 import NavIcon from "../../public/images/navicon-img.png";
 import Image from 'next/image';
-import Badge from "../../public/images/mlh.svg";
 
 function Landing() {
 
@@ -32,8 +31,7 @@ function Landing() {
     };
 
     return (
-        <div className='flex items-center justify-center bg-customPurple'>
-            <div className={`${isSmallScreen ? '' : 'w-[80vw]'} `}>
+            <div className={`${isSmallScreen ? '' : ''} `}>
             {!isSmallScreen && <NavBar />}
             {isSmallScreen && 
                 
@@ -59,9 +57,8 @@ function Landing() {
             }
             
             <div className={`${isSmallScreen ? 'items-start pt-32' : 'items-center h-[40vh] pt-24'} pl-5 flex flex-col bg-customPurple justify-center text-white`}>
-                <div className='absolute top-0 right-0 mr-5 mt-5' style={{ zIndex: 101 }}>
-                            <Image width={80} src={Badge} />
-                </div>
+
+               
                 <h2>May 18–19, 2024 @ sfu burnaby</h2>
                 <h1 className='text-5xl mt-1 mb-5'>StormHacks 2024</h1>
                 <p className={`${isSmallScreen ? '' : 'text-center'} text-xs justify-center max-w-sm`}>Lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
@@ -101,7 +98,7 @@ function Landing() {
                 </div>
             </div>
             </div>
-        </div>
+       
     )
 }
 
