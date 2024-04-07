@@ -23,7 +23,7 @@ const AboutUs = () => {
       </section>
 
       <section className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full
-      text-left text-base text-white font-vollkorn-sc">
+      text-left text-base text-white font-vollkorn-sc pb-16">
         <div className="w-[880px] flex flex-row flex-wrap items-start justify-center gap-[40px] max-w-full">
           <div className="flex-1 flex flex-col items-start justify-start pt-4 px-0 pb-0 box-border min-w-[270px]
           max-w-full">
@@ -45,7 +45,7 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-          <div className="h-60 flex-1 relative min-w-[270px] max-w-full hidden desktop:flex">
+          <div className="h-[300px] flex-1 relative min-w-[270px] max-w-full hidden desktop:flex">
             <div className="absolute top-0 left-0 rounded-md bg-whitesmoke w-full h-full" />
             <div className="absolute inset-0 flex justify-center items-center">
               <img

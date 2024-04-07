@@ -23,9 +23,9 @@ const DesignerFriendly = () => {
       </section>
 
       <section className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full
-      text-left text-base text-white font-vollkorn-sc">
+      text-left text-base text-white font-vollkorn-sc pb-16">
         <div className="w-[880px] flex flex-row flex-wrap items-start justify-center gap-[40px] max-w-full">
-          <div className="h-[340px] flex-1 relative min-w-[270px] max-w-full justify-center items-center
+          <div className="h-[430px] flex-1 relative min-w-[270px] max-w-full justify-center items-center
           hidden desktop:flex">
             <div className="absolute top-[0px] left-[0px] rounded-md bg-whitesmoke w-full h-full" />
             <img
@@ -44,7 +44,7 @@ const DesignerFriendly = () => {
           <div className="flex-1 flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border min-w-[270px]
           max-w-full">
             <div className="self-stretch flex flex-col items-start justify-start gap-[20px]">
-              <div className="self-stretch flex flex-col items-start justify-start gap-[4px]">
+              <div className="self-stretch flex flex-col items-start justify-start mobile:pt-4 gap-[4px]">
                 <div className="relative font-semibold">
                   designer-friendly
                 </div>
