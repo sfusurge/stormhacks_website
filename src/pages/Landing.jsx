@@ -35,13 +35,13 @@ function Landing() {
             {!isSmallScreen && <NavBar />}
             {isSmallScreen && 
                 
-                <div className=' pt-5 bg-customPurple' style={{ position: 'fixed', top: 0, width: '', zIndex: 100 }}>
+                <div className='pl-5 pt-5 [background:linear-gradient(180deg,_#241b38,_#231f20)]' style={{ position: 'fixed', top: 0, width: '', zIndex: 100 }}>
                 <button className='' onClick={toggleNav}><Image src={NavIcon} height={40}/></button>
 
                 {showNav && 
                   
-                    <div className='h-[95vh] flex items-center bg-customPurple'>
-                        <ul className=' h-[40vh] items-center text-white w-[80vw]' >
+                    <div className='h-[95vh] flex items-center '>
+                        <ul className=' h-[40vh] justify-center items-center text-white w-[80vw]' >
                             <li className='text-customPurple border text-white py-1 px-4 rounded mt-1  text-center hover:bg-white hover:text-customPurple'>Home</li>
                             <li className='text-customPurple border text-white py-1 px-4 rounded mt-2  text-center hover:bg-white hover:text-customPurple'>About</li>
                             <li className='text-customPurple border text-white py-1 px-4 rounded  mt-2 text-center hover:bg-white hover:text-customPurple'>Sponsors</li>
@@ -64,19 +64,19 @@ function Landing() {
                 <p className={`${isSmallScreen ? '' : 'text-center'} text-xs justify-center max-w-sm`}>Lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
                 <div className='mt-6'>
                 
-                    <button className={`${isSmallScreen ? 'block w-[75vw] mb-5' : 'mr-5'} border border-transparent hover:border-customPurple text-customPurple bg-white  py-2 px-4 rounded`}>
+                    <button className={`${isSmallScreen ? 'block w-[75vw] mb-5 min-w-[200px]' : 'mr-5'} border border-transparent hover:border-customPurple text-customPurple bg-white  py-2 px-4 rounded`}>
                         Register as hacker
                     </button>
-                    <button className={`${isSmallScreen ? 'block w-[75vw] mb-10' : '' } border hover:bg-white hover:text-customPurple text-white py-2 px-4 rounded`}>
+                    <button className={`${isSmallScreen ? 'block w-[75vw] mb-10 min-w-[200px]' : '' } border hover:bg-white hover:text-customPurple text-white py-2 px-4 rounded`}>
                         Register as mentor/volunteer
                     </button>
                 </div>
             </div>
-            <div className='bg-customPurple h-[51vh] flex justify-center items-center text-white'>
+            <div className=' h-[51vh] flex justify-center items-center text-white'>
                 <Image src={PlaceHoldImage} width={600} alt="image"/>
             </div>
-            <div className='pt-10 bg-customPurple flex justify-center'>
-                <div className={`w-[70vw] ${isSmallScreen ? '': 'flex'} bg-customPurple text-center justify-around mb-10`}>
+            <div className='pt-10  flex justify-center'>
+                <div className={`w-[70vw] ${isSmallScreen ? '': 'flex'}  text-center justify-around mb-10`}>
                     <div className='flex flex-col text-white mb-5'>
                         <p className='text-5xl mb-2'>24</p>
                         <p>hours</p>

@@ -6,7 +6,7 @@ function NavBar() {
 
     return (
         <div>
-        <div className='pb-5 flex pt-5 bg-customPurple justify-between text-white ' style={{ position: 'fixed', top: 0, width: '', zIndex: 100 }}>
+        <div className='pb-5 flex pt-5 justify-between text-white ' style={{ position: 'fixed', top: 0, width: '', zIndex: 100 }}>
             <ul className=' flex items-center ' >
                 <Image width={40} src={PlaceHoldImage2}/>
               
