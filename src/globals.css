@@ -4,8 +4,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;1,400&display=swap");
 
+.full-bleed {
+  width: 100%;
+  grid-column: 1 / -1;
+}
 :root {
-  --foreground-rgb: 0,0,0;
+  --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
@@ -27,5 +31,3 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
-
