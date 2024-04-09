@@ -11,8 +11,8 @@ interface TrackCardProps {
 
 const TrackCard: React.FC<TrackCardProps> = ({ imageUrl, alt, trackSubtitle, trackTitle, trackDescription }) => {
     return (
-        <div className="desktop:w-[267px] mobile:w-[382px]">
-            <div className="mb-5 desktop:w-[267px] desktop:h-[217px] mobile:w-[382px] mobile:h-[200px]">
+        <div className="desktop:w-[237px] mobile:w-[382px]">
+            <div className="mb-5 desktop:w-[237px] desktop:h-[217px] mobile:w-[382px] mobile:h-[200px]">
 
                <Image 
                     src={imageUrl}
