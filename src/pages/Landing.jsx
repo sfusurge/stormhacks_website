@@ -62,12 +62,12 @@ function Landing() {
                 <h2>May 18–19, 2024 @ sfu burnaby</h2>
                 <h1 className='text-5xl mt-1 mb-5 '>StormHacks 2024</h1>
                 <p className={`${isSmallScreen ? '' : 'text-center'} text-xs justify-center max-w-sm`}>Lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                <div className='mt-6'>
+                <div className={`${isSmallScreen ? 'w-full' : ''} mt-6 `}>
                 
-                    <button className={`${isSmallScreen ? 'block w-[75vw] mb-5 min-w-[200px]' : 'mr-5'} border border-transparent hover:border-customPurple text-customPurple bg-white  py-2 px-4 rounded`}>
+                    <button className={`${isSmallScreen ? 'w-full mb-5 min-w-[200px]' : 'mr-5'} border border-transparent hover:border-customPurple text-customPurple bg-white  py-2 px-4 rounded`}>
                         Register as hacker
                     </button>
-                    <button className={`${isSmallScreen ? 'block w-[75vw] mb-10 min-w-[200px]' : '' } border hover:bg-white hover:text-customPurple text-white py-2 px-4 rounded`}>
+                    <button className={`${isSmallScreen ? 'w-full mb-10 min-w-[200px]' : '' } border hover:bg-white hover:text-customPurple text-white py-2 px-4 rounded`}>
                         Register as mentor/volunteer
                     </button>
                 </div>

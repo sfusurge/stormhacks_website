@@ -16,12 +16,12 @@ function NavBar() {
                 <li className='mr-5 hover:underline'>FAQ</li>
                 <li className='mr-5 hover:underline'>Surge</li>
             </ul>
-            <ul className='flex mr-8'>
+            <div className='ml-8 flex mr-8 justify-center'>
                 <Image width={40} src={PlaceHoldImage2}/>
                 <Image width={40} src={PlaceHoldImage2}/>
                 <Image width={40} src={PlaceHoldImage2}/>
                 <Image width={40} src={PlaceHoldImage2}/>
-            </ul>
+            </div>
             
         </div>
 
