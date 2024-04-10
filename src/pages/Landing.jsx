@@ -35,13 +35,13 @@ function Landing() {
             {!isSmallScreen && <NavBar />}
             {isSmallScreen && 
                 
-                <div className='pl-5 pt-5 [background:linear-gradient(180deg,_#241b38,_#231f20)]' style={{ position: 'fixed', top: 0, width: '', zIndex: 100 }}>
+                <div className='w-full  pt-5 [background:linear-gradient(180deg,_#241b38,_#231f20)]' style={{ position: 'fixed', top: 0, width: '', zIndex: 100 }}>
                 <button className='' onClick={toggleNav}><Image src={NavIcon} height={40}/></button>
 
                 {showNav && 
                   
-                    <div className='h-[95vh] flex items-center '>
-                        <ul className=' h-[40vh] justify-center items-center text-white w-[80vw]' >
+                    <div className=' h-[95vh] flex items-center justify-center items-center '>
+                        <ul className='pr-14 w-[80%] h-[40vh] text-white ' >
                             <li className='text-customPurple border text-white py-1 px-4 rounded mt-1  text-center hover:bg-white hover:text-customPurple'>Home</li>
                             <li className='text-customPurple border text-white py-1 px-4 rounded mt-2  text-center hover:bg-white hover:text-customPurple'>About</li>
                             <li className='text-customPurple border text-white py-1 px-4 rounded  mt-2 text-center hover:bg-white hover:text-customPurple'>Sponsors</li>
