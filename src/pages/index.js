@@ -2,6 +2,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import AboutUs from "../components/AboutUs";
 import DesignerFriendly from "../components/DesignerFriendly";
 import Register from "../components/Register";
+import WhySponsorUs from "../components/WhySponsorUs"
 
 export async function getStaticProps({ locale }) {
   return {
@@ -18,6 +19,7 @@ export default function Home() {
       <AboutUs />
       <DesignerFriendly />
       <Register />
+      <WhySponsorUs />
     </div>
   );
 }
