@@ -5,8 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;1,400&display=swap");
-
 .full-bleed {
   width: 100%;
   grid-column: 1 / -1;
