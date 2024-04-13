@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import PlaceHoldImage2 from "../../public/images/placehold2-img.png";
-import NavIcon from "../../public/images/navicon-img.png";
+import PlaceHoldImage2 from "../../public/assets/images/placehold2-img.png";
+import NavIcon from "../../public/assets/images/navicon-img.png";
 import Image from 'next/image';
 
 function NavBar({ isMobileScreen }) {
