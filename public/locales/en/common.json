@@ -1,8 +1,8 @@
 {
   "brand": {
     "surge": "SFU Surge",
-    "stormhacks": "StormHacks",
-    "stormhacks-theme": "Play Your Hand Forward"
+    "StormHacks": "StormHacks",
+    "StormHacks-theme": "Play Your Hand Forward"
   },
 
   "apply": {
@@ -90,7 +90,7 @@
   "header": {
     "links": {
       "intro": { "title": "StormHacks 2023" },
-      "about-stormhacks": { "text": "About", "title": "StormHacks 2023" },
+      "about-StormHacks": { "text": "About", "title": "StormHacks 2023" },
       "faq": { "text": "FAQ", "title": "FAQ - StormHacks 2023" },
       "sponsors": { "text": "Sponsors", "title": "Sponsors - StormHacks 2023" },
       "about-us": {
@@ -110,11 +110,11 @@
     "title": "Frequently Asked Questions",
     "what-is-a-hackathon": {
       "question": "What is this event about?",
-      "answer": "A hackathon is an event where teams collaborate on a project, or \"hack\", given a certain time limit. At Stormhacks, teams of 1-4 collaborate over 24 hours to brainstorm and innovate solutions to real-world problems. Or they are free to work on whatever fun/silly ideas they have in mind, the door is open. We will be inviting various mentors, judges, and guests working in the tech industry to share their expertise and knowledge to our participants. Winning teams will be selected based on various criteria that will be revealed closer to our event."
+      "answer": "A hackathon is an event where teams collaborate on a project, or \"hack\", given a certain time limit. At StormHacks, teams of 1-4 collaborate over 24 hours to brainstorm and innovate solutions to real-world problems. Or they are free to work on whatever fun/silly ideas they have in mind, the door is open. We will be inviting various mentors, judges, and guests working in the tech industry to share their expertise and knowledge to our participants. Winning teams will be selected based on various criteria that will be revealed closer to our event."
     },
     "what-if-its-my-first-time": {
       "question": "What experience do I need?",
-      "answer": "Don't even worry about it. Our event is open to any student coming from any background/major. We also have a workshop series to get you bootstrapped for our hackathon, called “Road to Stormhacks”."
+      "answer": "Don't even worry about it. Our event is open to any student coming from any background/major. We also have a workshop series to get you bootstrapped for our hackathon, called “Road to StormHacks”."
     },
     "who-can-participate": {
       "question": "Who can participate?",
@@ -122,7 +122,7 @@
     },
     "finding-team-members": {
       "question": "Do I bring a team? Or do I find teammates at the event?",
-      "answer": "It's completely up to you. If you plan to join Stormhacks with a team ahead of time, please make sure that all group members sign-up together and mention each other in your application. We will also be facilitating team-formation at our event, so if you are short on members and/or want work with bright-minded peers, look forward to that :)"
+      "answer": "It's completely up to you. If you plan to join StormHacks with a team ahead of time, please make sure that all group members sign-up together and mention each other in your application. We will also be facilitating team-formation at our event, so if you are short on members and/or want work with bright-minded peers, look forward to that :)"
     },
     "when-can-i-start": {
       "question": "When can I start working on my project?",
@@ -170,11 +170,11 @@
     },
     "more-questions": {
       "question": "Have more questions?",
-      "answer": "Contact us through any of the social media links or at info@stormhacks.com!"
+      "answer": "Contact us through any of the social media links or at info@StormHacks.com!"
     },
     "first-day": {
       "question": "How will the event run day-of?",
-      "answer": "Stormhacks 2023 will not have an overnight venue space. Participants will receive an event itinerary prior to the event, including the opening and closing times for each day. When our venue closes, students will have the option to go home and continue working on their projects, or find a space somewhere on SFU’s Burnaby campus, which is open 24/7."
+      "answer": "StormHacks 2023 will not have an overnight venue space. Participants will receive an event itinerary prior to the event, including the opening and closing times for each day. When our venue closes, students will have the option to go home and continue working on their projects, or find a space somewhere on SFU’s Burnaby campus, which is open 24/7."
     }
   },
 
@@ -206,7 +206,7 @@
     "past-sponsors-heading": "Previous Sponsors"
   },
 
-  "about-stormhacks": {
+  "about-StormHacks": {
     "title": "About Us",
     "beginner-friendly": {
       "heading": "Beginner-Friendly",

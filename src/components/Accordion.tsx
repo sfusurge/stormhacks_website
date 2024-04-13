@@ -6,13 +6,17 @@ interface AccordionProps {
   answer: string;
 }
 
-const Accordion: React.FC<AccordionProps> = ({ title, answer }) => {
+const Accordion: React.FC<AccordionProps> = ({ title, answer}) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
+
+  const toggleAccordion = () => {
+    setAccordionOpen(!accordionOpen);
+  };
 
   return (
     <div className="py-2">
       <button
-        onClick={() => setAccordionOpen(!accordionOpen)}
+        onClick={toggleAccordion}
         className="flex justify-between items-center w-full"
       >
         <span className="text-white">{title}</span>
