@@ -1,41 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import NavBar from "../components/NavBar";
+import React from 'react';
 import PlaceHoldImage from "../../public/images/placehold-img.png";
 import Image from 'next/image';
 
 function Landing() {
-
-    const [isMobileScreen, setIsMobileScreen] = useState(false);
-    const [showNav, setShowNav] = useState(false);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobileScreen(window.innerWidth < 768);
-        };
-
-    
-        handleResize();
-
-      
-        window.addEventListener('resize', handleResize);
-
-        
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
-    const toggleNav = () => {
-        setShowNav(!showNav);
-    };
-
     return (
         <>
-            <NavBar isMobileScreen={isMobileScreen} />
             <div>
                 <div className={`${isMobileScreen ? 'items-start pt-32' : 'items-center h-[40vh] pt-24 pl-5'} flex flex-col bg-customPurple justify-center text-white`}>
 
-                
                     <h2>May 18–19, 2024 @ sfu burnaby</h2>
                     <h1 className='text-5xl mt-1 mb-5 '>StormHacks 2024</h1>
                     <p className={`${isMobileScreen ? '' : 'text-center'} text-xs justify-center max-w-sm`}>Lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit.</p>

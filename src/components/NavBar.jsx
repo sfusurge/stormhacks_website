@@ -6,8 +6,6 @@ import Image from 'next/image';
 function NavBar({ isMobileScreen }) {
 
     const [showNav, setShowNav] = useState(false);
-
-
     const toggleNav = () => {
         setShowNav(!showNav);
     };
