@@ -41,12 +41,12 @@ function Landing() {
                     <p className={`${isMobileScreen ? '' : 'text-center'} text-xs justify-center max-w-sm`}>Lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
                     <div className={`${isMobileScreen ? 'w-full' : ''} mt-6 `}>
                     
-                    <button className={`font-vollkorn ${isMobileScreen ? 'w-full mb-5 min-w-[200px]' : 'mr-5'} border hover:bg-customPurple hover:text-white text-customPurple bg-white py-2 px-4 rounded`}>
+                    <button className={`font-vollkorn ${isMobileScreen ? 'w-full mb-5 min-w-[200px]' : 'mr-5'} border hover:bg-customPurple hover:text-white text-customPurple bg-white py-2 px-4`}>
                         Register as a Hacker
                     </button>
 
                         
-                        <button className={`font-vollkorn ${isMobileScreen ? 'w-full mb-10 min-w-[200px]' : '' } border hover:bg-white hover:text-customPurple text-white py-2 px-4 rounded`}>
+                        <button className={`font-vollkorn ${isMobileScreen ? 'w-full mb-10 min-w-[200px]' : '' } border hover:bg-white hover:text-customPurple text-white py-2 px-4`}>
                             Register as a Mentor/Volunteer
                         </button>
                     </div>

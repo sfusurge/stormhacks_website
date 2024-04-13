@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronDown } from "react-feather"
+import { ChevronDown } from "react-feather";
 
 interface AccordionProps {
   title: string;
@@ -20,7 +20,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, answer }) => {
       </button>
       <div
         className={`grid overflow-hidden transition-all duration-300 ease-in-out text-slate-600 text-sm ${
-          accordionOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+          accordionOpen ? "grid-rows-[auto] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0 mt-0"
         }`}
       >
         <div className="overflow-hidden text-white">{answer}</div>
