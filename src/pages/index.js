@@ -21,7 +21,7 @@ export default function Home() {
       <AboutUs />
       <DesignerFriendly />
       <Register />
-      <Footer />
+      <Footer/>
     </div>
   );
 }
