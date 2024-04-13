@@ -21,6 +21,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
+        customPurple: 'rgba(36, 27, 56, 1)',
         silver: "#c4c4c4",
         white: "#fff",
         whitesmoke: "rgba(248, 248, 248, 0.04)",
