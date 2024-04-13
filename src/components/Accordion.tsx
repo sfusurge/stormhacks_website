@@ -23,7 +23,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, answer }) => {
           accordionOpen ? "grid-rows-[auto] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0 mt-0"
         }`}
       >
-        <div className="overflow-hidden text-white">{answer}</div>
+        <div className="overflow-hidden text-white text-left">{answer}</div>
       </div>
     </div>
   );
