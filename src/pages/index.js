@@ -1,6 +1,8 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useState, useEffect } from "react";
 import Landing from "./Landing";
+import TracksThemes from "./TracksThemes/TracksThemes";
+import Footer from "./Footer";
 import AboutUs from "../components/AboutUs";
 import DesignerFriendly from "../components/DesignerFriendly";
 import Register from "../components/Register";
@@ -38,6 +40,8 @@ export default function Home() {
       <AboutUs />
       <DesignerFriendly />
       <Register />
+      <TracksThemes />
+      <Footer />
     </div>
   );
 }
