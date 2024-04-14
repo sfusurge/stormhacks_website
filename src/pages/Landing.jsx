@@ -2,15 +2,14 @@ import React from 'react';
 import PlaceHoldImage from "../../public/images/placehold-img.png";
 import Image from 'next/image';
 
-function Landing() {
+function Landing({ isMobileScreen }) {
     return (
         <>
             <div>
                 <div className={`${isMobileScreen ? 'items-start pt-32' : 'items-center h-[40vh] pt-24 pl-5'} flex flex-col justify-center text-white`}>
 
-                
-                    <h2 className='font-vollkorn'>MAY 18–19, 2024 @ SFU BURNABY</h2>
-                    <h1 className='text-5xl mt-1 mb-5 '>StormHacks 2024</h1>
+                    <h2 className='text-[24px] font-vollkorn'>MAY 18-19, 2024 @ SFU BURNABY</h2>
+                    <h1 className='text-[64px] font-vollkorn-sc mt-1 mb-5 '>StormHacks 2024</h1>
                     <p className={`${isMobileScreen ? '' : 'text-center'} text-xs justify-center max-w-sm`}>Lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
                     <div className={`${isMobileScreen ? 'w-full' : ''} mt-6 `}>
                     
