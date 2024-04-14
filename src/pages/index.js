@@ -1,5 +1,5 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import CurrentSponsors from "../sponsors/CurrentSponsors.jsx";
+import SponsorsGallery from "../components/Sponsors";
 import TracksThemes from "./TracksThemes/TracksThemes";
 import Footer from "./Footer";
 import AboutUs from "../components/AboutUs";
@@ -24,7 +24,7 @@ export default function Home() {
       <Register />
       <TracksThemes />
       <WhySponsorUs />
-      <CurrentSponsors />
+      <SponsorsGallery />
       <Footer />
     </div>
   );
