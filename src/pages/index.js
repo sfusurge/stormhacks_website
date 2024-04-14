@@ -8,6 +8,8 @@ import DesignerFriendly from "../components/DesignerFriendly";
 import Register from "../components/Register";
 import NavBar from "../components/NavBar";
 
+import useMobileScreen from "../utils/hooks/useMobileScreen.tsx"
+
 export async function getStaticProps({ locale }) {
   return {
     props: {
@@ -18,24 +20,12 @@ export async function getStaticProps({ locale }) {
 }
 
 export default function Home() {
-  
-  const [isMobileScreen, setIsMobileScreen] = useState(false);
 
-  useEffect(() => {
-        const handleResize = () => {
-            setIsMobileScreen(window.innerWidth < 768);
-        };
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-  }, []);
-
+  const isMobileScreen = useMobileScreen();
 
   return (
     <div className="[background:linear-gradient(180deg,_#241b38,_#231f20)] grid grid-cols-[1fr_min(115ch,_calc(100%-64px))_1fr] gap-x-[32px] [&>*]:col-span-1 [&>*]:col-start-2 desktop:gap-x-[7.5vh] mobile:gap-x-[5vh] place-content-center">
-      <NavBar isMobileScreen={isMobileScreen}/>
+      <NavBar isMobileScreen={isMobileScreen} />
       <Landing />
       <AboutUs />
       <DesignerFriendly />
