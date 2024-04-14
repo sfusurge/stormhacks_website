@@ -11,14 +11,13 @@ const FAQ: React.FC = () => {
             mobile:text-center"
             style={{ marginBottom: "20px" }}
           >
-            Frequently Asked <br className="hidden mobile:flex" />
-            Questions <br className="hidden mobile:flex" />
+            Frequently asked <br className="hidden mobile:flex" />
+            questions <br className="hidden mobile:flex" />
           </h1>
         </div>
 
         <div className="w-full flex justify-center">
           <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 w-full max-w-[880px]">
-
             <div className="p-4">
               <Accordion
                 title="What is this event about?"
@@ -91,7 +90,7 @@ const FAQ: React.FC = () => {
 
             <div className="p-4 ">
               <Accordion
-                title= "Is this a virtual or in-person hackathon?"
+                title="Is this a virtual or in-person hackathon?"
                 answer="StormHacks 2024 will be completely in-person, taking place on the SFU Burnaby campus. There will be no virtual participation this year."
               />
             </div>
@@ -116,8 +115,6 @@ const FAQ: React.FC = () => {
                 answer="Contact us through any of our social media links or at info@stormhacks.com!"
               />
             </div>
-
-
           </div>
         </div>
       </div>

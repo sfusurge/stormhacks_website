@@ -37,7 +37,7 @@ const Register = () => {
                 mobile:text-center">
                 Register for <br className="hidden mobile:flex"/>
                 StormHacks 2024 <br className="hidden mobile:flex"/>
-                Today
+                today
               </h1>
             </div>
 
