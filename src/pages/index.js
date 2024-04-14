@@ -7,8 +7,9 @@ import AboutUs from "../components/AboutUs";
 import DesignerFriendly from "../components/DesignerFriendly";
 import Register from "../components/Register";
 import NavBar from "../components/NavBar";
+import WhySponsorUs from "../components/WhySponsorUs";
 
-import useMobileScreen from "../utils/hooks/useMobileScreen.tsx"
+import useMobileScreen from "../utils/hooks/useMobileScreen.tsx";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -20,7 +21,6 @@ export async function getStaticProps({ locale }) {
 }
 
 export default function Home() {
-
   const isMobileScreen = useMobileScreen();
 
   return (
@@ -31,6 +31,7 @@ export default function Home() {
       <DesignerFriendly />
       <Register />
       <TracksThemes />
+      <WhySponsorUs />
       <Footer />
     </div>
   );
