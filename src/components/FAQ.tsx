@@ -8,7 +8,7 @@ const FAQ: React.FC = () => {
         <div className="self-stretch flex flex-col items-start justify-start gap-25px">
           <h1
             className="m-0 self-stretch relative text-[40px] leading-[100%] font-normal font-vollkorn
-                  mobile:text-left"
+            mobile:text-center"
             style={{ marginBottom: "20px" }}
           >
             Frequently Asked <br className="hidden mobile:flex" />
