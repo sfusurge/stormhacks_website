@@ -65,7 +65,7 @@ function Landing() {
                             <p>total hackers</p>
                         </div>
                         <div className='flex flex-col text-white mb-5'>
-                            <p className='relative text-[50px]'>$90k</p>
+                            <p className='relative text-[50px]'>$5k</p>
                             <p>in prizes</p>
                         </div>
                         <div className='flex flex-col text-white mb-5'>

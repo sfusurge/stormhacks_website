@@ -6,7 +6,7 @@ interface AccordionProps {
   answer: string;
 }
 
-const Accordion: React.FC<AccordionProps> = ({ title, answer}) => {
+const Accordion: React.FC<AccordionProps> = ({ title, answer }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
   const toggleAccordion = () => {
@@ -14,13 +14,17 @@ const Accordion: React.FC<AccordionProps> = ({ title, answer}) => {
   };
 
   return (
-    <div className="py-2">
+    <div className="p-4 border border-white">
       <button
         onClick={toggleAccordion}
         className="flex justify-between items-center w-full"
       >
         <span className="text-white">{title}</span>
-        <ChevronDown className={`text-white transition-transform ${accordionOpen ? "rotate-180" : ""}`} />
+        <ChevronDown
+          className={`text-white transition-transform ${
+            accordionOpen ? "rotate-180" : ""
+          }`}
+        />
       </button>
       <div
         className={`grid overflow-hidden transition-all duration-300 ease-in-out text-slate-600 text-sm ${
