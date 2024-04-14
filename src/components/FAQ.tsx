@@ -57,14 +57,7 @@ const FAQ: React.FC = () => {
             <div className="p-4 ">
               <Accordion
                 title="What are we allowed to work on?"
-                answer="We will be providing hackers with themes/topics at the opening ceremony of the event. Hardware projects are allowed, but unfortunately are unable to provide any materials/supplies, so you will have to bring your own."
-              />
-            </div>
-
-            <div className="p-4 ">
-              <Accordion
-                title="What should I bring?"
-                answer="Your laptop and any cables/chargers for your devices are highly recommended. If your project requires any additional equipment or hardware you will be responsible for bringing it in. We also recommend you to bring personal toiletries such as such a tooth brush and toothpaste if you plan on staying overnight."
+                answer="We will be providing hackers with themes/topics at the opening ceremony of the event. Hardware projects are allowed, but we are unfortunately unable to provide any materials/supplies, so you will have to bring your own."
               />
             </div>
 
@@ -98,7 +91,7 @@ const FAQ: React.FC = () => {
 
             <div className="p-4 ">
               <Accordion
-                title= "Virtual or In-Person this year?"
+                title= "Is this a virtual or in-person hackathon?"
                 answer="StormHacks 2024 will be completely in-person, taking place on the SFU Burnaby campus. There will be no virtual participation this year."
               />
             </div>
@@ -112,15 +105,8 @@ const FAQ: React.FC = () => {
 
             <div className="p-4 ">
               <Accordion
-                title="What are the requirements to join?"
-                answer="The only requirement we have is that you are a university undergraduate that can attend the event in-person. We're absolutely open to all individuals of any major or experience-level!"
-              />
-            </div>
-
-            <div className="p-4 ">
-              <Accordion
                 title="Do I have to stay overnight?"
-                answer=""
+                answer="No, you are free to leave the premises overnight, but make sure that your whole team are present during the daytime portions of our event and judging period."
               />
             </div>
 
