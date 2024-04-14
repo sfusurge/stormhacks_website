@@ -1,10 +1,12 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import TracksThemes from "./TracksThemes/TracksThemes";
 import Footer from "./Footer";
 import Landing from "./Landing";
 import AboutUs from "../components/AboutUs";
 import DesignerFriendly from "../components/DesignerFriendly";
 import Register from "../components/Register";
 import FAQ from "../components/FAQ"
+import WhySponsorUs from "../components/WhySponsorUs"
 
 export async function getStaticProps({ locale }) {
   return {
@@ -22,8 +24,10 @@ export default function Home() {
       <AboutUs />
       <DesignerFriendly />
       <Register />
+      <TracksThemes />
+      <WhySponsorUs />
       <FAQ/>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
