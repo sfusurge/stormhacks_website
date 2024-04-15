@@ -7,7 +7,7 @@ export type SponsorInfo = {
 
 export const Sponsors: Array<SponsorInfo> = [
   {
-    imagePath: "/sponsors/defang-logo.svg",
+    imagePath: "/sponsors/defang-logo.png",
     imageUrl: "https://defang.io/",
     altText: "Defang Software Labs company logo",
   },
@@ -42,7 +42,7 @@ export const Sponsors: Array<SponsorInfo> = [
     altText: "Red Bull company logo",
   },
   {
-    imagePath: "/sponsors/echo3D-logo.png",
+    imagePath: "/sponsors/echo3D-logos.png",
     imageUrl: "https://www.echo3d.com/",
     altText: "echo3D 3D asset management company logo",
   },
@@ -72,7 +72,7 @@ export const Sponsors: Array<SponsorInfo> = [
     altText: "Simon Fraser Student Society Bookstore Logo",
   },
   {
-    imagePath: "/sponsors/sfu-csss.png",
+    imagePath: "/sponsors/sfu-csss-logo.png",
     imageUrl: "https://sfucsss.org/",
     altText: "Computing Systems Student Society Logo",
   },
