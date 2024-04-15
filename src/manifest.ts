@@ -94,8 +94,8 @@ export const Sponsors: Array<SponsorInfo> = [
 ];
 
 export type FrequentlyAskedQuestionsInfo = {
-  title: String;
-  answer: String;
+  title: string;
+  answer: string;
 };
 
 export const FrequentlyAskedQuestions: Array<FrequentlyAskedQuestionsInfo> = [
