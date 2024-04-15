@@ -2,6 +2,7 @@ export type SponsorInfo = {
   imagePath: String;
   imageUrl: String;
   altText: String;
+  tier?: String;
 };
 
 export const Sponsors: Array<SponsorInfo> = [
@@ -11,7 +12,7 @@ export const Sponsors: Array<SponsorInfo> = [
     altText: "Defang Software Labs company logo",
   },
   {
-    imagePath: "/sponsors/ea-logo.svg",
+    imagePath: "/sponsors/ea-logo.png",
     imageUrl: "https://www.ea.com/",
     altText: "Electronic Arts Company logo",
   },
@@ -27,7 +28,7 @@ export const Sponsors: Array<SponsorInfo> = [
   },
   {
     imagePath: "/sponsors/jam-logo-color.png",
-    imageUrl: "https://www.google.com/",
+    imageUrl: "https://www.jam.dev/",
     altText: "Jam Company logo",
   },
   {
@@ -36,7 +37,7 @@ export const Sponsors: Array<SponsorInfo> = [
     altText: "BC Jobs company logo",
   },
   {
-    imagePath: "/sponsors/redbull.jpg",
+    imagePath: "/sponsors/redbull-logo.svg",
     imageUrl: "https://www.redbull.com/",
     altText: "Red Bull company logo",
   },
@@ -57,7 +58,7 @@ export const Sponsors: Array<SponsorInfo> = [
   },
   {
     imagePath: "/sponsors/scalar-logo-white.png",
-    imageUrl: "https://www.scalar.ca/",
+    imageUrl: "https://www.scalar.com/",
     altText: "BC Jobs company logo",
   },
   {
@@ -86,15 +87,15 @@ export const Sponsors: Array<SponsorInfo> = [
     altText: "Steve's Poke Bar company logo",
   },
   {
-    imagePath: "/sponsors/wolfram-corporate-logo-horz-med.png",
+    imagePath: "/sponsors/wolfram-logo.svg",
     imageUrl: "https://www.wolframalpha.com/",
     altText: "Wolfram Alpha company logo",
   },
 ];
 
 export type FrequentlyAskedQuestionsInfo = {
-  title: string;
-  answer: string;
+  title: String;
+  answer: String;
 };
 
 export const FrequentlyAskedQuestions: Array<FrequentlyAskedQuestionsInfo> = [
