@@ -19,9 +19,8 @@ function SponsorsGallery() {
 
       <div className="mb-16 grid desktop:full-bleed desktop:grid-cols-3 mobile:grid-cols-1 gap-12 place-content-center justify-items-center">
         {Sponsors.map((data, index) => (
-          <div className="my-auto">
+          <div className="my-auto" key={index}>
             <ClickableImage
-              key={index}
               src={data.imagePath}
               altText={data.altText}
               imageUrl={data.imageUrl}
