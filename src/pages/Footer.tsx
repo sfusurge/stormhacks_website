@@ -21,7 +21,7 @@ const Footer = () => {
             <Link
               href={PageLinkTypeInfo[type].href}
               key={type}
-              className="text-sm italic font-vollkorn"
+              className="text-sm text-white italic font-vollkorn"
             >
               {PageLinkTypeInfo[type].name}
             </Link>
