@@ -15,7 +15,7 @@ const FAQ: React.FC = () => {
 
       <section className="grid desktop:grid-cols-2 mobile:grid-cols-1 place-content-center desktop:gap-6 mobile:gap-4 px-24 w-full">
         {FrequentlyAskedQuestions.map((data, index) => (
-          <Accordion title={data.title} answer={data.answer} />
+          <Accordion title={data.title} answer={data.answer} key={index} />
         ))}
       </section>
     </>
