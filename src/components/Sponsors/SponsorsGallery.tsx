@@ -5,7 +5,10 @@ import { useEffect, useState } from "react";
 function SponsorsGallery() {
   return (
     <>
-      <div className="grid place-content-center desktop:mb-16 mobile:mb-8">
+      <div
+        className="grid place-content-center desktop:mb-16 mobile:mb-8"
+        id="sponsors"
+      >
         <h4 className="font-vollkorn-sc text-base text-white text-center pb-2">
           THANK YOU TO
         </h4>

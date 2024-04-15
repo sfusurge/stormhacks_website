@@ -47,25 +47,26 @@ function Landing() {
             dolor sit amet consectetur adipiscing elit.
           </p>
           <div className={`${isMobileScreen ? "w-full" : ""} mt-6 `}>
-    <button
-        onClick={() => window.location.href = registerAsAHackerURL}
-        className={`font-vollkorn ${
-            isMobileScreen ? "w-full mb-5 min-w-[200px]" : "mr-5"
-        } border text-customPurple bg-white py-2 px-4 hover:bg-gainsboro-100`}
-    >
-        Register as a Hacker
-    </button>
+            <a href="https://forms.gle/qHGjak2D1A8eUSuq7">
+              <button
+                className={`font-vollkorn ${
+                  isMobileScreen ? "w-full mb-5 min-w-[200px]" : "mr-5"
+                } border text-customPurple bg-white py-2 px-4 hover:bg-gainsboro-100`}
+              >
+                Register as a Hacker
+              </button>
+            </a>
 
-    <button
-        onClick={() => window.location.href = registerAsAMentorURL}
-        className={`font-vollkorn ${
-            isMobileScreen ? "w-full mb-10 min-w-[200px]" : ""
-        } border text-white py-2 px-4 hover:bg-gainsboro-200 hover:border-[1px] hover:border-solid hover:border-gainsboro-100`}
-    >
-        Register as a Mentor/Volunteer
-    </button>
-</div>
-
+            <a href="https://forms.gle/v6k3hDo2aFXESFAu5">
+              <button
+                className={`font-vollkorn ${
+                  isMobileScreen ? "w-full mb-10 min-w-[200px]" : ""
+                } border text-white py-2 px-4 hover:bg-gainsboro-200 hover:border-[1px] hover:border-solid hover:border-gainsboro-100`}
+              >
+                Register as a Mentor/Volunteer
+              </button>
+            </a>
+          </div>
         </div>
         <div className=" h-[51vh] flex justify-center items-center text-white">
           <Image src={PlaceHoldImage} width={600} alt="image" />

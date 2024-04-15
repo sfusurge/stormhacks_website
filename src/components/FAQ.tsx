@@ -8,6 +8,7 @@ const FAQ: React.FC = () => {
       <h1
         className="pb-8 text-center text-[40px] text-white leading-[100%] font-vollkorn"
         style={{ marginBottom: "20px" }}
+        id="faq"
       >
         Frequently asked <br className="hidden mobile:flex" />
         questions <br className="hidden mobile:flex" />
