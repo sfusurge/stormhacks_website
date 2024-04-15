@@ -11,11 +11,11 @@ export const Sponsors: Array<SponsorInfo> = [
     imageUrl: "https://defang.io/",
     altText: "Defang Software Labs company logo",
   },
-  {
-    imagePath: "/sponsors/ea-logo.png",
-    imageUrl: "https://www.ea.com/",
-    altText: "Electronic Arts Company logo",
-  },
+  // {
+  //   imagePath: "/sponsors/ea-logo.png",
+  //   imageUrl: "https://www.ea.com/",
+  //   altText: "Electronic Arts Company logo",
+  // },
   {
     imagePath: "/sponsors/evo-logo.png",
     imageUrl: "https://www.evo.ca/",
