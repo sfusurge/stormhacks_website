@@ -1,5 +1,5 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import SponsorsGallery from "../components/Sponsors";
+import SponsorsGallery from "../components/Sponsors/SponsorsGallery.tsx";
 import TracksThemes from "./TracksThemes/TracksThemes";
 import Footer from "./Footer";
 import AboutUs from "../components/AboutUs";
