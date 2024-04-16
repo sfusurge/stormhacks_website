@@ -29,7 +29,7 @@ export default function Home() {
       <NavBar isMobileScreen={isMobileScreen} />
       <Landing isMobileScreen={isMobileScreen} />
       <AboutUs />
-      <TracksThemes />
+      {/* <TracksThemes /> */}
       <WhySponsorUs />
       <SponsorsGallery />
       <FAQ />

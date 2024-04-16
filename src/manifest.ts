@@ -174,28 +174,28 @@ export const FrequentlyAskedQuestions: Array<FrequentlyAskedQuestionsInfo> = [
 
 export const TracksAndThemes: CardProps[] = [
   {
-    altText: "Track 1 Image Alt Text",
+    altText: "1st main track: Health and Wellness",
     imageUrl: "/images/card-img.svg",
-    subtitle: "Track 1",
-    title: "Track 1",
+    subtitle: "",
+    title: "Health and Wellness",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra  sem vel lectus posuere cursus. Sed eu diam ullamcorper, sagittis mauris  sit amet.",
+      "Explore innovative solutions that enhance personal health and promote wellness. This track encourages participants to develop tools aimed at improving physical, mental and emotional wellbeing. ",
   },
   {
-    altText: "Track 2 Image Alt Text",
+    altText: "2nd main track: Sustainability and the Environment",
     imageUrl: "/images/card-img.svg",
-    subtitle: "Track 2",
-    title: "Track 2",
+    subtitle: "",
+    title: "Sustainability and the Environment",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra  sem vel lectus posuere cursus. Sed eu diam ullamcorper, sagittis mauris  sit amet.",
+      "Create sustainable technologies that protect our environment and conserve resources. This track challenges hackers to devise eco-friendly solutions that address problems like climate change, waste reduction and renewable energy.",
   },
   {
-    altText: "Track 3 Image Alt Text",
+    altText: "Third main track: Social Connectivity",
     imageUrl: "/images/card-img.svg",
-    subtitle: "Track 3",
-    title: "Track 3",
+    subtitle: "",
+    title: "Social Connectivity",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra  sem vel lectus posuere cursus. Sed eu diam ullamcorper, sagittis mauris  sit amet.",
+      "Develop applications that empower people and strengthen communities through digital connectivity. This track is perfect for projects aimed at improving community engagement, enhancing digital interactions and facilitating better communication technologies.",
   },
 ];
 
