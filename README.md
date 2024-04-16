@@ -1,181 +1,36 @@
-# StormHacks Website
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-The source code and development repository for [https://stormhacks.com/](https://stormhacks.com/).
+## Getting Started
 
-<img src=".github/assets/stormhacks.svg" alt="StormHacks Logo" />
+First, run the development server:
 
-Hosted by <a href="https://sfusurge.com/"><img src=".github/assets/surge.svg" height="16" style="height: 1em; line-height: 100%" /> SFU Surge</a>.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-&nbsp;
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-**Table of Contents:**
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- [Contributing](#contributing)
-   - [Setup (The Easy Way)](#setup-the-easy-way)
-   - [Setup (The Hard Way)](#setup-the-hard-way)
-   - [Development](#development)
-      - [VS Code](#vs-code)
-   - [Workflow](#workflow)
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Learn More
 
+To learn more about Next.js, take a look at the following resources:
 
-&nbsp;
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Contributing
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-### Setup (The Easy Way)
+## Deploy on Vercel
 
-<details><summary><b>MacOS / Linux</b></summary><div>
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-1. **Install nvm for Bash:** https://github.com/nvm-sh/nvm#installing-and-updating
-2. **Run the start script.**
-   ```bash
-   ./start.sh
-   ```
-
-</div></details>
-
-<details><summary><b>Windows</b></summary><div>
-
-1. **Install PowerShell.**
-2. **Install nvm for PowerShell:** https://github.com/aaronpowell/ps-nvm
-3. **Run the start script.**
-   ```bash
-   .\start.ps1
-   ```
-
-</div></details>
-
-
-### Setup (The Hard Way)
-
-1. **Clone the repository.**  
-   
-   ```bash
-   https://github.com/sfusurge/stormhacks_website.git
-   ```
-   
-2. **Install `nvm` (Node Version Manager)**
-
-   - [Bash/Zsh](https://github.com/nvm-sh/nvm)
-   - [Fish Shell](https://github.com/jorgebucaran/nvm.fish)
-   - [PowerShell](https://github.com/aaronpowell/ps-nvm) (Windows)
-
-3. **Log in to GitHub Packages with NPM**
-
-   Create a [Personal Access Token] for your GitHub account, then log in to the registry by running the following account
-
-   ```bash
-   npm login --registry=https://npm.pkg.github.com
-   ```
-
-   > ```
-   > Username: YOUR-GITHUB-USERNAME 
-   > Password: ghp_xxxx
-   > Email: YOUR-GITHUB-EMAIL
-   > ```
-
-4. **Install development dependencies.**  
-   
-   ```bash
-   nvm use
-   npm install
-   ```
-
-
-### Development
-
-Run `npm start` to open a local dev server for the StormHacks website.
-
-#### VS Code
-
-If you prefer using Visual Studio Code for development, this repository contains an already-configured workspace with recommended folder layouts and settings.
-
-To open the workspace, open the `Stormhacks.code-workspace` folder through your file browser, or with `File: Open Workspace from File...` in the VS Code command palette.
-
-#### IntelliJ / WebStorm
-
-All the settings required for development with IntelliJ-platform IDEs are included, but you need to do a tiny bit of setup first:
-
-1. Associate `tsconfig.paths.json` with the `TypeScript config` file type.  
-   Go to *Settings -> Editor -> File Types -> TypeScript config* and add  `tsconfig.paths.json` as a file name pattern.
-
-2. Enable `eslint`.  
-   Go to *Settings -> Languages & Frameworks -> JavaScript -> Code Quality Tools -> ESLint* and select "Manual ESLint configuration".
-
-3. If you don't already have the Prettier plugin installed, please install it.
-
-
-### Workflow
-
-1. **Checkout the latest `main` branch and create a feature branch.**
-   
-   ```bash
-   git checkout main
-   git pull
-   git checkout -b my-feature
-   ```
-   
-2. **Work on your changes.**  
-   Make sure to periodically commit and push your changes!
-   
-   > **Commit Policy:**  
-   > 
-   > - Run `npm run format` before adding files to the commit.
-   > - Each commit should be buildable by itself.
-   > - Each commit should (ideally) be one change.
-   > - Commit messages should be descriptive. 
-
-3. **Rebase against the latest `main`.**  
-   
-   ```bash
-   git push
-   git fetch
-   git rebase origin/main
-   git push --force  # DO NOT DO THIS IF MULTIPLE PEOPLE ARE WORKING ON THE BRANCH
-   ```
-   
-   If it doesn't work, let @eth-p know and he'll fix it!
-   
-   Tip: You can undo a merge-conflicted rebase by running `git rebase --abort`.
-
-4. **Open a Pull Request for your branch.**
-   
-   https://github.com/sfusurge/stormhacks_website/compare
-   
-5. **Ask another @Developer to review your Pull Request.**
-
-   Request a review using GitHub and message the developer channel on Slack. If you need a quicker review, you can DM another developer on Discord.
-   
-6. **Merge your approved Pull Request.**
-
-   Great job! Once your Pull Request is merged, it will be deployed automatically.
-
-
-&nbsp;
-
-
-## Archives
-
-Archives are hosted at the `archive.stormhacks.com` domain. Each site is built and served by Netlify, and wrapped inside an `<iframe>` for presentation on the archive website.
-
-|Year|Status|
-|:--|:--|
-|**[2021](https://archive.stormhacks.com/2021/)**|[![Netlify Status](https://api.netlify.com/api/v1/badges/fc4b6043-e750-49f7-8508-227fce824f38/deploy-status)](https://app.netlify.com/sites/stormhacks-archive-2021-internal/deploys)|
-|**[2022](https://archive.stormhacks.com/2022/)**|[![Netlify Status](https://api.netlify.com/api/v1/badges/1fbaa297-4792-494a-b6d0-aec23050bd07/deploy-status)](https://app.netlify.com/sites/stormhacks-archive-2022-internal/deploys)|
-
-### Creating Archives
-
-1. Check out final copy of the current website as a new `archives/[year]` branch.
-
-2. Modify the `index.html` page to include the following:
-   
-   ```html
-   <script src="https://archive.stormhacks.com/history-client.js"></script>
-   ```
-   
-   This script allows `react-router-dom` and browser navigation to work properly from within the presentation iframe.
-
-3. Create a Netlify site for this repo targeting the `archives/[year]` branch.
-
-4. Check out the `archives/site` branch and add the archive to the `src/archives.js` file.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
