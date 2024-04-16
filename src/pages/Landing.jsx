@@ -18,6 +18,7 @@ function Landing({ isMobileScreen }) {
           MAY 18–19, 2024 @ SFU BURNABY
         </h2>
         <Image
+          alt="Stormhacks logo"
           src={isMobileScreen ? MobileLogo : DesktopLogo}
           className="mb-12"
         />

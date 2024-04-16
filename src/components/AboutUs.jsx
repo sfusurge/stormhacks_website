@@ -11,41 +11,29 @@ const AboutUsSection = () => {
         className="self-stretch flex flex-row items-start justify-center py-0 box-border max-w-full
           text-left text-base text-white font-vollkorn-sc pb-16"
       >
-        <div className="w-[880px] flex flex-row flex-wrap items-start justify-center gap-[40px] max-w-full">
-          <div
-            className="flex-1 flex flex-col items-start justify-start pt-4 px-0 pb-0 box-border min-w-[270px]
-              max-w-full"
-          >
-            <div className="self-stretch flex flex-col items-start justify-start gap-[20px]">
-              <div className="flex flex-col items-start justify-start gap-[5px]">
-                <div className="relative font-semibold inline-block min-w-[75px]">
-                  about us
-                </div>
-                <h1 className="m-0 relative text-[40px] leading-[100%] font-normal font-vollkorn">
-                  Beginner-friendly
-                </h1>
-              </div>
-              <div className="self-stretch h-[110px] relative font-vollkorn inline-block leading-snug">
-                Make your first hackathon special at StormHacks 2024. In past
-                events, 46% of participants have been new hackers— SH24 is one
-                of the top places for you to join other beginners in tech and
-                self-starters for life-long learning, challenges and more.
-              </div>
+        <div className="w-[880px] grid desktop:grid-cols-2 mobile:grid-cols-1 gap-[40px] max-w-full">
+          <div className="text-white">
+            <h2 className="font-vollkorn-sc text-base mb-2">about us</h2>
+            <h1 className="mb-4 relative text-[40px] leading-[100%] font-normal font-vollkorn">
+              Beginner-friendly
+            </h1>
+            <div className="font-vollkorn text-base whitespace-pre-wrap">
+              Make your first hackathon special at StormHacks 2024. In past
+              events, 46% of participants have been new hackers— SH24 is one of
+              the top places for you to join other beginners in tech and
+              self-starters for life-long learning, challenges and more.
             </div>
           </div>
-          <div className="h-[300px] flex-1 relative min-w-[270px] max-w-full hidden desktop:flex">
-            <div className="absolute top-0 left-0 rounded-md bg-whitesmoke w-full h-full" />
-            <div className="absolute inset-0 flex justify-center items-center">
-              <Image
-                alt="Image of organizers at Stormhacks 2023"
-                src={aboutUsImage1}
-                fill
-                className="rounded"
-                style={{
-                  objectFit: "cover",
-                }}
-              />
-            </div>
+
+          <div className="h-[300px] min-w-[270px] max-w-[440px] place-self-center">
+            <Image
+              alt="Image of organizers at Stormhacks 2023"
+              src={aboutUsImage1}
+              className="rounded"
+              style={{
+                objectFit: "cover",
+              }}
+            />
           </div>
         </div>
       </section>
@@ -54,60 +42,49 @@ const AboutUsSection = () => {
 };
 
 const DesignerFriendlySection = () => {
-  const designerFriendlyImageName = "/designer-friendly.png";
+  const isMobileScreen = useMobileScreen();
 
   return (
     <>
       <section
-        className="desktop:mb-16 mobile:mb-32 self-stretch flex flex-row items-start justify-center py-0 box-border max-w-full
-      text-left text-base text-white font-vollkorn-sc"
+        className="desktop:mb-16 self-stretch flex flex-row items-start justify-center py-0 box-border max-w-full
+      text-left text-base"
       >
-        <div className="w-[880px] flex flex-row flex-wrap items-start justify-center gap-[40px] max-w-full">
-          <div
-            className="h-[430px] flex-1 relative min-w-[270px] max-w-full justify-center items-center
-          hidden desktop:flex"
-          >
-            <div className="absolute top-[0px] left-[0px] rounded-md bg-whitesmoke w-full h-full" />
+        <div className="w-[880px] grid desktop:grid-cols-2 mobile:grid-rows-2 gap-[40px] max-w-full">
+          <div className="mb-auto h-[300px] min-w-[270px] max-w-[440px] mobile:row-start-2 place-self-center">
             <Image
               alt="Image of organizers at Stormhacks 2023"
               src={aboutUsImage2}
-              fill
-              className="rounded border"
+              className="rounded"
               style={{
                 objectFit: "cover",
               }}
             />
           </div>
-          <div
-            className="flex-1 flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border min-w-[270px]
-          max-w-full"
-          >
-            <div className="self-stretch flex flex-col items-start justify-start gap-[20px]">
-              <div className="self-stretch flex flex-col items-start justify-start mobile:pt-4 gap-[4px]">
-                <div className="relative font-semibold">designer-friendly</div>
-                <h1 className="m-0 self-stretch relative text-[40px] leading-[100%] font-normal font-vollkorn">
-                  Coding is not a must-have
-                </h1>
-              </div>
-              <div className="self-stretch h-[220px] relative font-vollkorn inline-block leading-snug">
-                <p className="m-0 whitespace-pre-wrap">
-                  One of the most challenging things about a hackathon can be
-                  developing your final submission, especially for hackers who
-                  are aiming to build their design skills, sharing their ideas
-                  and stories through visuals and experiences. This can often
-                  lead to people feeling left out or discouraged from even
-                  {/* eslint-disable-next-line react/no-unescaped-entities */}
-                  entering their first hackathon, especially if you're entering
-                  on your own.
-                </p>
-                <p className="m-0 mb-4"></p>
-                <p className="m-0">
-                  {/* eslint-disable-next-line react/no-unescaped-entities */}
-                  For all you designers, we're hosting prizes and workshops to
-                  help support your no-code solutions and prototypes!
-                </p>
-              </div>
-            </div>
+
+          <div className="text-white mobile:row-start-1">
+            <h2 className="font-vollkorn-sc text-base mb-2">
+              Designer-friendly
+            </h2>
+            <h1 className="mb-4 text-heading leading-[100%] font-vollkorn">
+              Coding is not a must-have
+            </h1>
+            <p className="whitespace-pre-wrap font-vollkorn">
+              One of the most challenging things about a hackathon can be
+              developing your final submission, especially for hackers who are
+              aiming to build their design skills, sharing their ideas and
+              stories through visuals and experiences. This can often lead to
+              people feeling left out or discouraged from even
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
+              entering their first hackathon, especially if you're entering on
+              your own.
+            </p>
+            <br />
+            <p className="font-vollkorn">
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
+              For all you designers, we're hosting prizes and workshops to help
+              support your no-code solutions and prototypes!
+            </p>
           </div>
         </div>
       </section>

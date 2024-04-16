@@ -19,7 +19,7 @@ function NavBar({ isMobileScreen }) {
           style={{ position: "fixed", top: 0, width: "", zIndex: 100 }}
         >
           <button className="" onClick={toggleNav}>
-            <Image src={NavIcon} height={40} />
+            <Image alt="Stormhacks navigation icon" src={NavIcon} height={40} />
           </button>
 
           {showNav && (
