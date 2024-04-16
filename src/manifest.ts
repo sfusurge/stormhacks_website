@@ -84,7 +84,7 @@ export const Sponsors: Array<SponsorInfo> = [
     altText: "Standout Stickers company logo",
   },
   {
-    imagePath: "/sponsors/steves-poke.jpg",
+    imagePath: "/sponsors/steves-poke.png",
     imageUrl: "https://www.stevespokebar.ca/",
     altText: "Steve's Poke Bar company logo",
   },
