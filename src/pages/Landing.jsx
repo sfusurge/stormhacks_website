@@ -49,9 +49,16 @@ function Landing({ isMobileScreen }) {
             </a>
           </div>
         </div>
+
         <div className=" h-[51vh] flex justify-center items-center text-white">
-          <Image src={PlaceHoldImage} width={600} alt="image" />
+          <Image
+            src={"/images/hero-section.png"}
+            fill={true}
+            alt="image"
+            style={{ zIndex: -1 }}
+          />
         </div>
+
         <div className="pt-10  flex justify-center font-vollkorn">
           <div
             className={`w-[70vw] ${

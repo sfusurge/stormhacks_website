@@ -17,8 +17,8 @@ const ImageCard: React.FC<CardProps> = ({
   description,
 }) => {
   return (
-    <div className="desktop:w-[237px] mobile:w-[300px]">
-      <div className="mb-5 desktop:w-[237px] desktop:h-[217px] mobile:w-[300px] mobile:h-[200px]">
+    <div className="desktop:w-[237px] mobile:min-w-[300px] mobile:max-w-[382px]">
+      <div className="mb-5 desktop:w-[237px] desktop:h-[217px] mobile:min-w-[300px] mobile:max-w-[382px] mobile:h-[200px]">
         <Image
           src={imageUrl}
           alt={altText}
