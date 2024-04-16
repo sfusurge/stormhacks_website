@@ -1,18 +1,18 @@
 import React from "react";
 import ImageCard from "@/components/TracksThemes/ImageCard";
-import TracksInfo from "./TracksInfo.json";
+import { TracksAndThemes } from "@/manifest";
 
 const TracksThemes = () => {
   return (
-    <div className="mb-16 flex desktop:flex-row mobile:flex-col justify-between text-white items-center">
-      {TracksInfo.map((track, index) => (
+    <div className="mb-16 flex desktop:flex-row desktop:items-stretch mobile:flex-col justify-between text-white items-center">
+      {TracksAndThemes.map((track, index) => (
         <ImageCard
           key={index}
-          imageUrl={track.imagePath}
-          alt={track.alt}
-          subtitle={track.trackSubtitle}
-          title={track.trackTitle}
-          description={track.trackDescription}
+          imageUrl={track.imageUrl}
+          altText={track.altText}
+          subtitle={track.subtitle}
+          title={track.title}
+          description={track.description}
         />
       ))}
     </div>

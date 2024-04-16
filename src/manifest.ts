@@ -1,3 +1,5 @@
+import { CardProps } from "./components/TracksThemes/ImageCard";
+
 export type SponsorInfo = {
   imagePath: String;
   imageUrl: String;
@@ -170,37 +172,58 @@ export const FrequentlyAskedQuestions: Array<FrequentlyAskedQuestionsInfo> = [
   },
 ];
 
-export type TrackInfo = {
-  altText: string;
-  imagePath: string;
-  trackSubtitle: string;
-  trackTitle: string;
-  trackDescription: string;
-};
-
-export const TracksAndThemes: TrackInfo[] = [
+export const TracksAndThemes: CardProps[] = [
   {
     altText: "Track 1 Image Alt Text",
-    imagePath: "/images/card-img.svg",
-    trackSubtitle: "Track 1",
-    trackTitle: "Track 1",
-    trackDescription:
+    imageUrl: "/images/card-img.svg",
+    subtitle: "Track 1",
+    title: "Track 1",
+    description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra  sem vel lectus posuere cursus. Sed eu diam ullamcorper, sagittis mauris  sit amet.",
   },
   {
     altText: "Track 2 Image Alt Text",
-    imagePath: "/images/card-img.svg",
-    trackSubtitle: "Track 2",
-    trackTitle: "Track 2",
-    trackDescription:
+    imageUrl: "/images/card-img.svg",
+    subtitle: "Track 2",
+    title: "Track 2",
+    description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra  sem vel lectus posuere cursus. Sed eu diam ullamcorper, sagittis mauris  sit amet.",
   },
   {
     altText: "Track 3 Image Alt Text",
-    imagePath: "/images/card-img.svg",
-    trackSubtitle: "Track 3",
-    trackTitle: "Track 3",
-    trackDescription:
+    imageUrl: "/images/card-img.svg",
+    subtitle: "Track 3",
+    title: "Track 3",
+    description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra  sem vel lectus posuere cursus. Sed eu diam ullamcorper, sagittis mauris  sit amet.",
+  },
+];
+
+export const WhySponsor: CardProps[] = [
+  {
+    altText: "Sponsor Stormhacks to recruit for the future",
+    imageUrl: "/images/card-img.svg",
+    subtitle: "",
+    title: "Recruit for the future",
+    description:
+      "Get exposure and access to a huge pool of top technical talent across the Canadian West Coast. Find the next set of candidates who will grow your competitive advantage.",
+  },
+  {
+    altText:
+      "Promote and receive feedback when you choose to sponsor Stormhacks!",
+    imageUrl: "/images/card-img.svg",
+    subtitle: "",
+    title: "Promotion + Receive Feedback",
+    description:
+      "With options for sponsoring your own prize & challenge, you can highlight the potential of your product or API as hackers gain hands-on experience using your platform.",
+  },
+  {
+    altText:
+      "Make a lasting impression on potential candidates when you support Stormhacks!",
+    imageUrl: "/images/card-img.svg",
+    subtitle: "",
+    title: "Make an Impression",
+    description:
+      "Boost your brand awareness by sharing company swag, or sponsoring a fun event. Directly engage with hackers from Vancouver's growing tech community and beyond!",
   },
 ];

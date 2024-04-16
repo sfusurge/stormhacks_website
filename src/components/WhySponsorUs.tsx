@@ -1,13 +1,15 @@
-import Image from "next/image";
+import { WhySponsor } from "@/manifest";
+import { TracksAndThemes } from "@/manifest";
+import ImageCard from "./TracksThemes/ImageCard";
 const WhySponsorUs = () => {
   const registerImageName = "/images/card-img.svg";
   return (
     <>
-      <div className="text-center text-white pb-5 pt-10 text-[16px]">
+      <div className="font-vollkorn-sc text-center text-white pb-5 pt-10 text-base">
         PLEASE SPONSOR US
       </div>
 
-      <div className="text-center text-white pb-8 text-[40px]">
+      <div className="font-vollkorn text-center text-white pb-8 text-heading">
         Why sponsor us?
       </div>
 
@@ -16,7 +18,7 @@ const WhySponsorUs = () => {
         We're looking for passionate companies and organizations looking to
         foster talent across the global tech community—people hoping to take on
         young and innovative minds, presenting meaningful opportunities and
-        challenge students’ limits.
+        challenge students' limits.
       </div>
 
       <div className="flex justify-center pb-10">
@@ -24,71 +26,17 @@ const WhySponsorUs = () => {
           Sponsor us now
         </button>
       </div>
-      <div>
-        <div className="flex desktop:flex-row mobile:flex-col justify-between text-white py-20 text-white items-center">
-          <div>
-            <div className="rounded-md bg-whitesmoke desktop:w-[237px] desktop:h-[217px] mobile:w-[382px] mobile:h-[200px]">
-              <Image
-                className="w-full h-full object-cover"
-                alt=""
-                src={registerImageName}
-                width={0}
-                height={0}
-              />
-            </div>
-
-            <h2 className="text-white pb-8  font-vollkorn text-[24px] mt-3 desktop:w-[237px] mobile:w-[382px]">
-              Make an impression
-            </h2>
-
-            <h1 className=" text-white  font-vollkorn pb-8 text-[16px] desktop:w-[237px] desktop:h-[217px] mobile:w-[382px] mobile:h-[200px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              pharetra sem vel lectus posuere cursus. Sed eu diam.
-            </h1>
-          </div>
-
-          <div>
-            <div className="rounded-md bg-whitesmoke desktop:w-[237px] desktop:h-[217px] mobile:w-[382px] mobile:h-[200px]">
-              <Image
-                className="w-full h-full object-cover"
-                alt=""
-                src={registerImageName}
-                width={0}
-                height={0}
-              />
-            </div>
-
-            <div className="text-white font-vollkorn pb-8 text-[24px] mt-3 desktop:w-[237px] mobile:w-[382px]">
-              Make an impression
-            </div>
-
-            <div className=" text-white font-vollkorn pb-8 text-[16px] desktop:w-[237px] desktop:h-[217px] mobile:w-[382px] mobile:h-[200px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              pharetra sem vel lectus posuere cursus. Sed eu diam.
-            </div>
-          </div>
-
-          <div>
-            <div className="rounded-md bg-whitesmoke desktop:w-[237px] desktop:h-[217px] mobile:w-[382px] mobile:h-[200px]">
-              <Image
-                className="w-full h-full object-cover"
-                alt=""
-                src={registerImageName}
-                width={0}
-                height={0}
-              />
-            </div>
-
-            <div className="text-white font-vollkorn pb-8 text-[24px] mt-3 desktop:w-[237px] mobile:w-[382px]">
-              Make an impression
-            </div>
-
-            <div className=" text-white font-vollkorn pb-8 text-[16px] desktop:w-[237px] desktop:h-[217px] mobile:w-[382px] mobile:h-[200px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              pharetra sem vel lectus posuere cursus. Sed eu diam.
-            </div>
-          </div>
-        </div>
+      <div className="mb-16 flex desktop:flex-row desktop:items-stretch mobile:flex-col justify-between text-white items-center">
+        {WhySponsor.map((sponsor, index) => (
+          <ImageCard
+            key={index}
+            title={sponsor.title}
+            subtitle={""}
+            altText={sponsor.altText}
+            description={sponsor.description}
+            imageUrl={sponsor.imageUrl}
+          />
+        ))}
       </div>
     </>
   );

@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-interface CardProps {
+export interface CardProps {
   imageUrl: string;
-  alt: string;
+  altText: string;
   subtitle: string;
   title: string;
   description: string;
@@ -11,7 +11,7 @@ interface CardProps {
 
 const ImageCard: React.FC<CardProps> = ({
   imageUrl,
-  alt,
+  altText,
   subtitle,
   title,
   description,
@@ -21,7 +21,7 @@ const ImageCard: React.FC<CardProps> = ({
       <div className="mb-5 desktop:w-[237px] desktop:h-[217px] mobile:w-[382px] mobile:h-[200px]">
         <Image
           src={imageUrl}
-          alt={alt}
+          alt={altText}
           width={0}
           height={0}
           className="w-full h-full object-cover"
