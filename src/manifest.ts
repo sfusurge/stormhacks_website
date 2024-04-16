@@ -169,3 +169,38 @@ export const FrequentlyAskedQuestions: Array<FrequentlyAskedQuestionsInfo> = [
       "Contact us through any of our social media links or at info@stormhacks.com!",
   },
 ];
+
+export type TrackInfo = {
+  altText: string;
+  imagePath: string;
+  trackSubtitle: string;
+  trackTitle: string;
+  trackDescription: string;
+};
+
+export const TracksAndThemes: TrackInfo[] = [
+  {
+    altText: "Track 1 Image Alt Text",
+    imagePath: "/images/card-img.svg",
+    trackSubtitle: "Track 1",
+    trackTitle: "Track 1",
+    trackDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra  sem vel lectus posuere cursus. Sed eu diam ullamcorper, sagittis mauris  sit amet.",
+  },
+  {
+    altText: "Track 2 Image Alt Text",
+    imagePath: "/images/card-img.svg",
+    trackSubtitle: "Track 2",
+    trackTitle: "Track 2",
+    trackDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra  sem vel lectus posuere cursus. Sed eu diam ullamcorper, sagittis mauris  sit amet.",
+  },
+  {
+    altText: "Track 3 Image Alt Text",
+    imagePath: "/images/card-img.svg",
+    trackSubtitle: "Track 3",
+    trackTitle: "Track 3",
+    trackDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra  sem vel lectus posuere cursus. Sed eu diam ullamcorper, sagittis mauris  sit amet.",
+  },
+];
