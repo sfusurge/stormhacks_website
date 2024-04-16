@@ -68,12 +68,6 @@ function NavBar({ isMobileScreen }) {
               </Link>
             </ul>
           </div>
-          <div className="flex ml-auto">
-            <Image width={40} src={PlaceHoldImage2} />
-            <Image width={40} src={PlaceHoldImage2} />
-            <Image width={40} src={PlaceHoldImage2} />
-            <Image width={40} src={PlaceHoldImage2} />
-          </div>
         </div>
       )}
     </>

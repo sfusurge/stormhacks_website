@@ -10,11 +10,11 @@ const Footer = () => {
   return (
     <footer className="mt-24">
       <hr className="absolute left-0 right-0" />
-      <div className="flex justify-center items-center mt-10 mx-auto mb-5">
+      {/* <div className="flex justify-center items-center mt-10 mx-auto mb-5">
         <Image src={FooterImage} alt="" width={160} height={60} />
-      </div>
+      </div> */}
 
-      <nav className="flex justify-center space-x-6 mb-5 flex-wrap">
+      <nav className="flex justify-center space-x-6 my-5 flex-wrap">
         {Object.values(PageLinkType).map((type) => {
           if (typeof type === "string") return null;
           return (
@@ -29,12 +29,12 @@ const Footer = () => {
         })}
       </nav>
 
-      <div className="flex justify-center space-x-6 mb-10">
+      {/* <div className="flex justify-center space-x-6 mb-10">
         {Object.values(SocialLinkType).map((type) => {
           if (typeof type === "string") return null;
           return <SocialLinkIcon key={type} type={type} />;
         })}
-      </div>
+      </div> */}
     </footer>
   );
 };

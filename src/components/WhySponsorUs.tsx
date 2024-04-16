@@ -26,7 +26,7 @@ const WhySponsorUs = () => {
           Sponsor us now
         </button>
       </div>
-      <div className="mb-16 flex desktop:flex-row desktop:items-stretch mobile:flex-col justify-between text-white items-center">
+      {/* <div className="mb-16 flex desktop:flex-row desktop:items-stretch mobile:flex-col justify-between text-white items-center">
         {WhySponsor.map((sponsor, index) => (
           <ImageCard
             key={index}
@@ -37,7 +37,7 @@ const WhySponsorUs = () => {
             imageUrl={sponsor.imageUrl}
           />
         ))}
-      </div>
+      </div> */}
     </>
   );
 };
