@@ -11,7 +11,7 @@ function Landing({ isMobileScreen }) {
 
                 
                     <h2 className='font-vollkorn-sc text-[20px]'>MAY 18–19, 2024 @ SFU BURNABY</h2>
-                    <h1 className='mt-1 mb-5 text-[64px] font-vollkorn'>StormHacks 2024</h1>
+                    <h1 className='mt-1 mb-5 desktop:text-[64px] mobile:text-[48px] font-vollkorn'>StormHacks 2024</h1>
                     <p className={`${isMobileScreen ? '' : 'text-center'} text-xs justify-center max-w-sm`}>Lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
                     <div className={`${isMobileScreen ? 'w-full' : ''} mt-6 `}>
                     

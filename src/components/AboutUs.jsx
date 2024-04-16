@@ -6,7 +6,7 @@ const AboutUsSection = () => {
   return (
     <>
         <section
-          className="self-stretch flex-row items-start justify-center py-0 px-5 box-border max-w-full
+          className="self-stretch flex-row items-start justify-center py-0 box-border max-w-full
           text-left text-base text-white font-vollkorn-sc hidden mobile:flex"
           id="about"
         >
@@ -26,7 +26,7 @@ const AboutUsSection = () => {
         </section>
 
         <section
-          className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full
+          className="self-stretch flex flex-row items-start justify-center py-0 box-border max-w-full
           text-left text-base text-white font-vollkorn-sc pb-16"
         >
           <div className="w-[880px] flex flex-row flex-wrap items-start justify-center gap-[40px] max-w-full">
@@ -77,7 +77,7 @@ const DesignerFriendlySection = () => {
 
   return (
     <>
-      <section className="self-stretch flex-row items-start justify-center py-0 px-5 box-border max-w-full
+      <section className="self-stretch flex-row items-start justify-center py-0 box-border max-w-full
       text-left text-base text-white font-vollkorn-sc hidden mobile:flex">
         <div className="h-[240px] flex-1 relative min-w-[270px] max-w-full flex justify-center items-center">
           <div className="absolute top-[0px] left-[0px] rounded-md bg-whitesmoke w-full h-full" />
@@ -96,8 +96,8 @@ const DesignerFriendlySection = () => {
         </div>
       </section>
 
-      <section className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full
-      text-left text-base text-white font-vollkorn-sc pb-16">
+      <section className="desktop:mb-16 mobile:mb-32 self-stretch flex flex-row items-start justify-center py-0 box-border max-w-full
+      text-left text-base text-white font-vollkorn-sc">
         <div className="w-[880px] flex flex-row flex-wrap items-start justify-center gap-[40px] max-w-full">
           <div className="h-[430px] flex-1 relative min-w-[270px] max-w-full justify-center items-center
           hidden desktop:flex">
@@ -156,7 +156,7 @@ const RegisterSection = () => {
   const isMobileScreen = useMobileScreen()
 
   return  (
-    <section className="px-5 mb-24 desktop:grid desktop:grid-cols-1 desktop:content-center text-white">
+    <section className="mb-20 desktop:grid desktop:grid-cols-1 desktop:content-center text-white">
       <h2 className="desktop:text-center mobile:text-left text-base font-vollkorn-sc text-white">
         What are you waiting for?
       </h2>

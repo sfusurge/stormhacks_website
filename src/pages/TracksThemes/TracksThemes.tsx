@@ -4,7 +4,7 @@ import TracksInfo from "./TracksInfo.json"
 
 const TracksThemes = () => {
     return (
-        <div className="flex desktop:flex-row mobile:flex-col justify-between text-white items-center py-20">
+        <div className="mb-16 flex desktop:flex-row mobile:flex-col justify-between text-white items-center">
             {TracksInfo.map((track, index) => (
                 <TrackCard 
                     key={index}
