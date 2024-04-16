@@ -4,13 +4,12 @@ import Landing from "./Landing";
 import SponsorsGallery from "../components/Sponsors/SponsorsGallery.tsx";
 import TracksThemes from "./TracksThemes/TracksThemes";
 import Footer from "./Footer";
-import Landing from "./Landing";
 import AboutUs from "../components/AboutUs";
 import DesignerFriendly from "../components/DesignerFriendly";
 import Register from "../components/Register";
 import NavBar from "../components/NavBar";
 import WhySponsorUs from "../components/WhySponsorUs";
-
+import FAQ from "../components/FAQ"
 import useMobileScreen from "../utils/hooks/useMobileScreen.tsx";
 
 export async function getStaticProps({ locale }) {
