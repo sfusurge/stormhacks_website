@@ -17,8 +17,8 @@ const ImageCard: React.FC<CardProps> = ({
   description,
 }) => {
   return (
-    <div className="desktop:w-[237px] mobile:w-[382px]">
-      <div className="mb-5 desktop:w-[237px] desktop:h-[217px] mobile:w-[382px] mobile:h-[200px]">
+    <div className="desktop:w-[237px] mobile:w-[300px]">
+      <div className="mb-5 desktop:w-[237px] desktop:h-[217px] mobile:w-[300px] mobile:h-[200px]">
         <Image
           src={imageUrl}
           alt={altText}
@@ -27,11 +27,11 @@ const ImageCard: React.FC<CardProps> = ({
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="mb-10">
+      <div className="mb-10 w-full">
         <h2 className="font-vollkorn font-semibold uppercase text-base">
           {subtitle}
         </h2>
-        <h1 className="font-vollkorn text-[2.5rem]">{title}</h1>
+        <h1 className="font-vollkorn text-heading">{title}</h1>
         <p className="font-vollkorn text-base">{description}</p>
       </div>
     </div>
