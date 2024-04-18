@@ -114,7 +114,7 @@ const RegisterSection = () => {
             <button
               className={`font-vollkorn ${
                 isMobileScreen ? "w-full mb-5 min-w-[200px]" : "mr-5"
-              } border hover:bg-customPurple hover:text-white text-customPurple bg-white py-2 px-4`}
+              } border hover:bg-opacity-50 text-customPurple bg-white py-2 px-4`}
             >
               Register as a Hacker
             </button>
@@ -123,7 +123,7 @@ const RegisterSection = () => {
             <button
               className={`font-vollkorn ${
                 isMobileScreen ? "w-full mb-5 min-w-[200px]" : "mr-5"
-              } border hover:bg-white hover:text-customPurple text-white py-2 px-4`}
+              } border hover:bg-gainsboro-200 text-white py-2 px-4`}
             >
               Register as a Mentor/Volunteer
             </button>

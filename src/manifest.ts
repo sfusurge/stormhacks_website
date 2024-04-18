@@ -9,15 +9,21 @@ export type SponsorInfo = {
 
 export const Sponsors: Array<SponsorInfo> = [
   {
+    imagePath: "/sponsors/transoft-logo.svg",
+    imageUrl: "https://www.transoftsolutions.com/",
+    altText: "Transoft Solution company logo",
+  },
+
+  {
     imagePath: "/sponsors/defang-logo.png",
     imageUrl: "https://defang.io/",
     altText: "Defang Software Labs company logo",
   },
-  // {
-  //   imagePath: "/sponsors/ea-logo.png",
-  //   imageUrl: "https://www.ea.com/",
-  //   altText: "Electronic Arts Company logo",
-  // },
+  {
+    imagePath: "/sponsors/powerex-logo.png",
+    imageUrl: "https://www.powerex.com/",
+    altText: "Powerex Energy company logo",
+  },
   {
     imagePath: "/sponsors/evo-logo.png",
     imageUrl: "https://www.evo.ca/",
@@ -54,11 +60,6 @@ export const Sponsors: Array<SponsorInfo> = [
     altText: "Major League Hacking logo",
   },
   {
-    imagePath: "/sponsors/powerex-logo.png",
-    imageUrl: "https://www.powerex.com/",
-    altText: "Powerex Energy company logo",
-  },
-  {
     imagePath: "/sponsors/scalar-logo-white.png",
     imageUrl: "https://www.scalar.com/",
     altText: "BC Jobs company logo",
@@ -87,6 +88,11 @@ export const Sponsors: Array<SponsorInfo> = [
     imagePath: "/sponsors/steves-poke.png",
     imageUrl: "https://www.stevespokebar.ca/",
     altText: "Steve's Poke Bar company logo",
+  },
+  {
+    imagePath: "/sponsors/Wizeprep_logo_in_kind.png",
+    imageUrl: "https://www.wizeprep.com/",
+    altText: "Wizeprep company logo",
   },
   {
     imagePath: "/sponsors/wolfram-logo.svg",

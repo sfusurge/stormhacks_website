@@ -24,16 +24,24 @@ export default function Home() {
   const isMobileScreen = useMobileScreen();
 
   return (
-    <div className="[background:linear-gradient(180deg,_#241b38,_#231f20)] mobile:px-4 grid grid-cols-[1fr_min(115ch,_calc(100%-64px))_1fr] gap-x-[32px] [&>*]:col-span-1 [&>*]:col-start-2 desktop:gap-x-[7.5vh] mobile:gap-x-[5vh] place-content-center">
-      <MLHBanner2024 />
-      <NavBar isMobileScreen={isMobileScreen} />
-      <Landing isMobileScreen={isMobileScreen} />
-      <AboutUs />
-      {/* <TracksThemes /> */}
-      <WhySponsorUs />
-      <SponsorsGallery />
-      <FAQ />
-      <Footer />
-    </div>
+    <>
+<div style={{ backgroundColor: 'rgba(48, 36, 56, 1)' }} className="mobile:px-4 grid grid-cols-[1fr_min(115ch,_calc(100%-64px))_1fr] gap-x-[32px] [&>*]:col-span-1 [&>*]:col-start-2 desktop:gap-x-[7.5vh] mobile:gap-x-[5vh] place-content-center">
+        <MLHBanner2024 />
+        <NavBar isMobileScreen={isMobileScreen} />
+      </div>
+
+      <div>
+        <Landing isMobileScreen={isMobileScreen} />
+      </div>
+
+      <div style={{ backgroundColor: 'rgb(77, 50, 63)' }} className="mobile:px-4 grid grid-cols-[1fr_min(115ch,_calc(100%-64px))_1fr] gap-x-[32px] [&>*]:col-span-1 [&>*]:col-start-2 desktop:gap-x-[7.5vh] mobile:gap-x-[5vh] place-content-center">
+        <AboutUs />
+        {/* <TracksThemes /> */}
+        <WhySponsorUs />
+        <SponsorsGallery />
+        <FAQ />
+        <Footer />
+      </div>
+    </>
   );
 }

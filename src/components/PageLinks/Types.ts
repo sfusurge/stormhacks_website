@@ -6,6 +6,7 @@ export enum PageLinkType {
   Surge,
   CodeOfConduct,
   Email,
+  PrevEvents
 }
 
 // TODO: Update with the correct href values
@@ -24,6 +25,10 @@ export const PageLinkTypeInfo: Record<
   },
   [PageLinkType.Email]: {
     name: "Email Us",
-    href: "mailto:info@stormhacks.com",
+    href: "mailto:sponsorships@stormhacks.com",
+  },
+  [PageLinkType.PrevEvents]: {
+    name: "Past Events",
+    href: "https://archive.stormhacks.com/",
   },
 };
