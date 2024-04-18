@@ -20,9 +20,12 @@ const WhySponsorUs = () => {
       </div>
 
       <div className="flex justify-center desktop:mb-24 mobile:mb-12">
-        <button className="w-[135px] h-[48px] bg-opacity-50 hover:bg-gainsboro-200 text-white font-bold py-2 px-4 border border-white text-[12px]">
-          Sponsor us now
+        <a href="mailto:info@stormhacks.com">
+        <button className="font-vollkorn w-[135px] h-[48px] bg-opacity-50 hover:bg-gainsboro-200 text-white font-bold py-2 px-4 border border-white text-[12px]">
+          Sponsor Us Now
         </button>
+        </a>
+
       </div>
       {/* <div className="mb-16 flex desktop:flex-row desktop:items-stretch mobile:flex-col justify-between text-white items-center">
         {WhySponsor.map((sponsor, index) => (

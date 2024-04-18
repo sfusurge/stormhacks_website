@@ -101,7 +101,7 @@ const RegisterSection = () => {
         What are you waiting for?
       </h2>
       <h1 className="desktop:text-center mobile:text-left text-heading font-vollkorn text-white">
-        Register for Stormhacks 2024 today
+        Register for StormHacks 2024 today
       </h1>
 
       <div
