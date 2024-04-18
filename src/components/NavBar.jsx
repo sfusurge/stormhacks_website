@@ -15,7 +15,8 @@ function NavBar({ isMobileScreen }) {
     <>
       {isMobileScreen ? (
         <div
-          className="w-full pt-5 [background:linear-gradient(180deg,_#241b38,_#231f20)]"
+          className={`w-full pt-5 font-vollkorn ${showNav ? "[background:linear-gradient(180deg,_#241b38,_#231f20)]": ""}`}
+    
           style={{ position: "fixed", top: 0, width: "", zIndex: 100 }}
         >
           <button className="" onClick={toggleNav}>
@@ -43,7 +44,7 @@ function NavBar({ isMobileScreen }) {
           )}
         </div>
       ) : (
-        <div className="flex items-center content-center py-5">
+        <div className="flex items-center content-center py-5 font-vollkorn">
           <div
             className="py-5 flex justify-between text-white "
             style={{ top: 0, width: "", zIndex: 100 }}
@@ -52,7 +53,7 @@ function NavBar({ isMobileScreen }) {
               <Image width={40} height={40} src={"/favicon.ico"} />
 
               <Link href="#">
-                <li className="ml-5 mr-5 hover:underline">Home</li>
+                <li className="ml-5 mr-5 hover:underline ">Home</li>
               </Link>
               <Link href="#about">
                 <li className="mr-5 hover:underline">About</li>
@@ -64,7 +65,7 @@ function NavBar({ isMobileScreen }) {
                 <li className="mr-5 hover:underline">FAQ</li>
               </Link>
               <Link href="https://www.sfusurge.com">
-                <li className="mr-5 hover:underline">Surge</li>
+                <li className="mr-5 hover:underline"> SFU Surge</li>
               </Link>
             </ul>
           </div>
