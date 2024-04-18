@@ -39,6 +39,7 @@ const config: Config = {
     fontSize: {
       sm: "14px",
       base: "16px",
+      heading: "40px",
     },
   },
   plugins: [],
