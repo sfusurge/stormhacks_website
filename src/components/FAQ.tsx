@@ -21,11 +21,11 @@ const FAQ: React.FC = () => {
             className={`grid gap-4 mobile:grid-cols-1 desktop:grid-cols-2 w-full max-w-[880px]`}
           >
             {FrequentlyAskedQuestions.map((data, index) => (
-              <div className="p-0">
+              <div className="p-0" key={index}>
+                
                 <Accordion
                   title={data.title}
                   answer={data.answer}
-                  key={index}
                 />
               </div>
             ))}
