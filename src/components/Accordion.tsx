@@ -14,7 +14,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, answer }) => {
   };
 
   return (
-    <div className="p-4 border border-white">
+    <div className="p-4 border border-white rounded-md">
       <button
         onClick={toggleAccordion}
         className="flex justify-between items-center w-full"

@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import PlaceHoldImage2 from "../../public/images/placehold2-img.png";
-import NavIcon from "../../public/images/navicon-img.png";
-import { PageLinkType, PageLinkTypeInfo } from "@/components/PageLinks/Types";
+import React, { useState } from "react";
 import Image from "next/image";
+import { HiMenu } from "react-icons/hi";
+import { PageLinkType, PageLinkTypeInfo } from "@/components/PageLinks/Types";
 import Link from "next/link";
 
 function NavBar({ isMobileScreen }) {
@@ -15,19 +14,18 @@ function NavBar({ isMobileScreen }) {
     <>
       {isMobileScreen ? (
         <div
-          className={`w-full h-screen pt-5 font-vollkorn`}
+          className={`w-full h-screen pt-5 font-vollkorn ${
+            showNav ? "bg-customPurple" : ""
+          }`}
           style={{
-            background: showNav
-              ? "linear-gradient(180deg, #241b38, #231f20)"
-              : "",
             position: "fixed",
             top: 0,
             left: 0,
             zIndex: 100,
           }}
         >
-          <button className="" onClick={toggleNav}>
-            <Image alt="Stormhacks navigation icon" src={NavIcon} height={40} />
+          <button className="p-4" onClick={toggleNav}>
+            <HiMenu className="text-white" size={24} />
           </button>
 
           {showNav && (

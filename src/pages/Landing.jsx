@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import NavBar from "../components/NavBar";
-import PlaceHoldImage from "../../public/images/placehold-img.png";
 import DesktopLogo from "../../public/images/logo-desktop.svg";
 import MobileLogo from "../../public/images/logo-mobile.svg";
 import Image from "next/image";
@@ -15,7 +13,7 @@ function Landing({ isMobileScreen }) {
           minHeight: "5px",
           position: "relative",
           zIndex: 1,
-          marginBottom: "-5px",
+          marginBottom: "0px",
         }}
         className={`${
           isMobileScreen ? "pt-32" : "min-h-[40vh] pt-24 pl-5"
@@ -30,8 +28,44 @@ function Landing({ isMobileScreen }) {
             src={isMobileScreen ? MobileLogo : DesktopLogo}
             className="mb-12"
           />
-
         </div>
+      </div>
+
+      <div
+        style={{
+          position: "relative",
+          textAlign: "center",
+          backgroundColor: "rgba(48, 36, 56, 1)",
+          color: "white",
+        }}
+      >
+        <div className="font-vollkorn text-base whitespace-pre-wrap">
+          Conjure code and summon spellbinding software solutions at our
+        </div>
+
+        <div className="font-vollkorn text-base whitespace-pre-wrap mb-5">
+          most magical iteration of StormHacks yet!
+        </div>
+
+        <a href="https://forms.gle/qHGjak2D1A8eUSuq7">
+          <button
+            className={`font-vollkorn ${
+              isMobileScreen ? "w-full mb-5 min-w-[200px]" : "mr-5"
+            } border hover:bg-opacity-50 rounded-md text-customPurple bg-white py-2 px-4`}
+          >
+            Register as a Hacker
+          </button>
+        </a>
+
+        <a href="https://forms.gle/v6k3hDo2aFXESFAu5">
+          <button
+            className={`font-vollkorn ${
+              isMobileScreen ? "w-full mb-10 min-w-[200px]" : ""
+            } border rounded-md hover:bg-gainsboro-200 text-white py-2 px-4`}
+          >
+            Register as a Mentor/Volunteer
+          </button>
+        </a>
       </div>
 
       <Image src={HeroSection} className="my-auto" />
