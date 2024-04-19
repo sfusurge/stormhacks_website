@@ -24,11 +24,26 @@ export const Sponsors: Array<SponsorInfo> = [
     imageUrl: "https://www.powerex.com/",
     altText: "Powerex Energy company logo",
   },
+
   {
-    imagePath: "/sponsors/evo-logo.png",
-    imageUrl: "https://www.evo.ca/",
-    altText: "Evo car sharing logo",
+    imagePath: "/sponsors/scalar-logo-white.png",
+    imageUrl: "https://www.scalar.com/",
+    altText: "Scalar company logo",
   },
+
+  {
+    imagePath: "/sponsors/bcjobs-logo.png",
+    imageUrl: "https://www.bcjobs.ca/",
+    altText: "BC Jobs company logo",
+  },
+
+  {
+    imagePath: "/sponsors/mlh-logo.png",
+    imageUrl: "https://www.mlh.com/",
+    altText: "Major League Hacking logo",
+  },
+
+
   {
     imagePath: "/sponsors/github-logo-white.png",
     imageUrl: "https://www.github.com/",
@@ -39,11 +54,7 @@ export const Sponsors: Array<SponsorInfo> = [
     imageUrl: "https://www.jam.dev/",
     altText: "Jam Company logo",
   },
-  {
-    imagePath: "/sponsors/bcjobs-logo.png",
-    imageUrl: "https://www.bcjobs.ca/",
-    altText: "BC Jobs company logo",
-  },
+
   {
     imagePath: "/sponsors/redbull-logo.svg",
     imageUrl: "https://www.redbull.com/",
@@ -54,16 +65,19 @@ export const Sponsors: Array<SponsorInfo> = [
     imageUrl: "https://www.echo3d.com/",
     altText: "echo3D 3D asset management company logo",
   },
+
   {
-    imagePath: "/sponsors/mlh-logo.png",
-    imageUrl: "https://www.mlh.com/",
-    altText: "Major League Hacking logo",
+    imagePath: "/sponsors/verbwire-logo.png",
+    imageUrl: "https://www.verbwire.com/",
+    altText: "Verbwire sharing logo",
   },
+
   {
-    imagePath: "/sponsors/scalar-logo-white.png",
-    imageUrl: "https://www.scalar.com/",
-    altText: "BC Jobs company logo",
+    imagePath: "/sponsors/evo-logo.png",
+    imageUrl: "https://www.evo.ca/",
+    altText: "Evo car sharing logo",
   },
+
   {
     imagePath: "/sponsors/sfss-logo-color.png",
     imageUrl: "https://sfss.ca/",
@@ -95,7 +109,7 @@ export const Sponsors: Array<SponsorInfo> = [
     altText: "Wizeprep company logo",
   },
   {
-    imagePath: "/sponsors/wolfram-logo.svg",
+    imagePath: "/sponsors/wolfram-corporate-logo-horz-med.png",
     imageUrl: "https://www.wolframalpha.com/",
     altText: "Wolfram Alpha company logo",
   },

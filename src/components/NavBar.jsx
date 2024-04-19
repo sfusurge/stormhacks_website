@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import Image from "next/image";
+import React, { useState, useEffect } from "react";
 import { HiMenu } from "react-icons/hi";
 import { PageLinkType, PageLinkTypeInfo } from "@/components/PageLinks/Types";
+import Image from "next/image";
 import Link from "next/link";
 
 function NavBar({ isMobileScreen }) {
@@ -14,18 +14,12 @@ function NavBar({ isMobileScreen }) {
     <>
       {isMobileScreen ? (
         <div
-          className={`w-full h-screen pt-5 font-vollkorn ${
-            showNav ? "bg-customPurple" : ""
-          }`}
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            zIndex: 100,
-          }}
+          className={`w-full pt-5 font-vollkorn ${showNav ? "[background:linear-gradient(180deg,_#241b38,_#231f20)]": ""}`}
+    
+          style={{ position: "fixed", top: 0, width: "", zIndex: 100 }}
         >
-          <button className="p-4" onClick={toggleNav}>
-            <HiMenu className="text-white" size={24} />
+          <button className="" onClick={toggleNav}>
+          <HiMenu className="text-white" size={24} />
           </button>
 
           {showNav && (
