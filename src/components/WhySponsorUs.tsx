@@ -21,7 +21,7 @@ const WhySponsorUs = () => {
 
       <div className="flex justify-center desktop:mb-24 mobile:mb-12">
         <a href="mailto:sponsorships@stormhacks.com">
-        <button className="font-vollkorn w-[135px] h-[48px] bg-opacity-50 hover:bg-gainsboro-200 text-white font-bold py-2 px-4 border border-white text-[15px]">
+        <button className="font-vollkorn w-[135px] h-[48px] bg-opacity-50 rounded-md hover:bg-gainsboro-200 text-white font-bold py-2 px-4 border border-white text-[15px]">
           Sponsor Us
         </button>
         </a>

@@ -15,9 +15,16 @@ function NavBar({ isMobileScreen }) {
     <>
       {isMobileScreen ? (
         <div
-          className={`w-full pt-5 font-vollkorn ${showNav ? "[background:linear-gradient(180deg,_#241b38,_#231f20)]": ""}`}
-    
-          style={{ position: "fixed", top: 0, width: "", zIndex: 100 }}
+          className={`w-full h-screen pt-5 font-vollkorn`}
+          style={{
+            background: showNav
+              ? "linear-gradient(180deg, #241b38, #231f20)"
+              : "",
+            position: "fixed",
+            top: 0,
+            left: 0,
+            zIndex: 100,
+          }}
         >
           <button className="" onClick={toggleNav}>
             <Image alt="Stormhacks navigation icon" src={NavIcon} height={40} />

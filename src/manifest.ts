@@ -9,7 +9,7 @@ export type SponsorInfo = {
 
 export const Sponsors: Array<SponsorInfo> = [
   {
-    imagePath: "/sponsors/transoft-logo.svg",
+    imagePath: "/sponsors/transoft-logo.png",
     imageUrl: "https://www.transoftsolutions.com/",
     altText: "Transoft Solution company logo",
   },

@@ -24,12 +24,13 @@ function Landing({ isMobileScreen }) {
         <h2 className="font-vollkorn-sc text-[20px]">
           MAY 18–19, 2024 @ SFU BURNABY
         </h2>
-        <div style={{ position: "relative",  textAlign: 'center' }}>
+        <div style={{ position: "relative", textAlign: "center" }}>
           <Image
             alt="Stormhacks logo"
             src={isMobileScreen ? MobileLogo : DesktopLogo}
             className="mb-12"
           />
+
         </div>
       </div>
 
