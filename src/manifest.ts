@@ -15,17 +15,6 @@ export const Sponsors: Array<SponsorInfo> = [
   },
 
   {
-    imagePath: "/sponsors/defang-logo.png",
-    imageUrl: "https://defang.io/",
-    altText: "Defang Software Labs company logo",
-  },
-  {
-    imagePath: "/sponsors/powerex-logo.png",
-    imageUrl: "https://www.powerex.com/",
-    altText: "Powerex Energy company logo",
-  },
-
-  {
     imagePath: "/sponsors/scalar-logo-white.png",
     imageUrl: "https://www.scalar.com/",
     altText: "Scalar company logo",
@@ -36,6 +25,21 @@ export const Sponsors: Array<SponsorInfo> = [
     imageUrl: "https://www.bcjobs.ca/",
     altText: "BC Jobs company logo",
   },
+
+  {
+    imagePath: "/sponsors/defang-logo.png",
+    imageUrl: "https://defang.io/",
+    altText: "Defang Software Labs company logo",
+  },
+  {
+    imagePath: "/sponsors/powerex-logo.png",
+    imageUrl: "https://www.powerex.com/",
+    altText: "Powerex Energy company logo",
+  },
+
+
+
+
 
   {
     imagePath: "/sponsors/mlh-logo.png",

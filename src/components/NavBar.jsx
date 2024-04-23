@@ -16,8 +16,11 @@ function NavBar({ isMobileScreen }) {
         <div
           className={`w-full pt-5 font-vollkorn ${showNav ? "[background:linear-gradient(180deg,_#241b38,_#231f20)]": ""}`}
     
-          style={{ position: "fixed", top: 0, width: "", zIndex: 100 }}
+          style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100 }}
         >
+
+
+          
           <button className="" onClick={toggleNav}>
           <HiMenu className="text-white" size={24} />
           </button>
@@ -63,7 +66,8 @@ function NavBar({ isMobileScreen }) {
               <Link href="#faq">
                 <li className="mr-5 hover:underline">FAQ</li>
               </Link>
-              <Link href="https://www.sfusurge.com">
+              <Link href="https://www.sfusurge.com"  target="_blank"
+            rel="noopener noreferrer">
                 <li className="mr-5 hover:underline"> SFU Surge</li>
               </Link>
             </ul>

@@ -10,6 +10,7 @@ import WhySponsorUs from "../components/WhySponsorUs";
 import FAQ from "../components/FAQ";
 import useMobileScreen from "../utils/hooks/useMobileScreen.tsx";
 import { MLHBanner2024 } from "../components/MLHBanner.jsx";
+import Execs from "../components/Execs.jsx";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -40,6 +41,7 @@ export default function Home() {
         <WhySponsorUs />
         <SponsorsGallery />
         <FAQ />
+        <Execs/>
         <Footer />
       </div>
     </>

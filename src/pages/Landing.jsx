@@ -47,25 +47,47 @@ function Landing({ isMobileScreen }) {
           most magical iteration of StormHacks yet!
         </div>
 
-        <a href="https://forms.gle/qHGjak2D1A8eUSuq7">
-          <button
-            className={`font-vollkorn ${
-              isMobileScreen ? "w-full mb-5 min-w-[200px]" : "mr-5"
-            } border hover:bg-opacity-50 rounded-md text-customPurple bg-white py-2 px-4`}
+          <a
+            href="https://forms.gle/qHGjak2D1A8eUSuq7"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Register as a Hacker
-          </button>
-        </a>
+            <button
+              className={`font-vollkorn ${
+                isMobileScreen ? "w-2/3 mb-5 min-w-[200px]" : "mr-5"
+              } border hover:bg-opacity-50 text-customPurple rounded-md bg-white py-2 px-4`}
+            >
+              Register as a Hacker
+            </button>
+          </a>
+          
+          <a
+            href="https://forms.gle/v6k3hDo2aFXESFAu5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button
+              className={`font-vollkorn ${
+                isMobileScreen ? "w-2/3 mb-5 min-w-[200px]" : "mr-5"
+              } border hover:bg-gainsboro-200 text-white rounded-md py-2 px-4`}
+            >
+              Mentor
+            </button>
+          </a>
 
-        <a href="https://forms.gle/v6k3hDo2aFXESFAu5">
-          <button
-            className={`font-vollkorn ${
-              isMobileScreen ? "w-full mb-10 min-w-[200px]" : ""
-            } border rounded-md hover:bg-gainsboro-200 text-white py-2 px-4`}
+          <a
+            href="https://forms.gle/auZMLBMFFvphT3o89"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Register as a Mentor/Volunteer
-          </button>
-        </a>
+            <button
+              className={`font-vollkorn ${
+                isMobileScreen ? "w-2/3 mb-5 min-w-[200px]" : "mr-5"
+              } border hover:bg-gainsboro-200 text-white rounded-md py-2 px-4`}
+            >
+              Volunteer
+            </button>
+          </a>
       </div>
 
       <Image src={HeroSection} className="my-auto" />

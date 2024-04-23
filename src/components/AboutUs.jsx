@@ -48,7 +48,7 @@ const DesignerFriendlySection = () => {
     <>
       <section
         className="desktop:mb-16 self-stretch flex flex-row items-start justify-center py-0 box-border max-w-full
-      text-left text-base"
+        text-left text-base"
       >
         <div className="w-[880px] grid desktop:grid-cols-2 mobile:grid-rows-2 gap-[40px] max-w-full">
           <div className="mb-auto h-[300px] min-w-[270px] max-w-[440px] mobile:row-start-2 place-self-center">
@@ -80,7 +80,7 @@ const DesignerFriendlySection = () => {
               your own.
             </p>
             <br />
-            <p className="font-vollkorn">
+            <p className="font-vollkorn mb-10">
               {/* eslint-disable-next-line react/no-unescaped-entities */}
               For all you designers, we're hosting prizes and workshops to help
               support your no-code solutions and prototypes!
@@ -110,7 +110,11 @@ const RegisterSection = () => {
         } text-xs justify-center max-w-mobile`}
       >
         <div className={`${isMobileScreen ? "w-full" : ""} mt-6 `}>
-          <a href="https://forms.gle/qHGjak2D1A8eUSuq7">
+          <a
+            href="https://forms.gle/qHGjak2D1A8eUSuq7"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <button
               className={`font-vollkorn ${
                 isMobileScreen ? "w-full mb-5 min-w-[200px]" : "mr-5"
@@ -119,13 +123,32 @@ const RegisterSection = () => {
               Register as a Hacker
             </button>
           </a>
-          <a href="https://forms.gle/v6k3hDo2aFXESFAu5">
+          
+          <a
+            href="https://forms.gle/v6k3hDo2aFXESFAu5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <button
               className={`font-vollkorn ${
                 isMobileScreen ? "w-full mb-5 min-w-[200px]" : "mr-5"
               } border hover:bg-gainsboro-200 text-white rounded-md py-2 px-4`}
             >
-              Register as a Mentor/Volunteer
+              Mentor
+            </button>
+          </a>
+
+          <a
+            href="https://forms.gle/auZMLBMFFvphT3o89"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button
+              className={`font-vollkorn ${
+                isMobileScreen ? "w-full mb-5 min-w-[200px]" : "mr-5"
+              } border hover:bg-gainsboro-200 text-white rounded-md py-2 px-4`}
+            >
+              Volunteer
             </button>
           </a>
         </div>
