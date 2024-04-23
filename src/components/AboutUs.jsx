@@ -80,7 +80,7 @@ const DesignerFriendlySection = () => {
               your own.
             </p>
             <br />
-            <p className="font-vollkorn mb-10">
+            <p className="font-vollkorn">
               {/* eslint-disable-next-line react/no-unescaped-entities */}
               For all you designers, we're hosting prizes and workshops to help
               support your no-code solutions and prototypes!
