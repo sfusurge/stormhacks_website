@@ -37,7 +37,8 @@ import Brendan from "../../public/execs/Brendan_Shen.jpg"
 import Josie from "../../public/execs/josie.JPG"
 import Kaia from "../../public/execs/kaia.jpg"
 import Sabina from "../../public/execs/sabi.jpeg"
-
+import Alicia from "../../public/execs/Alicia_LeClercq.png"
+import Anoushka from "../../public/execs/anoushka_chavan.jpg"
 
 const execTeam = [
   {
@@ -169,8 +170,20 @@ const execTeam = [
   {
     name: "Josie Trinh",
     position: "Social Media Coordinator",
-    linkedin: "https://www.linkedin.com/in/nghi-trinh-josie/ ",
+    linkedin: "https://www.linkedin.com/in/nghi-trinh-josie/",
     image: Josie,
+  },
+  {
+    name: "Anoushka Chavan",
+    position: "Director of Marketing",
+    linkedin: "",
+    image: Anoushka,
+  },
+  {
+    name: "Alicia LeClercq",
+    position: "Marketing Coordinator",
+    linkedin: "https://www.linkedin.com/in/alicialeclercq/",
+    image: Alicia,
   },
   {
     name: "Revika Jain",
@@ -268,6 +281,9 @@ const execTeam = [
 
 
 const Execs = () => {
+  const itemsInLastRow = execTeam.length % 6;
+  const emptyColumns = itemsInLastRow === 0 ? 0 : 6 - itemsInLastRow;
+  
   return (
     <section className="pt-10 self-stretch flex flex-col items-center py-0 px-5 box-border max-w-full text-center text-base text-white font-vollkorn">
       <h1
@@ -298,7 +314,7 @@ const Execs = () => {
         contests, workshops, sponsor booths, and more.
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 justify-center">
         {execTeam.map((member, index) => (
           <div key={index} className="flex flex-col items-center">
             <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
