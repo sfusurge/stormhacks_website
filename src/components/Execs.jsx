@@ -308,7 +308,7 @@ const Execs = () => {
 				contests, workshops, sponsor booths, and more.
 			</div>
 
-			<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 justify-center">
+			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 justify-center">
 				{execTeam.map((member, index) => (
 					<div key={index} className="flex flex-col items-center">
 						<a href={member.linkedin} target="_blank" rel="noopener noreferrer">
