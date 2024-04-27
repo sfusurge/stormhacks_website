@@ -11,7 +11,7 @@ import Mukhiil from "../../public/execs/Mukhiil_Basaran.png"
 import Monishka from "../../public/execs/Monishka_Gautam.jpg"
 import MariaZ from "../../public/execs/Maria_Zia.jpg"
 import MariaY from "../../public/execs/Maria_yufe.jpg"
-import Christina from "../../public/execs/davidlowe.png";
+import Christina from "../../public/execs/Christina_Raganit.jpg";
 import Arriyan from "../../public/execs/Arryian_ali.png"
 import Linda from "../../public/execs/lindajolly.jpeg"
 import Natalie from "../../public/execs/Natalie_Kayda.jpg"

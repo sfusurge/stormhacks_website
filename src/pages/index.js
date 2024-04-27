@@ -41,7 +41,7 @@ export default function Home() {
         <WhySponsorUs />
         <SponsorsGallery />
         <FAQ />
-        {/* <Execs/> */}
+        <Execs/>
         <Footer />
       </div>
     </>
