@@ -472,6 +472,12 @@ export const Executives: ExecutivesInfo[] = [
 		image: "execs/kevin_shi.png",
 	},
 	{
+		name: "Christina Raganit",
+		position: "Director of Visual Design",
+		linkedin: "https://www.linkedin.com/in/christinaraganit/",
+		image: "/execs/Christina_Raganit.jpg",
+	},
+	{
 		name: "Brendan Shen",
 		position: "Developer",
 		linkedin: "https://www.linkedin.com/in/brendan-shen/",
