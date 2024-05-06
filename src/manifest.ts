@@ -139,6 +139,18 @@ export const Sponsors: Array<SponsorInfo> = [
     altText: "Wolfram Alpha company logo",
     tier: SponsorTier.InKind
   },
+  {
+    imagePath: "/sponsors/trulioo-logo.png",
+    imageUrl: "https://www.trulioo.com/",
+    altText: "Trulioo company logo", 
+    tier: SponsorTier.Silver
+  },
+  {
+    imagePath: "/sponsors/nordvpn-logo.png", 
+    imageUrl: "https://www.nordvpn.com",
+    altText: "NordVPN company logo", 
+    tier: SponsorTier.InKind
+  }
 ];
 
 export type FrequentlyAskedQuestionsInfo = {
