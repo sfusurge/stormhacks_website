@@ -1,8 +1,9 @@
 import ClickableImage from "../ClickableImage";
-import { SponsorInfo, Sponsors } from "@/manifest";
+import { SponsorTier, SponsorInfo, Sponsors } from "@/manifest";
 import { useEffect, useState } from "react";
 
 function SponsorsGallery() {
+
   return (
     <>
       <div className="grid place-content-center mb-8" id="sponsors">
@@ -15,20 +16,23 @@ function SponsorsGallery() {
       </div>
 
       <div className="mb-16 grid desktop:full-bleed desktop:grid-cols-3 mobile:grid-cols-1 gap-12 place-content-center justify-items-center">
-        {Sponsors.map((data, index) => (
-          <div className="my-auto" key={index}>
-            <ClickableImage
-              src={data.imagePath}
-              altText={data.altText}
-              imageUrl={data.imageUrl}
-              height={200}
-              width={200}
-            />
-          </div>
-        ))}
+        {
+          Sponsors.slice().sort((a, b) => b.tier - a.tier).map((data, index) => (
+            <div className="my-auto" key={index}>
+              <ClickableImage
+                src={data.imagePath}
+                altText={data.altText}
+                imageUrl={data.imageUrl}
+                height={200}
+                width={200}
+              />
+            </div>
+          ))
+        }
       </div>
     </>
-  );
+  )
 }
 
 export default SponsorsGallery;
+
