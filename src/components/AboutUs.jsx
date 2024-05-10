@@ -110,7 +110,7 @@ const RegisterSection = () => {
         } text-xs justify-center max-w-mobile`}
       >
         <div className={`${isMobileScreen ? "w-full" : ""} mt-6 `}>
-          <a
+          {/* <a
             href="https://forms.gle/qHGjak2D1A8eUSuq7"
             target="_blank"
             rel="noopener noreferrer"
@@ -122,7 +122,7 @@ const RegisterSection = () => {
             >
               Register as a Hacker
             </button>
-          </a>
+          </a> */}
           
           <a
             href="https://forms.gle/v6k3hDo2aFXESFAu5"
@@ -134,11 +134,11 @@ const RegisterSection = () => {
                 isMobileScreen ? "w-full mb-5 min-w-[200px]" : "mr-5"
               } border hover:bg-gainsboro-200 text-white rounded-md py-2 px-4`}
             >
-              Mentor
+              Register as a Mentor
             </button>
           </a>
 
-          <a
+          {/* <a
             href="https://forms.gle/auZMLBMFFvphT3o89"
             target="_blank"
             rel="noopener noreferrer"
@@ -150,7 +150,7 @@ const RegisterSection = () => {
             >
               Volunteer
             </button>
-          </a>
+          </a> */}
         </div>
       </div>
     </section>
