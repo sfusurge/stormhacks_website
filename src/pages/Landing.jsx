@@ -88,9 +88,9 @@ function Landing({ isMobileScreen }) {
             Volunteer
           </button>
         </a> */}
-        {/* <p className="font-vollkorn text-[24px] pb-10">
-          Applications are now closed
-        </p> */}
+        <p className="font-vollkorn text-[24px] pb-10 mt-5">
+          Hacker applications are now closed
+        </p>
       </div>
 
       <Image src={HeroSection} className="my-auto" />
