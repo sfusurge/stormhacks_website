@@ -59,7 +59,7 @@ function Landing({ isMobileScreen }) {
 					>
 						Register as a Hacker
 					</button>
-				</a>
+				</a> */}
 
 				<a
 					href="https://forms.gle/v6k3hDo2aFXESFAu5"
@@ -71,11 +71,11 @@ function Landing({ isMobileScreen }) {
 							isMobileScreen ? "w-2/3 mb-5 min-w-[200px]" : "mr-5"
 						} border hover:bg-gainsboro-200 text-white rounded-md py-2 px-4`}
 					>
-						Mentor
+						Register as a Mentor
 					</button>
 				</a> 
 
-        <a
+        {/* <a
           href="https://forms.gle/auZMLBMFFvphT3o89"
           target="_blank"
           rel="noopener noreferrer"
@@ -88,9 +88,9 @@ function Landing({ isMobileScreen }) {
             Volunteer
           </button>
         </a> */}
-        <p className="font-vollkorn text-[24px] pb-10">
+        {/* <p className="font-vollkorn text-[24px] pb-10">
           Applications are now closed
-        </p>
+        </p> */}
       </div>
 
       <Image src={HeroSection} className="my-auto" />

@@ -71,12 +71,6 @@ export const Sponsors: Array<SponsorInfo> = [
   },
 
   {
-    imagePath: "/sponsors/redbull-logo.svg",
-    imageUrl: "https://www.redbull.com/",
-    altText: "Red Bull company logo",
-    tier: SponsorTier.InKind
-  },
-  {
     imagePath: "/sponsors/echo3D-logos.png",
     imageUrl: "https://www.echo3d.com/",
     altText: "echo3D 3D asset management company logo",
@@ -149,6 +143,18 @@ export const Sponsors: Array<SponsorInfo> = [
     imagePath: "/sponsors/nordvpn-logo.png", 
     imageUrl: "https://www.nordvpn.com",
     altText: "NordVPN company logo", 
+    tier: SponsorTier.InKind
+  },
+  {
+    imagePath: "/sponsors/Incogni_Logo.jpg", 
+    imageUrl: "https://incogni.com",
+    altText: "Incogni company logo", 
+    tier: SponsorTier.InKind
+  },
+  {
+    imagePath: "/sponsors/nordpass_logo.svg", 
+    imageUrl: "https://nordpass.com",
+    altText: "NordPass company logo", 
     tier: SponsorTier.InKind
   }
 ];
