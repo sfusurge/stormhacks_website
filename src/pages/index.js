@@ -26,7 +26,10 @@ export default function Home() {
 
   return (
     <>
-<div style={{ backgroundColor: 'rgba(48, 36, 56, 1)' }} className="mobile:px-4 grid grid-cols-[1fr_min(115ch,_calc(100%-64px))_1fr] gap-x-[32px] [&>*]:col-span-1 [&>*]:col-start-2 desktop:gap-x-[7.5vh] mobile:gap-x-[5vh] place-content-center">
+      <div
+        style={{ backgroundColor: "rgba(48, 36, 56, 1)" }}
+        className="mobile:px-4 grid grid-cols-[1fr_min(115ch,_calc(100%-64px))_1fr] gap-x-[32px] [&>*]:col-span-1 [&>*]:col-start-2 desktop:gap-x-[7.5vh] mobile:gap-x-[5vh] place-content-center"
+      >
         <MLHBanner2024 />
         <NavBar isMobileScreen={isMobileScreen} />
       </div>
@@ -35,13 +38,16 @@ export default function Home() {
         <Landing isMobileScreen={isMobileScreen} />
       </div>
 
-      <div style={{ backgroundColor: 'rgb(77, 50, 63)' }} className="mobile:px-4 grid grid-cols-[1fr_min(115ch,_calc(100%-64px))_1fr] gap-x-[32px] [&>*]:col-span-1 [&>*]:col-start-2 desktop:gap-x-[7.5vh] mobile:gap-x-[5vh] place-content-center">
+      <div
+        style={{ backgroundColor: "rgb(77, 50, 63)" }}
+        className="mobile:px-4 grid grid-cols-[1fr_min(115ch,_calc(100%-64px))_1fr] gap-x-[32px] [&>*]:col-span-1 [&>*]:col-start-2 desktop:gap-x-[7.5vh] mobile:gap-x-[5vh] place-content-center"
+      >
         <AboutUs />
         {/* <TracksThemes /> */}
         <WhySponsorUs />
         <SponsorsGallery />
         <FAQ />
-        <Execs/>
+        <Execs />
         <Footer />
       </div>
     </>

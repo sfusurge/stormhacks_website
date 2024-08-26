@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import DesktopLogo from "../../public/images/logo-desktop.svg";
 import MobileLogo from "../../public/images/logo-mobile.svg";
 import Image from "next/image";
@@ -47,50 +47,53 @@ function Landing({ isMobileScreen }) {
           most magical iteration of StormHacks yet!
         </div>
 
-        {/* <a
-					href="https://forms.gle/qHGjak2D1A8eUSuq7"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<button
-						className={`font-vollkorn ${
-							isMobileScreen ? "w-2/3 mb-5 min-w-[200px]" : "mr-5"
-						} border hover:bg-opacity-50 text-customPurple rounded-md bg-white py-2 px-4`}
-					>
-						Register as a Hacker
-					</button>
-				</a>
-
-				<a
-					href="https://forms.gle/v6k3hDo2aFXESFAu5"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<button
-						className={`font-vollkorn ${
-							isMobileScreen ? "w-2/3 mb-5 min-w-[200px]" : "mr-5"
-						} border hover:bg-gainsboro-200 text-white rounded-md py-2 px-4`}
-					>
-						Mentor
-					</button>
-				</a> 
-
         <a
-          href="https://forms.gle/auZMLBMFFvphT3o89"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdi7KvFdQnenKCdhyejl5_0bD95EfEbIKC3lf_Avc4wTefSYQ/viewform"
           target="_blank"
           rel="noopener noreferrer"
         >
           <button
             className={`font-vollkorn ${
               isMobileScreen ? "w-2/3 mb-5 min-w-[200px]" : "mr-5"
+            } border hover:bg-opacity-50 text-customPurple rounded-md bg-white py-2 px-4`}
+          >
+            Register as a Hacker
+          </button>
+        </a>
+
+        {/* <a
+          href="https://forms.gle/v6k3hdo2afxesfau5"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button
+            classname={`font-vollkorn ${
+              ismobilescreen ? "w-2/3 mb-5 min-w-[200px]" : "mr-5"
             } border hover:bg-gainsboro-200 text-white rounded-md py-2 px-4`}
           >
-            Volunteer
+            mentor
           </button>
-        </a> */}
+        </a>
+
+        <a
+          href="https://forms.gle/auzmlbmffvpht3o89"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button
+            classname={`font-vollkorn ${
+              ismobilescreen ? "w-2/3 mb-5 min-w-[200px]" : "mr-5"
+            } border hover:bg-gainsboro-200 text-white rounded-md py-2 px-4`}
+          >
+            volunteer
+          </button>
+        </a> 
+
+
+        
         <p className="font-vollkorn text-[24px] pb-10">
           Applications are now closed
-        </p>
+        </p>*/}
       </div>
 
       <Image src={HeroSection} className="my-auto" />
