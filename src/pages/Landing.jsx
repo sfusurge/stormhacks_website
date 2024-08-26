@@ -20,7 +20,7 @@ function Landing({ isMobileScreen }) {
         } flex flex-col justify-center items-center text-white`}
       >
         <h2 className="font-vollkorn-sc text-[20px]">
-          MAY 18–19, 2024 @ SFU BURNABY
+          Oct 5-6, 2024 @ SFU BURNABY
         </h2>
         <div style={{ position: "relative", textAlign: "center" }}>
           <Image
