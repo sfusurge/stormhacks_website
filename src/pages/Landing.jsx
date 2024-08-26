@@ -16,7 +16,7 @@ function Landing({ isMobileScreen }) {
           marginBottom: "0px",
         }}
         className={`${
-          isMobileScreen ? "pt-32" : "min-h-[40vh] pt-24 pl-5"
+          isMobileScreen ? "pt-32" : "min-h-[40vh] pt-24 px-5"
         } flex flex-col justify-center items-center text-white`}
       >
         <h2 className="font-vollkorn-sc text-[20px]">
@@ -61,6 +61,9 @@ function Landing({ isMobileScreen }) {
           </button>
         </a>
 
+        <div className="mt-10 text-base font-light font-vollkorn text-center px-5">
+          Applications close September 15, 2024, 11:59p.m
+        </div>
         {/* <a
           href="https://forms.gle/v6k3hdo2afxesfau5"
           target="_blank"
