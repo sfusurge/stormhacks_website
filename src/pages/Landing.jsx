@@ -39,7 +39,7 @@ function Landing({ isMobileScreen }) {
           color: "white",
         }}
       >
-        <div className="font-vollkorn text-base whitespace-pre-wrap">
+        <div className="font-vollkorn text-base whitespace-pre-wrap px-5">
           Conjure code and summon spellbinding software solutions at our
         </div>
 
