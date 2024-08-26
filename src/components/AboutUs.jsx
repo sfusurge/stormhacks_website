@@ -123,8 +123,8 @@ const RegisterSection = () => {
               Register as a Hacker
             </button>
           </a>
-          
-          <a
+
+          {/* <a
             href="https://forms.gle/v6k3hDo2aFXESFAu5"
             target="_blank"
             rel="noopener noreferrer"
@@ -150,7 +150,7 @@ const RegisterSection = () => {
             >
               Volunteer
             </button>
-          </a>
+          </a> */}
         </div>
       </div>
     </section>
