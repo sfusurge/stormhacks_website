@@ -111,7 +111,7 @@ const RegisterSection = () => {
       >
         <div className={`${isMobileScreen ? "w-full" : ""} mt-6 `}>
           <a
-            href="https://forms.gle/qHGjak2D1A8eUSuq7"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdi7KvFdQnenKCdhyejl5_0bD95EfEbIKC3lf_Avc4wTefSYQ/viewform"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -134,11 +134,11 @@ const RegisterSection = () => {
                 isMobileScreen ? "w-full mb-5 min-w-[200px]" : "mr-5"
               } border hover:bg-gainsboro-200 text-white rounded-md py-2 px-4`}
             >
-              Mentor
+              Register as a Mentor
             </button>
           </a>
 
-          <a
+          {/* <a
             href="https://forms.gle/auZMLBMFFvphT3o89"
             target="_blank"
             rel="noopener noreferrer"
