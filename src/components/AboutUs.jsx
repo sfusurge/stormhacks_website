@@ -125,7 +125,7 @@ const RegisterSection = () => {
           </a>
 
           <a
-            href="https://forms.gle/UTnJMmGHsuqmho797"
+            href="https://forms.gle/JQfL7osaLfVX5Ee18"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -139,7 +139,7 @@ const RegisterSection = () => {
           </a>
           
           <a
-            href="https://forms.gle/ceu5D4rTS2ar4TiH6"
+            href="https://forms.gle/mrKZtTEZjEu5TCy87"
             target="_blank"
             rel="noopener noreferrer"
           >

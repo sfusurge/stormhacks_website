@@ -61,36 +61,43 @@ function Landing({ isMobileScreen }) {
           </button>
         </a>
 
-        <div className="mt-10 text-base font-light font-vollkorn text-center px-5">
-          Applications close September 15, 2024, 11:59p.m
-        </div>
-        {/* {<a
-          href="https://forms.gle/v6k3hdo2afxesfau5"
+        <a
+          href="https://forms.gle/JQfL7osaLfVX5Ee18"
           target="_blank"
           rel="noopener noreferrer"
         >
           <button
-            classname={`font-vollkorn ${
+            className={`font-vollkorn ${
               isMobileScreen ? "w-2/3 mb-5 min-w-[200px]" : "mr-5"
             } border hover:bg-gainsboro-200 text-white rounded-md py-2 px-4`}
           >
-            mentor
+            Register as a Mentor
           </button>
         </a>
-        }
+
         <a
-          href="https://forms.gle/auzmlbmffvpht3o89"
+          href="https://forms.gle/mrKZtTEZjEu5TCy87"
           target="_blank"
           rel="noopener noreferrer"
         >
           <button
-            classname={`font-vollkorn ${
+            className={`font-vollkorn ${
               isMobileScreen ? "w-2/3 mb-5 min-w-[200px]" : "mr-5"
             } border hover:bg-gainsboro-200 text-white rounded-md py-2 px-4`}
           >
-            volunteer
+            Register as a Volunteer
           </button>
-        </a>  */}
+        </a>
+
+        
+
+        <div className="mt-10 text-base font-light font-vollkorn text-center px-5">
+          Hacker applications close September 15, 2024, 11:59 p.m.
+        </div>
+        <div className="mt-10 text-base font-light font-vollkorn text-center px-5">
+          Mentor/Volunteer applications close September 22, 2024, 11:59 p.m.
+        </div>
+        
 
 
         
