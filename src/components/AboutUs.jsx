@@ -124,8 +124,8 @@ const RegisterSection = () => {
             </button>
           </a>
 
-          {/* <a
-            href="https://forms.gle/v6k3hDo2aFXESFAu5"
+          <a
+            href="https://forms.gle/UTnJMmGHsuqmho797"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -137,9 +137,9 @@ const RegisterSection = () => {
               Register as a Mentor
             </button>
           </a>
-
-          {/* <a
-            href="https://forms.gle/auZMLBMFFvphT3o89"
+          
+          <a
+            href="https://forms.gle/ceu5D4rTS2ar4TiH6"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -148,9 +148,9 @@ const RegisterSection = () => {
                 isMobileScreen ? "w-full mb-5 min-w-[200px]" : "mr-5"
               } border hover:bg-gainsboro-200 text-white rounded-md py-2 px-4`}
             >
-              Volunteer
+              Register as a Volunteer
             </button>
-          </a> */}
+          </a> 
         </div>
       </div>
     </section>

@@ -64,20 +64,20 @@ function Landing({ isMobileScreen }) {
         <div className="mt-10 text-base font-light font-vollkorn text-center px-5">
           Applications close September 15, 2024, 11:59p.m
         </div>
-        {/* <a
+        {/* {<a
           href="https://forms.gle/v6k3hdo2afxesfau5"
           target="_blank"
           rel="noopener noreferrer"
         >
           <button
             classname={`font-vollkorn ${
-              ismobilescreen ? "w-2/3 mb-5 min-w-[200px]" : "mr-5"
+              isMobileScreen ? "w-2/3 mb-5 min-w-[200px]" : "mr-5"
             } border hover:bg-gainsboro-200 text-white rounded-md py-2 px-4`}
           >
             mentor
           </button>
         </a>
-
+        }
         <a
           href="https://forms.gle/auzmlbmffvpht3o89"
           target="_blank"
@@ -85,18 +85,18 @@ function Landing({ isMobileScreen }) {
         >
           <button
             classname={`font-vollkorn ${
-              ismobilescreen ? "w-2/3 mb-5 min-w-[200px]" : "mr-5"
+              isMobileScreen ? "w-2/3 mb-5 min-w-[200px]" : "mr-5"
             } border hover:bg-gainsboro-200 text-white rounded-md py-2 px-4`}
           >
             volunteer
           </button>
-        </a> 
+        </a>  */}
 
 
         
-        <p className="font-vollkorn text-[24px] pb-10">
+        {/* <p className="font-vollkorn text-[24px] pb-10">
           Applications are now closed
-        </p>*/}
+        </p> */}
       </div>
 
       <Image src={HeroSection} className="my-auto" />
