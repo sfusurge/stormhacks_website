@@ -92,7 +92,7 @@ function Landing({ isMobileScreen }) {
         
 
         <div className="mt-10 text-base font-light font-vollkorn text-center px-5">
-          Hacker applications close September 15, 2024, 11:59 p.m.
+          Hacker applications close September 22, 2024, 11:59 p.m.
         </div>
         <div className="mt-10 text-base font-light font-vollkorn text-center px-5">
           Mentor/Volunteer applications close September 22, 2024, 11:59 p.m.
