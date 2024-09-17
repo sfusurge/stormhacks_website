@@ -249,7 +249,7 @@ export const FrequentlyAskedQuestions: Array<FrequentlyAskedQuestionsInfo> = [
   {
     title: "When and where is the event happening?",
     answer:
-      "The event is taking place on May 18-19th, 2024. The venue is the Student Union Building on SFU's Burnaby campus",
+      "The event is taking place on October 5-6th, 2024. The venue is the Student Union Building on SFU's Burnaby campus",
   },
   {
     title: "What does it cost to get in?",
