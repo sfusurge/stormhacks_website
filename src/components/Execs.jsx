@@ -1,135 +1,174 @@
 import React from "react";
 import Image from "next/image";
-import David from "../../public/execs/davidlowe.png";
+
+import Matt from "../../public/execs/matthewwong2.jpg";
+import MariaZ from "../../public/execs/mariazia.jpg";
+import BrianR from "../../public/execs/brianrahadi.jpg";
+import Keyaan from "../../public/execs/keyaanvegdani.jpg";
+import Kaia from "../../public/execs/kaiado.jpg";
+import Chris from "../../public/execs/christopherfong.jpg";
+import Christina from "../../public/execs/christinaraganit.jpg";
+import Vicky from "../../public/execs/vickyxu.jpg";
+import Alex from "../../public/execs/alexandrasvoboda.jpg";
 import Johnson from "../../public/execs/johnsonluong.jpg";
-import Alex from "../../public/execs/Alexandra_Svoboda.jpg";
-import Kate from "../../public/execs/kateleen_paran.jpg";
-import Darian from "../../public/execs/Darian_Wong.jpeg";
-import AngelaK from "../../public/execs/Angela_Kurian.jpg";
-import Matt from "../../public/execs/matthewwong.jpg";
-import Mukhiil from "../../public/execs/Mukhiil_Basaran.png";
-import Monishka from "../../public/execs/Monishka_Gautam.jpg";
-import MariaZ from "../../public/execs/Maria_Zia.jpg";
-import MariaY from "../../public/execs/Maria_yufe.jpg";
-import Christina from "../../public/execs/Christina_Raganit.jpg";
-import Arriyan from "../../public/execs/Arryian_ali.png";
-import Linda from "../../public/execs/lindajolly.jpeg";
-import Natalie from "../../public/execs/Natalie_Kayda.jpg";
-import AngelaS from "../../public/execs/angela_shen.jpg";
-import Tinay from "../../public/execs/tinay_yernazarova.jpg";
+import BrianW from "../../public/execs/brianwang.jpg";
+import Rasya from "../../public/execs/rasyahadaayaa.jpg";
+import Christine from "../../public/execs/christinevu.jpg";
+import AngelaL from "../../public/execs/angelalim.jpg";
+import Fady from "../../public/execs/fadynasr.jpg";
+import AlexM from "../../public/execs/alexmei.jpg";
+import Darrick from "../../public/execs/darrickgunawan.jpg";
+import Paul from "../../public/execs/paullee.jpg";
+import MichaelT from "../../public/execs/michaelt.jpg";
+import Arriyan from "../../public/execs/arriyanali.jpg";
+import Natalie from "../../public/execs/nataliekayda.jpg";
+import AngelaS from "../../public/execs/angelashen.jpg";
+import Tinay from "../../public/execs/tinayyernazarova.jpg";
+import Linda from "../../public/execs/lindajolly.jpg";
+import Yifei from "../../public/execs/yifeiwang.jpg";
+import Josie from "../../public/execs/josietrinh.jpg";
+import Mackenzie from "../../public/execs/mackenziescholz.jpg";
+import Nafisha from "../../public/execs/nafishadjamalus.jpg";
 import Kylie from "../../public/execs/kylieseto.jpg";
-import Revika from "../../public/execs/revika_jain.jpg";
-import Rosa from "../../public/execs/rosa_chen.jpg";
-import Varghese from "../../public/execs/varghese.jpg";
-import Noor from "../../public/execs/Noor.jpeg";
-import Sakshi from "../../public/execs/Sakshi_Wadhwa.png";
-import Raghav from "../../public/execs/Raghav.jpg";
-import Triane from "../../public/execs/triane.png";
-import Elsa from "../../public/execs/Elsa_Sinuhaji.jpg";
-import Vicky from "../../public/execs/Vicky.JPG";
-import Samiha from "../../public/execs/samiha_rahida.jpg";
-import Chris from "../../public/execs/christopher_fong.jpg";
-import Kevin from "../../public/execs/kevin_shi.png";
-import Jenna from "../../public/execs/Jenna_Lee.jpeg";
-import Ayana from "../../public/execs/ayana_h.jpeg";
-import Jas from "../../public/execs/Jas_Mangat.JPG";
-import Brendan from "../../public/execs/Brendan_Shen.jpg";
-import Josie from "../../public/execs/josie.jpg";
-import Kaia from "../../public/execs/kaia.jpg";
-import Sabina from "../../public/execs/sabi.jpeg";
-import Alicia from "../../public/execs/Alicia_LeClercq.png";
-import Anoushka from "../../public/execs/anoushka_chavan.jpg";
+import Kevin from "../../public/execs/kevinshi.jpg";
+import Brendan from "../../public/execs/brendanshen.jpg";
+import Jenna from "../../public/execs/jennalee.jpg";
+import Ayana from "../../public/execs/ayanahussain.jpg";
+import Celine from "../../public/execs/celineaugustsantoso.jpg";
+import Kasey from "../../public/execs/kaseyle.jpg";
+import MichaelD from "../../public/execs/michaeldresler.jpg";
+import Kelvin from "../../public/execs/kelvinkwan.jpg";
+import Samiha from "../../public/execs/samiharaida.jpg";
+import Lily from "../../public/execs/lilyli.jpg";
+import Rosa from "../../public/execs/rosachen.jpg";
+import Darian from "../../public/execs/darianwong.jpg";
+import AngelaK from "../../public/execs/angelakurian.jpg";
+
 
 const execTeam = [
 	{
-		name: "David Lowe",
-		position: "Co-President",
-		linkedin: "https://www.linkedin.com/in/davidrobertlowe/",
-		image: David,
-	},
-	{
-		name: "Johnson Luong",
-		position: "Co-President",
-		linkedin: "https://www.linkedin.com/in/johnson-luong/",
-		image: Johnson,
-	},
-	{
-		name: "Alexandra Svoboda",
-		position: "Director of HR",
-		linkedin: "https://www.linkedin.com/in/a-svoboda/",
-		image: Alex,
-	},
-	{
-		name: "Kateleen Paran",
-		position: "HR Coordinator",
-		linkedin: "https://www.linkedin.com/in/kateleenparan/",
-		image: Kate,
-	},
-	{
-		name: "Darian Wong",
-		position: "HR Coordinator",
-		linkedin: "https://www.linkedin.com/in/thedarianwong/",
-		image: Darian,
-	},
-	{
-		name: "Angela Kurian",
-		position: "HR Coordinator",
-		linkedin: "https://www.linkedin.com/in/angela-mary-kurian-a84a09251/",
-		image: AngelaK,
-	},
-	{
+		//Directors
 		name: "Matthew Wong",
-		position: "Co-Director of Logistics",
+		position: "President",
 		linkedin: "https://www.linkedin.com/in/matthewwong1129/",
 		image: Matt,
 	},
 	{
-		name: "Mukhiil Baskaran",
-		position: "Co-Director of Logistics",
-		linkedin: "https://www.linkedin.com/in/mukhiil-baskaran/",
-		image: Mukhiil,
-	},
-	{
-		name: "Monishka Gautam",
-		position: "Logistics Coordinator",
-		linkedin: "https://www.linkedin.com/in/monishka-gautam/",
-		image: Monishka,
-	},
-	{
 		name: "Maria Zia",
-		position: "Logistics Coordinator",
+		position: "Co-Director of Logistics",
 		linkedin: "https://www.linkedin.com/in/maria-zia-9a6200259/",
 		image: MariaZ,
 	},
 	{
-		name: "Maria Yufe",
-		position: "Logistics Coordinator",
-		linkedin: "https://www.linkedin.com/in/maria-yufe/",
-		image: MariaY,
+		name: "Brian Rahadi",
+		position: "Co-Director of Logistics",
+		linkedin: "https://www.linkedin.com/in/brianrahadi/",
+		image: BrianR,
 	},
 	{
-		name: "Kylie Seto",
-		position: "Logistics Coordinator",
-		linkedin: "https://www.linkedin.com/in/kylie-seto/",
-		image: Kylie,
+		name: "Keyaan Vegdani",
+		position: "Director of Visual Design",
+		linkedin: "https://www.linkedin.com/in/keyaan-vegdani/",
+		image: Keyaan,
+	},
+	{
+		name: "Kaia Do",
+		position: "Director of Marketing",
+		linkedin: "https://www.linkedin.com/in/kaiado",
+		image: Kaia,
+	},
+	{
+		name: "Christopher Fong",
+		position: "Co-Director of Technology",
+		linkedin: "https://www.linkedin.com/in/chrisfong604/",
+		image: Chris,
 	},
 	{
 		name: "Christina Raganit",
-		position: "Director of Visual Design",
+		position: "Co-Director of Technology",
 		linkedin: "https://www.linkedin.com/in/christinaraganit/",
 		image: Christina,
 	},
+	{
+		name: "Vicky Xu",
+		position: "Director of Finance",
+		linkedin: "https://www.linkedin.com/in/vickykxu/",
+		image: Vicky,
+	},
+	{
+		name: "Alexandra Svoboda",
+		position: "Director of Human Resources",
+		linkedin: "https://www.linkedin.com/in/a-svoboda/",
+		image: Alex,
+	},
+	{
+		name: "Johnson Luong",
+		position: "Director of External Relations",
+		linkedin: "https://www.linkedin.com/in/johnson-luong/",
+		image: Johnson,
+	},
+	//Logistics Coordinators
+	{
+		name: "Brian Wang",
+		position: "Logistics Coordinator",
+		linkedin: "https://www.linkedin.com/in/brian-c-wang",
+		image: BrianW,
+	},
+	{
+		name: "Rasya Hadaayaa",
+		position: "Logistics Coordinator",
+		linkedin: "https://www.linkedin.com/in/rah99/",
+		image: Rasya,
+	},
+	{
+		name: "Christine Vu",
+		position: "Logistics Coordinator",
+		linkedin: "https://www.linkedin.com/in/christine-vu-8b2121264/",
+		image: Christine,
+	},
+	{
+		name: "Angela Lim",
+		position: "Logistics Coordinator",
+		linkedin: "https://www.linkedin.com/in/angelalim-/",
+		image: AngelaL,
+	},
+	{
+		name: "Fady Nasr",
+		position: "Logistics Coordinator",
+		linkedin: "https://www.linkedin.com/in/fady-nasr-9431aa2a1/",
+		image: Fady,
+	},
+	{
+		name: "Alex Mei",
+		position: "Logistics Coordinator",
+		linkedin: "https://www.linkedin.com/in/alex-mei-720279313/",
+		image: AlexM,
+	},
+	{
+		name: "Darrick Gunawan",
+		position: "Logistics Coordinator",
+		linkedin: "https://www.linkedin.com/in/darrick-gunawan/",
+		image: Darrick,
+	},
+	//ER Coordinators
+	{
+		name: "Paul Lee",
+		position: "External Relations Coordinator",
+		linkedin: "https://www.linkedin.com/in/pauldklee/",
+		image: Paul,
+	},
+	{
+		name: "Michael Tran",
+		position: "External Relations Coordinator",
+		linkedin: "https://www.linkedin.com/in/michael-tran-sfu/",
+		image: MichaelT,
+	},
+	//Visual Design Coordinators
 	{
 		name: "Arriyan Ali",
 		position: "Visual Design Coordinator",
 		linkedin: "https://www.linkedin.com/in/arriyanali/",
 		image: Arriyan,
-	},
-	{
-		name: "Linda Jolly",
-		position: "Visual Design Coordinator",
-		linkedin: "https://www.linkedin.com/in/linda-jolly-5849a5224/",
-		image: Linda,
 	},
 	{
 		name: "Natalie Kayda",
@@ -150,23 +189,18 @@ const execTeam = [
 		image: Tinay,
 	},
 	{
-		name: "Jas Mangat",
-		position: "Director of Social Media",
-		linkedin: "www.linkedin.com/in/jas-mangat ",
-		image: Jas,
+		name: "Linda Jolly",
+		position: "Visual Design Coordinator",
+		linkedin: "https://www.linkedin.com/in/linda-jolly-5849a5224/",
+		image: Linda,
 	},
 	{
-		name: "Kaia Do",
-		position: "Social Media Coordinator",
-		linkedin: "https://www.linkedin.com/in/khuedo04/",
-		image: Kaia,
+		name: "Yifei Wang",
+		position: "Visual Design Coordinator",
+		linkedin: "https://www.linkedin.com/in/yifeiwangdesigner/",
+		image: Yifei,
 	},
-	{
-		name: "Sabina Yelyubayeva",
-		position: "Social Media Coordinator",
-		linkedin: "www.linkedin.com/in/sabina-yel",
-		image: Sabina,
-	},
+	//Marketing Coordinators
 	{
 		name: "Josie Trinh",
 		position: "Social Media Coordinator",
@@ -174,82 +208,23 @@ const execTeam = [
 		image: Josie,
 	},
 	{
-		name: "Anoushka Chavan",
-		position: "Director of Marketing",
-		linkedin: "",
-		image: Anoushka,
+		name: "Mackenzie Scholz",
+		position: "Photographer/videographer",
+		linkedin: "https://www.linkedin.com/in/mackenzie-scholz-1607b816a",
+		image: Mackenzie,
 	},
 	{
-		name: "Alicia LeClercq",
-		position: "Marketing Coordinator",
-		linkedin: "https://www.linkedin.com/in/alicialeclercq/",
-		image: Alicia,
+		name: "Nafisha Djamalus",
+		position: "Video Editor",
+		linkedin: "https://www.linkedin.com/in/nafisha-d-b67516218/",
+		image: Nafisha,
 	},
+	//Technology Coordinators
 	{
-		name: "Revika Jain",
-		position: "Co-Director of ER",
-		linkedin: "https://www.linkedin.com/in/revika-jain/",
-		image: Revika,
-	},
-	{
-		name: "Rosa Chen",
-		position: "Co-Director of ER",
-		linkedin: "https://www.linkedin.com/in/rosaychen/",
-		image: Rosa,
-	},
-	{
-		name: "Varghese Bobus",
-		position: "ER Coordinator",
-		linkedin: "https://www.linkedin.com/in/vbobus/",
-		image: Varghese,
-	},
-	{
-		name: "Noor Eeman",
-		position: "ER Coordinator",
-		linkedin: "https://www.linkedin.com/in/nooreeman/",
-		image: Noor,
-	},
-	{
-		name: "Sakshi Wadhwa",
-		position: "Director of Merchandise",
-		linkedin: "https://www.linkedin.com/in/sakshiwadhwa123/",
-		image: Sakshi,
-	},
-	{
-		name: "Raghav Ahuja",
-		position: "Merchandise Coordinator",
-		linkedin: "https://www.linkedin.com/in/ahuja-raghav/",
-		image: Raghav,
-	},
-	{
-		name: "Triane Tambay",
-		position: "Director of Projects",
-		linkedin: "https://www.linkedin.com/in/triane-tambay/",
-		image: Triane,
-	},
-	{
-		name: "Elsa Sinuhaji",
-		position: "Projects Coordinator",
-		linkedin: "https://www.linkedin.com/in/elsa-sinuhaji-5124151a4/",
-		image: Elsa,
-	},
-	{
-		name: "Vicky Xu",
-		position: "Director of Finance",
-		linkedin: "https://www.linkedin.com/in/vickykxu/",
-		image: Vicky,
-	},
-	{
-		name: "Samiha Raida",
-		position: "Finance Coordinator",
-		linkedin: "https://www.linkedin.com/in/samiharaida/",
-		image: Samiha,
-	},
-	{
-		name: "Christopher Fong",
-		position: "Director of Technology",
-		linkedin: "https://www.linkedin.com/in/chrisfong604/",
-		image: Chris,
+		name: "Kylie Seto",
+		position: "Project Manager",
+		linkedin: "https://www.linkedin.com/in/kylie-seto/",
+		image: Kylie,
 	},
 	{
 		name: "Kevin Shi",
@@ -274,6 +249,62 @@ const execTeam = [
 		position: "Developer",
 		linkedin: "https://www.linkedin.com/in/ayana-hussain/",
 		image: Ayana,
+	},
+	{
+		name: "Celine August Santoso",
+		position: "Product Design Team",
+		linkedin: "https://www.linkedin.com/in/celine-august/",
+		image: Celine,
+	},
+	{
+		name: "Kasey Le",
+		position: "Product Design Team",
+		linkedin: "https://www.linkedin.com/in/kasey-le",
+		image: Kasey,
+	},
+	{
+		name: "Michael Dresler",
+		position: "Product Design Team",
+		linkedin: "https://www.linkedin.com/in/michael-dresler/",
+		image: MichaelD,
+	},
+	{
+		name: "Kelvin Kwan",
+		position: "Product Design Team",
+		linkedin: "https://www.linkedin.com/in/kelvin-kwan-8906b1230",
+		image: Kelvin,
+	},
+	//Finance Coordinators
+	{
+		name: "Samiha Raida",
+		position: "Finance Coordinator",
+		linkedin: "https://www.linkedin.com/in/samiharaida/",
+		image: Samiha,
+	},
+	{
+		name: "Lily Li",
+		position: "Finance Coordinator",
+		linkedin: "https://www.linkedin.com/in/lilyli0302/",
+		image: Lily,
+	},
+	{
+		name: "Rosa Chen",
+		position: "Finance Coordinator",
+		linkedin: "https://www.linkedin.com/in/rosaychen/",
+		image: Rosa,
+	},
+	//HR Coordinators
+	{
+		name: "Darian Wong",
+		position: "Human Resources Coordinator",
+		linkedin: "https://www.linkedin.com/in/thedarianwong/",
+		image: Darian,
+	},
+	{
+		name: "Angela Kurian",
+		position: "Human Resources Coordinator",
+		linkedin: "https://www.linkedin.com/in/angela-mary-kurian-a84a09251/",
+		image: AngelaK,
 	},
 ];
 
