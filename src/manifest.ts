@@ -115,7 +115,7 @@ export const Sponsors: Array<SponsorInfo> = [
   },
 
   {
-    imagePath: "/sponsors/standout-stickers-logo.png",
+    imagePath: "/sponsors/standout-stickers-logo.svg",
     imageUrl: "http://hackp.ac/mlh-StandOutStickers-hackathons",
     altText: "Standout Stickers company logo",
     tier: SponsorTier.InKind
