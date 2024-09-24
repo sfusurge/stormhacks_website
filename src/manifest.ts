@@ -143,6 +143,13 @@ export const Sponsors: Array<SponsorInfo> = [
   },
 
   {
+    imagePath: "/sponsors/caterdash-logo.svg",
+    imageUrl: "https://www.caterdash.com/",
+    altText: "Caterdash company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
     imagePath: "/sponsors/osf-logo.svg",
     imageUrl: "https://oldspaghettifactory.ca/",
     altText: "The Old Spaghetti Factory company logo",
