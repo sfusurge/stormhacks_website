@@ -17,16 +17,16 @@ export type SponsorInfo = {
 
 export const Sponsors: Array<SponsorInfo> = [
   {
-    imagePath: "/sponsors/defang-logo.png",
-    imageUrl: "https://defang.io/",
-    altText: "Defang Software Labs company logo",
+    imagePath: "/sponsors/scalar-logo-white.png",
+    imageUrl: "https://www.scalar.com/",
+    altText: "Scalar company logo",
     tier: SponsorTier.InKind
   },
 
   {
-    imagePath: "/sponsors/scalar-logo-white.png",
-    imageUrl: "https://www.scalar.com/",
-    altText: "Scalar company logo",
+    imagePath: "/sponsors/defang-logo.png",
+    imageUrl: "https://defang.io/",
+    altText: "Defang Software Labs company logo",
     tier: SponsorTier.InKind
   },
 
@@ -38,23 +38,9 @@ export const Sponsors: Array<SponsorInfo> = [
   },
 
   {
-    imagePath: "/sponsors/mlh-logo.png",
-    imageUrl: "https://www.mlh.com/",
-    altText: "Major League Hacking logo",
-    tier: SponsorTier.InKind
-  },
-
-  {
-    imagePath: "/sponsors/Wizeprep_logo_in_kind.png",
-    imageUrl: "https://www.wizeprep.com/",
-    altText: "Wizeprep company logo",
-    tier: SponsorTier.InKind
-  },
-
-  {
-    imagePath: "/sponsors/jam-logo-color.png",
-    imageUrl: "https://www.jam.dev/",
-    altText: "Jam Company logo",
+    imagePath: "/sponsors/trulioo-logo.png",
+    imageUrl: "https://www.trulioo.com/",
+    altText: "Trulioo company logo",
     tier: SponsorTier.InKind
   },
 
@@ -66,6 +52,83 @@ export const Sponsors: Array<SponsorInfo> = [
   },
 
   {
+    imagePath: "/sponsors/mlh-logo.png",
+    imageUrl: "https://www.mlh.com/",
+    altText: "Major League Hacking logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/nordvpn-logo-white.svg",
+    imageUrl: "https://www.nordvpn.com",
+    altText: "NordVPN company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/nordpass-logo.svg",
+    imageUrl: "https://nordpass.com",
+    altText: "NordPass company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/incogni-logo.svg",
+    imageUrl: "https://incogni.com",
+    altText: "Incogni company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/saily-logo-white.svg",
+    imageUrl: "https://saily.com",
+    altText: "Saily company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/cfi-logo.svg",
+    imageUrl: "https://corporatefinanceinstitute.com/",
+    altText: "Corporate Finance Institute company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/wolfram-corporate-logo-horz-med.png",
+    imageUrl: "https://www.wolframalpha.com/",
+    altText: "Wolfram Alpha company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/promosapien-logo.svg",
+    imageUrl: "https://www.promosapien.ca/",
+    altText: "Promosapien company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/jam-logo-color.png",
+    imageUrl: "https://www.jam.dev/",
+    altText: "Jam Company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/standout-stickers-logo.png",
+    imageUrl: "http://hackp.ac/mlh-StandOutStickers-hackathons",
+    altText: "Standout Stickers company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/Wizeprep_logo_in_kind.png",
+    imageUrl: "https://www.wizeprep.com/",
+    altText: "Wizeprep company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
     imagePath: "/sponsors/sfu-bookstore-logo-2.png",
     imageUrl: "https://shop.sfu.ca/",
     altText: "Simon Fraser Student Society Bookstore Logo",
@@ -73,9 +136,9 @@ export const Sponsors: Array<SponsorInfo> = [
   },
 
   {
-    imagePath: "/sponsors/vancouver-water-adventures-logo.webp",
-    imageUrl: "https://vancouverwateradventures.com/",
-    altText: "Vancouver Water Adventures company logo",
+    imagePath: "/sponsors/redbull-logo.svg",
+    imageUrl: "https://www.redbull.com/ca-en",
+    altText: "Redbull company logo",
     tier: SponsorTier.InKind
   },
 
@@ -108,72 +171,9 @@ export const Sponsors: Array<SponsorInfo> = [
   },
 
   {
-    imagePath: "/sponsors/redbull-logo.svg",
-    imageUrl: "https://www.redbull.com/ca-en",
-    altText: "Redbull company logo",
-    tier: SponsorTier.InKind
-  },
-
-  {
-    imagePath: "/sponsors/cfi-logo.svg",
-    imageUrl: "https://corporatefinanceinstitute.com/",
-    altText: "Corporate Finance Institute company logo",
-    tier: SponsorTier.InKind
-  },
-
-  {
-    imagePath: "/sponsors/standout-stickers-logo.png",
-    imageUrl: "http://hackp.ac/mlh-StandOutStickers-hackathons",
-    altText: "Standout Stickers company logo",
-    tier: SponsorTier.InKind
-  },
-
-  {
-    imagePath: "/sponsors/wolfram-corporate-logo-horz-med.png",
-    imageUrl: "https://www.wolframalpha.com/",
-    altText: "Wolfram Alpha company logo",
-    tier: SponsorTier.InKind
-  },
-
-  {
-    imagePath: "/sponsors/trulioo-logo.png",
-    imageUrl: "https://www.trulioo.com/",
-    altText: "Trulioo company logo", 
-    tier: SponsorTier.InKind
-  },
-
-  {
-    imagePath: "/sponsors/nordvpn-logo.png",
-    imageUrl: "https://www.nordvpn.com",
-    altText: "NordVPN company logo", 
-    tier: SponsorTier.InKind
-  },
-
-  {
-    imagePath: "/sponsors/nordpass-white-horizontal.png",
-    imageUrl: "https://nordpass.com",
-    altText: "NordPass company logo",
-    tier: SponsorTier.InKind
-  },
-
-  {
-    imagePath: "/sponsors/incogni-logo-white.png",
-    imageUrl: "https://incogni.com",
-    altText: "Incogni company logo",
-    tier: SponsorTier.InKind
-  },
-
-  {
-    imagePath: "/sponsors/saily-logo-white.svg",
-    imageUrl: "https://saily.com",
-    altText: "Saily company logo",
-    tier: SponsorTier.InKind
-  },
-
-  {
-    imagePath: "/sponsors/promosapien-logo.svg",
-    imageUrl: "https://www.promosapien.ca/",
-    altText: "Promosapien company logo",
+    imagePath: "/sponsors/vancouver-water-adventures-logo.webp",
+    imageUrl: "https://vancouverwateradventures.com/",
+    altText: "Vancouver Water Adventures company logo",
     tier: SponsorTier.InKind
   },
 
