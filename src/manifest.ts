@@ -16,162 +16,64 @@ export type SponsorInfo = {
 };
 
 export const Sponsors: Array<SponsorInfo> = [
-/*  {
-    imagePath: "/sponsors/transoft-logo.png",
-    imageUrl: "https://www.transoftsolutions.com/",
-    altText: "Transoft Solution company logo",
-    tier: SponsorTier.Gold
-  },*/
-
-/*  {
+  {
     imagePath: "/sponsors/scalar-logo-white.png",
     imageUrl: "https://www.scalar.com/",
     altText: "Scalar company logo",
-    tier: SponsorTier.Title
-  },*/
+    tier: SponsorTier.InKind
+  },
 
-/*  {
-    imagePath: "/sponsors/bcjobs-logo.png",
-    imageUrl: "https://www.bcjobs.ca/",
-    altText: "BC Jobs company logo",
-    tier: SponsorTier.Silver
-  },*/
-
-/*  {
+  {
     imagePath: "/sponsors/defang-logo.png",
     imageUrl: "https://defang.io/",
     altText: "Defang Software Labs company logo",
-    tier: SponsorTier.Bronze
-  },*/
-
-/*  {
-    imagePath: "/sponsors/powerex-logo.png",
-    imageUrl: "https://www.powerex.com/",
-    altText: "Powerex Energy company logo",
-    tier: SponsorTier.Bronze
-  },*/
-
-  {
-    imagePath: "/sponsors/mlh-logo.png",
-    imageUrl: "https://www.mlh.com/",
-    altText: "Major League Hacking logo",
-    tier: SponsorTier.Gold
-  },
-
-/*  {
-    imagePath: "/sponsors/github-logo-white.png",
-    imageUrl: "https://www.github.com/",
-    altText: "Github Company logo",
-    tier: SponsorTier.Bronze
-  },*/
-
-  {
-    imagePath: "/sponsors/jam-logo-color.png",
-    imageUrl: "https://www.jam.dev/",
-    altText: "Jam Company logo",
     tier: SponsorTier.InKind
   },
 
-/*  {
-    imagePath: "/sponsors/echo3D-logos.png",
-    imageUrl: "https://www.echo3d.com/",
-    altText: "echo3D 3D asset management company logo",
-    tier: SponsorTier.InKind
-  },*/
-
-/*  {
-    imagePath: "/sponsors/verbwire-logo.png",
-    imageUrl: "https://www.verbwire.com/",
-    altText: "Verbwire sharing logo",
-    tier: SponsorTier.Bronze
-  },*/
-
-/*  {
-    imagePath: "/sponsors/evo-logo.png",
-    imageUrl: "https://www.evo.ca/",
-    altText: "Evo car sharing logo",
-    tier: SponsorTier.InKind
-  },*/
-
-/*  {
-    imagePath: "/sponsors/sfss-logo-color.png",
-    imageUrl: "https://sfss.ca/",
-    altText: "Simon Fraser Student Society Logo",
-    tier: SponsorTier.Gold
-  },*/
-
-/*  {
-    imagePath: "/sponsors/sfu-bookstore.png",
-    imageUrl: "https://shop.sfu.ca/",
-    altText: "Simon Fraser Student Society Bookstore Logo",
-    tier: SponsorTier.InKind
-  },*/
-
-/*  {
-    imagePath: "/sponsors/sfu-csss-logo.png",
-    imageUrl: "https://sfucsss.org/",
-    altText: "Computing Systems Student Society Logo",
-    tier: SponsorTier.InKind
-  },*/
-
   {
-    imagePath: "/sponsors/standout-stickers-logo.png",
-    imageUrl: "http://hackp.ac/mlh-StandOutStickers-hackathons",
-    altText: "Standout Stickers company logo",
-    tier: SponsorTier.InKind
-  },
-
-/*  {
-    imagePath: "/sponsors/steves-poke.png",
-    imageUrl: "https://www.stevespokebar.ca/",
-    altText: "Steve's Poke Bar company logo",
-    tier: SponsorTier.Bronze
-  },*/
-
-/*  {
-    imagePath: "/sponsors/Wizeprep_logo_in_kind.png",
-    imageUrl: "https://www.wizeprep.com/",
-    altText: "Wizeprep company logo",
-    tier: SponsorTier.InKind
-  },*/
-
-  {
-    imagePath: "/sponsors/wolfram-corporate-logo-horz-med.png",
-    imageUrl: "https://www.wolframalpha.com/",
-    altText: "Wolfram Alpha company logo",
+    imagePath: "/sponsors/transoft-logo.png",
+    imageUrl: "https://www.transoftsolutions.com/",
+    altText: "Transoft Solution company logo",
     tier: SponsorTier.InKind
   },
 
   {
     imagePath: "/sponsors/trulioo-logo.png",
     imageUrl: "https://www.trulioo.com/",
-    altText: "Trulioo company logo", 
-    tier: SponsorTier.Silver
+    altText: "Trulioo company logo",
+    tier: SponsorTier.InKind
   },
 
-/*  {
-    imagePath: "/sponsors/nord-security-logo.svg",
-    imageUrl: "https://nordsecurity.com/",
-    altText: "Nord Security company logo",
+  {
+    imagePath: "/sponsors/sfss-logo-color.png",
+    imageUrl: "https://sfss.ca/",
+    altText: "Simon Fraser Student Society Logo",
     tier: SponsorTier.InKind
-  },*/
+  },
 
   {
-    imagePath: "/sponsors/nordvpn-logo.png",
+    imagePath: "/sponsors/mlh-logo.png",
+    imageUrl: "https://www.mlh.com/",
+    altText: "Major League Hacking logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/nordvpn-logo-white.svg",
     imageUrl: "https://www.nordvpn.com",
-    altText: "NordVPN company logo", 
+    altText: "NordVPN company logo",
     tier: SponsorTier.InKind
   },
 
   {
-    imagePath: "/sponsors/nordpass-white-horizontal.png",
+    imagePath: "/sponsors/nordpass-logo.svg",
     imageUrl: "https://nordpass.com",
     altText: "NordPass company logo",
     tier: SponsorTier.InKind
   },
 
   {
-    imagePath: "/sponsors/incogni-logo-white.png",
+    imagePath: "/sponsors/incogni-logo.svg",
     imageUrl: "https://incogni.com",
     altText: "Incogni company logo",
     tier: SponsorTier.InKind
@@ -185,6 +87,20 @@ export const Sponsors: Array<SponsorInfo> = [
   },
 
   {
+    imagePath: "/sponsors/cfi-logo.svg",
+    imageUrl: "https://corporatefinanceinstitute.com/",
+    altText: "Corporate Finance Institute company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/wolfram-corporate-logo-horz-med.png",
+    imageUrl: "https://www.wolframalpha.com/",
+    altText: "Wolfram Alpha company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
     imagePath: "/sponsors/promosapien-logo.svg",
     imageUrl: "https://www.promosapien.ca/",
     altText: "Promosapien company logo",
@@ -192,18 +108,143 @@ export const Sponsors: Array<SponsorInfo> = [
   },
 
   {
-    imagePath: "/sponsors/sfss-logo-color.png",
-    imageUrl: "https://sfss.ca/",
-    altText: "Simon Fraser Student Society Logo",
+    imagePath: "/sponsors/jam-logo-color.png",
+    imageUrl: "https://www.jam.dev/",
+    altText: "Jam Company logo",
     tier: SponsorTier.InKind
   },
 
   {
+    imagePath: "/sponsors/standout-stickers-logo.svg",
+    imageUrl: "http://hackp.ac/mlh-StandOutStickers-hackathons",
+    altText: "Standout Stickers company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/Wizeprep_logo_in_kind.png",
+    imageUrl: "https://www.wizeprep.com/",
+    altText: "Wizeprep company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/sfu-bookstore-logo-2.png",
+    imageUrl: "https://shop.sfu.ca/",
+    altText: "Simon Fraser Student Society Bookstore Logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/redbull-logo.svg",
+    imageUrl: "https://www.redbull.com/ca-en",
+    altText: "Redbull company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/caterdash-logo.svg",
+    imageUrl: "https://www.caterdash.com/",
+    altText: "Caterdash company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/osf-logo.svg",
+    imageUrl: "https://oldspaghettifactory.ca/",
+    altText: "The Old Spaghetti Factory company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/cactus-club-logo.svg",
+    imageUrl: "https://www.cactusclubcafe.com/",
+    altText: "Cactus Club Cafe company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/rio-theatre-logo.png",
+    imageUrl: "https://riotheatre.ca/",
+    altText: "Rio Theatre company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/antons-pasta-logo.png",
+    imageUrl: "https://antonspastabar.com/",
+    altText: "Anton's Pasta Bar company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
+    imagePath: "/sponsors/vancouver-water-adventures-logo.webp",
+    imageUrl: "https://vancouverwateradventures.com/",
+    altText: "Vancouver Water Adventures company logo",
+    tier: SponsorTier.InKind
+  },
+
+  /*  {
+    imagePath: "/sponsors/nord-security-logo.svg",
+    imageUrl: "https://nordsecurity.com/",
+    altText: "Nord Security company logo",
+    tier: SponsorTier.InKind
+  },*/
+/*  {
     imagePath: "/sponsors/sfu-csss-logo.png",
     imageUrl: "https://sfucsss.org/",
     altText: "Computing Systems Student Society Logo",
     tier: SponsorTier.InKind
-  },
+  },*/
+      /*  {
+      imagePath: "/sponsors/bcjobs-logo.png",
+      imageUrl: "https://www.bcjobs.ca/",
+      altText: "BC Jobs company logo",
+      tier: SponsorTier.Silver
+    },*/
+  /*  {
+      imagePath: "/sponsors/powerex-logo.png",
+      imageUrl: "https://www.powerex.com/",
+      altText: "Powerex Energy company logo",
+      tier: SponsorTier.Bronze
+    },*/
+
+  /*  {
+      imagePath: "/sponsors/echo3D-logos.png",
+      imageUrl: "https://www.echo3d.com/",
+      altText: "echo3D 3D asset management company logo",
+      tier: SponsorTier.InKind
+    },*/
+  /*  {
+      imagePath: "/sponsors/verbwire-logo.png",
+      imageUrl: "https://www.verbwire.com/",
+      altText: "Verbwire sharing logo",
+      tier: SponsorTier.Bronze
+    },*/
+  /*  {
+      imagePath: "/sponsors/evo-logo.png",
+      imageUrl: "https://www.evo.ca/",
+      altText: "Evo car sharing logo",
+      tier: SponsorTier.InKind
+    },*/
+  /*  {
+    imagePath: "/sponsors/github-logo-white.png",
+    imageUrl: "https://www.github.com/",
+    altText: "Github Company logo",
+    tier: SponsorTier.Bronze
+  },*/
+  /*  {
+    imagePath: "/sponsors/sfu-csss-logo.png",
+    imageUrl: "https://sfucsss.org/",
+    altText: "Computing Systems Student Society Logo",
+    tier: SponsorTier.InKind
+  },*/
+  /*  {
+    imagePath: "/sponsors/steves-poke.png",
+    imageUrl: "https://www.stevespokebar.ca/",
+    altText: "Steve's Poke Bar company logo",
+    tier: SponsorTier.Bronze
+  },*/
 ];
 
 export type FrequentlyAskedQuestionsInfo = {

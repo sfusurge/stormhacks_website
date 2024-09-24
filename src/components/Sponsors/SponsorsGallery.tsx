@@ -15,7 +15,7 @@ function SponsorsGallery() {
         </h2>
       </div>
 
-      <div className="mb-16 grid desktop:full-bleed desktop:grid-cols-3 mobile:grid-cols-1 gap-12 place-content-center justify-items-center">
+      <div className="grid desktop:full-bleed desktop:grid-cols-3 mobile:grid-cols-1 mobile:gap-24 desktop:gap-20 place-content-center justify-items-center">
         {
           Sponsors.slice().sort((a, b) => b.tier - a.tier).map((data, index) => (
             <div className="my-auto" key={index}>
