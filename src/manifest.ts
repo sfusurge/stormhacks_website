@@ -136,9 +136,9 @@ export const Sponsors: Array<SponsorInfo> = [
   },
 
   {
-    imagePath: "/sponsors/redbull-logo.svg",
+    imagePath: "/sponsors/redbull-basement-logo.png",
     imageUrl: "https://www.redbull.com/ca-en",
-    altText: "Redbull company logo",
+    altText: "Redbull basement logo",
     tier: SponsorTier.InKind
   },
 
