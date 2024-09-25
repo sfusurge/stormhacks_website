@@ -209,7 +209,7 @@ const execTeam = [
 	},
 	{
 		name: "Mackenzie Scholz",
-		position: "Photographer/ Videographer",
+		position: "Photographer/Videographer",
 		linkedin: "https://www.linkedin.com/in/mackenzie-scholz-1607b816a",
 		image: Mackenzie,
 	},
