@@ -115,9 +115,9 @@ export const Sponsors: Array<SponsorInfo> = [
   },
 
   {
-    imagePath: "/sponsors/standout-stickers-logo.svg",
-    imageUrl: "http://hackp.ac/mlh-StandOutStickers-hackathons",
-    altText: "Standout Stickers company logo",
+    imagePath: "/sponsors/redbull-basement-logo.png",
+    imageUrl: "https://www.redbull.com/ca-en",
+    altText: "Redbull basement logo",
     tier: SponsorTier.InKind
   },
 
@@ -136,9 +136,9 @@ export const Sponsors: Array<SponsorInfo> = [
   },
 
   {
-    imagePath: "/sponsors/redbull-basement-logo.png",
-    imageUrl: "https://www.redbull.com/ca-en",
-    altText: "Redbull basement logo",
+    imagePath: "/sponsors/standout-stickers-logo.svg",
+    imageUrl: "http://hackp.ac/mlh-StandOutStickers-hackathons",
+    altText: "Standout Stickers company logo",
     tier: SponsorTier.InKind
   },
 
