@@ -136,6 +136,13 @@ export const Sponsors: Array<SponsorInfo> = [
   },
 
   {
+    imagePath: "/sponsors/purebuttons-blue-logo.png",
+    imageUrl: "https://hackp.ac/mlh-standoutstickers-hackathons",
+    altText: "Purebuttons company logo",
+    tier: SponsorTier.InKind
+  },
+
+  {
     imagePath: "/sponsors/standout-stickers-logo.svg",
     imageUrl: "http://hackp.ac/mlh-StandOutStickers-hackathons",
     altText: "Standout Stickers company logo",
